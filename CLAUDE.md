@@ -51,6 +51,9 @@ two goals or be cut.
 Build order: ~~passes~~ → ~~programme~~ → partners → speakers → creators
 → brands → visit → ~~about~~ → faq → blog → contact
 
+Programme revisited: Stages section replaced with 2025 Highlights
+(filterable session cards). CTA updated to "Coming Soon" for 2026.
+
 ## Key Build Decisions
 
 These override ARCHITECTURE.md and STYLE-GUIDE.md where they conflict.
