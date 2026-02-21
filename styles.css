@@ -3820,17 +3820,78 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 }
 
 
-/* ---------- PARTNER QUOTES (canvas, left-aligned header) ---------- */
-.partner-quotes {
+/* (partner-quotes styles moved to carousel block below) */
+
+
+/* ---------- PARTNER AUDIENCE BREAKDOWN (charcoal, 3-col) ---------- */
+.partner-audience {
+  background: var(--colour-charcoal);
+  border-radius: var(--radius-md);
+}
+
+.partner-audience__grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.partner-audience__col {
+  text-align: center;
+}
+
+.partner-audience__number {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  color: var(--colour-cyan);
+  line-height: 1.1;
+}
+
+.partner-audience__label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: var(--space-sm);
+}
+
+.partner-audience__col h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--colour-white);
+  margin-bottom: var(--space-xs);
+}
+
+.partner-audience__col p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.925rem;
+}
+
+@media (min-width: 768px) {
+  .partner-audience__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+
+/* ---------- PARTNER ACTIVATIONS (canvas, scroll carousel) ---------- */
+.partner-activations {
   background: transparent;
 }
 
-.partner-quotes__header h2 {
-  color: var(--colour-charcoal);
+.partner-activations__header {
   margin-bottom: var(--space-lg);
 }
 
-.partner-quotes__header h2::before {
+.partner-activations__header-text h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.partner-activations__header-text h2::before {
   content: '';
   display: block;
   width: 40px;
@@ -3838,6 +3899,289 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   background: var(--colour-purple);
   margin-bottom: var(--space-sm);
   border-radius: 2px;
+}
+
+.partner-activations__header-text p {
+  color: #555;
+  max-width: 50ch;
+}
+
+.partner-activations__nav {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.partner-activations__arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--colour-purple);
+  background: transparent;
+  color: var(--colour-purple);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.partner-activations__arrow:hover:not(:disabled) {
+  background: var(--colour-purple);
+  color: var(--colour-white);
+}
+
+.partner-activations__arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+@media (min-width: 768px) {
+  .partner-activations__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+  .partner-activations__nav {
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* Track — full-bleed scroll container */
+.partner-activations__track {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-left: max(var(--space-md), calc((100vw - 1200px) / 2 + 20px));
+  padding-right: var(--space-md);
+  scrollbar-width: none;
+  padding-bottom: var(--space-xs);
+}
+
+.partner-activations__track::-webkit-scrollbar {
+  display: none;
+}
+
+.partner-activations__card {
+  flex: 0 0 300px;
+  width: 300px;
+  scroll-snap-align: start;
+  background: var(--colour-white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-activations__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.partner-activations__img {
+  overflow: hidden;
+}
+
+.partner-activations__img img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.partner-activations__card:hover .partner-activations__img img {
+  transform: scale(1.05);
+}
+
+.partner-activations__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.partner-activations__body h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--colour-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.partner-activations__body p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
+}
+
+.partner-activations__for {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--colour-purple);
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--colour-grey-light);
+}
+
+.partner-activations__cta {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 1025px) {
+  .partner-activations__card {
+    flex: 0 0 340px;
+    width: 340px;
+  }
+}
+
+
+/* ---------- PARTNER QUOTES CAROUSEL (featured single quote) ---------- */
+.partner-quotes {
+  background: transparent;
+}
+
+.partner-quotes__carousel {
+  text-align: center;
+  position: relative;
+  padding: var(--space-xl) 0 var(--space-lg);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-quotes__mark {
+  position: absolute;
+  top: -0.15em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-heading);
+  font-size: clamp(8rem, 20vw, 14rem);
+  font-weight: 700;
+  color: var(--colour-purple);
+  opacity: 0.08;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.partner-quotes__slide {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.partner-quotes__slide[hidden] {
+  display: none;
+}
+
+.partner-quotes__slide blockquote {
+  margin: 0;
+}
+
+.partner-quotes__slide blockquote p {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--colour-charcoal);
+  margin-bottom: var(--space-md);
+}
+
+.partner-quotes__slide blockquote footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.partner-quotes__slide blockquote cite {
+  font-style: normal;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--colour-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.partner-quotes__slide blockquote footer span {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.partner-quotes__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.partner-quotes__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--colour-purple);
+  background: transparent;
+  color: var(--colour-purple);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.partner-quotes__arrow:hover {
+  background: var(--colour-purple);
+  color: var(--colour-white);
+}
+
+.partner-quotes__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.partner-quotes__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--colour-grey-light);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.partner-quotes__dot.is-active {
+  background: var(--colour-purple);
+  transform: scale(1.2);
+}
+
+.partner-quotes__dot:hover:not(.is-active) {
+  background: #ccc;
+}
+
+/* Slide transition */
+.partner-quotes__slide {
+  animation: partnerQuoteFadeIn 0.4s ease;
+}
+
+@keyframes partnerQuoteFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 
@@ -3999,6 +4343,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 /* ---------- PARTNERS PAGE FOCUS STATES ---------- */
 .partner-tiers :focus-visible,
+.partner-audience :focus-visible,
 .partner-enquiry :focus-visible,
 .partner-cta :focus-visible {
   outline-color: var(--colour-cyan);

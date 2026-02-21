@@ -493,3 +493,143 @@ and left-aligned quote grids.
 - Staggered card offset (margin-top: 80px) — reuse for team/speaker pairs
 - Left-aligned sections with purple accent bar — use broadly
 - Placeholder avatar circles with initials — reuse for speakers page
+
+---
+
+## Partners Page (partners.html)
+
+### Colour Rhythm
+1. Hero — dark photo overlay
+2. Why Partner — transparent on canvas (55/45 asymmetric split)
+3. Who You'll Reach — charcoal (all corners rounded, audience breakdown)
+4. Partnership Tiers — purple (all corners rounded, isolated block)
+5. Ways to Get Involved — transparent on canvas (scroll carousel)
+6. Full-bleed Photo Break — edge-to-edge image
+7. 2026 Partners — transparent on canvas (logo stack)
+8. What Partners Say — transparent on canvas (featured quote carousel)
+9. Full-bleed Photo Break 2 — edge-to-edge image
+10. Enquiry Form — purple (all corners rounded, isolated block)
+11. Newsletter — charcoal (rounded top corners)
+12. Footer — charcoal
+
+### Decisions
+
+**Hero**
+- Compact 60vh, photo bg + dark overlay (exhibitor floor shot)
+- Headline: "Put Your Brand at the Heart of Podcasting"
+- Two CTAs: "Enquire Now" (purple, scrolls to #enquire) +
+  "Book Your Pass" (coral, links to passes.html)
+
+**Why Partner (asymmetric split)**
+- Canvas bg, 55/45 CSS Grid split on desktop, stacks on mobile
+- Left: value proposition copy (2 paragraphs), no inline stats —
+  removed because the "Who You'll Reach" section below provides
+  more detailed, segmented audience data
+- Right: exhibition floor photo (4:3 ratio, rounded)
+- Left-aligned h2 with purple accent bar above
+
+**Who You'll Reach (audience breakdown)**
+- Charcoal bg, all corners rounded — isolated block
+- Centred section-header (--light variant, white text)
+- 3-column grid: Podcast Creators (2,391), Brand Advertisers (1,042),
+  Platforms & Tech (100+ exhibiting)
+- Cyan stat numbers (clamp font-size), "in 2025" label, white h3,
+  translucent-white description per column
+- Each column explains what that audience is actively looking for
+- Responsive: 1-col mobile → 3-col tablet+
+
+**Partnership Tiers (purple, glass cards)**
+- Purple bg, all corners rounded — isolated block
+- 4 glass-card grid: Headline Partner, Official Partner, Show
+  Partner, Exhibitor. Cyan labels, white text.
+- CTA: "Request the Partnership Deck" ghost button → #enquire
+- Responsive: 1-col mobile → 2-col tablet → 4-col desktop
+
+**Ways to Get Involved (scroll carousel)**
+- Canvas bg, left-aligned header with purple accent bar
+- Split header: heading/subtitle left, prev/next arrow buttons right
+  (desktop). Stacks on mobile.
+- Horizontal scroll-snap carousel (same pattern as homepage programme
+  stages). Full-bleed outside .container.
+- 7 activation cards, each with: photo at top (16:10 aspect ratio,
+  hover zoom), title, description, "Best for:" label with purple
+  text and top border divider
+- Cards: 300px mobile / 340px desktop, scroll-snap-align: start
+- Arrow buttons: 44px circles, purple border, hover fill. Prev
+  disabled at scroll start, next disabled at scroll end. JS in main.js.
+- Photos mapped to real event photography: Stand (Canon), Stage
+  (Origin iHeart), PodHouse (Set), Advice Lab, Meeting Tables,
+  Spiritland, Networking
+- CTA: "Discuss Your Options" purple button → #enquire
+
+**2026 Partners (logo stack)**
+- Canvas bg, centred section-header
+- Full-width logo stack image (same asset as homepage)
+
+**What Partners Say (featured quote carousel)**
+- Canvas bg, centred layout
+- Single featured quote at a time — large Space Grotesk type
+  (clamp 1.5rem → 2.25rem), centred, max-width 800px
+- Giant translucent quotation mark (opacity 0.08, clamp 8rem → 14rem)
+  positioned behind the quote as visual anchoring
+- 6 quotes with full attribution (name in purple uppercase cite,
+  role/company below in grey):
+  1. Kym Treasure, Founder & CEO, Audacia
+  2. Jez Nelson, Global Head of Podcasts, Sony Music Entertainment
+  3. Craig Strachan, CEO, Novel
+  4. Fatima Zaidi, Founder & CEO, Quill & CoHost
+  5. Adam Bowie, Business Development Manager, BBC World Service
+  6. Sean Howard, Founder, Flight Path
+- Controls: prev/next arrow buttons + 6 dot indicators
+- Fade-up transition animation on slide change (0.4s ease)
+- JS in main.js: goTo() function, wrapping navigation, dot click
+- Replaced previous 3-quote static grid (then 6-quote grid) —
+  single quote at a time = more impact, less wall-of-text
+
+**Enquiry Form (purple, isolated block)**
+- Purple bg, all corners rounded — unchanged from initial build
+- 45/55 grid: contact info left (Alex Booth block), form right
+- Cyan accent on h2 bar, form focus states, links
+
+**Removed: "Attending Instead" CTA strip**
+- Was charcoal bg with "Book Your Pass" + "View Programme" CTAs
+- Redundant — pass booking CTA already in nav and hero
+- Newsletter now flows directly from enquiry form with natural
+  charcoal rounded-top corners
+
+**CSS Architecture**
+- Prefix: .partner-*
+- New classes (enrichment pass): .partner-audience, .partner-audience__grid,
+  .partner-audience__col, .partner-audience__number, .partner-audience__label,
+  .partner-activations__header, .partner-activations__header-text,
+  .partner-activations__nav, .partner-activations__arrow,
+  .partner-activations__track, .partner-activations__card,
+  .partner-activations__img, .partner-activations__body,
+  .partner-activations__for, .partner-activations__cta,
+  .partner-quotes__carousel, .partner-quotes__mark,
+  .partner-quotes__slide, .partner-quotes__controls,
+  .partner-quotes__arrow, .partner-quotes__dots, .partner-quotes__dot
+- Retained: .partner-why, .partner-why__grid, .partner-why__text,
+  .partner-why__image, .partner-tiers, .partner-tiers__grid,
+  .partner-logos, .partner-enquiry (all form styles unchanged),
+  .partner-cta (CSS retained but section removed from HTML)
+- Removed: .partner-why__stats (inline stats removed from HTML),
+  old .partner-quotes__header (replaced by carousel)
+- Focus: cyan on charcoal/purple sections (.partner-audience added
+  to focus-visible rule group)
+
+**JavaScript (main.js additions)**
+- Partner activations scroll arrows: getScrollAmount() calculates
+  card width + gap, updateArrowState() enables/disables prev/next
+  based on scroll position. Listens to scroll + resize events.
+- Partner quotes carousel: goTo(index) manages slide visibility,
+  dot active state, aria-selected, and fade-in animation retrigger.
+  Wrapping navigation (last→first, first→last). Dot click handlers.
+
+**Reusable Patterns**
+- Scroll-snap carousel with arrow controls — reuse for speakers,
+  blog cards, or any horizontal browsable content
+- Featured quote carousel with dots — reuse for press quotes on
+  about page or standalone testimonial sections
+- Audience breakdown grid (charcoal + cyan stats) — reuse for
+  audience sub-pages (creators.html, brands.html)

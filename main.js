@@ -76,3 +76,72 @@ const revealObserver = new IntersectionObserver((entries) => {
 });
 
 revealElements.forEach(el => revealObserver.observe(el));
+
+
+/* --- Partner activations scroll arrows --- */
+const activationsTrack = document.querySelector('.partner-activations__track');
+
+if (activationsTrack) {
+  const prevBtn = document.querySelector('.partner-activations__arrow--prev');
+  const nextBtn = document.querySelector('.partner-activations__arrow--next');
+  const card = activationsTrack.querySelector('.partner-activations__card');
+
+  const getScrollAmount = () => {
+    if (!card) return 340;
+    return card.offsetWidth + parseInt(getComputedStyle(activationsTrack).gap) || 24;
+  };
+
+  const updateArrowState = () => {
+    const { scrollLeft, scrollWidth, clientWidth } = activationsTrack;
+    prevBtn.disabled = scrollLeft <= 2;
+    nextBtn.disabled = scrollLeft + clientWidth >= scrollWidth - 2;
+  };
+
+  prevBtn.addEventListener('click', () => {
+    activationsTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    activationsTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
+
+  activationsTrack.addEventListener('scroll', updateArrowState, { passive: true });
+  window.addEventListener('resize', updateArrowState, { passive: true });
+  updateArrowState();
+}
+
+
+/* --- Partner quotes carousel --- */
+const quotesCarousel = document.querySelector('.partner-quotes__carousel');
+
+if (quotesCarousel) {
+  const slides = quotesCarousel.querySelectorAll('.partner-quotes__slide');
+  const dots = quotesCarousel.querySelectorAll('.partner-quotes__dot');
+  const prevBtn = quotesCarousel.querySelector('.partner-quotes__arrow--prev');
+  const nextBtn = quotesCarousel.querySelector('.partner-quotes__arrow--next');
+  let current = 0;
+
+  const goTo = (index) => {
+    slides[current].classList.remove('is-active');
+    slides[current].hidden = true;
+    dots[current].classList.remove('is-active');
+    dots[current].setAttribute('aria-selected', 'false');
+
+    current = (index + slides.length) % slides.length;
+
+    slides[current].classList.add('is-active');
+    slides[current].hidden = false;
+    slides[current].style.animation = 'none';
+    slides[current].offsetHeight; // trigger reflow
+    slides[current].style.animation = '';
+    dots[current].classList.add('is-active');
+    dots[current].setAttribute('aria-selected', 'true');
+  };
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => goTo(i));
+  });
+}
