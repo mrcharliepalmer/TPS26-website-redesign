@@ -64,7 +64,7 @@ who knows the industry inside out.
 | Passes     | passes.html      | COMPLETE    | Yes       | Redesigned pricing cards with tiered hierarchy |
 | Programme  | programme.html   | COMPLETE    | Yes       | 2025 Highlights + Coming Soon CTA         |
 | About      | about.html       | COMPLETE    | Yes       | First page with dynamic layout techniques |
-| Partners   | partners.html    | COMPLETE    | No        | Needs BUILD-LOG entry                     |
+| Partners   | partners.html    | COMPLETE    | Yes       | Enriched: carousel, quote carousel, audience breakdown |
 | Visit      | visit.html       | COMPLETE    | No        | Needs BUILD-LOG entry                     |
 | Speakers   | speakers.html    | NOT STARTED | —         |                                           |
 | Creators   | creators.html    | NOT STARTED | —         | Audience sub-page                         |
