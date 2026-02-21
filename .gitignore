@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Backups
+*.backup.html
+*.backup.css
+
+# Retired assets
+BoldBishops Backgrounds/
