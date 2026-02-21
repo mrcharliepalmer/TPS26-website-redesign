@@ -3,6 +3,31 @@
    Shared JavaScript for all pages.
    ============================================================ */
 
+/* --- Urgency bar --- */
+const urgencyBar = document.getElementById('urgency-bar');
+
+if (urgencyBar) {
+  if (sessionStorage.getItem('urgency-dismissed')) {
+    urgencyBar.classList.add('is-hidden');
+  } else {
+    // Set CSS custom property for bar height so header offsets correctly
+    const setBarHeight = () => {
+      document.documentElement.style.setProperty(
+        '--urgency-bar-h',
+        urgencyBar.offsetHeight + 'px'
+      );
+    };
+    setBarHeight();
+    window.addEventListener('resize', setBarHeight, { passive: true });
+
+    urgencyBar.querySelector('.urgency-bar__close').addEventListener('click', () => {
+      urgencyBar.classList.add('is-hidden');
+      sessionStorage.setItem('urgency-dismissed', '1');
+      document.documentElement.style.setProperty('--urgency-bar-h', '0px');
+    });
+  }
+}
+
 /* --- Nav scroll behaviour --- */
 const header = document.getElementById('site-header');
 

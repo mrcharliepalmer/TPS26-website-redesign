@@ -487,6 +487,74 @@ p {
 }
 
 
+/* ---------- URGENCY BAR ---------- */
+.urgency-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--colour-purple);
+  color: var(--colour-white);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 10px 48px 10px 20px;
+  z-index: 101;
+}
+
+.urgency-bar a {
+  color: var(--colour-white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.urgency-bar a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.urgency-bar__close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--colour-white);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  opacity: 0.8;
+  transition: opacity var(--ease);
+}
+
+.urgency-bar__close:hover {
+  opacity: 1;
+}
+
+/* When urgency bar is dismissed (JS class or early html class) */
+.urgency-bar.is-hidden,
+.urgency-dismissed .urgency-bar {
+  display: none;
+}
+
+/* Push fixed header down by urgency bar height */
+html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header {
+  top: var(--urgency-bar-h, 37px);
+}
+
+@media (min-width: 768px) {
+  .urgency-bar {
+    font-size: 0.875rem;
+    padding: 10px 20px;
+  }
+}
+
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -1330,11 +1398,32 @@ p {
   font-weight: 500;
 }
 
+/* ── Pricing grid — asymmetric product showcase ── */
 .pricing__grid {
   display: grid;
   gap: var(--space-md);
+  align-items: stretch;
 }
 
+@media (min-width: 768px) {
+  .pricing__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .pricing__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Asymmetric showcase layout — passes page + homepage */
+  .passes-pricing .pricing__grid,
+  .home-pricing .pricing__grid {
+    grid-template-columns: 1.3fr 1fr 1fr 0.8fr;
+  }
+}
+
+/* ── Base card ── */
 .price-card {
   background: transparent;
   border-radius: var(--radius-md);
@@ -1348,38 +1437,16 @@ p {
 }
 
 .price-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.15);
 }
 
-.price-card--featured {
-  border: 2px solid var(--colour-orange);
-}
-
-.price-card__badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--colour-orange);
-  color: var(--colour-charcoal);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 4px 16px;
-  border-radius: 20px;
-  z-index: 1;
-}
-
-/* ── Top half: white ── */
-.price-card__top {
+/* Homepage fallback — unmodified cards on purple bg */
+.price-card:not([class*="price-card--"]) .price-card__top {
   background: var(--colour-white);
-  padding: var(--space-lg) var(--space-md) var(--space-md);
-  position: relative;
 }
 
-.price-card__top::before {
+.price-card:not([class*="price-card--"]) .price-card__top::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1390,15 +1457,111 @@ p {
   opacity: 0.3;
 }
 
+.price-card:not([class*="price-card--"]) .price-card__name {
+  color: #999;
+}
+
+.price-card:not([class*="price-card--"]) .price-card__price {
+  color: var(--colour-purple);
+}
+
+.price-card:not([class*="price-card--"]) .price-card__note {
+  color: #777;
+}
+
+.price-card:not([class*="price-card--"]) .price-card__body {
+  background: rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.price-card:not([class*="price-card--"]) .price-card__features li {
+  color: rgba(255,255,255,0.8);
+}
+
+.price-card:not([class*="price-card--"]) .price-card__features li::before {
+  color: var(--colour-cyan);
+}
+
+.price-card:not([class*="price-card--"]) .price-card__sold-out {
+  color: var(--colour-coral);
+}
+
+/* Homepage --featured variant (Gold 2-Day on homepage) */
+.price-card--featured {
+  /* No border — kept visually consistent with --popular */
+}
+
+.price-card--featured .price-card__top {
+  background: var(--colour-white);
+}
+
 .price-card--featured .price-card__top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
   background: var(--colour-orange);
   opacity: 1;
 }
 
-/* ── Bottom half: glass ── */
-.price-card__body {
+.price-card--featured .price-card__badge {
+  background: var(--colour-orange);
+  color: var(--colour-charcoal);
+  top: -12px;
+}
+
+.price-card--featured .price-card__name {
+  color: #999;
+}
+
+.price-card--featured .price-card__price {
+  color: var(--colour-purple);
+}
+
+.price-card--featured .price-card__note {
+  color: #777;
+}
+
+.price-card--featured .price-card__body {
   background: rgba(255,255,255,0.08);
   border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.price-card--featured .price-card__features li {
+  color: rgba(255,255,255,0.8);
+}
+
+.price-card--featured .price-card__features li::before {
+  color: var(--colour-cyan);
+}
+
+/* ── Badge (shared) ── */
+.price-card__badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 18px;
+  border-radius: 20px;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* ── Top half ── */
+.price-card__top {
+  padding: var(--space-lg) var(--space-md) var(--space-md);
+  position: relative;
+}
+
+/* ── Bottom half ── */
+.price-card__body {
   padding: var(--space-md);
   display: flex;
   flex-direction: column;
@@ -1413,7 +1576,6 @@ p {
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 700;
-  color: #999;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--space-sm);
@@ -1424,7 +1586,6 @@ p {
   font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 700;
-  color: var(--colour-purple);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -1432,12 +1593,10 @@ p {
 .price-card__price span {
   font-size: 1rem;
   font-weight: 500;
-  color: #999;
 }
 
 .price-card__note {
   font-size: 0.85rem;
-  color: #777;
   margin-top: 6px;
 }
 
@@ -1449,7 +1608,6 @@ p {
 
 .price-card__features li {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.8);
   padding: 8px 0;
   padding-left: var(--space-md);
   position: relative;
@@ -1459,18 +1617,24 @@ p {
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--colour-cyan);
   font-weight: 700;
 }
 
 .price-card__sold-out {
-  font-weight: 700;
-  color: var(--colour-coral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 0.9rem;
+  line-height: 1;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.15);
   margin-top: auto;
-  padding-top: var(--space-sm);
 }
 
 .pricing__footer {
@@ -1480,16 +1644,226 @@ p {
   font-size: 0.85rem;
 }
 
-@media (min-width: 768px) {
-  .pricing__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+/* ─────────────────────────────────────────────────
+   PLATINUM — dark premium hero card
+   ───────────────────────────────────────────────── */
+.price-card--platinum {
+  background: linear-gradient(170deg, #3a3a3a 0%, var(--colour-charcoal) 40%, #2a2a2a 100%);
+  box-shadow:
+    0 16px 48px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-@media (min-width: 1025px) {
-  .pricing__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.price-card--platinum:hover {
+  box-shadow:
+    0 24px 64px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.price-card--platinum .price-card__badge {
+  background: linear-gradient(135deg, var(--colour-cyan), var(--colour-purple));
+  color: var(--colour-white);
+}
+
+.price-card--platinum .price-card__top {
+  background: transparent;
+  padding-top: calc(var(--space-lg) + var(--space-md));
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.price-card--platinum .price-card__name {
+  color: var(--colour-cyan);
+}
+
+.price-card--platinum .price-card__price {
+  color: var(--colour-white);
+}
+
+.price-card--platinum .price-card__note {
+  color: rgba(255,255,255,0.5);
+}
+
+.price-card--platinum .price-card__body {
+  background: transparent;
+}
+
+.price-card--platinum .price-card__features li {
+  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.price-card--platinum .price-card__features li:last-child {
+  border-bottom: none;
+}
+
+.price-card--platinum .price-card__features li::before {
+  color: var(--colour-cyan);
+}
+
+
+/* ─────────────────────────────────────────────────
+   GOLD 2-DAY — Most Popular, charcoal with purple accent
+   ───────────────────────────────────────────────── */
+.price-card--popular {
+  background: var(--colour-charcoal);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.price-card--popular:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+
+.price-card--popular .price-card__badge {
+  background: var(--colour-orange);
+  color: var(--colour-charcoal);
+}
+
+.price-card--popular .price-card__top {
+  background: transparent;
+  padding-top: calc(var(--space-lg) + var(--space-md));
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.price-card--popular .price-card__name {
+  color: var(--colour-orange);
+}
+
+.price-card--popular .price-card__price {
+  color: var(--colour-white);
+}
+
+.price-card--popular .price-card__note {
+  color: rgba(255,255,255,0.5);
+}
+
+.price-card--popular .price-card__body {
+  background: transparent;
+}
+
+.price-card--popular .price-card__features li {
+  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.price-card--popular .price-card__features li:last-child {
+  border-bottom: none;
+}
+
+.price-card--popular .price-card__features li::before {
+  color: var(--colour-orange);
+}
+
+
+/* ─────────────────────────────────────────────────
+   GOLD 1-DAY — charcoal baseline, quieter treatment
+   ───────────────────────────────────────────────── */
+.price-card--gold {
+  background: var(--colour-charcoal);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.price-card--gold:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.price-card--gold .price-card__top {
+  background: transparent;
+  padding-top: calc(var(--space-lg) + var(--space-md));
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.price-card--gold .price-card__name {
+  color: var(--colour-orange);
+}
+
+.price-card--gold .price-card__price {
+  color: var(--colour-white);
+}
+
+.price-card--gold .price-card__note {
+  color: rgba(255,255,255,0.5);
+}
+
+.price-card--gold .price-card__body {
+  background: transparent;
+}
+
+.price-card--gold .price-card__features li {
+  color: rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.price-card--gold .price-card__features li:last-child {
+  border-bottom: none;
+}
+
+.price-card--gold .price-card__features li::before {
+  color: var(--colour-orange);
+  opacity: 0.6;
+}
+
+
+/* ─────────────────────────────────────────────────
+   SILVER — Sold Out, visually retired
+   ───────────────────────────────────────────────── */
+.price-card--soldout {
+  background: rgba(255,255,255,0.04);
+  box-shadow: none;
+  opacity: 0.5;
+  pointer-events: none;
+  border: 1px dashed rgba(255,255,255,0.15);
+}
+
+.price-card--soldout:hover {
+  transform: none;
+}
+
+.price-card--soldout .price-card__top {
+  background: transparent;
+  padding-top: calc(var(--space-lg) + var(--space-md));
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.price-card--soldout .price-card__name {
+  color: rgba(255,255,255,0.4);
+}
+
+.price-card--soldout .price-card__price {
+  color: rgba(255,255,255,0.35);
+}
+
+.price-card--soldout .price-card__price s {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.price-card--soldout .price-card__note {
+  color: rgba(255,255,255,0.3);
+}
+
+.price-card--soldout .price-card__body {
+  background: transparent;
+}
+
+.price-card--soldout .price-card__features li {
+  color: rgba(255,255,255,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.price-card--soldout .price-card__features li:last-child {
+  border-bottom: none;
+}
+
+.price-card--soldout .price-card__features li::before {
+  color: rgba(255,255,255,0.25);
+}
+
+.price-card--soldout .price-card__sold-out {
+  color: rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,0.1);
+  opacity: 1;
 }
 
 

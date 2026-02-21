@@ -30,6 +30,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <script>if(sessionStorage.getItem('urgency-dismissed'))document.documentElement.classList.add('urgency-dismissed');</script>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -93,6 +94,12 @@
   <!-- Skip to content -->
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Urgency bar -->
+  <div class="urgency-bar" id="urgency-bar" role="status">
+    95% of exhibition space for 2026 is now sold. <a href="partners.html">Enquire Now &rarr;</a>
+    <button class="urgency-bar__close" aria-label="Dismiss notice">&times;</button>
+  </div>
+
   <!-- ============ HEADER / NAV ============ -->
   <header class="site-header" id="site-header">
     <nav class="nav" aria-label="Primary navigation">
@@ -109,7 +116,7 @@
         <li><a href="visit.html">Visit</a></li>
       </ul>
 
-      <a href="#passes" class="btn btn--primary btn--sm nav__cta">Book Your Pass</a>
+      <a href="#passes" class="btn btn--primary btn--sm nav__cta">Choose Your Pass</a>
 
       <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span>
@@ -126,7 +133,7 @@
     <a href="speakers.html">Speakers</a>
     <a href="partners.html">Partners</a>
     <a href="visit.html">Visit</a>
-    <a href="#passes" class="btn btn--primary">Book Your Pass</a>
+    <a href="#passes" class="btn btn--primary">Choose Your Pass</a>
   </div>
 
 
@@ -175,7 +182,51 @@
     </section>
 
 
-    <!-- ============ 2. PRICING CARDS ============ -->
+    <!-- ============ 2. PLATINUM SPOTLIGHT ============ -->
+    <section class="passes-spotlight section-padding" aria-label="Platinum pass">
+      <div class="container">
+        <div class="passes-spotlight__inner">
+          <div class="passes-spotlight__content reveal">
+            <p class="passes-spotlight__tag">Platinum Pass · £350</p>
+            <h2>The Ultimate Festival Experience</h2>
+            <p>Reloaded for 2026 with even more perks and incredible value. The Platinum Pass gives you everything — and then some.</p>
+            <ul class="passes-spotlight__perks">
+              <li>
+                <strong>Fast-track entry</strong>
+                <span>Skip the queues at all main theatres</span>
+              </li>
+              <li>
+                <strong>Leaders in Podcasting Breakfast</strong>
+                <span>An exclusive morning gathering at The Fox on The Green, steps from the venue</span>
+              </li>
+              <li>
+                <strong>The Official Party</strong>
+                <span>Wednesday evening at The Standard Hotel with DJs and welcome drinks</span>
+              </li>
+              <li>
+                <strong>Premium seating</strong>
+                <span>Reserved seats in all main theatres</span>
+              </li>
+              <li>
+                <strong>Exclusive networking</strong>
+                <span>PodHouse Receptions and invitation-only gatherings</span>
+              </li>
+              <li>
+                <strong>On-demand content</strong>
+                <span>Access recorded sessions and highlights after the show</span>
+              </li>
+            </ul>
+            <a href="#passes" class="btn btn--primary btn--lg">Book Platinum — £350</a>
+          </div>
+          <div class="passes-spotlight__image reveal">
+            <img src="Photos/Famous faces/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD3_0387-Enhanced-NR_1920x1280.jpg" alt="Speakers on stage at The Podcast Show" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ 3. PRICING CARDS ============ -->
     <section class="passes-pricing section-padding" id="passes" aria-label="Pass pricing">
       <div class="container">
         <div class="section-header section-header--light reveal">
@@ -185,45 +236,29 @@
 
         <div class="pricing__grid">
 
-          <!-- Silver -->
-          <div class="price-card reveal">
+          <!-- Platinum (Hero card) -->
+          <div class="price-card price-card--platinum reveal">
+            <div class="price-card__badge">Reloaded for 2026</div>
             <div class="price-card__top">
-              <div class="price-card__name">Silver Day</div>
-              <div class="price-card__price">£59</div>
-              <div class="price-card__note">One-day access</div>
+              <div class="price-card__name">Platinum</div>
+              <div class="price-card__price">£350</div>
+              <div class="price-card__note">The ultimate experience</div>
             </div>
             <div class="price-card__body">
               <ul class="price-card__features">
-                <li>Access to exhibition floor</li>
-                <li>Selected stage access</li>
-                <li>Networking areas</li>
-                <li>The Hub Bar</li>
+                <li>Everything in Gold 2-Day</li>
+                <li>Fast-track entry to all theatres</li>
+                <li>Leaders in Podcasting Breakfast</li>
+                <li>The Official Party at The Standard</li>
+                <li>Premium seating</li>
+                <li>Exclusive networking events</li>
               </ul>
-              <p class="price-card__sold-out">Sold Out</p>
+              <a href="#passes" class="btn btn--gradient btn--sm">Book Platinum</a>
             </div>
           </div>
 
-          <!-- Gold 1-Day -->
-          <div class="price-card reveal">
-            <div class="price-card__top">
-              <div class="price-card__name">Gold 1-Day</div>
-              <div class="price-card__price">£115</div>
-              <div class="price-card__note">Full access, one day</div>
-            </div>
-            <div class="price-card__body">
-              <ul class="price-card__features">
-                <li>All stages and sessions</li>
-                <li>Creator Village access</li>
-                <li>Exhibition floor</li>
-                <li>Networking areas &amp; Hub Bar</li>
-                <li>On-demand content after the show</li>
-              </ul>
-              <a href="#passes" class="btn btn--primary btn--sm">Book Gold 1-Day</a>
-            </div>
-          </div>
-
-          <!-- Gold 2-Day (Featured) -->
-          <div class="price-card price-card--featured reveal">
+          <!-- Gold 2-Day (Most Popular) -->
+          <div class="price-card price-card--popular reveal">
             <div class="price-card__badge">Most Popular</div>
             <div class="price-card__top">
               <div class="price-card__name">Gold 2-Day</div>
@@ -243,23 +278,40 @@
             </div>
           </div>
 
-          <!-- Platinum -->
-          <div class="price-card reveal">
+          <!-- Gold 1-Day -->
+          <div class="price-card price-card--gold reveal">
             <div class="price-card__top">
-              <div class="price-card__name">Platinum</div>
-              <div class="price-card__price">£350</div>
-              <div class="price-card__note">The ultimate experience</div>
+              <div class="price-card__name">Gold 1-Day</div>
+              <div class="price-card__price">£115</div>
+              <div class="price-card__note">Full access, one day</div>
             </div>
             <div class="price-card__body">
               <ul class="price-card__features">
-                <li>Everything in Gold 2-Day</li>
-                <li>Fast-track entry to all theatres</li>
-                <li>Leaders in Podcasting Breakfast</li>
-                <li>The Official Party at The Standard</li>
-                <li>Premium seating</li>
-                <li>Exclusive networking events</li>
+                <li>All stages and sessions</li>
+                <li>Creator Village access</li>
+                <li>Exhibition floor</li>
+                <li>Networking areas &amp; Hub Bar</li>
+                <li>On-demand content after the show</li>
               </ul>
-              <a href="#passes" class="btn btn--primary btn--sm">Book Platinum</a>
+              <a href="#passes" class="btn btn--urgency btn--sm">Book Gold 1-Day</a>
+            </div>
+          </div>
+
+          <!-- Silver (Sold Out) -->
+          <div class="price-card price-card--soldout reveal">
+            <div class="price-card__top">
+              <div class="price-card__name">Silver Day</div>
+              <div class="price-card__price"><s>£59</s></div>
+              <div class="price-card__note">One-day access</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>Access to exhibition floor</li>
+                <li>Selected stage access</li>
+                <li>Networking areas</li>
+                <li>The Hub Bar</li>
+              </ul>
+              <p class="price-card__sold-out">Sold Out</p>
             </div>
           </div>
 
@@ -272,7 +324,7 @@
     </section>
 
 
-    <!-- ============ 3. COMPARISON TABLE ============ -->
+    <!-- ============ 4. COMPARISON TABLE ============ -->
     <section class="passes-compare section-padding" aria-label="Pass comparison">
       <div class="container">
         <div class="section-header section-header--light reveal">
@@ -385,50 +437,6 @@
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============ 4. PLATINUM SPOTLIGHT ============ -->
-    <section class="passes-spotlight section-padding" aria-label="Platinum pass">
-      <div class="container">
-        <div class="passes-spotlight__inner">
-          <div class="passes-spotlight__content reveal">
-            <p class="passes-spotlight__tag">Platinum Pass · £350</p>
-            <h2>The Ultimate Festival Experience</h2>
-            <p>Reloaded for 2026 with even more perks and incredible value. The Platinum Pass gives you everything — and then some.</p>
-            <ul class="passes-spotlight__perks">
-              <li>
-                <strong>Fast-track entry</strong>
-                <span>Skip the queues at all main theatres</span>
-              </li>
-              <li>
-                <strong>Leaders in Podcasting Breakfast</strong>
-                <span>An exclusive morning gathering at The Fox on The Green, steps from the venue</span>
-              </li>
-              <li>
-                <strong>The Official Party</strong>
-                <span>Wednesday evening at The Standard Hotel with DJs and welcome drinks</span>
-              </li>
-              <li>
-                <strong>Premium seating</strong>
-                <span>Reserved seats in all main theatres</span>
-              </li>
-              <li>
-                <strong>Exclusive networking</strong>
-                <span>PodHouse Receptions and invitation-only gatherings</span>
-              </li>
-              <li>
-                <strong>On-demand content</strong>
-                <span>Access recorded sessions and highlights after the show</span>
-              </li>
-            </ul>
-            <a href="#passes" class="btn btn--primary btn--lg">Book Platinum — £350</a>
-          </div>
-          <div class="passes-spotlight__image reveal">
-            <img src="Photos/Famous faces/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD3_0387-Enhanced-NR_1920x1280.jpg" alt="Speakers on stage at The Podcast Show" loading="lazy">
-          </div>
         </div>
       </div>
     </section>
