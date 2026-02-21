@@ -28,6 +28,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
+  <!-- Leaflet.js (free, no API key) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   <script>if(sessionStorage.getItem('urgency-dismissed'))document.documentElement.classList.add('urgency-dismissed');</script>
@@ -143,7 +146,31 @@
     </section>
 
 
-    <!-- ============ 2. VENUE INTRO (asymmetric split) ============ -->
+    <!-- ============ 2. NEIGHBOURHOOD MAP (Leaflet.js) ============ -->
+    <section class="visit-map section-padding" aria-label="Neighbourhood map">
+      <div class="container">
+
+        <div class="visit-map__header reveal">
+          <h2>The Neighbourhood</h2>
+          <p>The BDC sits in the heart of Islington — one of London's best-connected and most vibrant areas. Everything you need is within walking distance.</p>
+        </div>
+
+        <div class="visit-map__wrap reveal">
+          <div id="visit-map" aria-label="Interactive map of the BDC neighbourhood showing transport, hotels, and restaurants"></div>
+        </div>
+
+        <div class="visit-map__legend">
+          <span class="visit-map__legend-item"><span class="visit-map__dot visit-map__dot--venue"></span> Venue</span>
+          <span class="visit-map__legend-item"><span class="visit-map__dot visit-map__dot--transport"></span> Transport</span>
+          <span class="visit-map__legend-item"><span class="visit-map__dot visit-map__dot--hotel"></span> Hotels</span>
+          <span class="visit-map__legend-item"><span class="visit-map__dot visit-map__dot--restaurant"></span> Restaurants</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ 3. VENUE INTRO (asymmetric split) ============ -->
     <section class="visit-venue section-padding" aria-label="The venue">
       <div class="container">
         <div class="visit-venue__grid reveal">
@@ -168,7 +195,7 @@
     </section>
 
 
-    <!-- ============ 3. KEY INFO BAND (purple, isolated) ============ -->
+    <!-- ============ 4. KEY INFO BAND (purple, isolated) ============ -->
     <section class="visit-info section-padding" aria-label="Key information">
       <div class="container">
 
@@ -204,70 +231,7 @@
     </section>
 
 
-    <!-- ============ 4. FULL-BLEED PHOTO BREAK ============ -->
-    <div class="photo-break" aria-label="Event photography">
-      <img
-        src="Photos/TP25 LUKE DAY 1/Entrance Hall - Registration.jpg"
-        alt="Registration area at The Podcast Show"
-        loading="lazy"
-      >
-    </div>
-
-
-    <!-- ============ 5. GETTING THERE (left-aligned, card grid) ============ -->
-    <section class="visit-travel section-padding" aria-label="Getting there">
-      <div class="container">
-
-        <div class="visit-travel__header reveal">
-          <h2>Getting There</h2>
-          <p>The BDC is one of the best-connected venues in London. Central, walkable, and easy to reach from all major stations and airports.</p>
-        </div>
-
-        <div class="visit-travel__grid">
-
-          <article class="card reveal">
-            <span class="visit-travel__label">By Tube</span>
-            <h3>Angel Station</h3>
-            <p>Northern Line — 5 minute walk. Exit the station, turn left onto Upper Street, and the BDC is on your right.</p>
-          </article>
-
-          <article class="card reveal">
-            <span class="visit-travel__label">By Rail</span>
-            <h3>Highbury &amp; Islington</h3>
-            <p>Overground, Victoria Line, and National Rail services. A 10 minute walk south along Upper Street.</p>
-          </article>
-
-          <article class="card reveal">
-            <span class="visit-travel__label">By Bus</span>
-            <h3>Upper Street Stops</h3>
-            <p>Routes 4, 19, 30, 43, and 271 all stop along Upper Street within walking distance of the venue.</p>
-          </article>
-
-          <article class="card reveal">
-            <span class="visit-travel__label">By Car</span>
-            <h3>Limited Parking</h3>
-            <p>The BDC has no on-site car park. Nearby NCP car parks include Islington and Finsbury Square. We recommend public transport.</p>
-          </article>
-
-          <article class="card reveal">
-            <span class="visit-travel__label">By Air</span>
-            <h3>London Airports</h3>
-            <p>City Airport: 30 mins. Heathrow: 60 mins via Piccadilly Line. Gatwick: 60 mins via Thameslink to King's Cross.</p>
-          </article>
-
-          <article class="card reveal">
-            <span class="visit-travel__label">By Bike</span>
-            <h3>Cycle Hire</h3>
-            <p>Santander Cycles docking stations on Upper Street and surrounding roads. Bike racks available at the BDC entrance.</p>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ============ 6. FULL-BLEED PHOTO BREAK 2 ============ -->
+    <!-- ============ 5. FULL-BLEED PHOTO BREAK ============ -->
     <div class="photo-break" aria-label="Event photography">
       <img
         src="Photos/TP25 LUKE DAY 1/People - Smiling.jpg"
@@ -277,7 +241,7 @@
     </div>
 
 
-    <!-- ============ 7. HOTELS & ACCOMMODATION (canvas, asymmetric) ============ -->
+    <!-- ============ 6. HOTELS & ACCOMMODATION (canvas) ============ -->
     <section class="visit-hotels section-padding" aria-label="Where to stay">
       <div class="container">
 
@@ -314,7 +278,89 @@
     </section>
 
 
-    <!-- ============ 8. ACCESSIBILITY (purple, isolated block) ============ -->
+    <!-- ============ 7. TRAVELLING FROM ABROAD (canvas, charcoal cards) ============ -->
+    <section class="visit-international section-padding" aria-label="Travelling from abroad">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <h2>Travelling From Abroad</h2>
+          <p>53 countries were represented at the last festival. Here's how to get here from wherever you are.</p>
+        </div>
+
+        <div class="visit-international__grid">
+
+          <article class="visit-international__card reveal">
+            <h3>From Europe</h3>
+            <p>Eurostar arrives at St Pancras International — a 10-minute taxi or tube ride to Angel. Direct trains from Paris (2h15), Brussels (1h50), and Amsterdam (3h52). Flights from all major European cities land at Heathrow, Gatwick, Stansted, or Luton.</p>
+          </article>
+
+          <article class="visit-international__card reveal">
+            <h3>From North America</h3>
+            <p>Direct flights to Heathrow from New York, Los Angeles, Toronto, and Chicago. Heathrow to Angel: take the Piccadilly Line to King's Cross, change to the Northern Line — 55 minutes total. City taxis and the Heathrow Express to Paddington are also options.</p>
+          </article>
+
+          <article class="visit-international__card reveal">
+            <h3>From Asia-Pacific</h3>
+            <p>Heathrow handles most long-haul arrivals. London City Airport also serves some routes. Consider arriving a day early to adjust for jet lag. London in late May averages 15–18°C — bring a light layer for the evenings.</p>
+          </article>
+
+          <article class="visit-international__card reveal">
+            <h3>Visa Information</h3>
+            <p>UK visa requirements vary by nationality. EU and EEA citizens do not need a visa but need a valid passport. US, Canadian, and Australian citizens do not need a visa for stays under six months. Check <a href="https://www.gov.uk/check-uk-visa" target="_blank" rel="noopener">gov.uk/check-uk-visa</a> for your country.</p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ 8. ISLINGTON IN MAY (charcoal editorial) ============ -->
+    <section class="visit-islington section-padding" aria-label="Islington in May">
+      <div class="container">
+
+        <div class="visit-islington__intro reveal">
+          <h2>You're Not Just Coming to a Conference. You're Coming to London.</h2>
+          <p>Islington in late May is one of the best places in the world to be. Upper Street is lined with independent restaurants, bars, and cafes. The evenings are long. The neighbourhood has the energy of a place that takes culture seriously. Most delegates extend their trip.</p>
+        </div>
+
+        <div class="visit-islington__grid">
+
+          <article class="visit-islington__card reveal">
+            <svg class="visit-islington__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <h3>Eat</h3>
+            <p>Ottolenghi, Trullo, Bellanger — some of London's best restaurants are within a 5-minute walk of the BDC.</p>
+          </article>
+
+          <article class="visit-islington__card reveal">
+            <svg class="visit-islington__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <h3>Drink</h3>
+            <p>The Almeida, The Canonbury Tavern, The Old Queen's Head — host of TPS creator meetups in 2025.</p>
+          </article>
+
+          <article class="visit-islington__card reveal">
+            <svg class="visit-islington__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <h3>Explore</h3>
+            <p>Camden Market 20 mins, the Barbican 15 mins, the City of London 20 mins. London is yours.</p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ 9. FULL-BLEED PHOTO BREAK 2 ============ -->
+    <div class="photo-break" aria-label="Event photography">
+      <img
+        src="Photos/TP25 LUKE DAY 1/Entrance Hall - Registration.jpg"
+        alt="Registration area at The Podcast Show"
+        loading="lazy"
+      >
+    </div>
+
+
+    <!-- ============ 10. ACCESSIBILITY (purple, isolated block) ============ -->
     <section class="visit-access section-padding" aria-label="Accessibility">
       <div class="container">
 
@@ -346,7 +392,7 @@
     </section>
 
 
-    <!-- ============ 9. FAQ (canvas) ============ -->
+    <!-- ============ 11. FAQ (canvas) ============ -->
     <section class="visit-faq section-padding" aria-label="Frequently asked questions">
       <div class="container">
 
@@ -404,7 +450,7 @@
     </section>
 
 
-    <!-- ============ 10. CTA STRIP ============ -->
+    <!-- ============ 12. CTA STRIP ============ -->
     <section class="visit-cta section-padding" aria-label="Book now">
       <div class="container">
         <div class="cta-strip__inner text-white reveal">
@@ -419,7 +465,7 @@
     </section>
 
 
-    <!-- ============ 11. NEWSLETTER ============ -->
+    <!-- ============ 13. NEWSLETTER ============ -->
     <section class="newsletter newsletter--vibrant section-padding" aria-label="Newsletter signup">
       <div class="container">
         <h2>Stay in the Loop</h2>
@@ -487,7 +533,65 @@
   </footer>
 
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="main.js" defer></script>
+  <script>
+    (function() {
+      var mapEl = document.getElementById('visit-map');
+      if (!mapEl || typeof L === 'undefined') return;
+
+      var map = L.map('visit-map', {
+        scrollWheelZoom: false,
+        attributionControl: true
+      }).setView([51.5362, -0.1022], 15);
+
+      L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }).addTo(map);
+
+      var colours = {
+        venue:      '#551fef',
+        transport:  '#47c9d6',
+        hotel:      '#ffbb00',
+        restaurant: '#ef5959'
+      };
+
+      function icon(colour) {
+        return L.divIcon({
+          className: 'visit-map__marker',
+          html: '<span style="background:' + colour + '"></span>',
+          iconSize: [14, 14],
+          iconAnchor: [7, 7],
+          popupAnchor: [0, -10]
+        });
+      }
+
+      var markers = [
+        { lat: 51.5353, lng: -0.1060, name: 'Business Design Centre', tag: 'Venue',      info: '52 Upper Street, Islington N1 0QH — home of The Podcast Show.',                          colour: colours.venue },
+        { lat: 51.5325, lng: -0.1059, name: 'Angel',                  tag: 'Transport',   info: 'Northern Line. 5-minute walk to the BDC.',                                                colour: colours.transport },
+        { lat: 51.5463, lng: -0.1040, name: 'Highbury & Islington',   tag: 'Transport',   info: 'Victoria Line, Overground & National Rail. 10-minute walk south.',                        colour: colours.transport },
+        { lat: 51.5348, lng: -0.1246, name: 'The Standard, London',   tag: 'Hotel',       info: 'King\'s Cross. 15-minute walk. Host venue for The Official Party.',                       colour: colours.hotel },
+        { lat: 51.5358, lng: -0.1054, name: 'Hilton Islington',       tag: 'Hotel',       info: 'Upper Street. Directly opposite the BDC.',                                                colour: colours.hotel },
+        { lat: 51.5340, lng: -0.1110, name: 'Premier Inn Angel',      tag: 'Hotel',       info: 'Liverpool Road. Budget-friendly, 5 minutes\' walk.',                                      colour: colours.hotel },
+        { lat: 51.5355, lng: -0.1030, name: 'Ottolenghi',             tag: 'Restaurant',  info: '287 Upper St. Modern Mediterranean — a London institution.',                              colour: colours.restaurant },
+        { lat: 51.5465, lng: -0.1010, name: 'Trullo',                 tag: 'Restaurant',  info: '300 St Paul\'s Rd. Seasonal Italian, handmade pasta, charcoal grill.',                    colour: colours.restaurant },
+        { lat: 51.5340, lng: -0.1034, name: 'Bellanger',              tag: 'Restaurant',  info: '9 Islington Green. Grand French brasserie, open early to late.',                          colour: colours.restaurant },
+        { lat: 51.5380, lng: -0.1040, name: 'Smokehouse Islington',   tag: 'Restaurant',  info: 'Canonbury Rd. Craft beer and slow-smoked meats. 3-minute walk.',                         colour: colours.restaurant }
+      ];
+
+      markers.forEach(function(m) {
+        L.marker([m.lat, m.lng], { icon: icon(m.colour) })
+          .addTo(map)
+          .bindPopup(
+            '<strong>' + m.name + '</strong>' +
+            '<span class="visit-map__popup-tag" style="background:' + m.colour + '">' + m.tag + '</span>' +
+            '<br>' + m.info
+          );
+      });
+    })();
+  </script>
 
 </body>
 </html>
