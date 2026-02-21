@@ -1707,7 +1707,8 @@ p {
 }
 
 /* Purple focus on light backgrounds with dark text */
-.prog-features :focus-visible {
+.prog-features :focus-visible,
+.prog-highlights :focus-visible {
   outline-color: var(--colour-purple);
 }
 
@@ -2542,6 +2543,118 @@ p {
 
 
 /* ---------- PROGRAMME PHOTO BREAK ---------- */
+
+
+/* ---------- PROGRAMME 2025 HIGHLIGHTS (filterable session cards) ---------- */
+.prog-highlights {
+  background: transparent;
+  position: relative;
+}
+
+.prog-highlights .section-header--left h2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--colour-purple);
+  margin-bottom: var(--space-sm);
+  border-radius: 2px;
+}
+
+.prog-highlights__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-lg);
+}
+
+.prog-highlights__filter {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 40px;
+  border: 2px solid var(--colour-purple);
+  background: transparent;
+  color: var(--colour-purple);
+  cursor: pointer;
+  transition: background var(--ease), color var(--ease);
+}
+
+.prog-highlights__filter:hover {
+  background: rgba(85, 31, 239, 0.08);
+}
+
+.prog-highlights__filter.active {
+  background: var(--colour-purple);
+  color: var(--colour-white);
+}
+
+.prog-highlights__grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .prog-highlights__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .prog-highlights__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Session highlight card — extends .card */
+.prog-highlight {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prog-highlight:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(85, 31, 239, 0.12);
+}
+
+.prog-highlight__stage {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--colour-purple);
+  background: rgba(85, 31, 239, 0.08);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: var(--space-sm);
+  align-self: flex-start;
+}
+
+.prog-highlight__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--colour-charcoal);
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.prog-highlight__speakers {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--colour-purple);
+  margin-bottom: var(--space-xs);
+}
+
+.prog-highlight__desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.55;
+  flex: 1;
+}
 
 
 /* ---------- PROGRAMME STAGES (canvas bg, left-aligned, photos in cards) ---------- */
