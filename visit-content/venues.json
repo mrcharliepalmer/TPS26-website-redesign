@@ -1,0 +1,298 @@
+{
+  "eat-drink": [
+    {
+      "name": "Ottolenghi",
+      "slug": "ottolenghi",
+      "type": "restaurant",
+      "image": "eat-drink/ottolenghi.jpg",
+      "description": "Ottolenghi Islington is open for breakfast, lunch and dinner, located opposite the Almeida, is a pre-theatre favourite. Reservations are taken for dinner but not during the day. This is both a deli and restaurant, seating about 50 people. Tables are mostly long and communal but there are a handful of tables for two.",
+      "area": "Islington"
+    },
+    {
+      "name": "The Vineyard",
+      "slug": "the-vineyard",
+      "type": "bar-restaurant",
+      "image": "eat-drink/the-vineyard.jpg",
+      "description": "The Vineyard on Upper Street is a vibrant bar and kitchen with one of the best looking gardens in Angel. Stylishly set into an L-shaped room with a large vault ceiling, the exposed bricks speak of the background of the site but the décor is modern and edgy. Boasting a large covered beer garden and gorgeous comfy vintage seating.",
+      "area": "Upper Street, Angel"
+    },
+    {
+      "name": "Meat Liquor N1",
+      "slug": "meat-liquor-n1",
+      "type": "restaurant",
+      "image": "eat-drink/meat-liquor-n1.jpg",
+      "description": "Meat Liquor took over an old Citroën garage bang in the middle of Highbury & Islington and Angel Stations. Lots of outdoor dining space in their Jägermeister garden, as well as a mezzanine for private dining. They are a burgers throw away from the BDC, Arsenal Emirates Stadium and O2 Academy Islington.",
+      "area": "Between Highbury & Islington and Angel"
+    },
+    {
+      "name": "The Camden Head",
+      "slug": "the-camden-head",
+      "type": "pub",
+      "image": "eat-drink/the-camden-head.jpg",
+      "description": "The Camden Head sits in the heart of Islington, tucked away on Camden Passage. It is a grade II listed building with a circular bar, etched glass windows and original mirrors. It is the perfect pub for summer or winter with its stunning original wood interiors and fireplace. It has a warm cosy feel in the winter months, while in the summer the large beer garden gives you a chance to soak up the sun. One of London's best and busiest comedy shows throughout the week. Food service midday to 9pm daily.",
+      "area": "Camden Passage, Islington"
+    },
+    {
+      "name": "The Old Queens Head",
+      "slug": "the-old-queens-head",
+      "type": "pub-venue",
+      "image": "eat-drink/the-old-queens-head.jpg",
+      "description": "The Old Queens Head offers a spectacular setting with its bespoke chandeliers and its 16th Century fireplaces. It is also a live performance venue and plays host to world class bands and DJs. The venue has a Karaoke Room with a dress up box. The kitchen offers a simple and tasty pub menu.",
+      "area": "Islington"
+    },
+    {
+      "name": "The Pig and Butcher",
+      "slug": "the-pig-and-butcher",
+      "type": "pub-restaurant",
+      "image": "eat-drink/the-pig-and-butcher.jpg",
+      "description": "The Pig and Butcher opened its doors in 2012 and has become a bit of an Islington institution. A laid back country style pub with a stunning private dining room and honest cooking. They take meat from the best farms in the UK and have a butcher on site. The menu changes daily depending on what they have hanging in the fridge. In the bar they serve craft beers, wine from family-owned vineyards only, aperitif cocktails and a selection of local hand pulled ales.",
+      "area": "Islington"
+    },
+    {
+      "name": "Tofu Vegan",
+      "slug": "tofu-vegan",
+      "type": "restaurant",
+      "image": "eat-drink/tofu-vegan.webp",
+      "description": "Tofu Vegan offers a completely plant-based menu suitable for vegetarians and vegans, and will also delight those who usually eat meat. Many dishes are made with tofu and mushrooms, or with Asian imitation meats made from bean proteins. Their expert team includes chefs from Sichuan, the Cantonese south of China and the northeastern Dongbei region, so the menu features a range of enticing regional flavours.",
+      "area": "Islington"
+    },
+    {
+      "name": "The Bull Islington",
+      "slug": "the-bull-islington",
+      "type": "pub",
+      "image": "eat-drink/the-bull-islington.webp",
+      "description": "Combining the best in British pub hospitality with individuality, character and quirky charm, The Bull is the perfect setting for a laid-back yet distinctly memorable drinking and dining experience. Whether you're looking for a lazy lunch or post-work get-together, The Bull offers tempting and flavoursome food, an explorative drinks menu and a genuine, welcoming atmosphere.",
+      "area": "Islington"
+    },
+    {
+      "name": "Bellanger",
+      "slug": "bellanger",
+      "type": "brasserie",
+      "image": "eat-drink/bellanger.webp",
+      "description": "A relaxed, all day Café, Bar and Brasserie on Islington Green from restaurateurs Corbin & King, the team behind The Wolseley. With refreshed interiors and an informal, more casual style. Their all-day menu features French brasserie classics such as Coq au Riesling, Confit De Canard and Steak Frites et Salade. Sandwiches, salads, Croques, eggs and Tarte Flambées are offered along with fromage, desserts and glaces.",
+      "area": "Islington Green"
+    },
+    {
+      "name": "Frederick's",
+      "slug": "fredericks",
+      "type": "restaurant",
+      "image": "eat-drink/fredericks.webp",
+      "description": "Frederick's is a relaxed, contemporary restaurant and bar with many private dining options. Serving modern European food with familiar yet focused service and an enviable wine list.",
+      "area": "Islington"
+    },
+    {
+      "name": "The Breakfast Club Angel",
+      "slug": "the-breakfast-club-angel",
+      "type": "restaurant",
+      "image": "eat-drink/the-breakfast-club-angel.jpg",
+      "description": "A bright, vibrant space with splashes of colour everywhere and quirky art lining the walls, it's a warm welcome for hungry Brunchers. For veggies, the Butternut Bubble is a delight. Carnivores can't go wrong with The BC Breakfast Burrito, full to the brim with chorizo, egg, peppers and spicy pepper sauce. For an innovative taste of India, try the Argy-Bhaji.",
+      "area": "Angel"
+    },
+    {
+      "name": "Brother Marcus Angel",
+      "slug": "brother-marcus",
+      "type": "restaurant",
+      "image": "eat-drink/brother-marcus.webp",
+      "description": "Brother Marcus in Angel serves a fantastic mix of British and Mediterranean cuisine which has Londoners practically lining up out the door. Located in Camden Passage, if you're looking for somewhere to do brunch, look no further. Every dish is made with top quality ingredients. The menu offers a range of vegan and vegetarian dishes.",
+      "area": "Camden Passage, Angel"
+    },
+    {
+      "name": "Le Sacré Coeur",
+      "slug": "le-sacre-coeur",
+      "type": "restaurant",
+      "image": "eat-drink/le-sacre-coeur.jpg",
+      "description": "A traditional French bistro tucked away in the heart of Angel, Islington. Their cosy, warm and welcoming quaint bistro is one of the oldest French restaurants in the area and has built up an astounding reputation for authentic, indulgent food. They create an undisturbed and classy environment centred around incredible food and impeccable service.",
+      "area": "Angel, Islington"
+    },
+    {
+      "name": "Masigo",
+      "slug": "masigo",
+      "type": "restaurant",
+      "image": "eat-drink/masigo.webp",
+      "description": "The best Korean restaurant in Angel, Islington. The fried chicken is crunchy yet juicy, a must try. They also offer Korean BBQ and hotpot.",
+      "area": "Angel, Islington"
+    },
+    {
+      "name": "Sticks'n'Sushi",
+      "slug": "sticks-n-sushi",
+      "type": "restaurant",
+      "image": "eat-drink/sticks-n-sushi.jpg",
+      "description": "A sushi restaurant that combines Japanese tradition with Danish flair. The menu features locally sourced vegetables and freshly caught seafood. Find maki, nigiri, small dishes, salads, and desserts. Choose between menus for one, two, several, flexitarians, or vegans. They also offer a wide selection of cocktails, wine, sake, and beer.",
+      "area": "Islington"
+    }
+  ],
+  "things-to-do": [
+    {
+      "name": "Camden Passage",
+      "slug": "camden-passage",
+      "type": "shopping-market",
+      "image": "things-to-do/camden-passage.jpeg",
+      "description": "Camden Passage, Islington is a picturesque car free London street filled with antique, vintage and contemporary shops, outdoor markets, cafes, restaurants and bars.",
+      "area": "Islington"
+    },
+    {
+      "name": "Coal Drops Yard",
+      "slug": "coal-drops-yard",
+      "type": "shopping-dining",
+      "image": "things-to-do/coal-drops-yard.jpeg",
+      "description": "Coal Drops Yard brings something entirely different to London's shopping and dining scene. The cobbled streets and brick arches are home to a wonderful and unexpected mix of independent shops and signature brands from home and abroad. Boutique shopping and dining at its best.",
+      "area": "King's Cross"
+    },
+    {
+      "name": "Sadler's Wells Theatre",
+      "slug": "sadlers-wells-theatre",
+      "type": "theatre",
+      "image": "things-to-do/sadlers-wells-theatre.jpeg",
+      "description": "Sadler's Wells Theatre is a performing arts venue in Angel, Islington, located on Rosebery Avenue. The present-day theatre is the sixth on the site since 1683. It consists of a 1,500-seat main auditorium and the Lilian Baylis Studio. Renowned as one of the world's leading dance venues and also a producing house.",
+      "area": "Angel, Islington"
+    },
+    {
+      "name": "Estorick Collection",
+      "slug": "estorick-collection",
+      "type": "gallery",
+      "image": "things-to-do/estorick-collection.jpeg",
+      "description": "The Estorick Collection of Modern Italian Art opened in London in 1998. A Grade II listed Georgian town house, its six galleries and art library have been fully upgraded. The Collection is known internationally for its core of Futurist works, as well as figurative art and sculpture dating from 1890 to the 1950s.",
+      "area": "Islington"
+    },
+    {
+      "name": "Regent's Canal",
+      "slug": "regents-canal",
+      "type": "outdoor",
+      "image": "things-to-do/regents-canal.jpg",
+      "description": "Visiting the Regent's Canal is like stepping into a hidden world. From the colourful collection of narrowboats at Little Venice it runs through Regent's Park, where it is overlooked by London Zoo's vast aviary. In Camden Town, it passes the craft stalls and quirky clothing shops of the famous market.",
+      "area": "Little Venice to Camden"
+    },
+    {
+      "name": "Almeida Theatre",
+      "slug": "almeida-theatre",
+      "type": "theatre",
+      "image": "things-to-do/almeida-theatre.jpeg",
+      "description": "The Almeida Theatre, opened in 1980, is a 325-seat producing house with an international reputation, located off Upper Street. The theatre produces a diverse range of drama. Successful plays are often transferred to West End Theatres.",
+      "area": "Upper Street, Islington"
+    },
+    {
+      "name": "Culpeper Community Garden",
+      "slug": "culpeper-community-garden",
+      "type": "outdoor",
+      "image": "things-to-do/culpeper-community-garden.jpeg",
+      "description": "A green oasis in the midst of streets, estates and inner city bustle. Culpeper is a beautiful public open space which is both a city park and an environmental community project. Managed by and for local people, it is an award winning project. A perfect place for a picnic or simply for relaxing.",
+      "area": "Islington"
+    },
+    {
+      "name": "Screen on the Green",
+      "slug": "screen-on-the-green",
+      "type": "cinema",
+      "image": "things-to-do/screen-on-the-green.jpeg",
+      "description": "The Screen On The Green is a single screen cinema facing Islington Green in the London Borough of Islington. The current building was opened in 1913 and it is one of the oldest continuously running cinemas in the UK.",
+      "area": "Islington Green"
+    },
+    {
+      "name": "Angel Central",
+      "slug": "angel-central",
+      "type": "shopping",
+      "image": "things-to-do/angel-central.jpeg",
+      "description": "Located off the ever-hip Upper Street, Angel Central Shopping Centre has a vibrant and stylish collection of shops, cafes, restaurants, cinemas and music venues under its roof. Whether you want to watch the latest movies or dine out, Angel Central offers that choice.",
+      "area": "Upper Street, Angel"
+    },
+    {
+      "name": "Spitalfields Market",
+      "slug": "spitalfields-market",
+      "type": "market",
+      "image": "things-to-do/spitalfields-market.jpeg",
+      "description": "There's something for everyone at Spitalfields Market. Every day the market is filled with artisanal foods, unique artwork, handmade goods, contemporary fashion and more. Flea market, street food, art market, cafes, bars, restaurants, stores, and events.",
+      "area": "Spitalfields"
+    },
+    {
+      "name": "Exmouth Market",
+      "slug": "exmouth-market",
+      "type": "market",
+      "image": "things-to-do/exmouth-market.jpeg",
+      "description": "Exmouth Market is a semi-pedestrianised street in Clerkenwell in the London Borough of Islington, with around 32 street food stalls as well as a plethora of vibrant bars and restaurants.",
+      "area": "Clerkenwell"
+    },
+    {
+      "name": "Emirates Stadium",
+      "slug": "emirates-stadium",
+      "type": "sport",
+      "image": "things-to-do/emirates-stadium.jpg",
+      "description": "The Emirates Stadium is a football stadium in Holloway, London, and the home of Arsenal. With a capacity of 60,704 it is the fourth-largest football stadium in England after Wembley Stadium, Old Trafford and Tottenham Hotspur Stadium.",
+      "area": "Holloway"
+    },
+    {
+      "name": "British Museum",
+      "slug": "british-museum",
+      "type": "museum",
+      "image": "things-to-do/british-museum.jpeg",
+      "description": "The British Museum is a public institution dedicated to human history, art and culture located in the Bloomsbury area of London. Its permanent collection of some eight million works is among the largest and most comprehensive in existence.",
+      "area": "Bloomsbury"
+    },
+    {
+      "name": "Little Angel Theatre",
+      "slug": "little-angel-theatre",
+      "type": "theatre",
+      "image": "things-to-do/little-angel-theatre.jpeg",
+      "description": "Little Angel Theatre is a puppet theatre for children and their families based in the London Borough of Islington. The 100-seat theatre, a former Temperance hall, was opened on 24 November 1961.",
+      "area": "Islington"
+    },
+    {
+      "name": "Union Chapel",
+      "slug": "union-chapel",
+      "type": "venue",
+      "image": "things-to-do/union-chapel.jpeg",
+      "description": "Union Chapel is a working church, live entertainment venue and charity drop-in centre in Islington. Built in the late 19th century in the Gothic revival style, the church is Grade I-listed. It is at the north end of Upper Street, near Highbury Fields.",
+      "area": "Upper Street, Islington"
+    }
+  ],
+  "hotels": [
+    {
+      "name": "The Hilton",
+      "slug": "the-hilton",
+      "type": "hotel",
+      "image": "hotels/the-hilton.png",
+      "description": "Hilton London Angel Islington is situated in the heart of Islington yet remains close to central London, striking the perfect locational balance. The hotel is just 5 minutes' walk from Angel tube station and one stop from Kings Cross St. Pancras. Stay steps from the Business Design Centre for The Podcast Show 2026.",
+      "offer": "Exclusive discounted room rate giving all Show delegates up to 18% off all bedrooms and suites.",
+      "dates": "Book from 20 May to 22nd May 2026",
+      "area": "Angel, Islington"
+    },
+    {
+      "name": "The Standard",
+      "slug": "the-standard",
+      "type": "hotel",
+      "image": "hotels/the-standard.jpg",
+      "description": "The Standard is centrally located with the best panoramic views of the London skyline, and just a 5 minute cab ride from the Business Design Centre. Nestled in the heart of London's thriving media district of King's Cross and right next to Eurostar, this will be a networking hub to the Show.",
+      "offer": "Exclusive discounted room rate giving all Show attendees a minimum of 15% off best available flexible rate off arguably the best view of the London skyline.",
+      "dates": "Book from 20 May to 22nd May 2026",
+      "area": "King's Cross"
+    },
+    {
+      "name": "The Gyle",
+      "slug": "the-gyle",
+      "type": "hotel",
+      "image": "hotels/the-gyle.jpg",
+      "description": "The Gyle isn't typical. A cosy, personalised base in Argyle Square, offering comfort, character, style and a unique stay.",
+      "offer": "Exclusive discounted room rate giving all Show attendees up to 12%. Platinum & Gold Pass holders get up to 12% off rooms; discount codes and links will be in your confirmation email.",
+      "dates": "Book from 18th May to 22nd May 2026",
+      "area": "Argyle Square, King's Cross"
+    },
+    {
+      "name": "The California London",
+      "slug": "the-california-london",
+      "type": "hotel",
+      "image": "hotels/the-california-london.png",
+      "description": "The California London isn't typical. A cosy, comfortable base steps from buzzing King's Cross, blending London townhouses with eclectic style.",
+      "offer": "Exclusive discounted room rate giving all Show attendees up to 12%. Platinum & Gold Pass holders get up to 12% off rooms; discount codes and links will be in your confirmation email.",
+      "dates": "Book from 18th May to 22nd May 2026",
+      "area": "King's Cross"
+    },
+    {
+      "name": "The Megaro",
+      "slug": "the-megaro",
+      "type": "hotel",
+      "image": "hotels/the-megaro.jpg",
+      "description": "The Megaro Hotel offers an array of creatively decorated rooms and suites that marry design, fashion and cinematography.",
+      "offer": "Exclusive discounted room rate giving all Show attendees up to 12%. Platinum & Gold Pass holders get up to 12% off rooms; discount codes and links will be in your confirmation email.",
+      "dates": "Book from 18th May to 22nd May 2026",
+      "area": "King's Cross"
+    }
+  ]
+}
