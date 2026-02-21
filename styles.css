@@ -1700,9 +1700,7 @@ p {
 .passes-cta :focus-visible,
 .pricing :focus-visible,
 .passes-info :focus-visible,
-.prog-night :focus-visible,
-.prog-stages :focus-visible,
-.prog-topics :focus-visible {
+.prog-night :focus-visible {
   outline-color: var(--colour-cyan);
 }
 
@@ -1735,52 +1733,6 @@ p {
 
 .photo-break--purple {
   background: var(--colour-purple);
-}
-
-
-/* ---------- PULLQUOTE (oversized quote on canvas) ---------- */
-.pullquote {
-  background: transparent;
-  padding-block: var(--space-xl);
-  text-align: center;
-}
-
-.pullquote__quote {
-  max-width: 800px;
-  margin-inline: auto;
-}
-
-.pullquote__quote p {
-  font-family: var(--font-heading);
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--colour-purple);
-  line-height: 1.15;
-}
-
-.pullquote__quote p::before {
-  content: '\201C';
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 5rem;
-  line-height: 0.6;
-  color: var(--colour-purple);
-  opacity: 0.25;
-  margin-bottom: var(--space-sm);
-}
-
-@media (min-width: 1025px) {
-  .pullquote {
-    padding-block: var(--space-2xl);
-  }
-
-  .pullquote__quote p {
-    font-size: 3.5rem;
-  }
-
-  .pullquote__quote p::before {
-    font-size: 7rem;
-  }
 }
 
 
@@ -2068,42 +2020,6 @@ p {
 
 .cta-strip__inner.text-white p {
   color: rgba(255,255,255,0.85);
-}
-
-
-/* ---------- IMAGE GALLERY / PHOTO STRIP ---------- */
-.photo-strip {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
-  overflow: hidden;
-  background: var(--colour-canvas);
-  padding: 4px;
-}
-
-.photo-strip img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-}
-
-@media (min-width: 768px) {
-  .photo-strip {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .photo-strip img {
-    height: 260px;
-  }
-}
-
-@media (min-width: 1025px) {
-  .photo-strip {
-    grid-template-columns: repeat(6, 1fr);
-  }
-  .photo-strip img {
-    height: 280px;
-  }
 }
 
 
@@ -2654,114 +2570,6 @@ p {
   color: #555;
   line-height: 1.55;
   flex: 1;
-}
-
-
-/* ---------- PROGRAMME STAGES (canvas bg, left-aligned, photos in cards) ---------- */
-.prog-stages {
-  background: transparent;
-  position: relative;
-}
-
-/* Stages header — uses .section-header .section-header--left */
-
-.prog-stages .section-header--left h2::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--colour-purple);
-  margin-bottom: var(--space-sm);
-  border-radius: 2px;
-}
-
-.prog-stages .section-header p {
-  font-weight: 500;
-  color: #555;
-}
-
-.prog-stages__grid {
-  display: grid;
-  gap: var(--space-md);
-}
-
-/* Stage card — uses .card for base styles */
-
-.stage-card__photo {
-  margin: calc(-1 * var(--space-md));
-  margin-bottom: var(--space-sm);
-  overflow: hidden;
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-}
-
-.stage-card__photo img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.stage-card:hover .stage-card__photo img {
-  transform: scale(1.03);
-}
-
-/* Purple card body — overrides .card white bg */
-.stage-card {
-  background: var(--colour-purple);
-  box-shadow: 0 4px 24px rgba(85,31,239,0.25);
-}
-
-.stage-card:hover {
-  box-shadow: 0 8px 32px rgba(85,31,239,0.35);
-}
-
-.stage-card__number {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--colour-cyan);
-  line-height: 1;
-  margin-bottom: var(--space-xs);
-}
-
-.stage-card__name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--colour-white);
-  margin-bottom: var(--space-xs);
-}
-
-.stage-card__desc {
-  color: rgba(255,255,255,0.8);
-  font-size: 0.925rem;
-  flex: 1;
-  margin-bottom: var(--space-sm);
-}
-
-.stage-card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: auto;
-}
-
-.stage-card__tags span {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.12);
-  color: var(--colour-cyan);
-}
-
-@media (min-width: 768px) {
-  .prog-stages__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 

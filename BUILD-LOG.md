@@ -189,14 +189,14 @@ Consult it when building a new page that needs a similar pattern.
 1. Hero — dark photo overlay
 2. Intro — transparent on canvas (asymmetric 55/45 split)
 3. Full-bleed Photo Break 1 — edge-to-edge image
-4. Stages — transparent on canvas (left-aligned, purple cards with photos)
-5. Content Themes — purple (all corners rounded, static 3-col grid, isolated block 1)
+4. 2025 Highlights — transparent on canvas (filterable white session cards)
+5. Content Themes for 2026 — purple (all corners rounded, static 3-col grid, isolated block 1)
 6. Full-bleed Photo Break 2 — edge-to-edge image
 7. Features & Spaces — transparent on canvas (alternating photo/card rows)
 8. Full-bleed Photo Break 3 — edge-to-edge image
 9. By Night — purple (all corners rounded, isolated block 2, photo feature cards)
 10. Full-bleed Photo Break 4 — edge-to-edge image
-11. CTA Strip — transparent on canvas
+11. Coming Soon CTA — transparent on canvas
 12. Newsletter — charcoal (rounded top corners)
 13. Footer — charcoal
 
@@ -237,8 +237,8 @@ Consult it when building a new page that needs a similar pattern.
 **Decisions**
 
 **Context**
-- 2026 line-up not yet announced — page leads with stages and
-  features, not individual sessions or speakers
+- 2026 line-up not yet announced — page uses 2025 session highlights
+  to set expectations, with a "Coming Soon" CTA for the 2026 programme
 - Combines "By Day" and "By Night" into one programme page
 
 **Hero**
@@ -252,20 +252,28 @@ Consult it when building a new page that needs a similar pattern.
 - Left: h2 with purple accent bar, copy, inline stats row (3 stats)
 - Right: event photo (Audience crowd shot, 4:3 ratio, rounded)
 
-**The Stages**
+**2025 Highlights** (replaced The Stages)
 - Canvas bg, left-aligned header with purple accent bar
-- 2-col grid of purple stage cards (overrides .card white bg)
-- Each card: 16:9 event photo at top, cyan stage number, white
-  title, translucent-white description, cyan tags on translucent bg
-- Purple box-shadow (rgba purple). Hover zoom on photos.
+- Framed as "A taste of what to expect" — 2025 sessions setting the
+  bar for 2026
+- 18 session cards across 4 stages: Origin Theatre (5), Creator Stage
+  (5), Brand Works (4), Industry (4)
+- Filterable by stage via pill-style buttons: All Stages, Origin Theatre,
+  Creator Stage, Brand Works, Industry
+- Active filter: purple fill; inactive: purple outline with hover tint
+- Each card: white .card base, purple stage pill label, bold title,
+  purple speaker names, charcoal description. Hover lift + shadow.
+- Responsive grid: 1-col mobile, 2-col tablet, 3-col desktop
+- Filter JS: vanilla, inline at bottom of page. Toggles display on
+  cards by data-stage attribute. Re-adds .visible class for filtered-in
+  cards to ensure reveal animation isn't broken.
 
-**Content Themes**
+**Content Themes for 2026**
 - Purple bg, fully rounded (all corners) — isolated block
 - Static 3-col grid of glass-style cards (1-col mobile, 2-col tablet,
   3-col desktop). Each card: bold white h3 + translucent-white description.
 - 9 themes: AI, Multi-Platform, Revenue, Community, Global, Streaming,
   True Crime, Branded Content, Podcasting as Social Media.
-- Replaces dual-direction marquee — cleaner, more scannable, less dated.
 
 **Features & Spaces**
 - Canvas bg, left-aligned header with purple accent bar
@@ -285,25 +293,27 @@ Consult it when building a new page that needs a similar pattern.
   Dinners) as compact glass cards below. 3-col on desktop.
 - SVG icons removed — photography carries the visual energy instead.
 
-**CTA Strip**
-- Canvas bg, centred. Headline: "Don't Miss Out" — urgency/FOMO driven.
+**Coming Soon CTA** (replaced "Don't Miss Out")
+- Canvas bg, centred. Headline: "2026 Programme Coming Soon"
+- Copy encourages subscribing for updates or booking a pass early
+- Both CTAs: purple Book + coral Partner
 
 **CSS Architecture**
 - Prefix: .prog-*
-- New classes: .prog-intro__grid, .prog-intro__text, .prog-intro__image,
+- New classes (highlights pass): .prog-highlights, .prog-highlights__filters,
+  .prog-highlights__filter, .prog-highlights__grid, .prog-highlight,
+  .prog-highlight__stage, .prog-highlight__title, .prog-highlight__speakers,
+  .prog-highlight__desc
+- Retained: .prog-intro__grid, .prog-intro__text, .prog-intro__image,
   .prog-themes, .prog-themes__grid, .prog-theme,
   .prog-features__row, .prog-features__row--reverse, .prog-features__photo,
-  .prog-features__cards, .prog-feature-card__label, .stage-card__photo,
+  .prog-features__cards, .prog-feature-card__label,
   .night-feature, .night-feature__image, .night-feature__badge,
   .night-feature__body, .night-feature__label, .prog-night__featured
-- Modified: .prog-stages (transparent bg), .stage-card (purple bg,
-  white/cyan text), .prog-themes (static grid, replaces marquee),
-  .prog-features (transparent bg, row layout), .prog-night (purple bg,
-  photo feature cards + compact supporting cards)
-- Removed: .prog-stats (stat band), .prog-topics (dual marquee),
-  .pullquote on programme page, .photo-strip on programme page,
-  .night-card--featured, .night-card__badge, .night-card__icon,
-  @keyframes topics-scroll-left/right
+- Dead CSS removed: .prog-stages, .stage-card* (~102 lines),
+  .pullquote* (~39 lines), .photo-strip* (~30 lines),
+  .prog-topics/:prog-stages focus rules (2 lines). Total ~192 lines.
+- Focus: purple on .prog-highlights (light bg)
 
 ---
 
