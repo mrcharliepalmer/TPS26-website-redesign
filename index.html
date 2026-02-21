@@ -30,6 +30,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <script>if(sessionStorage.getItem('urgency-dismissed'))document.documentElement.classList.add('urgency-dismissed');</script>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -91,6 +92,12 @@
 
   <!-- Skip to content -->
   <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Urgency bar -->
+  <div class="urgency-bar" id="urgency-bar" role="status">
+    95% of exhibition space for 2026 is now sold. <a href="partners.html">Enquire Now &rarr;</a>
+    <button class="urgency-bar__close" aria-label="Dismiss notice">&times;</button>
+  </div>
 
   <!-- ============ HEADER / NAV ============ -->
   <header class="site-header" id="site-header">
@@ -519,7 +526,7 @@
 
 
     <!-- ============ 9. PRICING ============ -->
-    <section class="pricing section-padding" aria-label="Pricing">
+    <section class="pricing home-pricing section-padding" aria-label="Pricing">
       <div class="container">
         <div class="section-header section-header--light reveal">
           <h2>Book Your Pass</h2>
@@ -548,25 +555,50 @@
 
         <div class="pricing__grid">
 
-          <!-- Silver -->
-          <div class="price-card reveal">
+          <!-- Platinum (Hero card) -->
+          <div class="price-card price-card--platinum reveal">
+            <div class="price-card__badge">Reloaded for 2026</div>
             <div class="price-card__top">
-              <div class="price-card__name">Silver Day</div>
-              <div class="price-card__price">£59</div>
-              <div class="price-card__note">One-day access</div>
+              <div class="price-card__name">Platinum</div>
+              <div class="price-card__price">£350</div>
+              <div class="price-card__note">The ultimate experience</div>
             </div>
             <div class="price-card__body">
               <ul class="price-card__features">
-                <li>Access to exhibition floor</li>
-                <li>Selected stage access</li>
-                <li>Networking areas</li>
+                <li>Everything in Gold 2-Day</li>
+                <li>Fast-track entry to all theatres</li>
+                <li>Leaders in Podcasting Breakfast</li>
+                <li>The Official Party at The Standard</li>
+                <li>Premium seating</li>
+                <li>Exclusive networking events</li>
               </ul>
-              <p class="price-card__sold-out">Sold Out</p>
+              <a href="passes.html" class="btn btn--gradient btn--sm">Book Platinum</a>
+            </div>
+          </div>
+
+          <!-- Gold 2-Day (Most Popular) -->
+          <div class="price-card price-card--popular reveal">
+            <div class="price-card__badge">Most Popular</div>
+            <div class="price-card__top">
+              <div class="price-card__name">Gold 2-Day</div>
+              <div class="price-card__price">£205</div>
+              <div class="price-card__note">Full access, both days</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>All stages and sessions — both days</li>
+                <li>Creator Village access</li>
+                <li>Full networking programme</li>
+                <li>Exhibition floor — both days</li>
+                <li>On-demand content after the show</li>
+                <li>Save £25 vs two 1-Day passes</li>
+              </ul>
+              <a href="passes.html" class="btn btn--urgency btn--sm">Book Gold 2-Day</a>
             </div>
           </div>
 
           <!-- Gold 1-Day -->
-          <div class="price-card reveal">
+          <div class="price-card price-card--gold reveal">
             <div class="price-card__top">
               <div class="price-card__name">Gold 1-Day</div>
               <div class="price-card__price">£115</div>
@@ -576,47 +608,29 @@
               <ul class="price-card__features">
                 <li>All stages and sessions</li>
                 <li>Creator Village access</li>
-                <li>Networking areas</li>
                 <li>Exhibition floor</li>
+                <li>Networking areas &amp; Hub Bar</li>
+                <li>On-demand content after the show</li>
               </ul>
-              <a href="passes.html" class="btn btn--primary btn--sm">Book Now</a>
+              <a href="passes.html" class="btn btn--urgency btn--sm">Book Gold 1-Day</a>
             </div>
           </div>
 
-          <!-- Gold 2-Day (Featured) -->
-          <div class="price-card price-card--featured reveal">
-            <div class="price-card__badge">Most Popular</div>
+          <!-- Silver (Sold Out) -->
+          <div class="price-card price-card--soldout reveal">
             <div class="price-card__top">
-              <div class="price-card__name">Gold 2-Day</div>
-              <div class="price-card__price">£205</div>
-              <div class="price-card__note">Full access, both days</div>
+              <div class="price-card__name">Silver Day</div>
+              <div class="price-card__price"><s>£59</s></div>
+              <div class="price-card__note">One-day access</div>
             </div>
             <div class="price-card__body">
               <ul class="price-card__features">
-                <li>All stages and sessions</li>
-                <li>Creator Village access</li>
-                <li>Full networking programme</li>
-                <li>Exhibition floor — both days</li>
+                <li>Access to exhibition floor</li>
+                <li>Selected stage access</li>
+                <li>Networking areas</li>
+                <li>The Hub Bar</li>
               </ul>
-              <a href="passes.html" class="btn btn--urgency btn--sm">Book Now</a>
-            </div>
-          </div>
-
-          <!-- Platinum -->
-          <div class="price-card reveal">
-            <div class="price-card__top">
-              <div class="price-card__name">Platinum</div>
-              <div class="price-card__price">£350</div>
-              <div class="price-card__note">The ultimate experience</div>
-            </div>
-            <div class="price-card__body">
-              <ul class="price-card__features">
-                <li>Everything in Gold 2-Day</li>
-                <li>Fast-track entry to theatres</li>
-                <li>Exclusive networking events</li>
-                <li>Premium seating</li>
-              </ul>
-              <a href="passes.html" class="btn btn--primary btn--sm">Book Now</a>
+              <p class="price-card__sold-out">Sold Out</p>
             </div>
           </div>
 

@@ -5,6 +5,38 @@ Consult it when building a new page that needs a similar pattern.
 
 ---
 
+## Global Components
+
+### Urgency Bar
+
+Present on every page. Fixed bar above the nav promoting exhibition
+space scarcity — serves conversion goal #2 (partnership enquiries).
+
+**Implementation**
+- HTML: `<div class="urgency-bar" id="urgency-bar" role="status">`
+  placed between skip-link and `<header>` on every page
+- Copy: "95% of exhibition space for 2026 is now sold. Enquire Now →"
+  with link to partners.html
+- Dismissible × button (`.urgency-bar__close`)
+- Inline `<script>` in `<head>` (after styles.css) checks
+  `sessionStorage('urgency-dismissed')` and adds `.urgency-dismissed`
+  to `<html>` before paint — prevents flash on returning pages
+- main.js: measures bar height → sets `--urgency-bar-h` CSS custom
+  property → header `top` offset via `body:has()` selector.
+  On dismiss: sets `sessionStorage`, hides bar, resets offset.
+
+**Styling**
+- Purple bg (`--colour-purple`), white text, z-index 101
+- Header pushed down via `html:not(.urgency-dismissed)
+  body:has(.urgency-bar:not(.is-hidden)) .site-header { top: var(--urgency-bar-h) }`
+- Mobile: 13px text, extra right padding for × button
+- Desktop (768px+): 14px text, centred padding
+
+**New page checklist item**: copy the urgency bar `<div>` and the
+inline `<head>` script from any existing page.
+
+---
+
 ## Homepage (index.html)
 
 ### Colour Rhythm
@@ -140,11 +172,52 @@ Consult it when building a new page that needs a similar pattern.
   "Partner With Us" (coral, links to partners.html)
 - Nav CTA links to #passes (anchor scroll) to avoid self-link reload
 
-**Pricing Cards**
-- 4-card structure with expanded feature lists (5-6 items)
+**Pricing Cards (redesigned — product showcase)**
+- 4-card structure reordered: Platinum → Gold 2-Day → Gold 1-Day → Silver
+- Asymmetric grid on desktop: `1.3fr 1fr 1fr 0.8fr` — Platinum widest,
+  Silver narrowest. `align-items: stretch` keeps heights equal.
+- All active cards share a charcoal background family. Hierarchy created
+  through accent colours, shadow weight, and surface treatment — not
+  different background colours.
 - Flex columns with features flex: 1 — pushes buttons to same baseline
-- Solid purple bg, rounded top corners, white split cards
+- All cards use matching `padding-top: calc(--space-lg + --space-md)`
+  so tier names, prices, and notes align horizontally across the row
+- Feature lists have subtle divider lines (`border-bottom`) on all tiers
+- Badges share identical sizing from `.price-card__badge` base rule —
+  only colour differs per variant
 - #book hrefs are placeholders — swap for real Lup booking URL
+
+**Platinum** (`.price-card--platinum`)
+- Gradient charcoal background (`170deg, #3a3a3a → --colour-charcoal → #2a2a2a`)
+- Heavy shadow (16→24px hover) + inset top-edge glow
+- Cyan accent system: name label, checkmarks, badge gradient (cyan→purple)
+- Feature list divider lines between items
+- "Reloaded for 2026" gradient badge
+- CTA: `btn--gradient` (coral→pink→purple)
+
+**Gold 2-Day** (`.price-card--popular`)
+- Flat charcoal background
+- Orange/gold accent system: 4px left border, "Most Popular" badge,
+  name label, checkmarks — all `--colour-orange`
+- Medium shadow (8→16px hover)
+- CTA: `btn--urgency` (orange)
+
+**Gold 1-Day** (`.price-card--gold`)
+- Flat charcoal background (same as Gold 2-Day)
+- Orange accent system shared with Gold 2-Day: name label in
+  `--colour-orange`, checkmarks in orange at 60% opacity (slightly
+  quieter than 2-Day)
+- Lighter shadow (4→8px hover)
+- CTA: `btn--urgency` (orange, matching Gold 2-Day)
+
+**Silver — Sold Out** (`.price-card--soldout`)
+- Translucent background, dashed border, 50% opacity, `pointer-events: none`
+- Price struck through with `<s>` tag
+- No CTA button — replaced with "Sold Out" label styled to match
+  button sizing/placement (same font-size, padding, width, border-radius)
+  but in muted grey with subtle border. Blends into the retired card
+  rather than drawing attention.
+- Communicates scarcity without competing for clicks
 
 **Comparison Table**
 - Full feature-by-feature table, 4 tiers
@@ -172,14 +245,21 @@ Consult it when building a new page that needs a similar pattern.
 
 **CSS Architecture**
 - Prefix: .passes-*
-- New classes: .passes-hero, .passes-pricing, .passes-compare,
-  .passes-spotlight, .passes-info, .passes-faq, .passes-cta
-- price-card now flex column globally (affects homepage too)
+- Section classes: .passes-pricing, .passes-compare, .passes-spotlight,
+  .passes-info, .passes-faq, .passes-cta
+- Card modifier classes: .price-card--platinum, .price-card--popular,
+  .price-card--gold, .price-card--soldout
+- Homepage backward compat: unmodified cards use `:not([class*="price-card--"])`
+  fallback styles; `--featured` variant preserved for homepage Gold 2-Day
+- Asymmetric grid scoped to `.passes-pricing .pricing__grid` — homepage
+  grid keeps `repeat(4, 1fr)`
 
 **Reusable Patterns**
 - Compact 60vh photo hero works well for all inner pages
 - FAQ accordion (.passes-faq) — abstract to .faq-accordion for faq.html
 - Glass-card info grid (.passes-info__card) — reusable on purple bgs
+- Price card accent system pattern (modifier class → accent colour for
+  name, checkmarks, badge, border) — reusable if new tiers are added
 
 ---
 

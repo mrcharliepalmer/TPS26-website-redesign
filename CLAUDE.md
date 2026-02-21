@@ -24,6 +24,14 @@ two goals or be cut.
 - Brands & Media: advertising opportunities, meeting agencies
 - Platform & Tech: showcasing innovation, accessing decision-makers
 
+## Tone of Voice
+Professional informal. Write like a knowledgeable friend, not a
+corporate brochure. Confident and direct — no hedging, no filler
+phrases. Warm but not gushing. Never colloquial or slangy.
+Contractions are fine. Exclamation marks are not. The goal is to make
+the reader feel like they're getting a straight answer from someone
+who knows the industry inside out.
+
 ## Design Direction
 - Cannot feel like a complete departure from the current brand
 - Must feel cleaner, bolder, and more immediately navigable
@@ -48,11 +56,22 @@ two goals or be cut.
 3. Homepage dynamic layout pass — COMPLETE (Phase 3 refinement)
 4. Inner pages — IN PROGRESS
 
-Build order: ~~passes~~ → ~~programme~~ → partners → speakers → creators
-→ brands → visit → ~~about~~ → faq → blog → contact
+### Page Build Status
 
-Programme revisited: Stages section replaced with 2025 Highlights
-(filterable session cards). CTA updated to "Coming Soon" for 2026.
+| Page       | File             | Status      | BUILD-LOG | Notes                                    |
+|------------|------------------|-------------|-----------|------------------------------------------|
+| Homepage   | index.html       | COMPLETE    | Yes       | Phase 3 dynamic layout pass done         |
+| Passes     | passes.html      | COMPLETE    | Yes       | Redesigned pricing cards with tiered hierarchy |
+| Programme  | programme.html   | COMPLETE    | Yes       | 2025 Highlights + Coming Soon CTA         |
+| About      | about.html       | COMPLETE    | Yes       | First page with dynamic layout techniques |
+| Partners   | partners.html    | COMPLETE    | No        | Needs BUILD-LOG entry                     |
+| Visit      | visit.html       | COMPLETE    | No        | Needs BUILD-LOG entry                     |
+| Speakers   | speakers.html    | NOT STARTED | —         |                                           |
+| Creators   | creators.html    | NOT STARTED | —         | Audience sub-page                         |
+| Brands     | brands.html      | NOT STARTED | —         | Audience sub-page                         |
+| FAQ        | faq.html         | NOT STARTED | —         | Reuse accordion pattern from passes page  |
+| Blog       | blog.html        | NOT STARTED | —         | Editorial hub, 3-4 seed articles          |
+| Contact    | contact.html     | NOT STARTED | —         |                                           |
 
 ## Key Build Decisions
 
@@ -63,6 +82,18 @@ For detailed per-page decisions, see BUILD-LOG.md.
 - Hero headline uses title case, not uppercase (.hero__title overrides
   the base h1 text-transform: uppercase)
 - Venue: "BDC" in short-form, "Business Design Centre" in footer/structured data
+
+### Urgency Bar
+- Persistent fixed bar above the nav on every page
+- Purple bg, white text, centred copy: "95% of exhibition space for
+  2026 is now sold. Enquire Now →" linking to partners.html
+- Dismissible (×) — preference stored in `sessionStorage` so it
+  doesn't reappear mid-session
+- Inline `<script>` in `<head>` adds `.urgency-dismissed` to `<html>`
+  before paint to prevent flash on dismissed pages
+- `--urgency-bar-h` CSS custom property set by JS — offsets the
+  fixed header `top` via `body:has()` selector
+- CSS class: `.urgency-bar`, JS in main.js
 
 ### Navigation
 - Official TPS logo PNGs (in /TPS Logos/), not text wordmark
@@ -96,8 +127,36 @@ For detailed per-page decisions, see BUILD-LOG.md.
 - Partner logos: Logo Stack _ Version 2_29th Jan.png (root)
 - /BoldBishops Backgrounds/ — exist but no longer referenced
 
+### Global CSS Fixes
+- `html { scrollbar-gutter: stable }` — prevents hero centering
+  offset caused by scrollbar appearing/disappearing
+- `p { max-width: 68ch; margin-inline: auto }` — centres the
+  constrained paragraph block within centred parents
+
+### Pricing Card System (passes page)
+- Charcoal card family with tiered hierarchy via accent colours + shadow
+- Order: Platinum → Gold 2-Day → Gold 1-Day → Silver
+- Asymmetric grid: `1.3fr 1fr 1fr 0.8fr` (passes page only)
+- Platinum: gradient charcoal bg, cyan accents, gradient badge, heavy shadow
+- Gold 2-Day: flat charcoal, orange accents (border/badge/name/ticks),
+  "Most Popular" badge
+- Gold 1-Day: flat charcoal, orange accents at 60% opacity, no badge
+- Silver: translucent, 50% opacity, dashed border, struck-through price,
+  no CTA button — "Sold Out" label styled as muted ghost button
+- All cards share equal height (stretch), matching top padding, feature
+  divider lines, and badge sizing
+- Homepage cards unchanged — uses `:not()` fallback + `--featured` variant
+- Modifier classes: `--platinum`, `--popular`, `--gold`, `--soldout`
+
+### Button Styles
+- `.btn--gradient`: coral→pink→purple. ::before pseudo-element hover.
+- `.btn--ghost-light`: transparent with translucent white border.
+
+### CSS Variables
+- `--colour-canvas: #f7f5f2`
+
 ### Accent Colour Rules (per background type)
-- On charcoal → cyan (or yellow for evening/night sections)
+- On charcoal → cyan (or orange for Gold pass tiers, yellow for evening/night sections)
 - On purple → cyan
 - On canvas/white → purple
 
@@ -154,8 +213,9 @@ canvas before conversion sections (pricing) for funnel logic.
 Homepage order: testimonials → photo break → partners → pricing.
 
 ### When Building a New Page
-1. Copy nav/header/footer from any existing inner page
-2. Add `class="active"` to the matching nav link
+1. Copy urgency bar + nav/header/footer from any existing inner page
+2. Include the inline sessionStorage script in `<head>` after styles.css
+3. Add `class="active"` to the matching nav link
 3. Use `.page-hero` for the hero
 4. Use `.section-header` (correct variant) for every section title
 5. Use `.glass-card` or `.card` — don't create new card types
