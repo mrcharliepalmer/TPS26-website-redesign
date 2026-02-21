@@ -4713,9 +4713,224 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 }
 
 
+/* ---------- VISIT NEIGHBOURHOOD MAP (Leaflet) ---------- */
+.visit-map {
+  background: transparent;
+}
+
+.visit-map__header {
+  margin-bottom: var(--space-lg);
+}
+
+.visit-map__header h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.visit-map__header h2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--colour-purple);
+  margin-bottom: var(--space-sm);
+  border-radius: 2px;
+}
+
+.visit-map__header p {
+  color: #555;
+}
+
+.visit-map__wrap {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+}
+
+#visit-map {
+  height: 320px;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  #visit-map {
+    height: 480px;
+  }
+}
+
+.visit-map__marker span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--colour-white);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.visit-map__popup-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--colour-white);
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.visit-map__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+  margin-top: var(--space-md);
+  justify-content: center;
+}
+
+.visit-map__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.visit-map__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.visit-map__dot--venue      { background: var(--colour-purple); }
+.visit-map__dot--transport   { background: var(--colour-cyan); }
+.visit-map__dot--hotel       { background: var(--colour-orange); }
+.visit-map__dot--restaurant  { background: var(--colour-coral); }
+
+
+/* ---------- VISIT TRAVELLING FROM ABROAD (canvas, charcoal cards) ---------- */
+.visit-international {
+  background: transparent;
+}
+
+.visit-international__grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.visit-international__card {
+  background: var(--colour-charcoal);
+  color: var(--colour-white);
+  padding: var(--space-lg) var(--space-md);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.visit-international__card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--colour-cyan);
+  margin-bottom: var(--space-sm);
+}
+
+.visit-international__card p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.925rem;
+  line-height: 1.65;
+}
+
+.visit-international__card a {
+  color: var(--colour-cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.visit-international__card a:hover {
+  color: var(--colour-white);
+}
+
+@media (min-width: 768px) {
+  .visit-international__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .visit-international__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ---------- VISIT ISLINGTON IN MAY (charcoal editorial) ---------- */
+.visit-islington {
+  background: var(--colour-charcoal);
+  border-radius: var(--radius-md);
+}
+
+.visit-islington__intro {
+  text-align: center;
+  max-width: 740px;
+  margin-inline: auto;
+  margin-bottom: var(--space-xl);
+}
+
+.visit-islington__intro h2 {
+  color: var(--colour-white);
+  margin-bottom: var(--space-md);
+}
+
+.visit-islington__intro p {
+  color: rgba(255,255,255,0.8);
+}
+
+.visit-islington__grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.visit-islington__card {
+  background: var(--colour-purple);
+  color: var(--colour-white);
+  padding: var(--space-lg) var(--space-md);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.visit-islington__icon {
+  width: 28px;
+  height: 28px;
+  color: var(--colour-cyan);
+  margin-bottom: var(--space-sm);
+}
+
+.visit-islington__card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+
+.visit-islington__card p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.925rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+  .visit-islington__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
 /* ---------- VISIT PAGE FOCUS STATES ---------- */
 .visit-info :focus-visible,
 .visit-access :focus-visible,
-.visit-cta :focus-visible {
+.visit-cta :focus-visible,
+.visit-islington :focus-visible {
   outline-color: var(--colour-cyan);
 }

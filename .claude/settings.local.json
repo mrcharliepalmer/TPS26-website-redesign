@@ -18,7 +18,9 @@
       "Bash(git pull:*)",
       "Bash(git stash:*)",
       "Bash(grep:*)",
-      "Bash(comm -23 /tmp/css_classes.txt /tmp/html_classes.txt)"
+      "Bash(comm -23 /tmp/css_classes.txt /tmp/html_classes.txt)",
+      "WebFetch(domain:thepodcastshowlondon.com)",
+      "Bash(for dir in \"/Users/belikenige/Documents/Work/Red Slash Studio/The Podcast Show/podcast-show-redesign-v2/Photos\"/*)"
     ]
   }
 }
