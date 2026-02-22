@@ -62,7 +62,7 @@ who knows the industry inside out.
 |------------|------------------|-------------|-----------|------------------------------------------|
 | Homepage   | index.html       | COMPLETE    | Yes       | Phase 3 dynamic layout pass done         |
 | Passes     | passes.html      | COMPLETE    | Yes       | Redesigned pricing cards with tiered hierarchy |
-| Programme  | programme.html   | COMPLETE    | Yes       | 2025 Highlights + Coming Soon CTA         |
+| Programme  | programme.html   | COMPLETE    | Yes       | Featured Sessions + Browse All Sessions wall + Coming Soon CTA |
 | About      | about.html       | COMPLETE    | Yes       | First page with dynamic layout techniques |
 | Partners   | partners.html    | COMPLETE    | Yes       | Enriched: carousel, quote carousel, audience breakdown |
 | Visit      | visit.html       | COMPLETE    | No        | Needs BUILD-LOG entry                     |
@@ -105,20 +105,74 @@ For detailed per-page decisions, see BUILD-LOG.md.
 - Two CTAs: "Book Your Pass" (btn--gradient) + "Partner With Us" (btn--ghost-light)
 
 ### Homepage Layout (Phase 3 + tweaks)
-- 12 sections with 3 isolated purple blocks, 2 full-bleed photo breaks
+- 14 sections with 4 isolated purple blocks, 2 full-bleed photo breaks
 - Prefix: .home-* for homepage-specific components
 - Stats band: purple bg, white numbers, rgba white labels
 - Stats count-up targets: `.home-stats__number[data-target]`
-- Programme stages: horizontal scroll with snap + right-edge fade
-  (was infinite marquee — clone JS removed)
-- Pull quote between programme & speakers removed — they flow directly
-- Speakers: 10× round circular avatars in 5-col grid (was 6× rectangular
-  3:4 portraits). Same visual language as about page advisory panel.
-- Testimonials are static
-- Section order: Hero → Stats → What is TPS → Photo Break → Audience →
-  Programme → Speakers → Testimonials → Photo Break 2 → Partners →
-  Pricing → Newsletter
+- Programme stages: horizontal scroll with snap + right-edge fade,
+  container-aligned padding (20px mobile, 40px tablet, container-edge
+  desktop). Right padding ensures stages 7/8 fully scrollable.
+- Session teaser: "A Taste of What to Expect" — purple bg, glass cards
+  with photos, theme pill filters, crossfade animation. Stage tags use
+  canonical programme colours (not generic white). Reduced top padding
+  since it follows programme section on same purple bg.
+- New for 2026: canvas bg, split layout — big headline left (sticky on
+  desktop) + 4 charcoal feature cards right (2×2 grid on tablet+).
+  Cards: Creator Mix, International Stage (Podimo), TPS Connects,
+  Creator First Stage (Arcade). Each with photo + description.
+- Speakers: 10× round circular avatars in 5-col grid. Centred header.
+- TPS After Hours: charcoal bg, hero-style treatment — full-bleed
+  party photo with dark gradient overlay, centred yellow title +
+  larger body copy + ghost CTA. Replaced previous 4-card grid.
+- Testimonials: static 3-col quote grid. Third quote: BBC World Service.
+- Section order: Hero → Stats → What is TPS → Photo Break → Pricing →
+  Audience → Programme (stages) → Session Teaser → New for 2026 →
+  Speakers → TPS After Hours → Testimonials → Photo Break 2 →
+  Partners → Newsletter
 - See BUILD-LOG.md for full colour rhythm and section-by-section decisions
+
+### Session Teaser System (homepage)
+- `.home-sessions` section on purple bg between Programme stages and
+  New for 2026
+- Title: "A Taste of What to Expect", subhead: "Our 2026 programme
+  will be announced soon. Click a theme below to explore highlights
+  from last year."
+- Shows exactly 3 session cards at a time in glass-card style with
+  event photography
+- Stage tags use canonical programme colours (`.tps-sessions__tag--*`)
+  matching the Browse All Sessions section on programme.html
+- Theme pill filters (All, Growth, Monetisation, Tech, Storytelling,
+  Business, Strategy, Landscape, Networking) — white active state on
+  purple bg
+- Curated session picks per theme in `CURATED` object (3 IDs per theme)
+- Default state (All): id 3 (Amanpour & Maitlis), id 34 (Grow Your
+  Audience), id 12 (Podcasting's Place in Advertising)
+- Photo pool: 18 event photos from /Photos/, Fisher-Yates shuffle,
+  re-shuffled on each theme change
+- Crossfade animation: `.is-leaving` (opacity 0, translateY -8px,
+  120ms) → `.is-entering` (opacity 1, translateY 0, 60ms stagger)
+- Browse link: "160+ sessions across 8 stages in 2025 — browse them
+  all →" linking to programme.html#browse-sessions
+- Data source: data/sessions.js (`window.__TPS_SESSIONS__`) with
+  fetch fallback to data/sessions.json
+- Inline `<script>` in index.html (not main.js)
+- CSS: `.home-sessions` prefix + overrides on `.tps-sessions__card`
+  scoped to `.home-sessions`
+- Reduced top padding (one-third of normal section-padding) since it
+  follows programme section on same purple bg
+- Border-radius flow: `.programme:has(+ .home-sessions)` removes
+  bottom radius from programme section; `.home-sessions` has bottom
+  radius only
+
+### Session Wall (programme.html)
+- Full 164-session browsable wall at programme.html#browse-sessions
+- Inserted between Featured Sessions (was "2025 Highlights") and
+  Content Themes for 2026
+- Two filter rows: stage pills (10) + theme pills (8)
+- Masonry layout via `column-count`
+- PAGE_SIZE=12 with "Show more" pagination
+- Card creation, filtering, animation logic in inline `<script>`
+- Data source: data/sessions.js with fetch fallback
 
 ### Assets in Use
 - Video: /Video/ (20s edit for hero)

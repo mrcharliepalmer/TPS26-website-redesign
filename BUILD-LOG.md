@@ -42,18 +42,20 @@ inline `<head>` script from any existing page.
 ### Colour Rhythm
 1. Hero — dark video overlay (100vh)
 2. Stats — purple bg (white count-up numbers, rgba white labels)
-3. Back for Our Fifth Year — transparent on canvas (55/45 asymmetric split)
+3. Back for Our Fifth Year — transparent on canvas (55/45 asymmetric split, tighter BDC frontage photo)
 4. Photo Break — full-bleed edge-to-edge image (visual pause)
-5. Where the Industry Comes Together — transparent on canvas (white cards with photos)
-6. Programme — purple (all corners rounded, isolated block)
-7. Pull Quote — transparent on canvas (purple text, large speech mark)
-8. Speakers — purple (all corners rounded, isolated block)
-9. Photo Break 2 — full-bleed edge-to-edge image (visual pause)
-10. Testimonials — transparent on canvas (3-col quote grid, purple accents)
-11. Pricing — purple (all corners rounded, isolated block)
-12. Partners — transparent on canvas (logo stack image)
-13. Newsletter — charcoal (rounded top corners, flows into footer)
-14. Footer — charcoal
+5. Pricing — purple (all corners rounded, isolated block)
+6. Where the Industry Comes Together — transparent on canvas (white cards with photos)
+7. Programme (stages only) — purple (top corners rounded, bottom flat → flows into sessions)
+8. A Taste of What to Expect — purple (no top radius, bottom corners rounded — glass session cards, canonical stage tag colours)
+9. New for 2026 — transparent on canvas (split layout: big headline left, 4 charcoal cards with photos right)
+10. Speakers — purple (all corners rounded, isolated block, centred header)
+11. TPS After Hours — charcoal (hero-style party photo with overlay, centred title + body)
+12. Testimonials — transparent on canvas (3-col quote grid, purple accents)
+13. Photo Break 2 — full-bleed edge-to-edge image (visual pause)
+14. Partners — transparent on canvas (logo stack image)
+15. Newsletter — charcoal (rounded top corners, flows into footer)
+16. Footer — charcoal
 
 ### Homepage Redesign (Phase 3 — dynamic layout pass)
 
@@ -112,12 +114,19 @@ inline `<head>` script from any existing page.
   visual interest and a content breather.
 - **Static speaker grid**: 6-col rectangular portrait grid replaces
   animated marquee. Different visual rhythm from programme marquee.
+  Speakers section now uses centred header (was left-aligned).
+- **TPS After Hours** (was "By Night"): hero-style treatment with
+  full-bleed party photo, dark gradient overlay, centred yellow title,
+  larger body copy, ghost-light CTA. Replaced previous 4-card grid
+  with compact cards. `.home-night--hero` modifier on charcoal base.
 - **Quote grid**: 3-col blockquote grid replaces single rotating
   carousel. More content visible at once.
 - **Programme stages**: Horizontal scroll with scroll-snap (was
   infinite marquee). Shows ~4 cards on desktop with right-edge
   fade hinting at more. Clone JS removed. Header left-aligned
-  (.section-header--left).
+  (.section-header--left). Track padding container-aligned:
+  20px mobile, 40px tablet, `max(40px, (100vw-1200px)/2)` desktop.
+  Right padding ensures stages 7/8 are fully scrollable.
 - **Partners**: Split header — heading/subtitle left, CTA right.
 
 **Button Styles**
@@ -147,6 +156,115 @@ inline `<head>` script from any existing page.
 - `p { max-width: 68ch; margin-inline: auto }` — the max-width was
   causing paragraphs to sit left-aligned in centred parents. Adding
   margin-inline: auto centres the constrained block.
+
+### Programme Section Restructure (Session Teaser Pass)
+
+The old single Programme section (stages + features + CTA) was split
+into three distinct sections with different background treatments:
+
+**1. Programme (stages only)**
+- Purple bg, retains horizontal scroll-snap stage cards (8 stages)
+- Top corners rounded, bottom corners flat — flows seamlessly into
+  the session teaser below
+- CSS: `.programme:has(+ .home-sessions)` removes bottom border-radius
+
+**2. A Taste of What to Expect (session teaser)**
+- Purple bg, glass cards with event photos, theme pill filters
+- Top corners flat (flows from programme), bottom corners rounded
+- Reduced top padding (one-third of section-padding) — same bg as
+  programme, no need for full gap
+- Section class: `.home-sessions`
+- Headline: "A Taste of What to Expect", subhead: "Our 2026 programme
+  will be announced soon. Click a theme below to explore highlights
+  from last year."
+- Left-aligned header (`.section-header--light.section-header--left`)
+
+**Theme pill filters**
+- `.home-sessions__pill` — translucent border on purple bg
+- Active state: white fill, purple text
+- Themes: All, Growth, Monetisation, Tech, Storytelling, Business,
+  Strategy, Landscape, Networking
+
+**Glass session cards**
+- 3 cards at a time, 3-col grid desktop / 1-col mobile
+- Glass style: `rgba(255,255,255,0.08)` bg, translucent border
+- Full-bleed photo at top (180px height, object-fit: cover)
+- Stage tags use canonical programme colours (`.tps-sessions__tag--*`)
+  matching Browse All Sessions on programme.html — generic white
+  override removed
+- Title (white), speaker (cyan), description (rgba white)
+- No padding on card — image bleeds to edges; text has own padding
+
+**Curated session picks**
+```javascript
+const CURATED = {
+  all:           [3, 34, 12],   // Amanpour & Maitlis, Grow Your Audience, Podcasting in Advertising
+  growth:        [34, 87, 5],
+  monetisation:  [35, 12, 93],
+  tech:          [4, 85, 86],
+  storytelling:  [3, 25, 37],
+  operations:    [116, 52, 36],
+  strategy:      [1, 81, 88],
+  landscape:     [88, 122, 15],
+  networking:    [39, 29, 161]
+};
+```
+
+**Photo system**
+- Pool of 18 event photos from /Photos/ directory
+- Fisher-Yates shuffle on init and on each theme change
+- `nextPhoto()` cycles through shuffled pool, reshuffles when exhausted
+- Each card gets a different photo on every render
+
+**Crossfade animation**
+- Exit: `.is-leaving` — opacity 0, translateY -8px, 120ms ease-out
+- Enter: `.is-entering` — opacity 1, translateY 0, 60ms ease stagger
+  (each card has `transitionDelay = i * 60ms`)
+- Grid min-height set to prevent layout shift during transition
+
+**Browse link**
+- Cyan text link: "160+ sessions across 8 stages in 2025 — browse
+  them all →"
+- Links to programme.html#browse-sessions (full session wall)
+- Centred, light font weight, reveal animation
+
+**Data loading**
+- Priority: `window.__TPS_SESSIONS__` (from data/sessions.js) →
+  fetch('data/sessions.json') → XHR fallback → hardcoded 3-session
+  fallback
+- Inline `<script>` at bottom of index.html (not in main.js)
+
+**3. New for 2026 (split layout)**
+- Canvas bg, separate section from programme
+- Section class: `.programme.programme--new2026`
+- Split layout (`.new2026__layout`): big headline left + 4 cards right
+- Left column (`.new2026__headline`): large h2 with purple accent bar,
+  subline "Four brand-new additions to this year's festival.",
+  ghost CTA → programme.html. Sticky on desktop (top: 120px).
+- Right column (`.new2026__cards`): 2×2 grid on tablet+, 1-col mobile
+- 4 charcoal feature cards with photos:
+  1. The Creator Mix — party photo
+  2. The International Stage, powered by Podimo — international panel
+  3. TPS Connects — exhibitor/brand meetings
+  4. The Creator First Stage, in association with Arcade — creator panel
+- Each card: photo at top, "New for 2026" label, title, description
+
+**CSS Architecture (session teaser)**
+- New classes: `.home-sessions`, `.home-sessions__filters`,
+  `.home-sessions__pill`, `.home-sessions__grid`,
+  `.home-sessions__card-image`, `.home-sessions__browse`
+- Card overrides scoped to `.home-sessions .tps-sessions__card`
+  (glass style, white text, cyan speakers)
+- Stage tags: generic white override REMOVED — tags now inherit
+  canonical colours from `.tps-sessions__tag--*` (purple for Origin,
+  cyan for Creator, coral for Brand Works, etc.)
+- Programme variant: `.programme--new2026` (canvas bg, no radius)
+- New for 2026 layout: `.new2026__layout` (grid, 1fr/1.6fr desktop),
+  `.new2026__headline` (sticky), `.new2026__cards` (2-col grid tablet+)
+- Border-radius flow fix: `.programme:has(+ .home-sessions)` for
+  seamless purple-to-purple transition
+- Cascade fix: `.section-header.section-header--left` with doubled
+  specificity to override later `.section-header` base styles
 
 ---
 
@@ -269,16 +387,17 @@ inline `<head>` script from any existing page.
 1. Hero — dark photo overlay
 2. Intro — transparent on canvas (asymmetric 55/45 split)
 3. Full-bleed Photo Break 1 — edge-to-edge image
-4. 2025 Highlights — transparent on canvas (filterable white session cards)
-5. Content Themes for 2026 — purple (all corners rounded, static 3-col grid, isolated block 1)
-6. Full-bleed Photo Break 2 — edge-to-edge image
-7. Features & Spaces — transparent on canvas (alternating photo/card rows)
-8. Full-bleed Photo Break 3 — edge-to-edge image
-9. By Night — purple (all corners rounded, isolated block 2, photo feature cards)
-10. Full-bleed Photo Break 4 — edge-to-edge image
-11. Coming Soon CTA — transparent on canvas
-12. Newsletter — charcoal (rounded top corners)
-13. Footer — charcoal
+4. Featured Sessions — transparent on canvas (filterable white session cards, was "2025 Highlights")
+5. Browse All 2025 Sessions — transparent on canvas (full 164-session wall, masonry grid)
+6. Content Themes for 2026 — purple (all corners rounded, static 3-col grid, isolated block 1)
+7. Full-bleed Photo Break 2 — edge-to-edge image
+8. Features & Spaces — transparent on canvas (alternating photo/card rows)
+9. Full-bleed Photo Break 3 — edge-to-edge image
+10. By Night — purple (all corners rounded, isolated block 2, photo feature cards)
+11. Full-bleed Photo Break 4 — edge-to-edge image
+12. Coming Soon CTA — transparent on canvas
+13. Newsletter — charcoal (rounded top corners)
+14. Footer — charcoal
 
 ### Programme Redesign (Visual Dynamics Pass)
 
@@ -332,7 +451,8 @@ inline `<head>` script from any existing page.
 - Left: h2 with purple accent bar, copy, inline stats row (3 stats)
 - Right: event photo (Audience crowd shot, 4:3 ratio, rounded)
 
-**2025 Highlights** (replaced The Stages)
+**Featured Sessions** (was "2025 Highlights")
+- Retitled from "2025 Highlights" to "Featured Sessions"
 - Canvas bg, left-aligned header with purple accent bar
 - Framed as "A taste of what to expect" — 2025 sessions setting the
   bar for 2026
@@ -347,6 +467,30 @@ inline `<head>` script from any existing page.
 - Filter JS: vanilla, inline at bottom of page. Toggles display on
   cards by data-stage attribute. Re-adds .visible class for filtered-in
   cards to ensure reveal animation isn't broken.
+
+**Browse All 2025 Sessions** (full session wall — new)
+- Inserted between Featured Sessions and Content Themes
+- Canvas bg, left-aligned header with purple accent bar
+- Section id: `#browse-sessions` (anchor target from homepage teaser)
+- Loads all 164 sessions from data/sessions.js
+  (`window.__TPS_SESSIONS__`) with fetch fallback to data/sessions.json
+- Two filter rows:
+  - Stage pills (10): All Stages, Origin Theatre, Creator Stage,
+    Brand Works, Industry, Talking Podcasts 1, Talking Podcasts 2,
+    Live Stage, Creator Podcast Studio, Advice Lab
+  - Theme pills (8): All Themes, Growth, Monetisation, Tech,
+    Storytelling, Business, Strategy, Landscape, Networking
+- Filters combine (AND logic): stage + theme must both match
+- Session count display: "Showing X of 164 sessions" (updates on filter)
+- Masonry layout: `column-count` CSS (1-col mobile, 2-col tablet,
+  3-col desktop). `break-inside: avoid` on cards.
+- Cards: same `.tps-sessions__card` as homepage but on white/canvas bg
+  (default styling, no glass override). Stage tag, title, speaker, desc.
+- Pagination: PAGE_SIZE=12, "Show more" button appends next batch
+- Animation: cards enter with fade-up (opacity 0 → 1, translateY 20px → 0)
+  with 30ms stagger per card
+- Inline `<script>` at bottom of programme.html (separate from the
+  existing highlights filter script)
 
 **Content Themes for 2026**
 - Purple bg, fully rounded (all corners) — isolated block
@@ -384,6 +528,11 @@ inline `<head>` script from any existing page.
   .prog-highlights__filter, .prog-highlights__grid, .prog-highlight,
   .prog-highlight__stage, .prog-highlight__title, .prog-highlight__speakers,
   .prog-highlight__desc
+- Session wall classes (shared with homepage): .tps-sessions,
+  .tps-sessions__filters, .tps-sessions__pill, .tps-sessions__grid,
+  .tps-sessions__card, .tps-sessions__tag, .tps-sessions__card-title,
+  .tps-sessions__card-speaker, .tps-sessions__card-desc,
+  .tps-sessions__count, .tps-sessions__more
 - Retained: .prog-intro__grid, .prog-intro__text, .prog-intro__image,
   .prog-themes, .prog-themes__grid, .prog-theme,
   .prog-features__row, .prog-features__row--reverse, .prog-features__photo,
