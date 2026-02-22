@@ -841,6 +841,11 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   border-radius: var(--radius-md);
 }
 
+/* When programme flows into the session teaser, drop bottom radius */
+.programme:has(+ .home-sessions) {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
 .section-header--left {
   text-align: left;
 }
@@ -877,8 +882,8 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding-left: var(--space-md);
-  padding-right: var(--space-md);
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: var(--space-sm);
   scrollbar-width: none;
 }
@@ -909,14 +914,19 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   .programme__marquee .programme-card {
     flex: 0 0 calc((100vw - 80px - 3 * var(--space-md)) / 3.4);
   }
+  .programme__marquee-track {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 @media (min-width: 1025px) {
   .programme__marquee .programme-card {
-    flex: 0 0 calc((min(1200px, 100vw) - 2 * var(--space-md) - 3 * var(--space-md)) / 4.3);
+    flex: 0 0 calc((min(1200px, 100vw) - 3 * var(--space-md)) / 4.3);
   }
   .programme__marquee-track {
-    padding-left: max(var(--space-md), calc((100vw - 1200px) / 2));
+    padding-left: max(40px, calc((100vw - 1200px) / 2));
+    padding-right: max(40px, calc((100vw - 1200px) / 2));
   }
 }
 
@@ -1021,6 +1031,86 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 @media (min-width: 768px) {
   .programme__features {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- New for 2026 variant: canvas bg, charcoal cards, split layout --- */
+.programme--new2026 {
+  background: var(--colour-canvas);
+  border-radius: 0;
+}
+
+.programme--new2026 .programme-feature {
+  background: var(--colour-charcoal);
+  border: none;
+}
+
+.programme--new2026 .programme-feature:hover {
+  background: #3d3d3d;
+}
+
+/* Split layout: big headline left, cards right */
+.new2026__layout {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.new2026__headline h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--colour-charcoal);
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+}
+
+.new2026__headline h2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--colour-purple);
+  margin-bottom: var(--space-sm);
+  border-radius: 2px;
+}
+
+.new2026__headline p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-lg);
+  margin-inline: 0;
+}
+
+.new2026__headline .btn {
+  color: var(--colour-purple);
+  border-color: var(--colour-purple);
+}
+
+.new2026__headline .btn:hover {
+  background: var(--colour-purple);
+  color: var(--colour-white);
+}
+
+.new2026__cards {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .new2026__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .new2026__layout {
+    grid-template-columns: 1fr 1.6fr;
+    align-items: start;
+  }
+
+  .new2026__headline {
+    position: sticky;
+    top: 120px;
   }
 }
 
@@ -1264,111 +1354,61 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   border-radius: var(--radius-md);
 }
 
-.home-night .section-header--light h2 {
-  color: var(--colour-yellow);
-}
-
-.home-night .section-header--left h2::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--colour-yellow);
-  margin-bottom: var(--space-sm);
-  border-radius: 2px;
-}
-
-.home-night__grid {
-  display: grid;
-  gap: var(--space-md);
-}
-
-.home-night__card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius-md);
+/* Hero-style after-hours treatment */
+.home-night--hero {
+  position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, background 0.3s ease;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.home-night__card:hover {
-  transform: translateY(-4px);
-  background: rgba(255,255,255,0.12);
+.home-night__backdrop {
+  position: absolute;
+  inset: 0;
 }
 
-.home-night__image {
-  overflow: hidden;
-}
-
-.home-night__image img {
+.home-night__backdrop img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
 }
 
-.home-night__card:hover .home-night__image img {
-  transform: scale(1.03);
+.home-night__backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 100%);
 }
 
-.home-night__body {
-  padding: var(--space-md);
-}
-
-.home-night__label {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--colour-yellow);
-  margin-bottom: var(--space-xs);
-}
-
-.home-night__body h3 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--colour-yellow);
-  margin-bottom: var(--space-xs);
-}
-
-.home-night__body p {
-  color: rgba(255,255,255,0.75);
-  font-size: 0.925rem;
-}
-
-.home-night__card--compact {
-  padding: var(--space-md);
-}
-
-.home-night__card--compact h3 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--colour-yellow);
-  margin-bottom: var(--space-xs);
-}
-
-.home-night__card--compact p {
-  color: rgba(255,255,255,0.75);
-  font-size: 0.9rem;
-}
-
-@media (min-width: 768px) {
-  .home-night__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-night__image img {
-    height: 240px;
-  }
-}
-
-.home-night__cta {
+.home-night__overlay-content {
+  position: relative;
+  z-index: 1;
   text-align: center;
-  margin-top: var(--space-lg);
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.home-night__overlay-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--colour-yellow);
+  margin-bottom: var(--space-md);
+}
+
+.home-night__overlay-content p {
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+  margin-inline: auto;
+}
+
+.home-night__overlay-content .btn {
+  margin-top: 0;
 }
 
 
@@ -2476,6 +2516,18 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   color: rgba(255,255,255,0.8);
 }
 
+/* Left-aligned variant (must appear after base .section-header to win cascade) */
+.section-header.section-header--left {
+  text-align: left;
+}
+
+.section-header.section-header--left h2::before {
+  margin: 0 0 var(--space-sm);
+}
+
+.section-header.section-header--left p {
+  margin-inline: 0;
+}
 
 
 /* ---------- GLASS CARD (translucent on dark/vibrant backgrounds) ---------- */
@@ -5730,4 +5782,158 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
     transition: none;
     opacity: 0;
   }
+}
+
+
+/* ============================================================
+   HOME SESSIONS TEASER — 3-card preview on purple bg
+   Prefix: .home-sessions-
+   ============================================================ */
+
+.home-sessions {
+  background: var(--colour-purple);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+/* Reduce gap when session teaser follows programme (both purple) */
+.home-sessions.section-padding { padding-top: calc(var(--space-xl) / 3); }
+@media (min-width: 1025px) {
+  .home-sessions.section-padding { padding-top: calc(var(--space-2xl) / 3); }
+}
+
+/* Accent bar: cyan on purple */
+.home-sessions .section-header--left h2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--colour-cyan);
+  margin-bottom: var(--space-sm);
+  border-radius: 2px;
+}
+
+/* --- Theme pill row (light pills on purple) --- */
+.home-sessions__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-lg);
+}
+
+.home-sessions__pill {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.home-sessions__pill:hover {
+  border-color: var(--colour-white);
+  color: var(--colour-white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.home-sessions__pill.is-active {
+  background: var(--colour-white);
+  color: var(--colour-purple);
+  border-color: var(--colour-white);
+  font-weight: 600;
+}
+
+/* --- 3-card grid --- */
+.home-sessions__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  min-height: 260px;
+}
+
+@media (min-width: 768px) {
+  .home-sessions__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Glass session card (overrides .tps-sessions__card inside this section) --- */
+.home-sessions .tps-sessions__card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+.home-sessions .tps-sessions__card:hover {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image — full-bleed top of card */
+.home-sessions__card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card text content below image */
+.home-sessions .tps-sessions__tag,
+.home-sessions .tps-sessions__card-title,
+.home-sessions .tps-sessions__card-speaker,
+.home-sessions .tps-sessions__card-desc {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+.home-sessions .tps-sessions__tag {
+  margin-top: var(--space-md);
+}
+
+.home-sessions .tps-sessions__card-desc {
+  padding-bottom: var(--space-md);
+}
+
+/* White text on glass */
+.home-sessions .tps-sessions__card-title {
+  color: var(--colour-white);
+}
+
+.home-sessions .tps-sessions__card-speaker {
+  color: var(--colour-cyan);
+}
+
+.home-sessions .tps-sessions__card-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Stage tags use their canonical programme colours (see .tps-sessions__tag--*) */
+
+/* --- Browse link (cyan on purple) --- */
+.home-sessions__browse {
+  text-align: center;
+  margin-top: var(--space-lg);
+  max-width: none;
+}
+
+.home-sessions__browse a {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--colour-cyan);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+
+.home-sessions__browse a:hover {
+  color: var(--colour-white);
 }
