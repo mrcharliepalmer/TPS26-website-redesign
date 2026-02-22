@@ -172,7 +172,7 @@
 
 
     <!-- ============ 3. FULL-BLEED PHOTO BREAK 1 ============ -->
-    <div class="photo-break" aria-label="Event photography">
+    <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img src="Photos/Famous faces/Podcast Show 2025 -Day 1-200703.jpg" alt="Speaker commanding the stage at The Podcast Show" loading="lazy">
     </div>
 
@@ -392,7 +392,7 @@
 
 
     <!-- ============ 8. FULL-BLEED PHOTO BREAK 2 ============ -->
-    <div class="photo-break" aria-label="Event photography">
+    <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img src="Photos/Famous faces/DSC1021_louis_theroux_1920x1278.jpeg" alt="Louis Theroux at The Podcast Show" loading="lazy">
     </div>
 
@@ -467,7 +467,7 @@
 
 
     <!-- ============ 10. FULL-BLEED PHOTO BREAK ============ -->
-    <div class="photo-break" aria-label="Event photography">
+    <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img src="Photos/Audience/Podcast Show 2025 -Day 1-100312.jpg" alt="Festival atmosphere at The Podcast Show" loading="lazy">
     </div>
 
@@ -539,9 +539,35 @@
 
 
     <!-- ============ 12. FULL-BLEED PHOTO BREAK 3 ============ -->
-    <div class="photo-break" aria-label="Event photography">
+    <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img src="Photos/Famous faces/The Podcast Show - 22nd May 2024 by Luke Dyson - LD3_0383-Enhanced-NR.jpg" alt="Festival energy at The Podcast Show" loading="lazy">
     </div>
+
+
+    <!-- ============ 13. THEMES TAG CLOUD ============ -->
+    <section class="prog-tags section-padding" aria-label="2026 themes">
+      <div class="container">
+        <div class="section-header section-header--left reveal">
+          <h2>What 2026 Is All About</h2>
+          <p>The conversations shaping the future of podcasting.</p>
+        </div>
+
+        <div class="prog-tags__cloud reveal">
+          <span class="prog-tags__pill">Multi-Platform Strategy</span>
+          <span class="prog-tags__pill">The AI Transformation</span>
+          <span class="prog-tags__pill">Streaming's Podcast Push</span>
+          <span class="prog-tags__pill">Evolving Revenue Models</span>
+          <span class="prog-tags__pill">Community &amp; Fandom</span>
+          <span class="prog-tags__pill">True Crime's Evolution</span>
+          <span class="prog-tags__pill">The Global Opportunity</span>
+          <span class="prog-tags__pill">Branded Content &amp; Advertising</span>
+          <span class="prog-tags__pill">Podcasting as Social Media</span>
+          <span class="prog-tags__pill">Creator Economy</span>
+          <span class="prog-tags__pill">Video Podcasting</span>
+          <span class="prog-tags__pill">Audience Measurement</span>
+        </div>
+      </div>
+    </section>
 
 
     <!-- ============ NEWSLETTER ============ -->
@@ -614,16 +640,19 @@
 
   <script src="main.js" defer></script>
 
-  <!-- Page-specific: Highlights filter -->
+  <!-- Page-specific: Highlights filter (animated) -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const filters = document.querySelectorAll('.prog-highlights__filter');
       const cards = document.querySelectorAll('.prog-highlight');
+      let isAnimating = false;
 
       filters.forEach(btn => {
         btn.addEventListener('click', () => {
+          if (isAnimating) return;
           const stage = btn.dataset.stage;
 
+          // Update active filter
           filters.forEach(f => {
             f.classList.remove('active');
             f.setAttribute('aria-selected', 'false');
@@ -631,14 +660,52 @@
           btn.classList.add('active');
           btn.setAttribute('aria-selected', 'true');
 
-          cards.forEach(card => {
-            if (stage === 'all' || card.dataset.stage === stage) {
-              card.style.display = '';
-              card.classList.add('visible');
-            } else {
-              card.style.display = 'none';
-            }
-          });
+          // Find cards currently visible and cards that should show
+          const visible = [...cards].filter(c => c.style.display !== 'none');
+          const toShow = [...cards].filter(c => stage === 'all' || c.dataset.stage === stage);
+
+          // If nothing changes, bail
+          if (visible.length === toShow.length && visible.every(c => toShow.includes(c))) return;
+
+          isAnimating = true;
+
+          // Phase 1: Exit — fade out visible cards
+          visible.forEach(c => c.classList.add('is-exiting'));
+
+          setTimeout(() => {
+            // Hide exiting, remove exit state
+            visible.forEach(c => {
+              c.classList.remove('is-exiting', 'visible');
+              c.style.display = 'none';
+            });
+
+            // Phase 2: Enter — prep incoming cards
+            toShow.forEach(c => {
+              c.style.display = '';
+              c.classList.add('is-entering');
+            });
+
+            // Force reflow so the entering state is painted before transition
+            void toShow[0]?.offsetHeight;
+
+            // Stagger the entrance
+            toShow.forEach((c, i) => {
+              setTimeout(() => {
+                c.classList.add('is-shown');
+              }, i * 40);
+            });
+
+            // Clean up after animations complete
+            const cleanupDelay = (toShow.length * 40) + 200;
+            setTimeout(() => {
+              toShow.forEach(c => {
+                c.classList.remove('is-entering', 'is-shown');
+                c.classList.add('visible');
+              });
+              isAnimating = false;
+            }, cleanupDelay);
+
+          }, 150); // matches exit duration
         });
       });
     });
