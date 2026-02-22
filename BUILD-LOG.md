@@ -44,18 +44,19 @@ inline `<head>` script from any existing page.
 2. Stats — purple bg (white count-up numbers, rgba white labels)
 3. Back for Our Fifth Year — transparent on canvas (55/45 asymmetric split, tighter BDC frontage photo)
 4. Photo Break — full-bleed edge-to-edge image (visual pause)
-5. Pricing — purple (all corners rounded, isolated block)
-6. Where the Industry Comes Together — transparent on canvas (white cards with photos)
-7. Programme (stages only) — purple (top corners rounded, bottom flat → flows into sessions)
-8. A Taste of What to Expect — purple (no top radius, bottom corners rounded — glass session cards, canonical stage tag colours)
-9. New for 2026 — transparent on canvas (split layout: big headline left, 4 charcoal cards with photos right)
-10. Speakers — purple (all corners rounded, isolated block, centred header)
-11. TPS After Hours — charcoal (hero-style party photo with overlay, centred title + body)
-12. Testimonials — transparent on canvas (3-col quote grid, purple accents)
-13. Photo Break 2 — full-bleed edge-to-edge image (visual pause)
-14. Partners — transparent on canvas (logo stack image)
-15. Newsletter — charcoal (rounded top corners, flows into footer)
-16. Footer — charcoal
+5. Pricing — canvas bg (`.home-pricing` override; charcoal cards contrast well on canvas)
+6. New for 2026 — dark purple #1a0a4e (all corners rounded, 4 feature cards with photos)
+7. Where the Industry Comes Together — transparent on canvas (white cards with photos)
+8. Programme (stages only) — purple (top corners rounded, bottom flat → flows into sessions; scroll arrows on tablet+)
+9. A Taste of What to Expect — purple (no top radius, bottom corners rounded — glass session cards, canonical stage tag colours)
+10. Speakers — canvas bg (`.home-speakers`; round avatars, purple borders, charcoal text)
+11. By Night hero — full-bleed 65vh image (CSS background, dark gradient overlay, centred yellow title + white strapline)
+12. By Night programme — charcoal bg (2×2 grid of evening items, yellow day labels, clean type, no card borders)
+13. Testimonials — transparent on canvas (3-col quote grid, purple accents)
+14. Photo Break 2 — full-bleed edge-to-edge image (visual pause)
+15. Partners — transparent on canvas (logo stack image)
+16. Newsletter — charcoal (rounded top corners, flows into footer)
+17. Footer — charcoal
 
 ### Homepage Redesign (Phase 3 — dynamic layout pass)
 
@@ -66,10 +67,11 @@ inline `<head>` script from any existing page.
 - Dynamic layout techniques (from About page) applied to homepage:
   full-bleed photo breaks, asymmetric splits, pull quotes, static
   grids. Every section feels different.
-- Three isolated purple blocks (Programme, Speakers, Pricing) with
-  canvas breathing room between them. Avoids "purple fatigue".
-- Conversion funnel: social proof (testimonials) immediately before
-  pricing for maximum impact.
+- Two purple blocks (Programme + Session Teaser flowing as one).
+  Pricing on canvas, Speakers on canvas, By Night on charcoal with
+  full-bleed image hero. Avoids "purple fatigue".
+- Conversion funnel: pricing sits early (after photo break) with
+  New for 2026 immediately below to reinforce FOMO.
 
 **Structural Changes (vs Phase 2)**
 - **Stats**: Purple bg with white count-up numbers and rgba(255,255,255,0.75)
@@ -84,15 +86,23 @@ inline `<head>` script from any existing page.
 - **Audience cards**: Photos replaced SVG icons. Each card has real
   event photo (aspect-ratio: 16/9). Cards on canvas, not gradient.
   No stagger offset — equal visual weight for all 3 audiences.
+- **Pricing**: Moved to canvas bg (`.home-pricing` override). Charcoal
+  price cards still pop against canvas. `section-header` (dark, not
+  `--light`). Footer text colour overridden to dark.
+- **New for 2026**: Moved to sit immediately after Pricing (canvas →
+  dark purple transition). Creates strong visual contrast and keeps
+  FOMO content grouped together.
 - **Programme**: Now an isolated rounded block (all corners) instead
   of rounded-top-only continuous purple. Glass-card marquee style.
+  Scroll navigation arrows (prev/next) on tablet+ with auto-hide at
+  boundaries. Real HTML spacer element ensures stage 8 is scrollable.
 - **Pull Quote**: New. Canvas bg, oversized purple quote text with
   large speech mark (opacity 0.25). Between Programme and Speakers.
   Provides canvas breathing room between purple blocks.
-- **Speakers**: Replaced horizontal marquee with static 6-column
-  portrait grid. Rectangular cards (3:4 aspect ratio), not circular
-  marquee. Isolated rounded purple block (all corners).
-  Responsive: 2-col mobile → 3-col tablet → 6-col desktop.
+- **Speakers**: Canvas bg (`.home-speakers`), 10× round circular
+  avatars in 5-col grid. Purple image borders, charcoal names, grey
+  roles. Stagger entrance via IntersectionObserver. No longer purple —
+  reduces purple fatigue after the Programme/Session Teaser block.
 - **Photo Break 2**: New. Second full-bleed image between Speakers
   and Testimonials. Same treatment as Photo Break 1.
 - **Testimonials**: Replaced single rotating carousel with 3-column
@@ -115,18 +125,27 @@ inline `<head>` script from any existing page.
 - **Static speaker grid**: 6-col rectangular portrait grid replaces
   animated marquee. Different visual rhythm from programme marquee.
   Speakers section now uses centred header (was left-aligned).
-- **TPS After Hours** (was "By Night"): hero-style treatment with
-  full-bleed party photo, dark gradient overlay, centred yellow title,
-  larger body copy, ghost-light CTA. Replaced previous 4-card grid
-  with compact cards. `.home-night--hero` modifier on charcoal base.
+- **By Night** (was "TPS After Hours"): two-part section. Part 1:
+  full-bleed 65vh hero image (CSS `background` on `.home-night__hero`)
+  with `linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7))`
+  overlay. Centred yellow title ("By Night") + white strapline. Part 2:
+  charcoal bg (`.home-night__programme`) with 2×2 grid of 4 evening
+  items (The Creator Mix, The Official Party, Live Podcasts, Executive
+  Dinners). Clean type — yellow day labels (small uppercase), white h3
+  titles, muted white body text. No card borders or backgrounds. CTA
+  centred below. Yellow accent colour matches programme page By Night.
 - **Quote grid**: 3-col blockquote grid replaces single rotating
   carousel. More content visible at once.
 - **Programme stages**: Horizontal scroll with scroll-snap (was
   infinite marquee). Shows ~4 cards on desktop with right-edge
   fade hinting at more. Clone JS removed. Header left-aligned
   (.section-header--left). Track padding container-aligned:
-  20px mobile, 40px tablet, `max(40px, (100vw-1200px)/2)` desktop.
-  Right padding ensures stages 7/8 are fully scrollable.
+  20px mobile, 40px tablet, `max(40px, (100vw-var(--max-width))/2)`
+  desktop. HTML spacer element (`.programme__marquee-spacer`) after
+  last card ensures stage 8 scrolls fully into view (replaces
+  padding-right which browsers ignore in flex scroll containers).
+  Prev/next arrow buttons (`.programme__arrow`) visible on tablet+,
+  auto-hide at scroll boundaries. JS in inline `<script>`.
 - **Partners**: Split header — heading/subtitle left, CTA right.
 
 **Button Styles**
@@ -139,6 +158,8 @@ inline `<head>` script from any existing page.
 **JavaScript**
 - Count-up stats: IntersectionObserver on `.home-stats__number[data-target]`
 - Programme marquee clone JS removed (now CSS scroll-snap)
+- Programme carousel arrows: inline `<script>`, getScrollAmount() by
+  card width + gap, updateArrows() hides prev/next at scroll boundaries
 - Testimonial carousel removed — replaced by static quote grid
 
 **CSS Architecture (homepage-specific)**
@@ -146,9 +167,15 @@ inline `<head>` script from any existing page.
 - New classes: .home-stats, .home-stats__grid, .home-stats__item,
   .home-stats__number, .home-stats__label, .home-photo-break,
   .home-pullquote, .home-pullquote__inner, .home-pullquote__quote,
-  .home-speakers__grid, .home-speaker, .home-speaker__image,
-  .home-speaker__name, .home-speaker__role, .home-press,
-  .home-press__grid, .home-press__quote
+  .home-speakers (section modifier), .home-speakers__grid,
+  .home-speaker, .home-speaker__image, .home-speaker__name,
+  .home-speaker__role, .home-pricing (canvas bg override),
+  .home-night__hero, .home-night__hero-content,
+  .home-night__programme, .home-night__grid, .home-night__item,
+  .home-night__day, .home-night__cta, .home-press,
+  .home-press__grid, .home-press__quote,
+  .programme__arrow, .programme__arrow--prev, .programme__arrow--next,
+  .programme__marquee-spacer
 
 **Global CSS fixes (affects all pages)**
 - `html { scrollbar-gutter: stable }` — prevents hero centering
@@ -234,20 +261,19 @@ const CURATED = {
   fallback
 - Inline `<script>` at bottom of index.html (not in main.js)
 
-**3. New for 2026 (split layout)**
-- Canvas bg, separate section from programme
-- Section class: `.programme.programme--new2026`
-- Split layout (`.new2026__layout`): big headline left + 4 cards right
-- Left column (`.new2026__headline`): large h2 with purple accent bar,
-  subline "Four brand-new additions to this year's festival.",
-  ghost CTA → programme.html. Sticky on desktop (top: 120px).
-- Right column (`.new2026__cards`): 2×2 grid on tablet+, 1-col mobile
-- 4 charcoal feature cards with photos:
+**3. New for 2026 (repositioned after Pricing)**
+- Dark purple bg (#1a0a4e), sits immediately after Pricing (canvas)
+- Section class: `.home-launch`
+- Centred intro: "Introducing" eyebrow (cyan pill), "New for 2026"
+  title (large Space Grotesk), subtitle
+- 4 feature cards with photos in 2×2 grid (tablet+) / 4-col (desktop)
+- Cards: glass-style on dark purple, photo at top (16:9), hover zoom,
+  numbered badge (01–04), cyan accents for partners
   1. The Creator Mix — party photo
   2. The International Stage, powered by Podimo — international panel
   3. TPS Connects — exhibitor/brand meetings
   4. The Creator First Stage, in association with Arcade — creator panel
-- Each card: photo at top, "New for 2026" label, title, description
+- CTA: "See the Full Programme" ghost-light button
 
 **CSS Architecture (session teaser)**
 - New classes: `.home-sessions`, `.home-sessions__filters`,

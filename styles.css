@@ -837,7 +837,8 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 .programme {
   background: var(--colour-purple);
   position: relative;
-  overflow: hidden;
+  overflow: clip;
+  overflow-x: clip;
   border-radius: var(--radius-md);
 }
 
@@ -880,10 +881,10 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   display: flex;
   gap: var(--space-md);
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
   padding-left: 20px;
-  padding-right: 20px;
+  scroll-padding-left: 20px;
   padding-bottom: var(--space-sm);
   scrollbar-width: none;
 }
@@ -894,8 +895,61 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 .programme__marquee .programme-card {
   flex: 0 0 280px;
-  width: 280px;
+  min-width: 280px;
   scroll-snap-align: start;
+}
+
+/* Spacer element after last card — ensures stage 8 scrolls fully into view */
+.programme__marquee-spacer {
+  flex: 0 0 20px;
+  min-width: 20px;
+}
+
+/* Scroll navigation arrows */
+.programme__arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - var(--space-sm) / 2));
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--colour-white);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.programme__arrow:hover {
+  background: rgba(0,0,0,0.55);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.programme__arrow.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.programme__arrow--prev {
+  left: 8px;
+}
+
+.programme__arrow--next {
+  right: 8px;
+}
+
+@media (min-width: 768px) {
+  .programme__arrow {
+    display: flex;
+  }
+  .programme__arrow--prev { left: 12px; }
+  .programme__arrow--next { right: 12px; }
 }
 
 /* Right-edge fade to hint at more cards */
@@ -908,25 +962,36 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   width: 60px;
   background: linear-gradient(to right, transparent, var(--colour-purple));
   pointer-events: none;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
   .programme__marquee .programme-card {
     flex: 0 0 calc((100vw - 80px - 3 * var(--space-md)) / 3.4);
+    min-width: calc((100vw - 80px - 3 * var(--space-md)) / 3.4);
   }
   .programme__marquee-track {
     padding-left: 40px;
-    padding-right: 40px;
+    scroll-padding-left: 40px;
+  }
+  .programme__marquee-spacer {
+    flex: 0 0 40px;
+    min-width: 40px;
   }
 }
 
 @media (min-width: 1025px) {
   .programme__marquee .programme-card {
     flex: 0 0 calc((min(1200px, 100vw) - 3 * var(--space-md)) / 4.3);
+    min-width: calc((min(1200px, 100vw) - 3 * var(--space-md)) / 4.3);
   }
   .programme__marquee-track {
-    padding-left: max(40px, calc((100vw - 1200px) / 2));
-    padding-right: max(40px, calc((100vw - 1200px) / 2));
+    padding-left: max(40px, calc((100vw - var(--max-width)) / 2));
+    scroll-padding-left: max(40px, calc((100vw - var(--max-width)) / 2));
+  }
+  .programme__marquee-spacer {
+    flex: 0 0 max(40px, calc((100vw - var(--max-width)) / 2));
+    min-width: max(40px, calc((100vw - var(--max-width)) / 2));
   }
 }
 
@@ -1285,6 +1350,19 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   }
 }
 
+/* Homepage speakers on canvas — dark text + purple border */
+.home-speakers .home-speaker__image {
+  border-color: var(--colour-purple);
+}
+
+.home-speakers .home-speaker__name {
+  color: var(--colour-charcoal);
+}
+
+.home-speakers .home-speaker__role {
+  color: #777;
+}
+
 /* Speaker avatar stagger entrance */
 .home-speaker {
   opacity: 0;
@@ -1299,14 +1377,10 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 }
 
 
-/* Reduce gap between programme and speakers */
+/* Reduce bottom gap on programme (still tight against session teaser) */
 .programme.section-padding { padding-bottom: calc(var(--space-xl) / 2); }
 @media (min-width: 1025px) {
   .programme.section-padding { padding-bottom: calc(var(--space-2xl) / 2); }
-}
-.speakers.section-padding { padding-top: calc(var(--space-xl) / 2); }
-@media (min-width: 1025px) {
-  .speakers.section-padding { padding-top: calc(var(--space-2xl) / 2); }
 }
 
 /* ---------- SPEAKERS ---------- */
@@ -1453,67 +1527,39 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 }
 
 
-/* ---------- HOME BY NIGHT (charcoal block with gold accents) ---------- */
-.home-night {
+/* ---------- TPS AFTER HOURS (clean image + charcoal strip) ---------- */
+
+/* Full-bleed photo — uses .photo-break--parallax for scroll effect */
+.home-night__hero img {
+  object-position: center 70%;
+}
+
+/* Charcoal strip below the image */
+.home-night__strip {
   background: var(--colour-charcoal);
-  border-radius: var(--radius-md);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
-/* Hero-style after-hours treatment */
-.home-night--hero {
-  position: relative;
-  overflow: hidden;
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-night__backdrop {
-  position: absolute;
-  inset: 0;
-}
-
-.home-night__backdrop img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.home-night__backdrop::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 100%);
-}
-
-.home-night__overlay-content {
-  position: relative;
-  z-index: 1;
+.home-night__strip-content {
   text-align: center;
-  max-width: 680px;
+  max-width: 600px;
   margin-inline: auto;
 }
 
-.home-night__overlay-content h2 {
+.home-night__strip-content h2 {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   color: var(--colour-yellow);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-xs);
 }
 
-.home-night__overlay-content p {
-  color: rgba(255,255,255,0.9);
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  line-height: 1.7;
-  margin-bottom: var(--space-lg);
+.home-night__strip-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  line-height: 1.5;
   margin-inline: auto;
-}
-
-.home-night__overlay-content .btn {
-  margin-top: 0;
+  margin-bottom: var(--space-lg);
 }
 
 
@@ -1657,6 +1703,15 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   background: var(--colour-purple);
   position: relative;
   border-radius: var(--radius-md);
+}
+
+/* Homepage pricing sits on canvas (not purple) */
+.home-pricing {
+  background: var(--colour-canvas);
+}
+
+.home-pricing .pricing__footer {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .pricing__header {
@@ -2145,6 +2200,43 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   color: rgba(255,255,255,0.4);
   border-color: rgba(255,255,255,0.1);
   opacity: 1;
+}
+
+/* Silver card on canvas (homepage) — needs dark text instead of white */
+.home-pricing .price-card--soldout {
+  background: rgba(0,0,0,0.03);
+  border-color: rgba(0,0,0,0.12);
+  opacity: 0.55;
+}
+
+.home-pricing .price-card--soldout .price-card__top {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.home-pricing .price-card--soldout .price-card__name {
+  color: rgba(0,0,0,0.35);
+}
+
+.home-pricing .price-card--soldout .price-card__price {
+  color: rgba(0,0,0,0.3);
+}
+
+.home-pricing .price-card--soldout .price-card__note {
+  color: rgba(0,0,0,0.25);
+}
+
+.home-pricing .price-card--soldout .price-card__features li {
+  color: rgba(0,0,0,0.3);
+  border-bottom-color: rgba(0,0,0,0.06);
+}
+
+.home-pricing .price-card--soldout .price-card__features li::before {
+  color: rgba(0,0,0,0.2);
+}
+
+.home-pricing .price-card--soldout .price-card__sold-out {
+  color: rgba(0,0,0,0.35);
+  border-color: rgba(0,0,0,0.12);
 }
 
 
@@ -5966,19 +6058,19 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   }
 }
 
-/* --- Glass session card (overrides .tps-sessions__card inside this section) --- */
+/* --- Canvas session card (overrides .tps-sessions__card inside this section) --- */
 .home-sessions .tps-sessions__card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--colour-canvas);
+  border: none;
   border-radius: var(--radius-md);
-  box-shadow: none;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   padding: 0;
 }
 
 .home-sessions .tps-sessions__card:hover {
-  background: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background: var(--colour-white);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 /* Card image — full-bleed top of card */
@@ -6006,17 +6098,17 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   padding-bottom: var(--space-md);
 }
 
-/* White text on glass */
+/* Dark text on canvas card */
 .home-sessions .tps-sessions__card-title {
-  color: var(--colour-white);
+  color: var(--colour-charcoal);
 }
 
 .home-sessions .tps-sessions__card-speaker {
-  color: var(--colour-cyan);
+  color: var(--colour-purple);
 }
 
 .home-sessions .tps-sessions__card-desc {
-  color: rgba(255, 255, 255, 0.7);
+  color: #666;
 }
 
 /* Stage tags use their canonical programme colours (see .tps-sessions__tag--*) */

@@ -105,35 +105,47 @@ For detailed per-page decisions, see BUILD-LOG.md.
 - Two CTAs: "Book Your Pass" (btn--gradient) + "Partner With Us" (btn--ghost-light)
 
 ### Homepage Layout (Phase 3 + tweaks)
-- 14 sections with 4 isolated purple blocks, 2 full-bleed photo breaks
+- 14 sections with 2 isolated purple blocks, 2 full-bleed photo breaks,
+  1 full-bleed image hero (By Night)
 - Prefix: .home-* for homepage-specific components
 - Stats band: purple bg, white numbers, rgba white labels
 - Stats count-up targets: `.home-stats__number[data-target]`
-- Programme stages: horizontal scroll with snap + right-edge fade,
-  container-aligned padding (20px mobile, 40px tablet, container-edge
-  desktop). Right padding ensures stages 7/8 fully scrollable.
+- Programme stages: horizontal scroll with snap + right-edge fade +
+  prev/next arrow buttons (hidden mobile, visible 768px+). Container-
+  aligned left padding (20px mobile, 40px tablet, container-edge
+  desktop). HTML spacer element (`.programme__marquee-spacer`) after
+  last card ensures stage 8 scrolls fully into view. Arrows auto-hide
+  at scroll boundaries. `.programme` uses `overflow: clip` (not
+  `hidden`) so child scroll containers work correctly.
 - Session teaser: "A Taste of What to Expect" — purple bg, glass cards
   with photos, theme pill filters, crossfade animation. Stage tags use
   canonical programme colours (not generic white). Reduced top padding
   since it follows programme section on same purple bg.
-- New for 2026: canvas bg, split layout — big headline left (sticky on
-  desktop) + 4 charcoal feature cards right (2×2 grid on tablet+).
-  Cards: Creator Mix, International Stage (Podimo), TPS Connects,
-  Creator First Stage (Arcade). Each with photo + description.
-- Speakers: 10× round circular avatars in 5-col grid. Centred header.
-- TPS After Hours: charcoal bg, hero-style treatment — full-bleed
-  party photo with dark gradient overlay, centred yellow title +
-  larger body copy + ghost CTA. Replaced previous 4-card grid.
+- New for 2026: dark purple bg (#1a0a4e), 4 feature cards with photos
+  in 2×2 grid (tablet+) / 4-col (desktop). Sits immediately after
+  pricing (canvas → dark purple transition). Cards: Creator Mix,
+  International Stage (Podimo), TPS Connects, Creator First Stage
+  (Arcade). Each with photo + description + cyan accents.
+- Speakers: canvas bg (`.home-speakers`), 10× round circular avatars
+  in 5-col grid. Centred header. Purple image borders, charcoal names,
+  grey roles. Stagger entrance animation via IntersectionObserver.
+- By Night: two-part section. Part 1: full-bleed 65vh hero image
+  (CSS background on `.home-night__hero`) with dark gradient overlay,
+  centred yellow title + white strapline. Part 2: charcoal bg
+  (`.home-night__programme`) with 2×2 grid of evening items — clean
+  type, yellow day labels, no card borders. CTA centred at bottom.
+  Yellow accent colour matches programme page By Night section.
 - Testimonials: static 3-col quote grid. Third quote: BBC World Service.
-- Section order: Hero → Stats → What is TPS → Photo Break → Pricing →
-  Audience → Programme (stages) → Session Teaser → New for 2026 →
-  Speakers → TPS After Hours → Testimonials → Photo Break 2 →
-  Partners → Newsletter
+- Section order: Hero → Stats → What is TPS → Photo Break → Pricing
+  (canvas) → New for 2026 (dark purple) → Audience → Programme
+  (stages, purple) → Session Teaser (purple) → Speakers (canvas) →
+  By Night (full-bleed image + charcoal) → Testimonials → Photo
+  Break 2 → Partners → Newsletter
 - See BUILD-LOG.md for full colour rhythm and section-by-section decisions
 
 ### Session Teaser System (homepage)
 - `.home-sessions` section on purple bg between Programme stages and
-  New for 2026
+  Speakers
 - Title: "A Taste of What to Expect", subhead: "Our 2026 programme
   will be announced soon. Click a theme below to explore highlights
   from last year."
@@ -261,10 +273,11 @@ to break the rhythm and keep things feeling like a festival:
 ### Colour Rhythm Principle
 Avoid consecutive purple sections. Each purple block should be
 isolated (all corners rounded) with canvas or full-bleed photo
-breathing room between them. Three purple blocks per page max.
-Social proof sections (testimonials/press + partners) should sit on
-canvas before conversion sections (pricing) for funnel logic.
-Homepage order: testimonials → photo break → partners → pricing.
+breathing room between them. Two purple blocks per page max
+(homepage uses Programme + Session Teaser as one flowing purple
+block). Social proof sections (testimonials/press + partners)
+should sit on canvas. Homepage pricing is on canvas (not purple)
+to reduce purple fatigue — charcoal price cards still contrast well.
 
 ### When Building a New Page
 1. Copy urgency bar + nav/header/footer from any existing inner page
