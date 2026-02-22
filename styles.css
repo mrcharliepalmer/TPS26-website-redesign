@@ -1572,6 +1572,18 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   margin-bottom: var(--space-lg);
 }
 
+/* Gold ghost button on charcoal */
+.home-night__strip-content .btn--ghost-light {
+  border-color: var(--colour-yellow);
+  color: var(--colour-yellow);
+}
+
+.home-night__strip-content .btn--ghost-light:hover {
+  background: rgba(241, 216, 100, 0.1);
+  border-color: var(--colour-yellow);
+  color: var(--colour-yellow);
+}
+
 
 /* ---------- HOME PRESS / INDUSTRY QUOTES (grid on canvas) ---------- */
 /* Home press — uses shared .press-quotes--light */
