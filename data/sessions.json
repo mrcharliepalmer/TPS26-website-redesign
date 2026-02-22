@@ -1,0 +1,1642 @@
+[
+  {
+    "id": 1,
+    "title": "Podcast Industry Keynote: The Year That Was - And The Year To Come In Podcasting",
+    "speaker": "James Cridland",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "James Cridland's annual keynote reviewing the biggest shifts in podcasting and what's coming next.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 2,
+    "title": "3x Your Podcast Episode Audience With Video",
+    "speaker": "Callum Airey (Calfreezy), Jorja McAndrew, Elliott Hackney",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "The Fellas Studios share proven tactics for tripling your podcast reach through video content.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 3,
+    "title": "Christiane Amanpour and Emily Maitlis: Behind The Headlines",
+    "speaker": "Emily Maitlis, Christiane Amanpour",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "Two of journalism's biggest names discuss how podcasting is reshaping the way news reaches audiences.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 4,
+    "title": "The World Is Watching: Scaling Success With Video on Spotify",
+    "speaker": "Roman Wasenm\u00fcller, Jack Davenport, Matt Sayward, Georgie Holt",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "Spotify's team reveals how video is driving global podcast growth on the platform.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 5,
+    "title": "California to Clapham: BetterHelp\u2019s Podcast Playbook for UK and US Audiences",
+    "speaker": "Oli Walters, Hetal Patel, Brittany Clevenger",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "How BetterHelp built a transatlantic podcast strategy that resonates with both UK and US listeners.",
+    "audience": "industry",
+    "theme": "growth"
+  },
+  {
+    "id": 6,
+    "title": "Looking To Audio\u2019s Tomorrow: The Radio / Audiobooks / Podcasting Convergence",
+    "speaker": "Ruth Fitzsimons, Shea Simpson, Lisa Higginson, Glenn Miller",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "Amazon and Wondery explore how radio, audiobooks and podcasting are merging into one audio ecosystem.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 7,
+    "title": "Mel Giedroyc is Dying to Do a Podcast",
+    "speaker": "Mel Giedroyc, Ollie Wilson, Charlie Murrell, Nia Deo",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "Mel Giedroyc and the Sony team discuss the creative journey of bringing a new celebrity podcast to life.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 8,
+    "title": "A $4bn Opportunity or a $400bn One? Why We Must Stop Playing Small Time to End the Format Debate and Step Into What\u2019s Next!",
+    "speaker": "Lily Taurau, Pollyanna Ward",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "A provocative look at why the podcast industry must think bigger and move beyond the format debate.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 9,
+    "title": "Why True Crime Will Never Die?",
+    "speaker": "Dylan Haskins, Carole Cadwalladr, Sue Mitchell, Mark Horgan, Ryan Nile",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "BBC Sounds investigates why true crime remains the most resilient and popular podcast genre.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 10,
+    "title": "The Girlfriends: From Hit Show To Always-on Feed",
+    "speaker": "Kara Welker, Anna Sinfield, Hannah Marshall",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "How iHeart turned The Girlfriends from a hit series into a year-round content brand.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 11,
+    "title": "Armando Iannucci\u2019s Life in Sound",
+    "speaker": "Richard Knight, Armando Iannucci",
+    "stage": "Origin Stage",
+    "day": "wednesday",
+    "desc": "Armando Iannucci reflects on his career in audio and what draws top creatives to the medium.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 12,
+    "title": "Podcasting's Place in the Advertising Landscape",
+    "speaker": "Tom Webster",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "Tom Webster presents Sounds Profitable's latest data on where podcasting sits in the wider ad market.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 13,
+    "title": "The True Crime Investigation",
+    "speaker": "Shaun Wilson, Molly Brown, Andy Maxwell",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "Audioboom examines true crime's commercial power and what makes it so attractive to advertisers.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 14,
+    "title": "Podcasting in 2030: The Role of Creators & Video",
+    "speaker": "James Chandler, Stephen Naughton, Flora Williams, Farhann Cachra",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "IAB panellists debate how creators and video will shape podcasting over the next five years.",
+    "audience": "brand",
+    "theme": "strategy"
+  },
+  {
+    "id": 15,
+    "title": "Infinite Dial UK 2025: Edison Research, SiriusXM Media, and AdsWizz",
+    "speaker": "Gabriel Soto, Ollie Chadwick",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "The definitive annual survey of UK podcast listening habits, platforms and audience demographics.",
+    "audience": "brand",
+    "theme": "landscape"
+  },
+  {
+    "id": 16,
+    "title": "A Case Study in Brand Podcasting: Arm\u2019s Tech Unheard",
+    "speaker": "Jonathan Armstrong, Gina Garrubbo",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "NPR and Arm break down how a global tech brand built an award-winning branded podcast.",
+    "audience": "brand",
+    "theme": "strategy"
+  },
+  {
+    "id": 17,
+    "title": "Mic Check: Are You Reaching the Right Podcast Audience",
+    "speaker": "Bryan Barletta, Abhishek Sen, Hossein Houssaini, Sam Austin",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "How audience targeting tools help advertisers reach the right podcast listeners at scale.",
+    "audience": "brand",
+    "theme": "growth"
+  },
+  {
+    "id": 18,
+    "title": "Finally, Proof Your Audio Campaign Works",
+    "speaker": "Kris Harris, Mat Harrison",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "Global DAX presents new evidence proving the measurable impact of audio advertising campaigns.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 19,
+    "title": "Podcast Programmatic Buying: What\u2019s Changed and Where the Future is Headed",
+    "speaker": "Anne Frisbie, Michael Bayston, Karin Kessler, Nadia Holmes, Laurent Dauron",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "Where programmatic podcast buying stands today and the technical shifts shaping its future.",
+    "audience": "brand",
+    "theme": "tech"
+  },
+  {
+    "id": 20,
+    "title": "Unlocking the Power of Perception: Leveraging Strategic Research to Enhance Branded Podcasts",
+    "speaker": "Jay Nachlis, Diana Barnes, Tony Mennuto",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "How strategic perception research can make branded podcasts more effective and memorable.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 21,
+    "title": "Show Me The Money - Unlocking the Monetary Value of Diverse Audiences",
+    "speaker": "Bernard Achampong, Dr Ayesha Taylor-Camara, Lydia Amoah",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "Why diverse podcast audiences represent an untapped commercial opportunity for brands and advertisers.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 22,
+    "title": "The Podcast Academy International Awards",
+    "speaker": "",
+    "stage": "Brand Works Stage",
+    "day": "wednesday",
+    "desc": "The Podcast Academy celebrates outstanding international podcasting with its annual awards ceremony.",
+    "audience": "brand",
+    "theme": "strategy"
+  },
+  {
+    "id": 23,
+    "title": "Do's and Don't & Best Practises with Examples for Podcasting on YouTube",
+    "speaker": "Charles Kerr",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "YouTube's Charles Kerr shares practical dos, don'ts and examples for podcasting on the platform.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 24,
+    "title": "Two Peas in a Pod: Some Unfiltered Advice To Find The Right Presenter Partnership",
+    "speaker": "Joelah Noble, Adeola Patronne, Mariam Musa",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "Candid advice on finding the right co-host and making presenter partnerships work long-term.",
+    "audience": "industry",
+    "theme": "monetisation"
+  },
+  {
+    "id": 25,
+    "title": "Why Comedians Make Great Podcasters",
+    "speaker": "Andrew Goldsmith, Frank Skinner, Russell Howard, Harriet Kemsley",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "Frank Skinner, Russell Howard and Harriet Kemsley discuss why comedy translates so well to podcasting.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 26,
+    "title": "The Future of Music Formats, With Pop Top 10",
+    "speaker": "Darby Dorras, Scott Mills, Helen Thomas, Zo\u00eb Edwards, Rory Connolly",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "BBC Sounds and the Pop Top 10 team explore how music formats are evolving in audio.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 27,
+    "title": "Charity Case: Podcasting For Good, with Comic Relief, \u201cOne Amazon,\u201d and Audio Always",
+    "speaker": "John Harris, Samir Patel, Sam Michell, Paul Fernley",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "How Comic Relief, Amazon and Audio Always are using podcasts to drive social impact.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 28,
+    "title": "Creators Leading the Charge: Community, Fandom, & the Future of Multi-Format Content",
+    "speaker": "Max Cutler, Morgan Absher, Jamie Laing",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "Jamie Laing and Pave explore how creators build loyal communities across multiple content formats.",
+    "audience": "creator",
+    "theme": "growth"
+  },
+  {
+    "id": 29,
+    "title": "Pitching to the CBC, ABC, BBC and NPR",
+    "speaker": "Rhian Roberts, Jessica Radburn, Arif Noorani, Irene Noguchi",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "Senior commissioners from CBC, ABC, BBC and NPR reveal exactly what they look for in a pitch.",
+    "audience": "creator",
+    "theme": "networking"
+  },
+  {
+    "id": 30,
+    "title": "Podcast Music Mastery",
+    "speaker": "Charlotte Wolf, Luisa Gerstein, Nick Alexander, Adam Foran",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "Expert producers share how to select, license and use music to elevate your podcast.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 31,
+    "title": "Anatomy of a British Scandal",
+    "speaker": "Alice Levine, Matt Forde, Dasha Lisitsina, Redzi Bernard",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "The team behind British Scandal reveals how they turn real UK scandals into gripping audio narratives.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 32,
+    "title": "How Podcasting Won An Election (and Where We Go From Here) with Pod Save The UK",
+    "speaker": "Giancarlo Bizzarro, Nish Kumar, Francesco Tassi",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "Crooked Media and Pod Save The UK discuss podcasting's growing influence on political campaigns.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 33,
+    "title": "The Integrity of True Crime",
+    "speaker": "Bethany Usher TBC, Jamie East, Scott Weinberger, Suruthi Bala, Hannah Maguire",
+    "stage": "Studio Stage",
+    "day": "wednesday",
+    "desc": "A panel exploring the ethical responsibilities of true crime podcasters towards victims and accuracy.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 34,
+    "title": "Grow Your Audience Like the Top Shows Do",
+    "speaker": "Mark Asquith, Jordan Harbinger",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "Captivate and Jordan Harbinger share the audience growth strategies used by top-performing shows.",
+    "audience": "creator",
+    "theme": "growth"
+  },
+  {
+    "id": 35,
+    "title": "Why the Time is Right to Get A Grip",
+    "speaker": "Emma Morrisroe, Angela Scanlon, Vicky Pattison",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "Angela Scanlon and Vicky Pattison discuss the creative and commercial momentum behind Get A Grip.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 36,
+    "title": "The Creator Economy is Dead. Welcome to the Era of Creator Entrepreneurs",
+    "speaker": "Leon Farrell, Natasha Birk",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "Flight Story Studio argues creators must evolve from content-makers into media entrepreneurs.",
+    "audience": "creator",
+    "theme": "strategy"
+  },
+  {
+    "id": 37,
+    "title": "Sonic Branding & The Power of Audio Storytelling",
+    "speaker": "Abigail Busenze, Nathan Freeman, Benbrick, Philip Raperport",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "How sonic branding and audio identity can give your podcast a distinctive, professional edge.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 38,
+    "title": "The Art Of Hosting - Behind the Mic and In Front of the Camera",
+    "speaker": "Seani B, Remel London, Katrina Ridley",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "Experienced hosts share what it takes to present confidently both on-mic and on-camera.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 39,
+    "title": "+44 Presents The Black Creators Meet Up",
+    "speaker": "Bernard Achampong, Dellessa James, Temi Alche\u0301my, Fred Santana, Dennis VP",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "A community meetup celebrating and connecting Black podcast creators across the UK.",
+    "audience": "creator",
+    "theme": "networking"
+  },
+  {
+    "id": 40,
+    "title": "How Zach Justice is Building a Multi-channel Media Empire Using AI",
+    "speaker": "Conor Eliot, Zach Justice",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "Zach Justice explains how he uses AI tools to run a multi-platform media operation.",
+    "audience": "creator",
+    "theme": "strategy"
+  },
+  {
+    "id": 41,
+    "title": "How To Take Podcasts Into TV",
+    "speaker": "Helen Pendlebury, Alice Sandelson, Max O\u2019Brien, Richard Morris",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "BBC Studios producers reveal the pathway for turning a successful podcast into a TV commission.",
+    "audience": "creator",
+    "theme": "strategy"
+  },
+  {
+    "id": 42,
+    "title": "Playing For The Camera: Vogue and Amber\u2019s Viral Video Moments Winning Over Audiences.",
+    "speaker": "Sarah Ray, Vogue Williams, Amber Wilson",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "Vogue Williams and Amber Wilson share how viral video moments helped grow their podcast audience.",
+    "audience": "creator",
+    "theme": "growth"
+  },
+  {
+    "id": 43,
+    "title": "21st Century Scripted Fiction in the UK - Boom or Niche?",
+    "speaker": "Alison Hindell, Ella Watts, Hannah Brankin",
+    "stage": "Creator Stage",
+    "day": "wednesday",
+    "desc": "Is scripted fiction podcasting in the UK booming or still a niche? Creators and commissioners debate.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 44,
+    "title": "ADHD In Adulthood: Untangling The Myths",
+    "speaker": "Sam Pittis, Katie Breathwick",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "Global explores how podcasts are helping to untangle myths and raise awareness around adult ADHD.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 45,
+    "title": "Monetize: Building Audience Trust for Long-Term Podcast Revenue",
+    "speaker": "Patrick Hill, Keisha Salmon, Kevin Y Brown",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "How to build genuine listener trust that converts into sustainable, long-term podcast revenue.",
+    "audience": "industry",
+    "theme": "monetisation"
+  },
+  {
+    "id": 46,
+    "title": "The Economist Presents: How \u201cLegacy Media\u201d Can Succeed With Podcasts",
+    "speaker": "Rosie Blau, John Shields, Sue-Lin Wong, Andrew Palmer",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "The Economist's team shares how traditional publishers can build a thriving podcast operation.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 47,
+    "title": "Behind the Paywall: Building A Sustainable Creator Business",
+    "speaker": "Stephanie Smellie, Hannah Maguire, Suruthi Bala",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "Patreon and top creators discuss how subscription models can underpin a sustainable podcast business.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 48,
+    "title": "How Analytics Can Inspire Podcast Creativity and Storytelling",
+    "speaker": "Sharon Taylor, Jordan Fox, Stephanie Andrews, Miranda Romano",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "How podcast analytics can inform creative decisions and improve storytelling, not just measure reach.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 49,
+    "title": "The Wargame \u2013 How To Turn Geopolitics Into Standout Audio Storytelling",
+    "speaker": "Yalda Hakim, Deborah Haynes, Dr Rob Johnson, James Shield",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "Sky and Tortoise reveal how they turned complex geopolitics into compelling audio storytelling.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 50,
+    "title": "Sound Numbers: Decoding Podcast Patterns",
+    "speaker": "Adam Bowie",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "A deep dive into what podcast listening data patterns reveal about audience behaviour and trends.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 51,
+    "title": "Snakes, Steve Backshall and Wildlife Storytelling",
+    "speaker": "Steve Backshall, Lizzie Daly, Sarah Roberts, Izzie Clarke, Eva Higginbotham",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "Steve Backshall and wildlife storytellers explore the art of bringing the natural world to audio.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 52,
+    "title": "The Podcasting Legal Must Knows",
+    "speaker": "Alexia Bedat, Stacey Mitsopulos, Cliff Fluet",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "Essential legal knowledge every podcaster needs \u2014 from copyright and defamation to contracts.",
+    "audience": "industry",
+    "theme": "operations"
+  },
+  {
+    "id": 53,
+    "title": "Your Platform, Your Revenue: The Future of Enterprise Podcasting",
+    "speaker": "\u00d6jje Holt, Chris Peterson",
+    "stage": "Talking Podcasts 1",
+    "day": "wednesday",
+    "desc": "How enterprise-grade podcast platforms give publishers more control over distribution and revenue.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 54,
+    "title": "Bed of Lies: Uncovering the UK\u2019s Biggest Scandals",
+    "speaker": "Louisa Wells, Cara McGoogan, Sarah Peters",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "The Telegraph's investigative team discusses how they uncover and tell the UK's biggest scandal stories.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 55,
+    "title": "Podcasting Without Borders: A Global Perspective with BBC World Service",
+    "speaker": "Ayeesha Chowdhury, Mairi Brewis, Valentina Kaledina, Shea Shimpson, Rebecca Henschke",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "BBC World Service producers share lessons from making podcasts that cross language and cultural barriers.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 56,
+    "title": "From Explosion to Evolution: The State of Video Podcasting",
+    "speaker": "Jay Nachlis, Steve Goldstein",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "Coleman Insights and Steve Goldstein assess how video podcasting has matured and where it's heading.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 57,
+    "title": "Anticipate & Adapt: Solve Your Podcast's Biggest Challenges (Before They Happen)",
+    "speaker": "Michele Cobb, Arielle Nissenblatt, Jay Green, Sangeeta Pillai",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "Practical frameworks for anticipating common podcast challenges and solving them before they escalate.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 58,
+    "title": "Do Podcasts Actually Help Men?",
+    "speaker": "Max Dickins, Fernando Desouches, James Scroggs, Sam Delaney",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "Do podcasts genuinely support men's wellbeing, or are they part of the problem? A candid panel.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 59,
+    "title": "How Africa Is Leading the Global Podcasting Revolution",
+    "speaker": "Jon Savage, Kevin Y Brown, Mac Maison, Ike Orizu",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "How African podcasters are building audiences and shaping the medium's global future.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 60,
+    "title": "Beyond Brexit: The Rise of European Podcasting",
+    "speaker": "Matt White, Anne Janssens, Ruben Schulze-Fr\u00f6hlich, Katia Sanerot",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "A look at how European podcast markets are growing independently of the US and UK.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 61,
+    "title": "The Opportunity of Kids' Podcasts: Unlocking Creativity and Connection",
+    "speaker": "Vic Elizabeth Turnbull, Jenna Clarke, Andy Smith, David Smith",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "The untapped opportunity in kids' podcasts and how to create content that engages young listeners.",
+    "audience": "industry",
+    "theme": "monetisation"
+  },
+  {
+    "id": 62,
+    "title": "Beyond Borders: Global Insights on Independent, Branded Podcasting",
+    "speaker": "Amanda Cupido, Ruth Barnes, Maria Lorenz-Bokelberg",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "International perspectives on building independent branded podcasts that work across borders.",
+    "audience": "brand",
+    "theme": "landscape"
+  },
+  {
+    "id": 63,
+    "title": "Making Podcasts That Sound Truly Global",
+    "speaker": "Lory Martinez, Luciano Banchero, Marcus H, Nuria Net",
+    "stage": "Talking Podcasts 2",
+    "day": "wednesday",
+    "desc": "Practical advice on producing podcasts that feel authentically global rather than regionally limited.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 64,
+    "title": "Climbing the Charts: Inside BBC Studios\u2019 Podcast Search Optimization Strategy with BBC Studios and Ausha",
+    "speaker": "Juliet Martin, Irene Picco",
+    "stage": "Ask The Experts",
+    "day": "wednesday",
+    "desc": "BBC Studios and Ausha reveal the podcast search optimisation tactics behind chart-climbing shows.",
+    "audience": "creator",
+    "theme": "growth"
+  },
+  {
+    "id": 65,
+    "title": "AMA (Ask Me Anything) with BetterHelp\u2019s Brittany Clevenger and Acast\u2019s Veronika Taylor and Lizzy Pollot",
+    "speaker": "Brittany Clevenger, Veronika Taylor, Lizzy Pollot",
+    "stage": "Ask The Experts",
+    "day": "wednesday",
+    "desc": "An open Q&A with BetterHelp and Acast on sponsorship strategy, brand partnerships and creator support.",
+    "audience": "creator",
+    "theme": "strategy"
+  },
+  {
+    "id": 66,
+    "title": "Mastering Podcast Audio: Insider Tips from Shure",
+    "speaker": "Jack Drury, Mark Bronzy",
+    "stage": "Ask The Experts",
+    "day": "wednesday",
+    "desc": "Shure's audio experts share insider tips on achieving professional-quality podcast sound.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 67,
+    "title": "Is AI Ready to Revolutionize Podcasting?",
+    "speaker": "Tess Kaday, Director of Product, Trint",
+    "stage": "Ask The Experts",
+    "day": "wednesday",
+    "desc": "A practical assessment of which AI tools are genuinely useful for podcast production today.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 68,
+    "title": "Navigating the AI Fog: How to Optimize and Enhance Media Workflows",
+    "speaker": "",
+    "stage": "Ask The Experts",
+    "day": "wednesday",
+    "desc": "How to cut through the AI hype and find tools that actually improve your media workflow.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 69,
+    "title": "True Crime Redefined: Beyond Murder & Mayhem",
+    "speaker": "Aron Shaviv, Jonathan Taylor",
+    "stage": "Ask The Experts",
+    "day": "wednesday",
+    "desc": "Redefining true crime beyond murder \u2014 exploring financial fraud, corruption and lesser-told stories.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 70,
+    "title": "Why High-Profile Personalities Are Choosing Podcasts Over Traditional Media",
+    "speaker": "Lee Alleston, Dermot Murnaghan, Dr. Hilary, Russell Quirk",
+    "stage": "Ask The Experts",
+    "day": "wednesday",
+    "desc": "Why celebrities and public figures are increasingly choosing podcasts as their primary media channel.",
+    "audience": "creator",
+    "theme": "strategy"
+  },
+  {
+    "id": 71,
+    "title": "Taking a 150K/month audio podcast to video (with unfiltered metrics)",
+    "speaker": "Harry Morton, Jacki Lamport",
+    "stage": "Ask The Experts",
+    "day": "wednesday",
+    "desc": "Real metrics from transitioning a 150K-download audio podcast to video \u2014 what worked and what didn't.",
+    "audience": "creator",
+    "theme": "strategy"
+  },
+  {
+    "id": 72,
+    "title": "Beyond the Mic: How AI is Rewriting the Future of Podcasting",
+    "speaker": "Cliff Fluet",
+    "stage": "Indie Business Stage",
+    "day": "wednesday",
+    "desc": "How AI is already changing podcast creation, distribution and discovery for independent makers.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 73,
+    "title": "Compliance 101",
+    "speaker": "Kirsty Howarth",
+    "stage": "Indie Business Stage",
+    "day": "wednesday",
+    "desc": "A practical primer on the compliance obligations every podcast business needs to understand.",
+    "audience": "creator",
+    "theme": "operations"
+  },
+  {
+    "id": 74,
+    "title": "Building Longevity & Traction in the Indie Podcasting Space",
+    "speaker": "Callum Dougherty, Luke Moore",
+    "stage": "Indie Business Stage",
+    "day": "wednesday",
+    "desc": "How indie podcasters can build lasting careers without relying on viral moments or major deals.",
+    "audience": "creator",
+    "theme": "operations"
+  },
+  {
+    "id": 75,
+    "title": "AudioUK Member Coffee & Networking",
+    "speaker": "Lead: Chloe Straw & Katie Banham",
+    "stage": "Indie Business Stage",
+    "day": "wednesday",
+    "desc": "A networking session for AudioUK members to connect and share industry insights over coffee.",
+    "audience": "creator",
+    "theme": "networking"
+  },
+  {
+    "id": 76,
+    "title": "Taking a Risk When Others Won't",
+    "speaker": "Ruth Barnes, John Sweeney, Jason Phipps",
+    "stage": "Indie Business Stage",
+    "day": "wednesday",
+    "desc": "Stories of bold editorial choices in podcasting \u2014 what happens when you take on risky subjects.",
+    "audience": "creator",
+    "theme": "operations"
+  },
+  {
+    "id": 77,
+    "title": "Spotlight on Latin America",
+    "speaker": "David R Gonzalez, Juan Manuel Giraldez",
+    "stage": "International Gallery",
+    "day": "wednesday",
+    "desc": "An overview of Latin America's fast-growing podcast ecosystem and its unique market dynamics.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 78,
+    "title": "Exploring Finland\u2019s Evolving Podcasting Landscape",
+    "speaker": "Moona K\u00e4rkk\u00e4inen, Jenny Nordlander",
+    "stage": "International Gallery",
+    "day": "wednesday",
+    "desc": "How Finland's podcast market is developing its own identity within the Nordic audio landscape.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 79,
+    "title": "TimTams and Tall Tales: Dunking into the Australian Podcast Landscape",
+    "speaker": "Kim Kerton, Corey Layton",
+    "stage": "International Gallery",
+    "day": "wednesday",
+    "desc": "A tour of Australia's podcast scene \u2014 audience habits, standout shows and market opportunities.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 80,
+    "title": "Connecting Across Borders: Why European Podcasters Need Each Other",
+    "speaker": "Andreea Coscai",
+    "stage": "International Gallery",
+    "day": "wednesday",
+    "desc": "Why cross-border collaboration between European podcasters benefits the entire continent's industry.",
+    "audience": "industry",
+    "theme": "networking"
+  },
+  {
+    "id": 81,
+    "title": "Emily Villatte - Creator Keynote",
+    "speaker": "Emily Villatte",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "Creator Emily Villatte delivers the opening keynote on building an audience in today's landscape.",
+    "audience": "creator",
+    "theme": "strategy"
+  },
+  {
+    "id": 82,
+    "title": "Building Global Media Brands in a Creator-First World",
+    "speaker": "Ashley Carman, Jack Davenport, Max Cutler",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "How Pave Studios is building global media brands by putting creators at the centre of the strategy.",
+    "audience": "brand",
+    "theme": "strategy"
+  },
+  {
+    "id": 83,
+    "title": "Politics & Podcasts In The Age Of Trump",
+    "speaker": "Anthony Scaramucci, Tony Pastor",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "Anthony Scaramucci and Goalhanger's Tony Pastor explore podcasting's role in the Trump-era political landscape.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 84,
+    "title": "Women\u2019s Sports: Impact, Growth & Opportunity",
+    "speaker": "Chloe Morgan, Maisie Adam, Lizzi Doyle, Kelly Somers",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "BBC Sounds examines the surge in women's sports podcasting and the opportunities it creates.",
+    "audience": "industry",
+    "theme": "growth"
+  },
+  {
+    "id": 85,
+    "title": "Inside Apple Podcasts",
+    "speaker": "Susie Warhurst, Jake Shapiro",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "Apple's podcast team offers a rare look inside the platform's editorial and discovery strategy.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 86,
+    "title": "YouTube Podcasting in 2025: Discovery and Audience Growth",
+    "speaker": "Steve McLendon, Cori Boyce",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "YouTube shares its latest data and tools for helping podcasters grow their audience on the platform.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 87,
+    "title": "The Power of Building Community with Elizabeth Day and Dan Jones",
+    "speaker": "Chris Skinner, Elizabeth Day, Dan Jones, Jaimie Meyers",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "Elizabeth Day, Dan Jones and Sony discuss how community-building turns listeners into devoted fans.",
+    "audience": "industry",
+    "theme": "growth"
+  },
+  {
+    "id": 88,
+    "title": "The State Of The Podcast Industry",
+    "speaker": "Will Pearson, Carrie Lieberman",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "iHeart's leadership shares the latest data and analysis on where the podcast industry stands today.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 89,
+    "title": "Building Your Brand: How The Creator Economy is Shaping the Future of Podcasts",
+    "speaker": "Steve Ackerman, Georgie Holt, Jordan Schwarzenberger, Liam Reardon, Millie Court",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "How the creator economy is reshaping podcast brand-building \u2014 with Love Island's Liam and Millie.",
+    "audience": "brand",
+    "theme": "strategy"
+  },
+  {
+    "id": 90,
+    "title": "A Sixties Singing Legend Turns Podcaster",
+    "speaker": "Faye Lyons-White, Lulu",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "Music legend Lulu shares why she chose podcasting and what the medium offers established talent.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 91,
+    "title": "The Rest Is YouTube: Jack Davenport gives the inside scoop on Goalhanger\u2019s YouTube Success Story.",
+    "speaker": "Alison Lomax, Jack Davenport, Tony Pastor",
+    "stage": "Origin Stage",
+    "day": "thursday",
+    "desc": "How Goalhanger built The Rest Is series into a YouTube success, with lessons for other publishers.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 92,
+    "title": "Podcast listening in the UK: Who? What? How? Why?",
+    "speaker": "Mark Pearson",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Ofcom's latest research on who listens to podcasts in the UK, on which platforms and why.",
+    "audience": "brand",
+    "theme": "landscape"
+  },
+  {
+    "id": 93,
+    "title": "Unlocking Revenue Opportunities for Your Podcast",
+    "speaker": "Christopher Avello, Bryan Barletta, Stephen Pickens, Izabela Russell",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Libsyn walks through the revenue models available to podcasters and how to maximise each one.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 94,
+    "title": "The Global Sales Opportunity \u2013 Turning Podcasting\u2019s Worldwide Boom Into Ad Revenue",
+    "speaker": "Bryan Barletta, Greg Styger, Alanna Vaughns, Daniel Karlsson",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Sounds Profitable explores how to convert global podcast audience growth into international ad revenue.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 95,
+    "title": "Podcast Advertising Market Trends",
+    "speaker": "Cameron Hendrix, Jim Ballas",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Magellan AI presents the latest trends, benchmarks and forecasts in podcast advertising spend.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 96,
+    "title": "Brand Suitability and Contextual Targeting in Podcasting \u2013 Tools and Insights",
+    "speaker": "Sharon Taylor, Corey Layton, Miranda Romano",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "How brand safety tools and contextual targeting are making podcast ad buying more precise.",
+    "audience": "brand",
+    "theme": "tech"
+  },
+  {
+    "id": 97,
+    "title": "Podcasting: The Global Opportunity for Brands",
+    "speaker": "Steven Abraham, Craig Eastwood, David Roemer Gonz\u00e1lez, Lemya Soltani, Selina Schmitt",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Oxford Road makes the case for why global brands should be investing more in podcast advertising.",
+    "audience": "brand",
+    "theme": "strategy"
+  },
+  {
+    "id": 98,
+    "title": "Women\u2019s Sports Content: Why Invest in the Revolution?",
+    "speaker": "Tom Fordyce, Jill Scott MBE, Karen Carney OBE, Louise Gwilliam, Ginny Seymour",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Why women's sports content is a smart investment \u2014 with Jill Scott and Karen Carney.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 99,
+    "title": "Are 360 Campaigns the Future of Podcast Advertising?",
+    "speaker": "Sophie Hind, Will Ridley, John Gibbons, Lucy Ledger, Tom Price",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Whether 360 campaigns spanning audio, video and social represent the future of podcast advertising.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 100,
+    "title": "Podcast Ads In Action: Behind The Scenes with NordVPN and NHS Blood & Transplant",
+    "speaker": "James Chandler, Marsha Crossland, Jisola Omibiyi, Shaun Wilson, Jake Storer",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Behind-the-scenes case studies of how NordVPN and NHS Blood & Transplant run podcast ad campaigns.",
+    "audience": "brand",
+    "theme": "monetisation"
+  },
+  {
+    "id": 101,
+    "title": "Brands & Advertisers Question Time",
+    "speaker": "Ruth Fitzsimons, Kym Treasure, Gina Garrubbo",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Senior brand and agency leaders take audience questions on the state of podcast advertising.",
+    "audience": "brand",
+    "theme": "strategy"
+  },
+  {
+    "id": 102,
+    "title": "Content Is For Machines. Worlds Are For Humans!",
+    "speaker": "Clare Suchley-Smith, Pollyanna Ward",
+    "stage": "Brand Works Stage",
+    "day": "thursday",
+    "desc": "Flight Story Studio argues that in an AI-saturated content world, immersive worlds will win.",
+    "audience": "brand",
+    "theme": "storytelling"
+  },
+  {
+    "id": 103,
+    "title": "Virtually Parkinson: Live",
+    "speaker": "Mike Parkinson, Benjamin Field, Jamie Anderson",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "Mike Parkinson records a live episode exploring how podcasting amplifies underrepresented stories.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 104,
+    "title": "Podcasting 2025\u20132035: Predictions for the Future of Global Podcasting",
+    "speaker": "Chloe Straw, Megan Bradshaw, Tiffany Ashitey, Jessica Cordova Kramer",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "Audio UK's panel of industry leaders predict what podcasting will look like over the next decade.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 105,
+    "title": "Superserving Audiences Around the World with Direct-To-Fan Engagement",
+    "speaker": "Emily Rasekh, Jaimie Meyers, Stephanie Smellie, Jack Davenport",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "Sony's global team shares strategies for building direct fan relationships across international markets.",
+    "audience": "industry",
+    "theme": "growth"
+  },
+  {
+    "id": 106,
+    "title": "BetterHelp & Untapped - How They're Using Podcast to Amplify Mental Health Research in the UK",
+    "speaker": "George MacDonald, Brittany Clevenger, Spencer Matthews",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "How BetterHelp and Spencer Matthews are using podcasting to advance mental health research in the UK.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 107,
+    "title": "Backing British Creativity",
+    "speaker": "James Cook, Nikki Ettore, Arif Noorani, Sara Nics, Annie Brown",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "BBC Studios makes the case for investing in British podcast talent and original audio content.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 108,
+    "title": "Earning Money from Video Podcasts: Has the Game Changed?",
+    "speaker": "James Cridland, Bryan Barletta, Catherine Browne, Austin Goh",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "Has video changed the economics of podcasting? Industry experts debate the new revenue landscape.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 109,
+    "title": "AI In Audio: The BBC\u2019s View",
+    "speaker": "Olle Zachrison, Petra Abbam, Nicky Birch",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "The BBC shares its position on AI in audio \u2014 the opportunities, the risks and the red lines.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 110,
+    "title": "Make It Make Sense: How to Make Great Podcasts and Run a Sustainable Audio Business",
+    "speaker": "Stephanie Wittels Wachs, Gretta Cohn, Jessica Cordova Kramer, Emily Rudder",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "Lemonada's founders share hard-won lessons on running a sustainable independent audio business.",
+    "audience": "creator",
+    "theme": "operations"
+  },
+  {
+    "id": 111,
+    "title": "The Year of 360: How Podcast Deals Are Changing in 2025",
+    "speaker": "Alexia Bedat, Will Pearson, Carrie Brody, Max Cutler",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "How 360 deals are reshaping the economics of podcast talent contracts in 2025.",
+    "audience": "industry",
+    "theme": "monetisation"
+  },
+  {
+    "id": 112,
+    "title": "Masterclass: The \"Social First\" Strategies That ACTUALLY Blow Up Podcasts",
+    "speaker": "Callum McDonnell, Rich Willan, Grace Miller, Liam Miller",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "Proven social-first promotion strategies that actually drive new listeners to your podcast.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 113,
+    "title": "Bradley Wiggins: From Peloton to Podcast",
+    "speaker": "Sir Bradley Wiggins, Graham Willgoss, Stefan Doyle",
+    "stage": "Studio Stage",
+    "day": "thursday",
+    "desc": "Sir Bradley Wiggins on his transition from professional cycling to building a podcast brand.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 114,
+    "title": "AI and How Creators Can Use It",
+    "speaker": "Norma Jean Belenky, James Cridland, Neil Mody, Emma Raz, Kendall Breitman",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "A practical guide to the AI tools creators can use today to improve their podcast workflow.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 115,
+    "title": "Staying Ahead: Podcasters, Creators, and the Future of Digital Storytelling",
+    "speaker": "Nicole Logan, Rhyanna Coleman, Ash Holme, Daniel Foxx, Tom Whiter",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "How podcasters and digital creators can stay ahead as the storytelling landscape evolves.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 116,
+    "title": "I Heard It On A Podcast, But Was It True?",
+    "speaker": "Mohit Bakaya, Marianna Spring, Yalda Hakim, Jasper Corbett",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "BBC journalists explore misinformation in podcasting and the responsibility creators carry.",
+    "audience": "creator",
+    "theme": "operations"
+  },
+  {
+    "id": 117,
+    "title": "Immersive Nonfiction: Elevating Real Stories with Dolby Atmos",
+    "speaker": "Tina Eckman, Tom Haines, Pascal Wyse, Jessica Ryan",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "How Dolby Atmos spatial audio can transform nonfiction podcast storytelling into immersive experiences.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 118,
+    "title": "Best Left Untold? How To Cover Difficult History",
+    "speaker": "Dan Clarke, Jenny Kleeman, Kavita Puri, Joe Dunthorne",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "Producers discuss the ethics and craft of covering sensitive and difficult historical subjects in audio.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 119,
+    "title": "The Art of Freelancing: Income, Impact and Independence",
+    "speaker": "Bea Duncan, Tess Davidson, Mae-Li Evans, Naomi Oiku",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "Practical advice on building a sustainable freelance career in podcast production and audio.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 120,
+    "title": "Almost 100 Podcast Growth Tips",
+    "speaker": "Arielle Nissenblatt, Lauren Passell, Shreya Sharma",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "A rapid-fire session packed with actionable tips for growing your podcast audience.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 121,
+    "title": "Always On: Miss Me?",
+    "speaker": "Dylan Haskins, Miquita Oliver, Jess Stone, Dino Sofos, Lorraine Okuefuna",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "The Miss Me? team discuss what it takes to maintain a successful always-on podcast format.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 122,
+    "title": "UKAN State of the Audio Industry 2025",
+    "speaker": "Laura Blake",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "UKAN presents its annual data snapshot of the UK audio industry's health and direction.",
+    "audience": "creator",
+    "theme": "landscape"
+  },
+  {
+    "id": 123,
+    "title": "UNEDITED: Panel Discussion",
+    "speaker": "Bernard Achampong, Lina Prestwood, Chris Mitchell, Sumit Sharma",
+    "stage": "Creator Stage",
+    "day": "thursday",
+    "desc": "Unedited's panel discusses amplifying underrepresented voices and building inclusive podcast spaces.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 124,
+    "title": "Female Leaders In Podcasting: What Will It Take?",
+    "speaker": "Sangeeta Pillai, Leanne Alie, Cathy Csukas, Nicole Logan, Ruth Barnes",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "A frank conversation about the barriers women face in podcast leadership and what needs to change.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 125,
+    "title": "After the Gold Rush: Navigating the Post-Bubble Podcast Landscape",
+    "speaker": "Tom Koenig, Caroline Edwards, Steve Wilson, Ronald Young Jr",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "How the industry is adapting after the investment boom cooled \u2014 strategies for the next era.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 126,
+    "title": "The Renewed Observer: The Future In Audio, Digital and Print",
+    "speaker": "Miranda Sawyer, James Harding, Basia Cummings, Jasper Corbett",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "Tortoise and The Observer discuss the future of audio alongside digital and print journalism.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 127,
+    "title": "Ex-MI6 Chief on the Power of Podcasting to Explore the World's Biggest Decisions",
+    "speaker": "Kate McCann, Sir Richard Dearlove",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "Former MI6 chief Sir Richard Dearlove on why podcasting is uniquely suited to exploring big decisions.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 128,
+    "title": "From Local Stories to Global Influence: The Cultural Significance of Podcasting",
+    "speaker": "Chloe Straw, Tony Pastor, Hugh Sheehan, Leanne Alie, Caroline Thornham",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "Audio UK explores how local podcast stories can achieve cultural significance on a global stage.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 129,
+    "title": "How Video Podcasts Are Redefining Content Creation",
+    "speaker": "Georgina Revell, Neil Mody, Stephanie Andrews, Guy Scott-Wilson",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "How video-first production techniques are reshaping the way podcasts are planned and created.",
+    "audience": "industry",
+    "theme": "tech"
+  },
+  {
+    "id": 130,
+    "title": "Truth, Trust, and Good Tape: Running A Successful Investigation In Audio",
+    "speaker": "Leo Hornak, Madison Marriage, Chloe Hadjimatheou, Carl Miller, Nick Wallis",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "Whistledown's investigative team shares what it takes to run a rigorous audio investigation.",
+    "audience": "industry",
+    "theme": "monetisation"
+  },
+  {
+    "id": 131,
+    "title": "Storytelling On Schedule: Making a Weekly Narrative Podcast",
+    "speaker": "Chris Baughen, Tristan Donovan, Rachel Byrne",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "How to produce compelling narrative storytelling on a weekly schedule without burning out.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 132,
+    "title": "Amplify Your Audience: The Power of Curation for Podcast Growth",
+    "speaker": "Jared Lapin",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "How editorial curation and playlist strategy can drive meaningful podcast audience growth.",
+    "audience": "industry",
+    "theme": "growth"
+  },
+  {
+    "id": 133,
+    "title": "How To Crack Narrative Video Podcasting with AI",
+    "speaker": "Jake Warren, Ney Alvarez, Anna Staufenberg, Hala Mohieddeen",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "How AI tools can help producers create visually compelling narrative video podcasts at scale.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 134,
+    "title": "The Audio-to-Video Survival Guide \u2014 Lessons from Top Video Producers",
+    "speaker": "Sam Shetabi, Ben Cartwright, Tomini Babs",
+    "stage": "Talking Podcasts 1",
+    "day": "thursday",
+    "desc": "Video producers share practical lessons for audio podcasters making the transition to video.",
+    "audience": "industry",
+    "theme": "strategy"
+  },
+  {
+    "id": 135,
+    "title": "What We Listen For",
+    "speaker": "Jemma Rose Brown, Davy Gardner, Jason Saldanha",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "Commissioning editors reveal what they listen for when evaluating podcast pitches and pilots.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 136,
+    "title": "Podcast Playbook: How to Create Award-Winning Experiences Audiences (and Advertisers) Love!",
+    "speaker": "Makeda Mays Green, Lynn Kestin-Sessler, Jessica Ferrer",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "How Nickelodeon creates podcast experiences that delight both young audiences and advertisers.",
+    "audience": "brand",
+    "theme": "growth"
+  },
+  {
+    "id": 137,
+    "title": "The Art of Global Explainers: Making Impactful News in 15 Minutes or Less",
+    "speaker": "Hannah Gelbart, Verity Wilde, Harriet Oliver, Benita Barden",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "BBC World Service's explainer team shares how to make complex global news accessible in 15 minutes.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 138,
+    "title": "How To Create A Suspenseful Narrative Podcast Series",
+    "speaker": "Nicole Jackson, Michael Safi, Alex Atack",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "The Guardian's audio team breaks down the craft of building suspense in narrative podcast series.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 139,
+    "title": "From Podcasting 1.0 to 4.0: The Evolution of Audio and Monetisation",
+    "speaker": "Sam Sethi",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "A history of podcast technology and business models \u2014 from RSS origins to the next monetisation wave.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 140,
+    "title": "The Podcasting Landscape in Canada",
+    "speaker": "Kattie Laur, Chris Oke, Yael Strasberg",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "An overview of Canada's podcast market \u2014 its unique characteristics, audiences and growth trajectory.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 141,
+    "title": "The Podcasting Scene in the MENA Region Country Focus: Saudi Arabia",
+    "speaker": "Darryl von D\u00e4niken, Mohammed Islam",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "A deep dive into Saudi Arabia's rapidly expanding podcast scene within the wider MENA region.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 142,
+    "title": "Managing Talent in Audio",
+    "speaker": "Ray Paul, Rachel Mallender, Ellie, Russell",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "How to find, manage and retain podcast talent while navigating the evolving audio industry.",
+    "audience": "industry",
+    "theme": "operations"
+  },
+  {
+    "id": 143,
+    "title": "9 Ways To Scale Your Business Without Being Pod-Famous",
+    "speaker": "Toby Goodman",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "Nine proven strategies for scaling a podcast-driven business without needing a massive personal brand.",
+    "audience": "industry",
+    "theme": "growth"
+  },
+  {
+    "id": 144,
+    "title": "The Critical Role of Accuracy",
+    "speaker": "Christina Moore, Flora Carmichael, Gabriel Gatehouse, Jessica Hanak-Hammerl",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "Why editorial accuracy matters more than ever in podcasting and how to build robust fact-checking processes.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 145,
+    "title": "The Podnews Weekly Review - Live",
+    "speaker": "James Cridland, Sam Sethi",
+    "stage": "Talking Podcasts 2",
+    "day": "thursday",
+    "desc": "James Cridland and Sam Sethi record a live edition of their weekly podcast industry roundup.",
+    "audience": "industry",
+    "theme": "storytelling"
+  },
+  {
+    "id": 146,
+    "title": "Why Hit Podcasts Sound Like TV \u2013 And How You Can Do It Too",
+    "speaker": "Rebecca Hodges, Matt Hill, Adam Jarrell, Joel Emery, Paul Moore",
+    "stage": "Ask The Experts",
+    "day": "thursday",
+    "desc": "How top podcasts borrow production techniques from television to create richer audio experiences.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 147,
+    "title": "Mind If We Talk... About BetterHelp's Next Audio Chapter?",
+    "speaker": "Emily Rudder, Brittany Clevenger",
+    "stage": "Ask The Experts",
+    "day": "thursday",
+    "desc": "BetterHelp and Acast discuss what's next for audio sponsorship and mental health brand partnerships.",
+    "audience": "creator",
+    "theme": "strategy"
+  },
+  {
+    "id": 148,
+    "title": "Turning complexity into curiosity: Mastering difficult content in podcasting",
+    "speaker": "",
+    "stage": "Ask The Experts",
+    "day": "thursday",
+    "desc": "How the European Central Bank turned complex financial topics into engaging podcast content.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 149,
+    "title": "Join the WePod Community: Connect, Co-produce and Sell Your Podcast Series",
+    "speaker": "Alexander Damiano Ricci, Ana Ribera Garcia, Lili Rutai, Henar Leon",
+    "stage": "Ask The Experts",
+    "day": "thursday",
+    "desc": "How the WePod network helps independent podcasters co-produce and sell series internationally.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 150,
+    "title": "Think the ROI of branded or video podcasts can\u2019t be measured? Think again. Here\u2019s how.",
+    "speaker": "Paul Riismandel",
+    "stage": "Ask The Experts",
+    "day": "thursday",
+    "desc": "Sounds Profitable demonstrates practical methods for measuring branded and video podcast ROI.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 151,
+    "title": "The Future of Audio in an AI-Driven Creative Landscape",
+    "speaker": "Bryan Barletta, Silke Zetzsche, Caleb Mansfield, Scott Porretti",
+    "stage": "Ask The Experts",
+    "day": "thursday",
+    "desc": "How AI is reshaping the creative landscape for audio producers \u2014 and what to prepare for.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 152,
+    "title": "Talent Voiced Ads: The Peaks and Pitfalls of Launching a New Format in Podcasting",
+    "speaker": "Michael Bayston, Sophie Herdman, Fergus Miller",
+    "stage": "Ask The Experts",
+    "day": "thursday",
+    "desc": "The opportunities and challenges of talent-voiced advertising as a new podcast revenue format.",
+    "audience": "creator",
+    "theme": "growth"
+  },
+  {
+    "id": 153,
+    "title": "A Netflix-Style Drop or a Spotify-Style Stream? Choosing Your Brand\u2019s Podcast Path",
+    "speaker": "Matthew Renzulli, Gigi Ustik, Michael Bird, Michaela Hallam",
+    "stage": "Ask The Experts",
+    "day": "thursday",
+    "desc": "Whether to release your branded podcast all at once or weekly \u2014 and how the choice affects results.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 154,
+    "title": "10 Ways to Turn Your Podcast Into IP",
+    "speaker": "Bernard Achampong, Preeti Varathan, Niki Igbaroola",
+    "stage": "Indie Business Stage",
+    "day": "thursday",
+    "desc": "Ten actionable strategies for turning your podcast intellectual property into new revenue streams.",
+    "audience": "creator",
+    "theme": "monetisation"
+  },
+  {
+    "id": 155,
+    "title": "Production Contracts 101",
+    "speaker": "Laura Hammond, Sarah Leach",
+    "stage": "Indie Business Stage",
+    "day": "thursday",
+    "desc": "A legal primer on production contracts \u2014 what to negotiate, what to watch for and what to avoid.",
+    "audience": "creator",
+    "theme": "storytelling"
+  },
+  {
+    "id": 156,
+    "title": "How To Make A Business Success From Video Podcasts",
+    "speaker": "Josh Adley, Lucy Rozario",
+    "stage": "Indie Business Stage",
+    "day": "thursday",
+    "desc": "Practical advice on building a profitable video podcast operation from the ground up.",
+    "audience": "creator",
+    "theme": "tech"
+  },
+  {
+    "id": 157,
+    "title": "Overcoming Negativity & Isolation",
+    "speaker": "Naomi Mellor, Stephanie Kuo",
+    "stage": "International Gallery",
+    "day": "thursday",
+    "desc": "How podcasters around the world are dealing with negativity, burnout and creative isolation.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 158,
+    "title": "Busting Myths About the French Podcast Market",
+    "speaker": "Julien Neuville, Jenny Zhao",
+    "stage": "International Gallery",
+    "day": "thursday",
+    "desc": "Debunking common misconceptions about the French podcast market and its real opportunities.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 159,
+    "title": "With a Population Twice the Size of the US, Let's Talk About South East Asia",
+    "speaker": "Guang Jin Yeo, Jonathan Pacey",
+    "stage": "International Gallery",
+    "day": "thursday",
+    "desc": "Why South East Asia's massive population represents one of podcasting's biggest untapped markets.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 160,
+    "title": "The MENA Podcast Boom: How Audio is Shaping the Future of Media",
+    "speaker": "Darryl von Daniken, TBC Speaker 2",
+    "stage": "International Gallery",
+    "day": "thursday",
+    "desc": "How the MENA region's podcast boom is reshaping media consumption across the Middle East.",
+    "audience": "industry",
+    "theme": "landscape"
+  },
+  {
+    "id": 161,
+    "title": "The Creator Mix",
+    "speaker": "Evening Event",
+    "stage": "Evening Programme",
+    "day": "wednesday",
+    "desc": "1,000+ creators, DJs and live music at an iconic London venue. The biggest gathering of podcasters under one roof.",
+    "audience": "creator",
+    "theme": "networking"
+  },
+  {
+    "id": 162,
+    "title": "The Official Party",
+    "speaker": "Evening Event",
+    "stage": "Evening Programme",
+    "day": "thursday",
+    "desc": "The industry's night out. Exclusive venue, big energy, and the connections that actually count. Platinum pass included.",
+    "audience": "industry",
+    "theme": "networking"
+  },
+  {
+    "id": 163,
+    "title": "Leaders in Podcasting Breakfast",
+    "speaker": "Platinum Exclusive",
+    "stage": "Evening Programme",
+    "day": "wednesday",
+    "desc": "Exclusive morning gathering for senior leaders at The Fox on The Green. Sets the tone for the whole festival.",
+    "audience": "industry",
+    "theme": "networking"
+  },
+  {
+    "id": 164,
+    "title": "PodHouse Receptions",
+    "speaker": "Partner Hosted",
+    "stage": "Evening Programme",
+    "day": "thursday",
+    "desc": "Invitation-only networking receptions for 70 people. The right room. The right conversations.",
+    "audience": "brand",
+    "theme": "networking"
+  }
+]

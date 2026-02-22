@@ -211,7 +211,7 @@
 
 
     <!-- ============ PHOTO BREAK ============ -->
-    <div class="photo-break" aria-label="Event photography">
+    <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img
         src="Photos/Audience/Podcast Show 2025 -Day 1-100312.jpg"
         alt="Podcast creators networking at The Podcast Show"
@@ -381,6 +381,64 @@
     </section>
 
 
+    <!-- ============ BROWSE THE SESSIONS ============ -->
+    <section class="tps-sessions section-padding" id="browse-sessions" aria-label="Browse the sessions">
+      <div class="container">
+        <div class="section-header section-header--left reveal">
+          <h2>Browse the Sessions</h2>
+          <p>Over 160 sessions across 8 stages in 2025. This is what a day at TPS looks like.</p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="tps-sessions__filters reveal" role="search" aria-label="Filter sessions">
+          <div class="tps-sessions__filter-row">
+            <span class="tps-sessions__filter-label">By Stage</span>
+            <div class="tps-sessions__pills" data-filter="stage">
+              <button class="tps-sessions__pill is-active" data-value="all" type="button">All Stages</button>
+              <button class="tps-sessions__pill" data-value="Origin Stage" type="button">Origin Stage</button>
+              <button class="tps-sessions__pill" data-value="Creator Stage" type="button">Creator Stage</button>
+              <button class="tps-sessions__pill" data-value="Brand Works Stage" type="button">Brand Works</button>
+              <button class="tps-sessions__pill" data-value="Studio Stage" type="button">Studio Stage</button>
+              <button class="tps-sessions__pill" data-value="Indie Business Stage" type="button">Indie Business</button>
+              <button class="tps-sessions__pill" data-value="Talking Podcasts" type="button">Talking Podcasts</button>
+              <button class="tps-sessions__pill" data-value="International Gallery" type="button">International Gallery</button>
+              <button class="tps-sessions__pill" data-value="Ask The Experts" type="button">Ask The Experts</button>
+              <button class="tps-sessions__pill" data-value="Evening Programme" type="button">Evening Programme</button>
+            </div>
+          </div>
+          <div class="tps-sessions__filter-row">
+            <span class="tps-sessions__filter-label">By Theme</span>
+            <div class="tps-sessions__pills" data-filter="theme">
+              <button class="tps-sessions__pill is-active" data-value="all" type="button">All Themes</button>
+              <button class="tps-sessions__pill" data-value="growth" type="button">Growth</button>
+              <button class="tps-sessions__pill" data-value="monetisation" type="button">Monetisation</button>
+              <button class="tps-sessions__pill" data-value="tech" type="button">Tech</button>
+              <button class="tps-sessions__pill" data-value="storytelling" type="button">Storytelling</button>
+              <button class="tps-sessions__pill" data-value="strategy" type="button">Strategy</button>
+              <button class="tps-sessions__pill" data-value="landscape" type="button">Landscape</button>
+              <button class="tps-sessions__pill" data-value="networking" type="button">Networking</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session count -->
+        <p class="tps-sessions__count reveal" aria-live="polite"></p>
+
+        <!-- Card grid -->
+        <div class="tps-sessions__grid" aria-label="Session cards"></div>
+
+        <!-- Show more -->
+        <div class="tps-sessions__more">
+          <button class="tps-sessions__more-btn btn btn--ghost-dark" type="button">Show More Sessions</button>
+        </div>
+
+        <!-- Footer line -->
+        <p class="tps-sessions__footer reveal">These are just some of the 160+ sessions from 2025. The 2026 programme is coming. <a href="programme.html">See the full 2025 highlights &rarr;</a></p>
+
+      </div>
+    </section>
+
+
     <!-- ============ 5. PROGRAMME HIGHLIGHTS ============ -->
     <section class="programme section-padding" aria-label="Programme highlights">
       <div class="container">
@@ -505,52 +563,52 @@
         </div>
 
         <div class="home-speakers__grid">
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:0">
             <img class="home-speaker__image" src="Photos/Famous faces/DSC1021_louis_theroux_1920x1278.jpeg" alt="Louis Theroux" loading="lazy">
             <div class="home-speaker__name">Louis Theroux</div>
             <div class="home-speaker__role">Broadcaster &amp; Podcaster</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:1">
             <img class="home-speaker__image" src="Photos/Famous faces/Podcast Show 2025 -Day 1-200703.jpg" alt="Ashley Flowers" loading="lazy">
             <div class="home-speaker__name">Ashley Flowers</div>
             <div class="home-speaker__role">Crime Junkie</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:2">
             <img class="home-speaker__image" src="Photos/Famous faces/Podcast Show 2025 -Day 1-200750.jpg" alt="GK Barry" loading="lazy">
             <div class="home-speaker__name">GK Barry</div>
             <div class="home-speaker__role">Creator &amp; Podcaster</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:3">
             <img class="home-speaker__image" src="Photos/Famous faces/Podcast_Show_2024_-_RB_-100453-2_1920x1280.jpg" alt="Mo Gilligan" loading="lazy">
             <div class="home-speaker__name">Mo Gilligan</div>
             <div class="home-speaker__role">Comedian &amp; Host</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:4">
             <img class="home-speaker__image" src="Photos/Famous faces/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD1_0417_1920x1280.jpg" alt="Elizabeth Day" loading="lazy">
             <div class="home-speaker__name">Elizabeth Day</div>
             <div class="home-speaker__role">How to Fail</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:5">
             <img class="home-speaker__image" src="Photos/Famous faces/The_Podcast_Show_-_23rd_May_2024_by_Luke_Dyson_-_LD3_0731_1920x1280.jpg" alt="Fearne Cotton" loading="lazy">
             <div class="home-speaker__name">Fearne Cotton</div>
             <div class="home-speaker__role">Happy Place</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:6">
             <img class="home-speaker__image" src="Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg" alt="Nish Kumar" loading="lazy">
             <div class="home-speaker__name">Nish Kumar</div>
             <div class="home-speaker__role">Comedian &amp; Presenter</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:7">
             <img class="home-speaker__image" src="Photos/Famous faces/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD3_0387-Enhanced-NR_1920x1280.jpg" alt="Katherine Ryan" loading="lazy">
             <div class="home-speaker__name">Katherine Ryan</div>
             <div class="home-speaker__role">Comedian &amp; Podcaster</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:8">
             <img class="home-speaker__image" src="Photos/Famous faces/The Podcast Show - 22nd May 2024 by Luke Dyson - LD3_0445.jpg" alt="MrBallen" loading="lazy">
             <div class="home-speaker__name">MrBallen</div>
             <div class="home-speaker__role">Storyteller &amp; Creator</div>
           </div>
-          <div class="home-speaker reveal">
+          <div class="home-speaker" style="--stagger:9">
             <img class="home-speaker__image" src="Photos/Famous faces/The_Podcast_Show_-_23rd_May_2024_by_Luke_Dyson_-_LD3_0818-Enhanced-NR_1920x2880.jpg" alt="Gary Lineker" loading="lazy">
             <div class="home-speaker__name">Gary Lineker</div>
             <div class="home-speaker__role">The Rest Is Football</div>
@@ -645,7 +703,7 @@
 
 
     <!-- ============ PHOTO BREAK 2 ============ -->
-    <div class="photo-break" aria-label="Event photography">
+    <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img
         src="Photos/Famous faces/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD3_0387-Enhanced-NR_1920x1280.jpg"
         alt="Speaker on stage at The Podcast Show"
@@ -779,6 +837,249 @@
 
     statNumbers.forEach(el => statsObserver.observe(el));
 
+  </script>
+
+  <!-- Page-specific: Browse the Sessions -->
+  <script src="data/sessions.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    /* --- Stage tag mapping --- */
+    const STAGE_TAGS = {
+      'Origin Stage':          'origin',
+      'Creator Stage':         'creator',
+      'Brand Works Stage':     'brand-works',
+      'Studio Stage':          'studio',
+      'Indie Business Stage':  'indie',
+      'Talking Podcasts 1':    'talking',
+      'Talking Podcasts 2':    'talking',
+      'International Gallery':  'international',
+      'Ask The Experts':       'ask',
+      'Evening Programme':     'evening'
+    };
+
+    /* --- Hardcoded fallback (24 sessions, 2+ per stage) --- */
+    const FALLBACK_SESSIONS = [
+      { id: 1, title: "Podcast Industry Keynote: The Year That Was", speaker: "James Cridland", stage: "Origin Stage", desc: "James Cridland's annual keynote reviewing the biggest shifts in podcasting and what's coming next.", audience: "industry", theme: "strategy" },
+      { id: 3, title: "Christiane Amanpour and Emily Maitlis: Behind The Headlines", speaker: "Emily Maitlis, Christiane Amanpour", stage: "Origin Stage", desc: "Two of journalism's biggest names discuss how podcasting is reshaping the way news reaches audiences.", audience: "industry", theme: "storytelling" },
+      { id: 85, title: "Inside Apple Podcasts", speaker: "Susie Warhurst, Jake Shapiro", stage: "Origin Stage", desc: "Apple's podcast team offers a rare look inside the platform's editorial and discovery strategy.", audience: "industry", theme: "tech" },
+      { id: 87, title: "The Power of Building Community", speaker: "Elizabeth Day, Dan Jones, Jaimie Meyers", stage: "Origin Stage", desc: "Elizabeth Day, Dan Jones and Sony discuss how community-building turns listeners into devoted fans.", audience: "industry", theme: "growth" },
+      { id: 34, title: "Grow Your Audience Like the Top Shows Do", speaker: "Mark Asquith, Jordan Harbinger", stage: "Creator Stage", desc: "Captivate and Jordan Harbinger share the audience growth strategies used by top-performing shows.", audience: "creator", theme: "growth" },
+      { id: 114, title: "AI and How Creators Can Use It", speaker: "Norma Jean Belenky, James Cridland, Neil Mody", stage: "Creator Stage", desc: "A practical guide to the AI tools creators can use today to improve their podcast workflow.", audience: "creator", theme: "tech" },
+      { id: 35, title: "Why the Time is Right to Get A Grip", speaker: "Angela Scanlon, Vicky Pattison", stage: "Creator Stage", desc: "Angela Scanlon and Vicky Pattison discuss the creative and commercial momentum behind Get A Grip.", audience: "creator", theme: "monetisation" },
+      { id: 12, title: "Podcasting's Place in the Advertising Landscape", speaker: "Tom Webster", stage: "Brand Works Stage", desc: "Tom Webster presents Sounds Profitable's latest data on where podcasting sits in the wider ad market.", audience: "brand", theme: "monetisation" },
+      { id: 97, title: "Podcasting: The Global Opportunity for Brands", speaker: "Steven Abraham, Craig Eastwood", stage: "Brand Works Stage", desc: "Oxford Road makes the case for why global brands should be investing more in podcast advertising.", audience: "brand", theme: "strategy" },
+      { id: 95, title: "Podcast Advertising Market Trends", speaker: "Cameron Hendrix, Jim Ballas", stage: "Brand Works Stage", desc: "Magellan AI presents the latest trends, benchmarks and forecasts in podcast advertising spend.", audience: "brand", theme: "monetisation" },
+      { id: 25, title: "Why Comedians Make Great Podcasters", speaker: "Frank Skinner, Russell Howard, Harriet Kemsley", stage: "Studio Stage", desc: "Frank Skinner, Russell Howard and Harriet Kemsley discuss why comedy translates so well to podcasting.", audience: "industry", theme: "storytelling" },
+      { id: 108, title: "Earning Money from Video Podcasts: Has the Game Changed?", speaker: "James Cridland, Bryan Barletta", stage: "Studio Stage", desc: "Has video changed the economics of podcasting? Industry experts debate the new revenue landscape.", audience: "industry", theme: "tech" },
+      { id: 72, title: "Beyond the Mic: How AI is Rewriting the Future of Podcasting", speaker: "Cliff Fluet", stage: "Indie Business Stage", desc: "How AI is already changing podcast creation, distribution and discovery for independent makers.", audience: "creator", theme: "tech" },
+      { id: 154, title: "10 Ways to Turn Your Podcast Into IP", speaker: "Bernard Achampong, Preeti Varathan", stage: "Indie Business Stage", desc: "Ten actionable strategies for turning your podcast intellectual property into new revenue streams.", audience: "creator", theme: "monetisation" },
+      { id: 47, title: "Behind the Paywall: Building A Sustainable Creator Business", speaker: "Stephanie Smellie, Hannah Maguire", stage: "Talking Podcasts 1", desc: "Patreon and top creators discuss how subscription models can underpin a sustainable podcast business.", audience: "creator", theme: "storytelling" },
+      { id: 56, title: "From Explosion to Evolution: The State of Video Podcasting", speaker: "Jay Nachlis, Steve Goldstein", stage: "Talking Podcasts 2", desc: "Coleman Insights and Steve Goldstein assess how video podcasting has matured and where it's heading.", audience: "industry", theme: "tech" },
+      { id: 125, title: "After the Gold Rush: Navigating the Post-Bubble Podcast Landscape", speaker: "Tom Koenig, Caroline Edwards", stage: "Talking Podcasts 1", desc: "How the industry is adapting after the investment boom cooled — strategies for the next era.", audience: "industry", theme: "landscape" },
+      { id: 77, title: "Spotlight on Latin America", speaker: "David R Gonzalez, Juan Manuel Giraldez", stage: "International Gallery", desc: "An overview of Latin America's fast-growing podcast ecosystem and its unique market dynamics.", audience: "industry", theme: "landscape" },
+      { id: 159, title: "Let's Talk About South East Asia", speaker: "Guang Jin Yeo, Jonathan Pacey", stage: "International Gallery", desc: "Why South East Asia's massive population represents one of podcasting's biggest untapped markets.", audience: "industry", theme: "landscape" },
+      { id: 67, title: "Is AI Ready to Revolutionize Podcasting?", speaker: "Tess Kaday", stage: "Ask The Experts", desc: "A practical assessment of which AI tools are genuinely useful for podcast production today.", audience: "creator", theme: "tech" },
+      { id: 146, title: "Why Hit Podcasts Sound Like TV", speaker: "Rebecca Hodges, Matt Hill, Adam Jarrell", stage: "Ask The Experts", desc: "How top podcasts borrow production techniques from television to create richer audio experiences.", audience: "creator", theme: "storytelling" },
+      { id: 161, title: "The Creator Mix", speaker: "Evening Event", stage: "Evening Programme", desc: "1,000+ creators, DJs and live music at an iconic London venue. The biggest gathering of podcasters under one roof.", audience: "creator", theme: "networking" },
+      { id: 162, title: "The Official Party", speaker: "Evening Event", stage: "Evening Programme", desc: "The industry's night out. Exclusive venue, big energy, and the connections that actually count.", audience: "industry", theme: "networking" },
+      { id: 80, title: "Connecting Across Borders: Why European Podcasters Need Each Other", speaker: "Andreea Coscai", stage: "International Gallery", desc: "Why cross-border collaboration between European podcasters benefits the entire continent's industry.", audience: "industry", theme: "networking" }
+    ];
+
+    const PAGE_SIZE = 12;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* --- DOM refs --- */
+    const gridEl   = document.querySelector('.tps-sessions__grid');
+    const moreBtn  = document.querySelector('.tps-sessions__more-btn');
+    const moreWrap = document.querySelector('.tps-sessions__more');
+    const countEl  = document.querySelector('.tps-sessions__count');
+
+    if (!gridEl) return;
+
+    /* --- State --- */
+    let allSessions = [];
+    let filtered    = [];
+    let visible     = 0;
+    let activeStage = 'all';
+    let activeTheme = 'all';
+
+    /* --- Load sessions --- */
+    function loadFromJSON(callback) {
+      // 1) Try fetch (works on http/https, blocked on file://)
+      if (typeof fetch === 'function') {
+        fetch('data/sessions.json')
+          .then(function(r) { if (!r.ok) throw new Error(); return r.json(); })
+          .then(function(data) { callback(data); })
+          .catch(function() { loadViaXHR(callback); });
+      } else {
+        loadViaXHR(callback);
+      }
+    }
+
+    function loadViaXHR(callback) {
+      try {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'data/sessions.json', true);
+        xhr.onload = function() {
+          try {
+            var data = JSON.parse(xhr.responseText);
+            if (Array.isArray(data) && data.length > 0) {
+              callback(data);
+            } else {
+              callback(FALLBACK_SESSIONS);
+            }
+          } catch(e) {
+            callback(FALLBACK_SESSIONS);
+          }
+        };
+        xhr.onerror = function() { callback(FALLBACK_SESSIONS); };
+        xhr.send();
+      } catch(e) {
+        callback(FALLBACK_SESSIONS);
+      }
+    }
+
+    function init() {
+      // Prefer preloaded data from sessions.js (works on file://)
+      if (window.__TPS_SESSIONS__ && Array.isArray(window.__TPS_SESSIONS__) && window.__TPS_SESSIONS__.length > 0) {
+        allSessions = window.__TPS_SESSIONS__;
+        applyFilters();
+        return;
+      }
+      loadFromJSON(function(data) {
+        allSessions = data;
+        applyFilters();
+      });
+    }
+
+    /* --- Filtering --- */
+
+    function matchesStage(session) {
+      if (activeStage === 'all') return true;
+      // "Talking Podcasts" matches both "Talking Podcasts 1" and "Talking Podcasts 2"
+      if (activeStage === 'Talking Podcasts') {
+        return session.stage.startsWith('Talking Podcasts');
+      }
+      return session.stage === activeStage;
+    }
+
+    function matchesTheme(session) {
+      if (activeTheme === 'all') return true;
+      return session.theme === activeTheme;
+    }
+
+    function applyFilters() {
+      filtered = allSessions.filter(s => matchesStage(s) && matchesTheme(s));
+      visible = 0;
+      renderCards(true);
+    }
+
+    /* --- Rendering --- */
+
+    function renderCards(isFilterChange) {
+      const nextBatch = filtered.slice(visible, visible + PAGE_SIZE);
+      const hasMore = (visible + PAGE_SIZE) < filtered.length;
+
+      if (isFilterChange) {
+        // Animate out existing cards, then replace
+        const existing = gridEl.querySelectorAll('.tps-sessions__card');
+        if (existing.length && !reducedMotion) {
+          existing.forEach(card => card.classList.add('is-leaving'));
+          setTimeout(() => {
+            gridEl.innerHTML = '';
+            visible = 0;
+            appendCards(filtered.slice(0, PAGE_SIZE));
+            visible = Math.min(PAGE_SIZE, filtered.length);
+            updateUI();
+          }, 150);
+        } else {
+          gridEl.innerHTML = '';
+          visible = 0;
+          appendCards(filtered.slice(0, PAGE_SIZE));
+          visible = Math.min(PAGE_SIZE, filtered.length);
+          updateUI();
+        }
+      } else {
+        // "Show more" — just append
+        appendCards(nextBatch);
+        visible += nextBatch.length;
+        updateUI();
+      }
+    }
+
+    function appendCards(sessions) {
+      sessions.forEach((session, i) => {
+        const card = createCard(session);
+        if (!reducedMotion) {
+          card.classList.add('is-entering');
+          card.style.animationDelay = (i * 40) + 'ms';
+        }
+        gridEl.appendChild(card);
+      });
+    }
+
+    function createCard(session) {
+      const el = document.createElement('article');
+      el.className = 'tps-sessions__card';
+
+      const tagClass = STAGE_TAGS[session.stage] || 'studio';
+
+      el.innerHTML =
+        '<span class="tps-sessions__tag tps-sessions__tag--' + tagClass + '">' + esc(session.stage) + '</span>' +
+        '<h3 class="tps-sessions__card-title">' + esc(session.title) + '</h3>' +
+        (session.speaker ? '<p class="tps-sessions__card-speaker">' + esc(session.speaker) + '</p>' : '') +
+        '<p class="tps-sessions__card-desc">' + esc(session.desc) + '</p>';
+
+      return el;
+    }
+
+    function esc(str) {
+      const d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+
+    function updateUI() {
+      // Count
+      countEl.textContent = filtered.length + ' session' + (filtered.length !== 1 ? 's' : '');
+
+      // Show more button
+      if (visible >= filtered.length) {
+        moreWrap.hidden = true;
+      } else {
+        moreWrap.hidden = false;
+      }
+    }
+
+    /* --- Filter pill clicks --- */
+
+    document.querySelectorAll('.tps-sessions__pills').forEach(row => {
+      row.addEventListener('click', (e) => {
+        const pill = e.target.closest('.tps-sessions__pill');
+        if (!pill) return;
+
+        const filterType = row.dataset.filter; // 'stage' or 'theme'
+        const value = pill.dataset.value;
+
+        // Update active pill in this row
+        row.querySelectorAll('.tps-sessions__pill').forEach(p => p.classList.remove('is-active'));
+        pill.classList.add('is-active');
+
+        if (filterType === 'stage') activeStage = value;
+        if (filterType === 'theme') activeTheme = value;
+
+        applyFilters();
+      });
+    });
+
+    /* --- Show more --- */
+    moreBtn.addEventListener('click', () => renderCards(false));
+
+    /* --- Kick off --- */
+    init();
+  })();
   </script>
 
 </body>

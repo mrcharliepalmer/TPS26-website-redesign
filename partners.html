@@ -352,7 +352,7 @@
 
 
     <!-- ============ 4. FULL-BLEED PHOTO BREAK ============ -->
-    <div class="photo-break" aria-label="Exhibition floor photography">
+    <div class="photo-break photo-break--parallax" aria-label="Exhibition floor photography">
       <img
         src="Photos/TP25 LUKE DAY 1/Show Floor - Riverside.jpg"
         alt="Exhibition stands at The Podcast Show"
@@ -378,25 +378,15 @@
     </section>
 
 
-    <!-- ============ 6. WHAT PARTNERS SAY (featured quote carousel) ============ -->
-    <section class="partner-quotes section-padding" aria-label="What partners say">
+    <!-- ============ 6. WHAT PARTNERS SAY (rotating quote display) ============ -->
+    <section class="partner-quotes section-padding" id="partner-quotes" aria-label="What partners say">
       <div class="container">
 
-        <div class="partner-quotes__carousel reveal" aria-roledescription="carousel" aria-label="Partner testimonials">
+        <div class="partner-quotes__stage reveal" aria-roledescription="carousel" aria-label="Partner testimonials">
 
           <span class="partner-quotes__mark" aria-hidden="true">&ldquo;</span>
 
           <div class="partner-quotes__slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 6">
-            <blockquote>
-              <p>The Podcast Show 2025 was an exceptional event. Wonderful panel discussions, excellent networking, fresh ideas with a distinct energy.</p>
-              <footer>
-                <cite>Kym Treasure</cite>
-                <span>Founder &amp; CEO, Audacia</span>
-              </footer>
-            </blockquote>
-          </div>
-
-          <div class="partner-quotes__slide" role="group" aria-roledescription="slide" aria-label="2 of 6" hidden>
             <blockquote>
               <p>Walking into The Podcast Show felt like the dawning of a new era. The buzz totally captured the energy of the industry. It's lifted it up.</p>
               <footer>
@@ -406,7 +396,7 @@
             </blockquote>
           </div>
 
-          <div class="partner-quotes__slide" role="group" aria-roledescription="slide" aria-label="3 of 6" hidden>
+          <div class="partner-quotes__slide" role="group" aria-roledescription="slide" aria-label="2 of 6" hidden>
             <blockquote>
               <p>Congratulations on what was the best year yet. The scheduling, layout and networking opportunities were outstanding. This is THE conference in the global podcasting calendar.</p>
               <footer>
@@ -416,9 +406,19 @@
             </blockquote>
           </div>
 
+          <div class="partner-quotes__slide" role="group" aria-roledescription="slide" aria-label="3 of 6" hidden>
+            <blockquote>
+              <p>The Podcast Show 2025 was an exceptional event. Wonderful panel discussions, excellent networking, fresh ideas with a distinct energy.</p>
+              <footer>
+                <cite>Kym Treasure</cite>
+                <span>Founder &amp; CEO, Audacia</span>
+              </footer>
+            </blockquote>
+          </div>
+
           <div class="partner-quotes__slide" role="group" aria-roledescription="slide" aria-label="4 of 6" hidden>
             <blockquote>
-              <p>The effort and dedication that go into making this event valuable for both sponsors and attendees are undeniable. A must-attend for anyone serious about the podcast industry.</p>
+              <p>The effort and dedication that go into making this event valuable are undeniable. A must-attend for anyone serious about the podcast industry.</p>
               <footer>
                 <cite>Fatima Zaidi</cite>
                 <span>Founder &amp; CEO, Quill &amp; CoHost</span>
@@ -448,7 +448,7 @@
 
           <div class="partner-quotes__controls">
             <button class="partner-quotes__arrow partner-quotes__arrow--prev" aria-label="Previous quote">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 16l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="partner-quotes__dots" role="tablist" aria-label="Select quote">
               <button class="partner-quotes__dot is-active" role="tab" aria-selected="true" aria-label="Quote 1"></button>
@@ -459,7 +459,7 @@
               <button class="partner-quotes__dot" role="tab" aria-selected="false" aria-label="Quote 6"></button>
             </div>
             <button class="partner-quotes__arrow partner-quotes__arrow--next" aria-label="Next quote">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
           </div>
 
@@ -470,7 +470,7 @@
 
 
     <!-- ============ 7. FULL-BLEED PHOTO BREAK 2 ============ -->
-    <div class="photo-break" aria-label="Event photography">
+    <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img
         src="Photos/TP25 LUKE DAY 1/Brand Works - Audience.jpg"
         alt="Audience at Brand Works stage"
