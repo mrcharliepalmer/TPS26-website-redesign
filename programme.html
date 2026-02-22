@@ -177,11 +177,11 @@
     </div>
 
 
-    <!-- ============ 5. 2025 HIGHLIGHTS (canvas, filterable session cards) ============ -->
-    <section class="prog-highlights section-padding" id="highlights" aria-label="2025 Highlights">
+    <!-- ============ 5. FEATURED SESSIONS (canvas, filterable session cards) ============ -->
+    <section class="prog-highlights section-padding" id="highlights" aria-label="Featured Sessions">
       <div class="container">
         <div class="section-header section-header--left reveal">
-          <h2>2025 Highlights</h2>
+          <h2>Featured Sessions</h2>
           <p>A taste of what to expect. These are just some of the sessions that defined last year's festival — and the bar we're raising for 2026.</p>
         </div>
 
@@ -326,6 +326,60 @@
             <p class="prog-highlight__desc">How the most successful creators are building businesses, not just audiences — community, fandom and multi-format content.</p>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ BROWSE ALL 2025 SESSIONS (full session wall) ============ -->
+    <section class="tps-sessions section-padding" id="browse-sessions" aria-label="Browse all 2025 sessions">
+      <div class="container">
+        <div class="section-header section-header--left reveal">
+          <h2>Browse All 2025 Sessions</h2>
+          <p>Over 160 sessions across 8 stages. Filter by stage or theme to find what matters to you.</p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="tps-sessions__filters reveal" role="search" aria-label="Filter sessions">
+          <div class="tps-sessions__filter-row">
+            <span class="tps-sessions__filter-label">By Stage</span>
+            <div class="tps-sessions__pills" data-filter="stage">
+              <button class="tps-sessions__pill is-active" data-value="all" type="button">All Stages</button>
+              <button class="tps-sessions__pill" data-value="Origin Stage" type="button">Origin Stage</button>
+              <button class="tps-sessions__pill" data-value="Creator Stage" type="button">Creator Stage</button>
+              <button class="tps-sessions__pill" data-value="Brand Works Stage" type="button">Brand Works</button>
+              <button class="tps-sessions__pill" data-value="Studio Stage" type="button">Studio Stage</button>
+              <button class="tps-sessions__pill" data-value="Indie Business Stage" type="button">Indie Business</button>
+              <button class="tps-sessions__pill" data-value="Talking Podcasts" type="button">Talking Podcasts</button>
+              <button class="tps-sessions__pill" data-value="International Gallery" type="button">International Gallery</button>
+              <button class="tps-sessions__pill" data-value="Ask The Experts" type="button">Ask The Experts</button>
+              <button class="tps-sessions__pill" data-value="Evening Programme" type="button">Evening Programme</button>
+            </div>
+          </div>
+          <div class="tps-sessions__filter-row">
+            <span class="tps-sessions__filter-label">By Theme</span>
+            <div class="tps-sessions__pills" data-filter="theme">
+              <button class="tps-sessions__pill is-active" data-value="all" type="button">All Themes</button>
+              <button class="tps-sessions__pill" data-value="growth" type="button">Growth</button>
+              <button class="tps-sessions__pill" data-value="monetisation" type="button">Monetisation</button>
+              <button class="tps-sessions__pill" data-value="tech" type="button">Tech</button>
+              <button class="tps-sessions__pill" data-value="storytelling" type="button">Storytelling</button>
+              <button class="tps-sessions__pill" data-value="strategy" type="button">Strategy</button>
+              <button class="tps-sessions__pill" data-value="landscape" type="button">Landscape</button>
+              <button class="tps-sessions__pill" data-value="networking" type="button">Networking</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session count -->
+        <p class="tps-sessions__count reveal" aria-live="polite"></p>
+
+        <!-- Card grid -->
+        <div class="tps-sessions__grid" aria-label="Session cards"></div>
+
+        <!-- Show more -->
+        <div class="tps-sessions__more">
+          <button class="tps-sessions__more-btn btn btn--ghost-dark" type="button">Show More Sessions</button>
         </div>
       </div>
     </section>
@@ -709,6 +763,159 @@
         });
       });
     });
+  </script>
+
+  <!-- Page-specific: Full session wall (Browse All 2025 Sessions) -->
+  <script src="data/sessions.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    const STAGE_TAGS = {
+      'Origin Stage':          'origin',
+      'Creator Stage':         'creator',
+      'Brand Works Stage':     'brand-works',
+      'Studio Stage':          'studio',
+      'Indie Business Stage':  'indie',
+      'Talking Podcasts 1':    'talking',
+      'Talking Podcasts 2':    'talking',
+      'International Gallery':  'international',
+      'Ask The Experts':       'ask',
+      'Evening Programme':     'evening'
+    };
+
+    const PAGE_SIZE = 12;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const gridEl   = document.querySelector('.tps-sessions__grid');
+    const moreBtn  = document.querySelector('.tps-sessions__more-btn');
+    const moreWrap = document.querySelector('.tps-sessions__more');
+    const countEl  = document.querySelector('.tps-sessions__count');
+
+    if (!gridEl) return;
+
+    let allSessions = [];
+    let filtered    = [];
+    let visible     = 0;
+    let activeStage = 'all';
+    let activeTheme = 'all';
+
+    function loadSessions(callback) {
+      if (window.__TPS_SESSIONS__ && window.__TPS_SESSIONS__.length > 0) {
+        callback(window.__TPS_SESSIONS__);
+        return;
+      }
+      if (typeof fetch === 'function') {
+        fetch('data/sessions.json')
+          .then(function(r) { if (!r.ok) throw new Error(); return r.json(); })
+          .then(function(data) { callback(data); })
+          .catch(function() { callback([]); });
+      }
+    }
+
+    function init() {
+      loadSessions(function(data) {
+        allSessions = data;
+        applyFilters();
+      });
+    }
+
+    function matchesStage(session) {
+      if (activeStage === 'all') return true;
+      if (activeStage === 'Talking Podcasts') return session.stage.startsWith('Talking Podcasts');
+      return session.stage === activeStage;
+    }
+
+    function matchesTheme(session) {
+      if (activeTheme === 'all') return true;
+      return session.theme === activeTheme;
+    }
+
+    function applyFilters() {
+      filtered = allSessions.filter(s => matchesStage(s) && matchesTheme(s));
+      visible = 0;
+      renderCards(true);
+    }
+
+    function renderCards(isFilterChange) {
+      if (isFilterChange) {
+        const existing = gridEl.querySelectorAll('.tps-sessions__card');
+        if (existing.length && !reducedMotion) {
+          existing.forEach(card => card.classList.add('is-leaving'));
+          setTimeout(() => {
+            gridEl.innerHTML = '';
+            visible = 0;
+            appendCards(filtered.slice(0, PAGE_SIZE));
+            visible = Math.min(PAGE_SIZE, filtered.length);
+            updateUI();
+          }, 150);
+        } else {
+          gridEl.innerHTML = '';
+          visible = 0;
+          appendCards(filtered.slice(0, PAGE_SIZE));
+          visible = Math.min(PAGE_SIZE, filtered.length);
+          updateUI();
+        }
+      } else {
+        const nextBatch = filtered.slice(visible, visible + PAGE_SIZE);
+        appendCards(nextBatch);
+        visible += nextBatch.length;
+        updateUI();
+      }
+    }
+
+    function appendCards(sessions) {
+      sessions.forEach((session, i) => {
+        const card = createCard(session);
+        if (!reducedMotion) {
+          card.classList.add('is-entering');
+          card.style.animationDelay = (i * 40) + 'ms';
+        }
+        gridEl.appendChild(card);
+      });
+    }
+
+    function createCard(session) {
+      const el = document.createElement('article');
+      el.className = 'tps-sessions__card';
+      const tagClass = STAGE_TAGS[session.stage] || 'studio';
+      el.innerHTML =
+        '<span class="tps-sessions__tag tps-sessions__tag--' + tagClass + '">' + esc(session.stage) + '</span>' +
+        '<h3 class="tps-sessions__card-title">' + esc(session.title) + '</h3>' +
+        (session.speaker ? '<p class="tps-sessions__card-speaker">' + esc(session.speaker) + '</p>' : '') +
+        '<p class="tps-sessions__card-desc">' + esc(session.desc) + '</p>';
+      return el;
+    }
+
+    function esc(str) {
+      const d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+
+    function updateUI() {
+      countEl.textContent = filtered.length + ' session' + (filtered.length !== 1 ? 's' : '');
+      moreWrap.hidden = (visible >= filtered.length);
+    }
+
+    document.querySelectorAll('.tps-sessions__pills').forEach(row => {
+      row.addEventListener('click', (e) => {
+        const pill = e.target.closest('.tps-sessions__pill');
+        if (!pill) return;
+        const filterType = row.dataset.filter;
+        const value = pill.dataset.value;
+        row.querySelectorAll('.tps-sessions__pill').forEach(p => p.classList.remove('is-active'));
+        pill.classList.add('is-active');
+        if (filterType === 'stage') activeStage = value;
+        if (filterType === 'theme') activeTheme = value;
+        applyFilters();
+      });
+    });
+
+    moreBtn.addEventListener('click', () => renderCards(false));
+
+    init();
+  })();
   </script>
 
 </body>
