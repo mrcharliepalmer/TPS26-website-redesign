@@ -1554,6 +1554,16 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   margin-bottom: var(--space-xs);
 }
 
+.home-night__strip-content h2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--colour-yellow);
+  margin: 0 auto var(--space-sm);
+  border-radius: 2px;
+}
+
 .home-night__strip-content p {
   color: rgba(255, 255, 255, 0.8);
   font-size: clamp(1rem, 1.8vw, 1.15rem);
