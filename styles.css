@@ -3360,7 +3360,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   margin-bottom: var(--space-lg);
 }
 
-.passes-group__card {
+.passes-group__stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
@@ -3369,25 +3369,26 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 .passes-group__stat {
   text-align: center;
-  padding: var(--space-md) var(--space-sm);
-  background: var(--colour-white);
-  border-radius: var(--radius-sm);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: var(--space-sm) 0;
 }
 
 .passes-group__stat strong {
   display: block;
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
   font-weight: 700;
   color: var(--colour-purple);
-  line-height: 1.1;
-  margin-bottom: 4px;
+  line-height: 1;
+  margin-bottom: var(--space-xs);
 }
 
 .passes-group__stat span {
-  font-size: 0.8rem;
-  color: #777;
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--colour-purple);
   line-height: 1.3;
 }
 

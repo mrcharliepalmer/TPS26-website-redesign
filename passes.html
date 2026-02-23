@@ -336,7 +336,7 @@
             <a href="mailto:team@thepodcastshowlondon.com" class="btn btn--primary btn--lg">Enquire About Group Bookings</a>
           </div>
           <div class="passes-group__details reveal">
-            <div class="passes-group__card">
+            <div class="passes-group__stats">
               <div class="passes-group__stat">
                 <strong>10%</strong>
                 <span>Discount on all pass types</span>
@@ -362,121 +362,494 @@
     </section>
 
 
-    <!-- ============ 4. COMPARISON TABLE ============ -->
-    <section class="passes-compare section-padding" aria-label="Pass comparison">
+    <!-- ============ 4. COMPARE PASSES (Feature Cards) ============ -->
+    <section class="passes-cards section-padding" aria-label="Compare passes">
       <div class="container">
         <div class="section-header reveal">
           <h2>Compare All Passes</h2>
           <p>See exactly what's included at every tier.</p>
         </div>
 
-        <div class="passes-compare__table-wrap reveal">
-          <table class="passes-compare__table" role="table">
-            <thead>
-              <tr>
-                <th scope="col">Feature</th>
-                <th scope="col">Silver</th>
-                <th scope="col">Gold 1-Day</th>
-                <th scope="col">Gold 2-Day</th>
-                <th scope="col">Platinum</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Exhibition floor</td>
-                <td>1 day</td>
-                <td>1 day</td>
-                <td>Both days</td>
-                <td>Both days</td>
-              </tr>
-              <tr>
-                <td>Selected stage access</td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>All stages &amp; sessions</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>Creator Village</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>Networking areas &amp; Hub Bar</td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>On-demand content (post-show)</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>Full networking programme</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>Fast-track theatre entry</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>Leaders in Podcasting Breakfast</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>The Official Party</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>Premium seating</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr>
-                <td>Exclusive networking events</td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Not included"><span class="passes-compare__dash">—</span></td>
-                <td aria-label="Included"><span class="passes-compare__check">✓</span></td>
-              </tr>
-              <tr class="passes-compare__price-row">
-                <td>Price</td>
-                <td><strong>Sold Out</strong></td>
-                <td><strong>£115</strong></td>
-                <td><strong>£205</strong></td>
-                <td><strong>£350</strong></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="passes-cards__grid reveal">
+
+          <!-- Silver -->
+          <div class="passes-cards__card passes-cards__card--soldout" data-pass="silver">
+            <div class="passes-cards__label">Sold Out</div>
+            <div class="passes-cards__head">
+              <div class="passes-cards__name">Silver Day</div>
+              <div class="passes-cards__price"><s>&pound;59</s></div>
+            </div>
+            <ul class="passes-cards__highlights">
+              <li>Exhibition floor access (1 day)</li>
+              <li>Selected stage access</li>
+              <li>Networking areas &amp; Hub Bar</li>
+            </ul>
+            <button class="passes-cards__toggle" aria-expanded="false" disabled>
+              <span class="passes-cards__toggle-text">See everything included</span>
+              <svg class="passes-cards__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="passes-cards__expand" aria-hidden="true">
+              <ul class="passes-cards__full-list">
+                <li class="included">Exhibition floor <span>1 day</span></li>
+                <li class="included">Selected stage access</li>
+                <li class="included">Networking areas &amp; Hub Bar</li>
+                <li class="excluded">All stages &amp; sessions</li>
+                <li class="excluded">Creator Village</li>
+                <li class="excluded">On-demand content</li>
+                <li class="excluded">Full networking programme</li>
+                <li class="excluded">Fast-track entry</li>
+                <li class="excluded">Leaders in Podcasting Breakfast</li>
+                <li class="excluded">The Official Party</li>
+                <li class="excluded">Premium seating</li>
+                <li class="excluded">Exclusive networking events</li>
+              </ul>
+            </div>
+            <div class="passes-cards__foot">
+              <span class="passes-cards__sold-label">Sold Out</span>
+            </div>
+          </div>
+
+          <!-- Gold 1-Day -->
+          <div class="passes-cards__card passes-cards__card--gold" data-pass="gold-1">
+            <div class="passes-cards__head">
+              <div class="passes-cards__name">Gold 1-Day</div>
+              <div class="passes-cards__price">&pound;115</div>
+            </div>
+            <ul class="passes-cards__highlights">
+              <li>All stages &amp; sessions</li>
+              <li>Creator Village access</li>
+              <li>On-demand content after the show</li>
+            </ul>
+            <button class="passes-cards__toggle" aria-expanded="false">
+              <span class="passes-cards__toggle-text">See everything included</span>
+              <svg class="passes-cards__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="passes-cards__expand" aria-hidden="true">
+              <ul class="passes-cards__full-list">
+                <li class="included">Exhibition floor <span>1 day</span></li>
+                <li class="included">Selected stage access</li>
+                <li class="included">All stages &amp; sessions</li>
+                <li class="included">Creator Village</li>
+                <li class="included">Networking areas &amp; Hub Bar</li>
+                <li class="included">On-demand content</li>
+                <li class="excluded">Full networking programme</li>
+                <li class="excluded">Fast-track entry</li>
+                <li class="excluded">Leaders in Podcasting Breakfast</li>
+                <li class="excluded">The Official Party</li>
+                <li class="excluded">Premium seating</li>
+                <li class="excluded">Exclusive networking events</li>
+              </ul>
+            </div>
+            <div class="passes-cards__foot">
+              <a href="#passes" class="btn btn--urgency btn--sm">Book Gold 1-Day</a>
+            </div>
+          </div>
+
+          <!-- Gold 2-Day -->
+          <div class="passes-cards__card passes-cards__card--popular" data-pass="gold-2">
+            <div class="passes-cards__badge">Most Popular</div>
+            <div class="passes-cards__head">
+              <div class="passes-cards__name">Gold 2-Day</div>
+              <div class="passes-cards__price">&pound;205</div>
+            </div>
+            <ul class="passes-cards__highlights">
+              <li>Both days full access</li>
+              <li>Full networking programme</li>
+              <li>Save &pound;25 vs two 1-Day passes</li>
+            </ul>
+            <button class="passes-cards__toggle" aria-expanded="false">
+              <span class="passes-cards__toggle-text">See everything included</span>
+              <svg class="passes-cards__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="passes-cards__expand" aria-hidden="true">
+              <ul class="passes-cards__full-list">
+                <li class="included">Exhibition floor <span>Both days</span></li>
+                <li class="included">Selected stage access</li>
+                <li class="included">All stages &amp; sessions</li>
+                <li class="included">Creator Village</li>
+                <li class="included">Networking areas &amp; Hub Bar</li>
+                <li class="included">On-demand content</li>
+                <li class="included">Full networking programme</li>
+                <li class="excluded">Fast-track entry</li>
+                <li class="excluded">Leaders in Podcasting Breakfast</li>
+                <li class="excluded">The Official Party</li>
+                <li class="excluded">Premium seating</li>
+                <li class="excluded">Exclusive networking events</li>
+              </ul>
+            </div>
+            <div class="passes-cards__foot">
+              <a href="#passes" class="btn btn--urgency btn--sm">Book Gold 2-Day</a>
+            </div>
+          </div>
+
+          <!-- Platinum -->
+          <div class="passes-cards__card passes-cards__card--platinum" data-pass="platinum">
+            <div class="passes-cards__badge passes-cards__badge--platinum">Reloaded for 2026</div>
+            <div class="passes-cards__head">
+              <div class="passes-cards__name">Platinum</div>
+              <div class="passes-cards__price">&pound;350</div>
+            </div>
+            <ul class="passes-cards__highlights">
+              <li>Leaders in Podcasting Breakfast</li>
+              <li>The Official Party at The Standard</li>
+              <li>Fast-track entry &amp; premium seating</li>
+              <li>Exclusive networking events</li>
+            </ul>
+            <button class="passes-cards__toggle" aria-expanded="false">
+              <span class="passes-cards__toggle-text">See everything included</span>
+              <svg class="passes-cards__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="passes-cards__expand" aria-hidden="true">
+              <ul class="passes-cards__full-list">
+                <li class="included">Exhibition floor <span>Both days</span></li>
+                <li class="included">Selected stage access</li>
+                <li class="included">All stages &amp; sessions</li>
+                <li class="included">Creator Village</li>
+                <li class="included">Networking areas &amp; Hub Bar</li>
+                <li class="included">On-demand content</li>
+                <li class="included">Full networking programme</li>
+                <li class="included">Fast-track entry</li>
+                <li class="included">Leaders in Podcasting Breakfast</li>
+                <li class="included">The Official Party</li>
+                <li class="included">Premium seating</li>
+                <li class="included">Exclusive networking events</li>
+              </ul>
+            </div>
+            <div class="passes-cards__foot">
+              <a href="#passes" class="btn btn--gradient btn--sm">Book Platinum</a>
+            </div>
+          </div>
+
         </div>
       </div>
+
+      <style>
+        /* ---- Compare Passes: Feature Cards ---- */
+        .passes-cards {
+          background: var(--colour-white);
+          position: relative;
+        }
+
+        .passes-cards__grid {
+          display: grid;
+          gap: var(--space-md);
+          grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 640px) {
+          .passes-cards__grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (min-width: 1025px) {
+          .passes-cards__grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+
+        /* --- Card base --- */
+        .passes-cards__card {
+          display: flex;
+          flex-direction: column;
+          background: var(--colour-canvas);
+          border: 1px solid var(--colour-grey-light);
+          border-radius: var(--radius-md);
+          padding: var(--space-md);
+          position: relative;
+          transition: box-shadow var(--ease);
+        }
+
+        .passes-cards__card:hover {
+          box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        /* --- Platinum elevated --- */
+        .passes-cards__card--platinum {
+          border-color: var(--colour-purple);
+          box-shadow: 0 2px 16px rgba(85,31,239,0.10);
+          background: linear-gradient(175deg, #faf9ff 0%, var(--colour-canvas) 100%);
+        }
+
+        .passes-cards__card--platinum:hover {
+          box-shadow: 0 6px 28px rgba(85,31,239,0.14);
+        }
+
+        /* --- Popular (Gold 2-Day) subtle highlight --- */
+        .passes-cards__card--popular {
+          border-color: rgba(255,187,0,0.4);
+        }
+
+        /* --- Sold out (Silver) --- */
+        .passes-cards__card--soldout {
+          opacity: 0.55;
+        }
+
+        .passes-cards__card--soldout .passes-cards__toggle {
+          pointer-events: none;
+          opacity: 0.4;
+        }
+
+        /* --- Label (Sold Out) --- */
+        .passes-cards__label {
+          position: absolute;
+          top: var(--space-sm);
+          right: var(--space-sm);
+          font-family: var(--font-heading);
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #999;
+          background: var(--colour-grey-light);
+          padding: 3px 10px;
+          border-radius: 40px;
+        }
+
+        /* --- Badges --- */
+        .passes-cards__badge {
+          display: inline-block;
+          align-self: flex-start;
+          font-family: var(--font-heading);
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: var(--colour-white);
+          background: var(--colour-orange);
+          padding: 4px 12px;
+          border-radius: 40px;
+          margin-bottom: var(--space-xs);
+        }
+
+        .passes-cards__badge--platinum {
+          background: var(--colour-purple);
+        }
+
+        /* --- Head: name + price --- */
+        .passes-cards__head {
+          margin-bottom: var(--space-md);
+        }
+
+        .passes-cards__name {
+          font-family: var(--font-heading);
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--colour-charcoal);
+          line-height: 1.2;
+        }
+
+        .passes-cards__price {
+          font-family: var(--font-heading);
+          font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+          font-weight: 700;
+          color: var(--colour-purple);
+          line-height: 1.1;
+          margin-top: 4px;
+        }
+
+        .passes-cards__card--soldout .passes-cards__price {
+          color: #999;
+        }
+
+        /* --- Headline features --- */
+        .passes-cards__highlights {
+          list-style: none;
+          padding: 0;
+          margin-bottom: auto;
+          padding-bottom: var(--space-md);
+          border-bottom: 1px solid var(--colour-grey-light);
+        }
+
+        .passes-cards__highlights li {
+          position: relative;
+          padding-left: 22px;
+          font-size: 0.9rem;
+          color: var(--colour-charcoal);
+          line-height: 1.5;
+          margin-bottom: 6px;
+        }
+
+        .passes-cards__highlights li:last-child {
+          margin-bottom: 0;
+        }
+
+        .passes-cards__highlights li::before {
+          content: '✓';
+          position: absolute;
+          left: 0;
+          color: var(--colour-purple);
+          font-weight: 700;
+          font-size: 0.85rem;
+        }
+
+        .passes-cards__card--soldout .passes-cards__highlights li::before {
+          color: #999;
+        }
+
+        /* --- Toggle button --- */
+        .passes-cards__toggle {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: var(--space-sm) 0 var(--space-xs);
+          font-family: var(--font-body);
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: var(--colour-purple);
+          background: none;
+          border: none;
+          cursor: pointer;
+          transition: color var(--ease);
+        }
+
+        .passes-cards__toggle:hover {
+          color: var(--colour-charcoal);
+        }
+
+        .passes-cards__chevron {
+          transition: transform 0.3s ease;
+          flex-shrink: 0;
+        }
+
+        .passes-cards__toggle[aria-expanded="true"] .passes-cards__chevron {
+          transform: rotate(180deg);
+        }
+
+        .passes-cards__toggle[aria-expanded="true"] .passes-cards__toggle-text::after {
+          content: none;
+        }
+
+        /* --- Expandable full list --- */
+        .passes-cards__expand {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.35s ease;
+        }
+
+        .passes-cards__expand > ul {
+          overflow: hidden;
+        }
+
+        .passes-cards__expand[aria-hidden="false"] {
+          grid-template-rows: 1fr;
+        }
+
+        .passes-cards__full-list {
+          list-style: none;
+          padding: 0 0 var(--space-sm);
+        }
+
+        .passes-cards__full-list li {
+          position: relative;
+          padding: 6px 0 6px 24px;
+          font-size: 0.82rem;
+          line-height: 1.4;
+          border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .passes-cards__full-list li:last-child {
+          border-bottom: none;
+        }
+
+        .passes-cards__full-list li.included {
+          color: var(--colour-charcoal);
+        }
+
+        .passes-cards__full-list li.included::before {
+          content: '✓';
+          position: absolute;
+          left: 0;
+          color: var(--colour-purple);
+          font-weight: 700;
+          font-size: 0.8rem;
+        }
+
+        .passes-cards__full-list li.excluded {
+          color: #bbb;
+          text-decoration: line-through;
+          text-decoration-color: #ddd;
+        }
+
+        .passes-cards__full-list li.excluded::before {
+          content: '—';
+          position: absolute;
+          left: 0;
+          color: #ccc;
+          font-size: 0.8rem;
+        }
+
+        .passes-cards__full-list li span {
+          display: inline;
+          color: #888;
+          font-size: 0.78rem;
+          margin-left: 4px;
+        }
+
+        /* --- Footer (CTA) --- */
+        .passes-cards__foot {
+          margin-top: var(--space-sm);
+        }
+
+        .passes-cards__foot .btn {
+          width: 100%;
+          text-align: center;
+        }
+
+        .passes-cards__sold-label {
+          display: block;
+          font-family: var(--font-heading);
+          font-size: 0.85rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #aaa;
+          text-align: center;
+          padding: 10px 0;
+          border: 1px dashed #ccc;
+          border-radius: var(--radius-sm);
+        }
+      </style>
+
+      <script>
+        /* --- Compare-cards accordion (one open at a time) --- */
+        (function() {
+          const section = document.querySelector('.passes-cards');
+          if (!section) return;
+
+          const toggles = section.querySelectorAll('.passes-cards__toggle:not([disabled])');
+
+          toggles.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              const card = btn.closest('.passes-cards__card');
+              const expand = card.querySelector('.passes-cards__expand');
+              const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+              /* Close all others first */
+              toggles.forEach(function(other) {
+                if (other !== btn) {
+                  other.setAttribute('aria-expanded', 'false');
+                  var otherExpand = other.closest('.passes-cards__card').querySelector('.passes-cards__expand');
+                  otherExpand.setAttribute('aria-hidden', 'true');
+                  var otherText = other.querySelector('.passes-cards__toggle-text');
+                  otherText.textContent = 'See everything included';
+                }
+              });
+
+              /* Toggle this one */
+              if (isOpen) {
+                btn.setAttribute('aria-expanded', 'false');
+                expand.setAttribute('aria-hidden', 'true');
+                btn.querySelector('.passes-cards__toggle-text').textContent = 'See everything included';
+              } else {
+                btn.setAttribute('aria-expanded', 'true');
+                expand.setAttribute('aria-hidden', 'false');
+                btn.querySelector('.passes-cards__toggle-text').textContent = 'Hide full list';
+              }
+            });
+          });
+        })();
+      </script>
     </section>
 
 
