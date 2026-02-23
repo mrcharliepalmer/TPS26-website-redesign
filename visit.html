@@ -28,9 +28,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Leaflet.js (free, no API key) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   <script>if(sessionStorage.getItem('urgency-dismissed'))document.documentElement.classList.add('urgency-dismissed');</script>
@@ -135,8 +132,8 @@
 
       <div class="page-hero__content">
         <p class="hero__tag">20–21 MAY 2026 · LONDON</p>
-        <h1 class="hero__title">Plan Your Visit</h1>
-        <p class="page-hero__subtitle">Everything you need to know about getting to the Business Design Centre, Islington. Registration opens at 8:30am, doors at 9am.</p>
+        <h1 class="hero__title">Welcome to Islington</h1>
+        <p class="page-hero__subtitle">Everything you need to know about getting to the BDC. Registration opens at 8:30am, doors at 9am.</p>
 
         <div class="hero__ctas">
           <a href="passes.html" class="btn btn--primary btn--lg">Book Your Pass</a>
@@ -146,304 +143,71 @@
     </section>
 
 
-    <!-- ============ 2. NEIGHBOURHOOD MAP (Leaflet.js) ============ -->
-    <section class="visit-map section-padding" aria-label="Neighbourhood map">
+
+
+
+    <!-- ============ 2. THE BDC (canvas, single hero image, enriched venue info) ============ -->
+    <section class="visit-bdc visit-bdc--canvas section-padding" aria-label="The BDC">
       <div class="container">
 
-        <div class="visit-map__header reveal">
-          <h2>The Neighbourhood</h2>
-          <p>The BDC sits in the heart of Islington — one of London's best-connected and most vibrant areas. Everything you need is within walking distance.</p>
+        <div class="section-header section-header--left reveal">
+          <h2>The BDC</h2>
+          <p>The Business Design Centre is one of London's most iconic event spaces — and for two days in May, it becomes the beating heart of the podcasting world. Eight stages, 160+ sessions, 200+ exhibitors, and 10,000 people who live and breathe audio. All under one roof.</p>
         </div>
 
-        <div class="visit-map__wrap reveal">
-          <div id="visit-map" aria-label="Interactive map of the BDC neighbourhood showing transport, hotels, and restaurants"></div>
+        <div class="visit-bdc__hero-image reveal">
+          <img
+            src="Photos/TP25 LUKE DAY 1/Show Floor - Creator Village.jpg"
+            alt="Inside the Business Design Centre — The Creator Village and Creator Stage banners hang above a packed show floor beneath the iconic arched glass roof"
+            loading="lazy"
+          >
         </div>
 
-        <div class="visit-map__legend">
-          <span class="visit-map__legend-item"><span class="visit-map__dot visit-map__dot--venue"></span> Venue</span>
-          <span class="visit-map__legend-item"><span class="visit-map__dot visit-map__dot--transport"></span> Transport</span>
-          <span class="visit-map__legend-item"><span class="visit-map__dot visit-map__dot--hotel"></span> Hotels</span>
-          <span class="visit-map__legend-item"><span class="visit-map__dot visit-map__dot--restaurant"></span> Restaurants</span>
-        </div>
+        <div class="visit-bdc__info-grid visit-bdc__info-grid--canvas">
 
-      </div>
-    </section>
-
-
-    <!-- ============ 3. VENUE INTRO (asymmetric split) ============ -->
-    <section class="visit-venue section-padding" aria-label="The venue">
-      <div class="container">
-        <div class="visit-venue__grid reveal">
-
-          <div class="visit-venue__text">
-            <h2>The Business Design Centre</h2>
-            <p>One of London's most iconic event spaces, the BDC sits in the heart of Islington — one of the capital's most vibrant neighbourhoods. With excellent transport links, world-class facilities, and an atmosphere built for networking, it's the perfect home for the world's biggest podcasting festival.</p>
-
-            <address class="visit-venue__address">
-              <strong>Business Design Centre</strong><br>
-              52 Upper Street<br>
-              Islington, London N1 0QH
-            </address>
+          <div class="visit-bdc__info-card reveal">
+            <h3>Dates &amp; Hours</h3>
+            <p>Wednesday 20 &amp; Thursday 21 May 2026. Registration from 8:30am, doors open at 9am, show closes at 6pm both days.</p>
           </div>
 
-          <div class="visit-venue__image">
-            <img src="Photos/TP25 LUKE DAY 1/BDC External2.jpg" alt="Business Design Centre exterior" loading="lazy">
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============ 4. KEY INFO BAND (purple, isolated) ============ -->
-    <section class="visit-info section-padding" aria-label="Key information">
-      <div class="container">
-
-        <div class="section-header section-header--light reveal">
-          <h2>Key Information</h2>
-        </div>
-
-        <div class="visit-info__grid">
-
-          <div class="glass-card reveal">
-            <h3>Dates</h3>
-            <p>Wednesday 20 &amp; Thursday 21 May 2026</p>
-          </div>
-
-          <div class="glass-card reveal">
-            <h3>Hours</h3>
-            <p>Registration from 8:30am. Doors open 9am. Show closes 6pm both days.</p>
-          </div>
-
-          <div class="glass-card reveal">
+          <div class="visit-bdc__info-card reveal">
             <h3>Registration</h3>
             <p>Collect your badge at the Entrance Hall. Bring your booking confirmation (digital or printed) and photo ID.</p>
           </div>
 
-          <div class="glass-card reveal">
+          <div class="visit-bdc__info-card reveal">
+            <h3>Getting There</h3>
+            <p>Angel tube station (Northern Line) is a 4-minute walk. Highbury &amp; Islington (Victoria Line, Overground) is 15 minutes on foot. King's Cross and St Pancras are one stop away. The venue sits outside the Congestion Charge zone — use postcode N1 0QH for sat nav.</p>
+          </div>
+
+          <div class="visit-bdc__info-card reveal">
+            <h3>Parking &amp; Cycling</h3>
+            <p>On-site car park available — pre-booking recommended. Free secure bike storage in the car park. Multiple bus routes serve Upper Street.</p>
+          </div>
+
+          <div class="visit-bdc__info-card reveal">
+            <h3>Food, Drink &amp; Facilities</h3>
+            <p>Catering outlets inside the venue plus hundreds of restaurants and cafes along Upper Street. Free Wi-Fi throughout. Cloakroom and shower facilities available. The on-site Hilton hotel is directly opposite.</p>
+          </div>
+
+          <div class="visit-bdc__info-card reveal">
             <h3>Night Programme</h3>
-            <p>Evening events run separately. Check your pass tier or purchase evening tickets on site.</p>
+            <p>Evening events run separately after the show floor closes. Check your pass tier for included access or purchase evening tickets on site.</p>
           </div>
 
         </div>
+
+        <address class="visit-bdc__address visit-bdc__address--canvas reveal">
+          Business Design Centre &middot; 52 Upper Street &middot; Islington, London N1 0QH
+        </address>
 
       </div>
     </section>
 
 
-    <!-- ============ 5. GETTING HERE FROM… (tabbed journey cards) ============ -->
-    <section class="visit-getting section-padding" aria-label="Getting here">
-      <div class="container">
-
-        <div class="section-header reveal">
-          <h2>Getting Here From&hellip;</h2>
-          <p>The Business Design Centre is one of the best-connected venues in London. Here's the quickest route from wherever you're travelling.</p>
-        </div>
-
-        <!-- Tab navigation -->
-        <div class="visit-getting__tabs" role="tablist" aria-label="Journey origin">
-          <button class="visit-getting__tab active" role="tab" aria-selected="true" aria-controls="getting-uk" id="btn-getting-uk">From the UK</button>
-          <button class="visit-getting__tab" role="tab" aria-selected="false" aria-controls="getting-europe" id="btn-getting-europe">From Europe</button>
-          <button class="visit-getting__tab" role="tab" aria-selected="false" aria-controls="getting-further" id="btn-getting-further">From Further Afield</button>
-        </div>
-
-        <!-- FROM THE UK panel -->
-        <div class="visit-getting__panel active" id="getting-uk" role="tabpanel" aria-labelledby="btn-getting-uk">
-          <div class="visit-getting__grid">
-
-            <article class="visit-journey-card reveal">
-              <h3>From Manchester</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Train to London Euston <span class="visit-journey-card__time">2h 10m</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">12 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Birmingham</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Train to London Euston <span class="visit-journey-card__time">1h 25m</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">12 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Edinburgh</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Train to London King's Cross <span class="visit-journey-card__time">4h 20m</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Bristol</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Train to London Paddington <span class="visit-journey-card__time">1h 40m</span></li>
-                <li>Circle Line to King's Cross <span class="visit-journey-card__time">15 mins</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Leeds</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Train to London King's Cross <span class="visit-journey-card__time">2h 10m</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Glasgow</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Train to London Euston <span class="visit-journey-card__time">4h 30m</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">12 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-          </div>
-        </div>
-
-        <!-- FROM EUROPE panel -->
-        <div class="visit-getting__panel" id="getting-europe" role="tabpanel" aria-labelledby="btn-getting-europe" hidden>
-          <div class="visit-getting__grid">
-
-            <article class="visit-journey-card reveal">
-              <h3>From Paris</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Eurostar to St Pancras <span class="visit-journey-card__time">2h 15m</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Brussels</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Eurostar to St Pancras <span class="visit-journey-card__time">1h 50m</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Amsterdam</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Eurostar to St Pancras <span class="visit-journey-card__time">3h 52m</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Berlin</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London Stansted <span class="visit-journey-card__time">1h 50m</span></li>
-                <li>Stansted Express to Liverpool Street <span class="visit-journey-card__time">47 mins</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">10 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Dublin</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London City <span class="visit-journey-card__time">1h 20m</span></li>
-                <li>DLR to Bank, Northern Line to Angel <span class="visit-journey-card__time">30 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Lisbon</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London Gatwick <span class="visit-journey-card__time">2h 45m</span></li>
-                <li>Gatwick Express to Victoria <span class="visit-journey-card__time">30 mins</span></li>
-                <li>Victoria Line to Highbury &amp; Islington <span class="visit-journey-card__time">15 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">10 mins</span></li>
-              </ol>
-            </article>
-
-          </div>
-        </div>
-
-        <!-- FROM FURTHER AFIELD panel -->
-        <div class="visit-getting__panel" id="getting-further" role="tabpanel" aria-labelledby="btn-getting-further" hidden>
-          <div class="visit-getting__grid">
-
-            <article class="visit-journey-card reveal">
-              <h3>From New York</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London Heathrow <span class="visit-journey-card__time">7h</span></li>
-                <li>Piccadilly Line to King's Cross <span class="visit-journey-card__time">50 mins</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Los Angeles</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London Heathrow <span class="visit-journey-card__time">10h 30m</span></li>
-                <li>Heathrow Express to Paddington <span class="visit-journey-card__time">15 mins</span></li>
-                <li>Circle Line to King's Cross <span class="visit-journey-card__time">15 mins</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Toronto</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London Heathrow <span class="visit-journey-card__time">7h 30m</span></li>
-                <li>Piccadilly Line to King's Cross <span class="visit-journey-card__time">50 mins</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Sydney</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London Heathrow <span class="visit-journey-card__time">22h+</span></li>
-                <li>Piccadilly Line to King's Cross <span class="visit-journey-card__time">50 mins</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Dubai</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London Heathrow <span class="visit-journey-card__time">7h</span></li>
-                <li>Piccadilly Line to King's Cross <span class="visit-journey-card__time">50 mins</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-            <article class="visit-journey-card reveal">
-              <h3>From Singapore</h3>
-              <ol class="visit-journey-card__steps">
-                <li>Fly to London Heathrow <span class="visit-journey-card__time">13h</span></li>
-                <li>Piccadilly Line to King's Cross <span class="visit-journey-card__time">50 mins</span></li>
-                <li>Northern Line to Angel <span class="visit-journey-card__time">8 mins</span></li>
-                <li>Walk to BDC <span class="visit-journey-card__time">5 mins</span></li>
-              </ol>
-            </article>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
 
 
-    <!-- ============ 6. FULL-BLEED PHOTO BREAK ============ -->
+    <!-- ============ 3. FULL-BLEED PHOTO BREAK ============ -->
     <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img
         src="Photos/TP25 LUKE DAY 1/People - Smiling.jpg"
@@ -453,126 +217,393 @@
     </div>
 
 
-    <!-- ============ 7. WHERE TO STAY (partner hotels with photos + offers) ============ -->
-    <section class="visit-hotels section-padding" aria-label="Where to stay">
+    <!-- ============ 4. THE NEIGHBOURHOOD (rich guide with tabs) ============ -->
+    <section class="visit-neighbourhood section-padding" aria-label="The neighbourhood">
       <div class="container">
 
-        <div class="visit-hotels__header reveal">
-          <h2>Where to Stay</h2>
-          <p>We've partnered with the best hotels in the neighbourhood to offer exclusive rates for festival delegates. Book early — rooms fill up fast.</p>
+        <div class="visit-neighbourhood__intro visit-neighbourhood__intro--accent reveal">
+          <h2>You're Not Just Coming to a Festival. You're Coming to Islington.</h2>
+          <p>Upper Street is lined with independent restaurants, bars, theatres, and markets. The evenings are long. The neighbourhood has the energy of a place that takes culture seriously. Most delegates extend their trip — here's why.</p>
         </div>
 
-        <div class="visit-hotels__grid visit-hotels__grid--rich">
+        <!-- Filter navigation -->
+        <div class="visit-neighbourhood__tabs" role="tablist" aria-label="Neighbourhood categories">
+          <button class="visit-neighbourhood__tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="visit-neighbourhood__tab" data-filter="eat-drink" role="tab" aria-selected="false">Eat &amp; Drink</button>
+          <button class="visit-neighbourhood__tab" data-filter="hotels" role="tab" aria-selected="false">Hotels</button>
+          <button class="visit-neighbourhood__tab" data-filter="things-to-do" role="tab" aria-selected="false">Things to Do</button>
+        </div>
 
-          <article class="visit-hotel-card reveal">
-            <div class="visit-hotel-card__image">
-              <img src="visit-content/hotels/the-hilton.png" alt="Hilton London Angel Islington" loading="lazy">
-              <span class="visit-hotel-card__badge">Closest to venue</span>
-            </div>
-            <div class="visit-hotel-card__body">
+        <!-- Single filterable card grid -->
+        <div class="visit-neighbourhood__grid" id="neighbourhood-cards">
+
+          <!-- Hotels -->
+          <article class="visit-place-card" data-cat="hotels">
+            <img src="visit-content/hotels/the-hilton.png" alt="Hilton London Angel Islington" loading="lazy">
+            <div class="visit-place-card__body">
               <h3>Hilton London Angel Islington</h3>
-              <span class="visit-hotel-card__area">Angel, Islington</span>
-              <p>Steps from the Business Design Centre on Upper Street. The closest hotel to the venue — walk across the road and you're there.</p>
-              <div class="visit-hotel-card__offer">
-                <strong>Exclusive delegate rate:</strong> Up to 18% off all rooms and suites
-              </div>
+              <span class="visit-place-card__type">Hotel &middot; Angel</span>
+              <p>Steps from the BDC on Upper Street. The closest hotel to the venue — walk across the road and you're there.</p>
+              <span class="visit-place-card__offer">Delegate rate: up to 18% off</span>
             </div>
           </article>
 
-          <article class="visit-hotel-card reveal">
-            <div class="visit-hotel-card__image">
-              <img src="visit-content/hotels/the-standard.jpg" alt="The Standard, London" loading="lazy">
-              <span class="visit-hotel-card__badge">Official Party venue</span>
-            </div>
-            <div class="visit-hotel-card__body">
+          <article class="visit-place-card" data-cat="hotels">
+            <img src="visit-content/hotels/the-standard.jpg" alt="The Standard, London" loading="lazy">
+            <div class="visit-place-card__body">
               <h3>The Standard, London</h3>
-              <span class="visit-hotel-card__area">King's Cross</span>
-              <p>Panoramic views of the London skyline and a 5-minute cab ride to the BDC. Right in the heart of King's Cross and next to Eurostar — a networking hub for the show.</p>
-              <div class="visit-hotel-card__offer">
-                <strong>Exclusive delegate rate:</strong> Minimum 15% off best available rate
-              </div>
+              <span class="visit-place-card__type">Hotel &middot; King's Cross</span>
+              <p>Panoramic views and a rooftop restaurant. Host venue for the official after-party, and right next to Eurostar.</p>
+              <span class="visit-place-card__offer">Delegate rate: 15% off best available</span>
             </div>
           </article>
 
-          <article class="visit-hotel-card reveal">
-            <div class="visit-hotel-card__image">
-              <img src="visit-content/hotels/the-megaro.jpg" alt="The Megaro Hotel" loading="lazy">
-            </div>
-            <div class="visit-hotel-card__body">
+          <article class="visit-place-card" data-cat="hotels">
+            <img src="visit-content/hotels/the-megaro.jpg" alt="The Megaro Hotel" loading="lazy">
+            <div class="visit-place-card__body">
               <h3>The Megaro</h3>
-              <span class="visit-hotel-card__area">King's Cross</span>
+              <span class="visit-place-card__type">Hotel &middot; King's Cross</span>
               <p>Creatively decorated rooms and suites that blend design, fashion, and cinematography. A stylish base near St Pancras.</p>
-              <div class="visit-hotel-card__offer">
-                <strong>Exclusive delegate rate:</strong> Up to 12% off rooms
-              </div>
+              <span class="visit-place-card__offer">Delegate rate: up to 12% off</span>
             </div>
           </article>
 
-          <article class="visit-hotel-card reveal">
-            <div class="visit-hotel-card__image">
-              <img src="visit-content/hotels/the-gyle.jpg" alt="The Gyle Hotel" loading="lazy">
-            </div>
-            <div class="visit-hotel-card__body">
+          <article class="visit-place-card" data-cat="hotels">
+            <img src="visit-content/hotels/the-gyle.jpg" alt="The Gyle Hotel" loading="lazy">
+            <div class="visit-place-card__body">
               <h3>The Gyle</h3>
-              <span class="visit-hotel-card__area">Argyle Square, King's Cross</span>
+              <span class="visit-place-card__type">Hotel &middot; King's Cross</span>
               <p>A cosy, personalised base with character and style. Comfort meets individuality in a quiet square minutes from the action.</p>
-              <div class="visit-hotel-card__offer">
-                <strong>Exclusive delegate rate:</strong> Up to 12% off rooms
-              </div>
+              <span class="visit-place-card__offer">Delegate rate: up to 12% off</span>
             </div>
           </article>
 
-          <article class="visit-hotel-card reveal">
-            <div class="visit-hotel-card__image">
-              <img src="visit-content/hotels/the-california-london.png" alt="The California London" loading="lazy">
-            </div>
-            <div class="visit-hotel-card__body">
+          <article class="visit-place-card" data-cat="hotels">
+            <img src="visit-content/hotels/the-california-london.png" alt="The California London" loading="lazy">
+            <div class="visit-place-card__body">
               <h3>The California London</h3>
-              <span class="visit-hotel-card__area">King's Cross</span>
+              <span class="visit-place-card__type">Hotel &middot; King's Cross</span>
               <p>London townhouses blended with eclectic West Coast style. Steps from buzzing King's Cross with easy access to the BDC.</p>
-              <div class="visit-hotel-card__offer">
-                <strong>Exclusive delegate rate:</strong> Up to 12% off rooms
-              </div>
+              <span class="visit-place-card__offer">Delegate rate: up to 12% off</span>
+            </div>
+          </article>
+
+          <!-- Eat & Drink -->
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/ottolenghi.jpg" alt="Ottolenghi restaurant" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Ottolenghi</h3>
+              <span class="visit-place-card__type">Restaurant</span>
+              <p>A London institution on Upper Street. Mediterranean deli and restaurant, communal tables, and food worth crossing the city for.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/bellanger.webp" alt="Bellanger brasserie" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Bellanger</h3>
+              <span class="visit-place-card__type">Brasserie</span>
+              <p>All-day French brasserie on Islington Green from the team behind The Wolseley. Steak frites, confit de canard, and a cocktail list that runs late.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/the-pig-and-butcher.jpg" alt="The Pig and Butcher" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>The Pig and Butcher</h3>
+              <span class="visit-place-card__type">Pub &amp; Restaurant</span>
+              <p>An Islington institution since 2012. On-site butcher, daily-changing menu, craft beers, and wine from family vineyards only.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/the-old-queens-head.jpg" alt="The Old Queens Head" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>The Old Queens Head</h3>
+              <span class="visit-place-card__type">Pub &amp; Live Venue</span>
+              <p>16th-century fireplaces, bespoke chandeliers, and a karaoke room. Live music, DJs, and a tasty pub menu. Host of TPS creator meetups in 2025.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/the-vineyard.jpg" alt="The Vineyard" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>The Vineyard</h3>
+              <span class="visit-place-card__type">Bar &amp; Kitchen</span>
+              <p>One of the best beer gardens in Angel. Exposed brick, vaulted ceilings, and gorgeous vintage seating inside. Perfect for a post-show drink.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/the-camden-head.jpg" alt="The Camden Head" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>The Camden Head</h3>
+              <span class="visit-place-card__type">Pub</span>
+              <p>Grade II listed, tucked away on Camden Passage. Etched glass windows, original mirrors, and one of London's best comedy nights.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/fredericks.webp" alt="Frederick's restaurant" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Frederick's</h3>
+              <span class="visit-place-card__type">Restaurant</span>
+              <p>Contemporary European with a stunning private dining room and one of Islington's best wine lists. Ideal for business dinners.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/sticks-n-sushi.jpg" alt="Sticks'n'Sushi" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Sticks'n'Sushi</h3>
+              <span class="visit-place-card__type">Restaurant</span>
+              <p>Japanese tradition meets Danish flair. Fresh seafood, handmade sushi, and a sake selection that runs deep.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/the-breakfast-club-angel.jpg" alt="The Breakfast Club Angel" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>The Breakfast Club</h3>
+              <span class="visit-place-card__type">Brunch</span>
+              <p>Bright, vibrant, and packed with character. The breakfast burritos alone are worth the trip. Perfect fuel before a day on the show floor.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/brother-marcus.webp" alt="Brother Marcus" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Brother Marcus</h3>
+              <span class="visit-place-card__type">Brunch &amp; Dinner</span>
+              <p>British meets Mediterranean on Camden Passage. Top-quality ingredients, vegan-friendly, and a brunch queue that speaks for itself.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/meat-liquor-n1.jpg" alt="Meat Liquor N1" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Meat Liquor N1</h3>
+              <span class="visit-place-card__type">Burgers &amp; Bar</span>
+              <p>Set in an old Citro&euml;n garage between Angel and Highbury stations. Outdoor dining, private mezzanine, and some of the best burgers in north London.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/le-sacre-coeur.jpg" alt="Le Sacré Coeur" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Le Sacr&eacute; Coeur</h3>
+              <span class="visit-place-card__type">French Bistro</span>
+              <p>One of the oldest French restaurants in the area. Cosy, traditional, and centred around authentic indulgent food in the heart of Angel.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/tofu-vegan.webp" alt="Tofu Vegan" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Tofu Vegan</h3>
+              <span class="visit-place-card__type">Vegan</span>
+              <p>Completely plant-based with chefs from Sichuan, Canton, and Dongbei. Regional Chinese flavours that delight even confirmed carnivores.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/the-bull-islington.webp" alt="The Bull Islington" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>The Bull</h3>
+              <span class="visit-place-card__type">Pub</span>
+              <p>Quirky charm meets British pub hospitality. Flavoursome food, an explorative drinks menu, and a genuinely welcoming atmosphere.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="eat-drink">
+            <img src="visit-content/eat-drink/masigo.webp" alt="Masigo Korean restaurant" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Masigo</h3>
+              <span class="visit-place-card__type">Korean</span>
+              <p>The best Korean in Angel. Crunchy-yet-juicy fried chicken, Korean BBQ, and hotpot. A delegate favourite.</p>
+            </div>
+          </article>
+
+          <!-- Things to Do -->
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/camden-passage.jpeg" alt="Camden Passage" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Camden Passage</h3>
+              <span class="visit-place-card__type">Shopping &amp; Market</span>
+              <p>A picturesque car-free street filled with antique shops, vintage finds, outdoor markets, and independent cafes. Two minutes from the BDC.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/coal-drops-yard.jpeg" alt="Coal Drops Yard" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Coal Drops Yard</h3>
+              <span class="visit-place-card__type">Shopping &amp; Dining</span>
+              <p>Cobbled streets and brick arches at King's Cross, home to a brilliant mix of independent shops and signature brands.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/sadlers-wells-theatre.jpeg" alt="Sadler's Wells Theatre" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Sadler's Wells Theatre</h3>
+              <span class="visit-place-card__type">Theatre</span>
+              <p>One of the world's leading dance venues. A 1,500-seat auditorium on Rosebery Avenue, a short walk from the BDC.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/almeida-theatre.jpeg" alt="Almeida Theatre" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Almeida Theatre</h3>
+              <span class="visit-place-card__type">Theatre</span>
+              <p>A 325-seat producing house with an international reputation, right off Upper Street. Plays regularly transfer to the West End.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/regents-canal.jpg" alt="Regent's Canal" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Regent's Canal</h3>
+              <span class="visit-place-card__type">Walk</span>
+              <p>A hidden world of narrowboats, towpaths, and waterside pubs. Walk from Angel to Camden Market, past London Zoo.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/union-chapel.jpeg" alt="Union Chapel" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Union Chapel</h3>
+              <span class="visit-place-card__type">Live Venue</span>
+              <p>A Grade I-listed Gothic revival church that doubles as one of London's most atmospheric live entertainment venues.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/estorick-collection.jpeg" alt="Estorick Collection" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Estorick Collection</h3>
+              <span class="visit-place-card__type">Gallery</span>
+              <p>Modern Italian art in a Grade II Georgian townhouse. Six galleries of Futurist works. A hidden gem of Islington.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/screen-on-the-green.jpeg" alt="Screen on the Green" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Screen on the Green</h3>
+              <span class="visit-place-card__type">Cinema</span>
+              <p>One of the UK's oldest continuously running cinemas, facing Islington Green. Single-screen charm since 1913.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/exmouth-market.jpeg" alt="Exmouth Market" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Exmouth Market</h3>
+              <span class="visit-place-card__type">Street Food &amp; Bars</span>
+              <p>A semi-pedestrianised street in Clerkenwell with 30+ street food stalls and a string of vibrant bars and restaurants.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/spitalfields-market.jpeg" alt="Spitalfields Market" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Spitalfields Market</h3>
+              <span class="visit-place-card__type">Market</span>
+              <p>Artisanal food, handmade goods, contemporary fashion, and a flea market. A short bus ride east from Islington.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/emirates-stadium.jpg" alt="Emirates Stadium" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Emirates Stadium</h3>
+              <span class="visit-place-card__type">Sport</span>
+              <p>Home of Arsenal FC. A 60,000-seat stadium just up the road in Holloway. Stadium tours available on non-match days.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/british-museum.jpeg" alt="British Museum" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>British Museum</h3>
+              <span class="visit-place-card__type">Museum</span>
+              <p>Eight million works spanning human history, art, and culture. Free entry. A 20-minute bus ride from Islington to Bloomsbury.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/culpeper-community-garden.jpeg" alt="Culpeper Community Garden" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Culpeper Community Garden</h3>
+              <span class="visit-place-card__type">Green Space</span>
+              <p>An award-winning green oasis in the midst of Islington. Perfect for a quiet lunch break or a moment of calm between sessions.</p>
+            </div>
+          </article>
+
+          <article class="visit-place-card" data-cat="things-to-do">
+            <img src="visit-content/things-to-do/angel-central.jpeg" alt="Angel Central" loading="lazy">
+            <div class="visit-place-card__body">
+              <h3>Angel Central</h3>
+              <span class="visit-place-card__type">Shopping</span>
+              <p>A stylish collection of shops, restaurants, cinemas, and music venues off Upper Street. Everything you need under one roof.</p>
             </div>
           </article>
 
         </div>
 
-        <p class="visit-hotels__note reveal">Discount codes are included in your booking confirmation email for Gold and Platinum pass holders.</p>
+        <button class="visit-neighbourhood__show-more" id="neighbourhood-show-more" style="display:none">
+          Show more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>
+        </button>
+
+        <p class="visit-neighbourhood__hotel-note" id="neighbourhood-hotel-note" style="display:none">Discount codes are included in your booking confirmation email for Gold and Platinum pass holders.</p>
 
       </div>
     </section>
 
 
-    <!-- ============ 7. TRAVELLING FROM ABROAD (canvas, charcoal cards) ============ -->
-    <section class="visit-international section-padding" aria-label="Travelling from abroad">
+    <!-- ============ 5. TRAVELLING FROM ABROAD (charcoal bg, image cards) ============ -->
+    <section class="visit-international visit-international--charcoal section-padding" aria-label="Travelling from abroad">
       <div class="container">
 
-        <div class="section-header reveal">
+        <div class="section-header section-header--light reveal">
           <h2>Travelling From Abroad</h2>
           <p>53 countries were represented at the last festival. Here's how to get here from wherever you are.</p>
         </div>
 
         <div class="visit-international__grid">
 
-          <article class="visit-international__card reveal">
-            <h3>From Europe</h3>
-            <p>Eurostar arrives at St Pancras International — a 10-minute taxi or tube ride to Angel. Direct trains from Paris (2h15), Brussels (1h50), and Amsterdam (3h52). Flights from all major European cities land at Heathrow, Gatwick, Stansted, or Luton.</p>
+          <article class="visit-international__card visit-international__card--image reveal">
+            <img src="visit-content/travel/eurostar.jpg" alt="Aerial view of London and Tower Bridge — your destination from mainland Europe" loading="lazy">
+            <div class="visit-international__card-body">
+              <h3>From Europe</h3>
+              <p>Eurostar arrives at St Pancras International — a 10-minute taxi or tube ride to Angel. Direct trains from Paris (2h15), Brussels (1h50), and Amsterdam (3h52). Flights from all major European cities land at Heathrow, Gatwick, Stansted, or Luton.</p>
+            </div>
           </article>
 
-          <article class="visit-international__card reveal">
-            <h3>From North America</h3>
-            <p>Direct flights to Heathrow from New York, Los Angeles, Toronto, and Chicago. Heathrow to Angel: take the Piccadilly Line to King's Cross, change to the Northern Line — 55 minutes total. City taxis and the Heathrow Express to Paddington are also options.</p>
+          <article class="visit-international__card visit-international__card--image reveal">
+            <img src="visit-content/travel/heathrow.jpg" alt="Plane landing at sunset — direct flights from North America to London" loading="lazy">
+            <div class="visit-international__card-body">
+              <h3>From North America</h3>
+              <p>Direct flights to Heathrow from New York, Los Angeles, Toronto, and Chicago. Heathrow to Angel: take the Piccadilly Line to King's Cross, change to the Northern Line — 55 minutes total. City taxis and the Heathrow Express to Paddington are also options.</p>
+            </div>
           </article>
 
-          <article class="visit-international__card reveal">
-            <h3>From Asia-Pacific</h3>
-            <p>Heathrow handles most long-haul arrivals. London City Airport also serves some routes. Consider arriving a day early to adjust for jet lag. London in late May averages 15–18°C — bring a light layer for the evenings.</p>
+          <article class="visit-international__card visit-international__card--image reveal">
+            <img src="visit-content/travel/london-skyline.jpg" alt="Big Ben and the Houses of Parliament at dusk" loading="lazy">
+            <div class="visit-international__card-body">
+              <h3>From Asia-Pacific</h3>
+              <p>Heathrow handles most long-haul arrivals. London City Airport also serves some routes. Consider arriving a day early to adjust for jet lag. London in late May averages 15–18°C — bring a light layer for the evenings.</p>
+            </div>
           </article>
 
-          <article class="visit-international__card reveal">
-            <h3>Visa Information</h3>
-            <p>UK visa requirements vary by nationality. EU and EEA citizens do not need a visa but need a valid passport. US, Canadian, and Australian citizens do not need a visa for stays under six months. Check <a href="https://www.gov.uk/check-uk-visa" target="_blank" rel="noopener">gov.uk/check-uk-visa</a> for your country.</p>
+          <article class="visit-international__card visit-international__card--image reveal">
+            <img src="visit-content/travel/passport-control.jpg" alt="Plane at airport terminal — UK visa information for international visitors" loading="lazy">
+            <div class="visit-international__card-body">
+              <h3>Visa Information</h3>
+              <p>UK visa requirements vary by nationality. EU and EEA citizens do not need a visa but need a valid passport. US, Canadian, and Australian citizens do not need a visa for stays under six months. Check <a href="https://www.gov.uk/check-uk-visa" target="_blank" rel="noopener">gov.uk/check-uk-visa</a> for your country.</p>
+            </div>
           </article>
 
         </div>
@@ -581,301 +612,7 @@
     </section>
 
 
-    <!-- ============ 8. THE NEIGHBOURHOOD (rich guide with tabs) ============ -->
-    <section class="visit-neighbourhood section-padding" aria-label="The neighbourhood">
-      <div class="container">
-
-        <div class="visit-neighbourhood__intro reveal">
-          <h2>You're Not Just Coming to a Festival. You're Coming to Islington.</h2>
-          <p>Upper Street is lined with independent restaurants, bars, theatres, and markets. The evenings are long. The neighbourhood has the energy of a place that takes culture seriously. Most delegates extend their trip — here's why.</p>
-        </div>
-
-        <!-- Tab navigation -->
-        <div class="visit-neighbourhood__tabs" role="tablist" aria-label="Neighbourhood categories">
-          <button class="visit-neighbourhood__tab active" role="tab" aria-selected="true" aria-controls="tab-eat-drink" id="btn-eat-drink">Eat &amp; Drink</button>
-          <button class="visit-neighbourhood__tab" role="tab" aria-selected="false" aria-controls="tab-things-to-do" id="btn-things-to-do">Things to Do</button>
-        </div>
-
-        <!-- EAT & DRINK panel -->
-        <div class="visit-neighbourhood__panel active" id="tab-eat-drink" role="tabpanel" aria-labelledby="btn-eat-drink">
-          <div class="visit-neighbourhood__grid">
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/ottolenghi.jpg" alt="Ottolenghi restaurant" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Ottolenghi</h3>
-                <span class="visit-place-card__type">Restaurant</span>
-                <p>A London institution on Upper Street. Mediterranean deli and restaurant, communal tables, and food worth crossing the city for. Opposite the Almeida Theatre.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/bellanger.webp" alt="Bellanger brasserie" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Bellanger</h3>
-                <span class="visit-place-card__type">Brasserie</span>
-                <p>All-day French brasserie on Islington Green from the team behind The Wolseley. Steak frites, confit de canard, and a cocktail list that runs late.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/the-pig-and-butcher.jpg" alt="The Pig and Butcher" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>The Pig and Butcher</h3>
-                <span class="visit-place-card__type">Pub &amp; Restaurant</span>
-                <p>An Islington institution since 2012. On-site butcher, daily-changing menu, craft beers, and wine from family vineyards only. Country pub energy in the heart of N1.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/the-old-queens-head.jpg" alt="The Old Queens Head" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>The Old Queens Head</h3>
-                <span class="visit-place-card__type">Pub &amp; Live Venue</span>
-                <p>16th-century fireplaces, bespoke chandeliers, and a karaoke room. Live music, DJs, and a tasty pub menu. Host of TPS creator meetups in 2025.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/the-vineyard.jpg" alt="The Vineyard" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>The Vineyard</h3>
-                <span class="visit-place-card__type">Bar &amp; Kitchen</span>
-                <p>One of the best beer gardens in Angel. Exposed brick, vaulted ceilings, and gorgeous vintage seating inside. Perfect for a post-show drink.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/the-camden-head.jpg" alt="The Camden Head" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>The Camden Head</h3>
-                <span class="visit-place-card__type">Pub</span>
-                <p>Grade II listed, tucked away on Camden Passage. Etched glass windows, original mirrors, and one of London's best comedy nights. Beer garden in summer.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/fredericks.webp" alt="Frederick's restaurant" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Frederick's</h3>
-                <span class="visit-place-card__type">Restaurant</span>
-                <p>Contemporary European with a stunning private dining room and one of Islington's best wine lists. Relaxed, focused, and ideal for business dinners.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/sticks-n-sushi.jpg" alt="Sticks'n'Sushi" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Sticks'n'Sushi</h3>
-                <span class="visit-place-card__type">Restaurant</span>
-                <p>Japanese tradition meets Danish flair. Fresh seafood, handmade sushi, and a sake selection that runs deep. Something for every palate.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/the-breakfast-club-angel.jpg" alt="The Breakfast Club Angel" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>The Breakfast Club</h3>
-                <span class="visit-place-card__type">Brunch</span>
-                <p>Bright, vibrant, and packed with character. The breakfast burritos alone are worth the trip. Perfect fuel before a day on the show floor.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/brother-marcus.webp" alt="Brother Marcus" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Brother Marcus</h3>
-                <span class="visit-place-card__type">Brunch &amp; Dinner</span>
-                <p>British meets Mediterranean on Camden Passage. Top-quality ingredients, vegan-friendly, and a brunch queue that speaks for itself.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/meat-liquor-n1.jpg" alt="Meat Liquor N1" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Meat Liquor N1</h3>
-                <span class="visit-place-card__type">Burgers &amp; Bar</span>
-                <p>Set in an old Citro&euml;n garage between Angel and Highbury stations. Outdoor dining, private mezzanine, and some of the best burgers in north London.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/le-sacre-coeur.jpg" alt="Le Sacré Coeur" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Le Sacr&eacute; Coeur</h3>
-                <span class="visit-place-card__type">French Bistro</span>
-                <p>One of the oldest French restaurants in the area. Cosy, traditional, and centred around authentic indulgent food in the heart of Angel.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/tofu-vegan.webp" alt="Tofu Vegan" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Tofu Vegan</h3>
-                <span class="visit-place-card__type">Vegan</span>
-                <p>Completely plant-based with chefs from Sichuan, Canton, and Dongbei. Regional Chinese flavours that delight even confirmed carnivores.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/the-bull-islington.webp" alt="The Bull Islington" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>The Bull</h3>
-                <span class="visit-place-card__type">Pub</span>
-                <p>Quirky charm meets British pub hospitality. Flavoursome food, an explorative drinks menu, and a genuinely welcoming atmosphere for a post-show wind-down.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/eat-drink/masigo.webp" alt="Masigo Korean restaurant" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Masigo</h3>
-                <span class="visit-place-card__type">Korean</span>
-                <p>The best Korean in Angel. Crunchy-yet-juicy fried chicken, Korean BBQ, and hotpot. A delegate favourite.</p>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <!-- THINGS TO DO panel -->
-        <div class="visit-neighbourhood__panel" id="tab-things-to-do" role="tabpanel" aria-labelledby="btn-things-to-do" hidden>
-          <div class="visit-neighbourhood__grid">
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/camden-passage.jpeg" alt="Camden Passage" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Camden Passage</h3>
-                <span class="visit-place-card__type">Shopping &amp; Market</span>
-                <p>A picturesque car-free street filled with antique shops, vintage finds, outdoor markets, and independent cafes. Two minutes from the BDC.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/coal-drops-yard.jpeg" alt="Coal Drops Yard" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Coal Drops Yard</h3>
-                <span class="visit-place-card__type">Shopping &amp; Dining</span>
-                <p>Cobbled streets and brick arches at King's Cross, home to a brilliant mix of independent shops and signature brands. Boutique shopping at its best.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/sadlers-wells-theatre.jpeg" alt="Sadler's Wells Theatre" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Sadler's Wells Theatre</h3>
-                <span class="visit-place-card__type">Theatre</span>
-                <p>One of the world's leading dance venues. A 1,500-seat auditorium on Rosebery Avenue, a short walk from the BDC. Check what's on during festival week.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/almeida-theatre.jpeg" alt="Almeida Theatre" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Almeida Theatre</h3>
-                <span class="visit-place-card__type">Theatre</span>
-                <p>A 325-seat producing house with an international reputation, right off Upper Street. Successful plays regularly transfer to the West End.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/regents-canal.jpg" alt="Regent's Canal" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Regent's Canal</h3>
-                <span class="visit-place-card__type">Walk</span>
-                <p>A hidden world of narrowboats, towpaths, and waterside pubs. Walk from Angel to Camden Market, past London Zoo and through Regent's Park.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/union-chapel.jpeg" alt="Union Chapel" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Union Chapel</h3>
-                <span class="visit-place-card__type">Live Venue</span>
-                <p>A Grade I-listed Gothic revival church that doubles as one of London's most atmospheric live entertainment venues. Top of Upper Street, near Highbury Fields.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/estorick-collection.jpeg" alt="Estorick Collection" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Estorick Collection</h3>
-                <span class="visit-place-card__type">Gallery</span>
-                <p>Modern Italian art in a Grade II Georgian townhouse. Six galleries of Futurist works, figurative art, and sculpture. A hidden gem of Islington.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/screen-on-the-green.jpeg" alt="Screen on the Green" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Screen on the Green</h3>
-                <span class="visit-place-card__type">Cinema</span>
-                <p>One of the UK's oldest continuously running cinemas, facing Islington Green. Single-screen charm since 1913.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/exmouth-market.jpeg" alt="Exmouth Market" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Exmouth Market</h3>
-                <span class="visit-place-card__type">Street Food &amp; Bars</span>
-                <p>A semi-pedestrianised street in Clerkenwell with 30+ street food stalls and a string of vibrant bars and restaurants.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/spitalfields-market.jpeg" alt="Spitalfields Market" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Spitalfields Market</h3>
-                <span class="visit-place-card__type">Market</span>
-                <p>Artisanal food, handmade goods, contemporary fashion, and a flea market. A short bus ride east from Islington.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/emirates-stadium.jpg" alt="Emirates Stadium" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Emirates Stadium</h3>
-                <span class="visit-place-card__type">Sport</span>
-                <p>Home of Arsenal FC. A 60,000-seat stadium just up the road in Holloway. Stadium tours available on non-match days.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/british-museum.jpeg" alt="British Museum" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>British Museum</h3>
-                <span class="visit-place-card__type">Museum</span>
-                <p>Eight million works spanning human history, art, and culture. Free entry. A 20-minute bus ride from Islington to Bloomsbury.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/culpeper-community-garden.jpeg" alt="Culpeper Community Garden" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Culpeper Community Garden</h3>
-                <span class="visit-place-card__type">Green Space</span>
-                <p>An award-winning green oasis in the midst of Islington. Perfect for a quiet lunch break or a moment of calm between sessions.</p>
-              </div>
-            </article>
-
-            <article class="visit-place-card reveal">
-              <img src="visit-content/things-to-do/angel-central.jpeg" alt="Angel Central" loading="lazy">
-              <div class="visit-place-card__body">
-                <h3>Angel Central</h3>
-                <span class="visit-place-card__type">Shopping</span>
-                <p>A stylish collection of shops, restaurants, cinemas, and music venues off Upper Street. Everything you need under one roof.</p>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ============ 9. FULL-BLEED PHOTO BREAK 2 ============ -->
+    <!-- ============ 6. FULL-BLEED PHOTO BREAK 2 ============ -->
     <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img
         src="Photos/TP25 LUKE DAY 1/Entrance Hall - Registration.jpg"
@@ -1058,125 +795,118 @@
   </footer>
 
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="main.js" defer></script>
+
+  <!-- Neighbourhood filter + show-more -->
   <script>
     (function() {
-      var mapEl = document.getElementById('visit-map');
-      if (!mapEl || typeof L === 'undefined') return;
+      var PAGE_SIZE = 6;
+      var tabs = document.querySelectorAll('.visit-neighbourhood__tab');
+      var cards = document.querySelectorAll('#neighbourhood-cards .visit-place-card');
+      var showMoreBtn = document.getElementById('neighbourhood-show-more');
+      var hotelNote = document.getElementById('neighbourhood-hotel-note');
+      if (!tabs.length || !cards.length) return;
 
-      var map = L.map('visit-map', {
-        scrollWheelZoom: false,
-        attributionControl: true
-      }).setView([51.5362, -0.1022], 15);
+      var currentFilter = 'all';
+      var isExpanded = false;
 
-      L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19
-      }).addTo(map);
+      function applyFilter(filter) {
+        currentFilter = filter;
+        isExpanded = false;
 
-      var colours = {
-        venue:      '#551fef',
-        transport:  '#47c9d6',
-        hotel:      '#ffbb00',
-        restaurant: '#ef5959'
-      };
-
-      function icon(colour) {
-        return L.divIcon({
-          className: 'visit-map__marker',
-          html: '<span style="background:' + colour + '"></span>',
-          iconSize: [14, 14],
-          iconAnchor: [7, 7],
-          popupAnchor: [0, -10]
+        /* Update tab states */
+        tabs.forEach(function(t) {
+          var isActive = t.getAttribute('data-filter') === filter;
+          t.classList.toggle('active', isActive);
+          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
         });
+
+        /* Filter and paginate cards */
+        var visibleCount = 0;
+        cards.forEach(function(card) {
+          var cat = card.getAttribute('data-cat');
+          var matches = filter === 'all' || cat === filter;
+
+          if (matches) {
+            visibleCount++;
+            if (visibleCount <= PAGE_SIZE) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        /* Show more button */
+        var totalMatching = 0;
+        cards.forEach(function(card) {
+          var cat = card.getAttribute('data-cat');
+          if (filter === 'all' || cat === filter) totalMatching++;
+        });
+
+        if (totalMatching > PAGE_SIZE) {
+          var remaining = totalMatching - PAGE_SIZE;
+          showMoreBtn.style.display = '';
+          showMoreBtn.innerHTML = 'Show ' + remaining + ' more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>';
+          showMoreBtn.classList.remove('is-expanded');
+        } else {
+          showMoreBtn.style.display = 'none';
+        }
+
+        /* Hotel note visibility */
+        if (filter === 'all' || filter === 'hotels') {
+          hotelNote.style.display = '';
+        } else {
+          hotelNote.style.display = 'none';
+        }
       }
 
-      var markers = [
-        { lat: 51.5353, lng: -0.1060, name: 'Business Design Centre', tag: 'Venue',      info: '52 Upper Street, Islington N1 0QH — home of The Podcast Show.',                          colour: colours.venue },
-        { lat: 51.5325, lng: -0.1059, name: 'Angel',                  tag: 'Transport',   info: 'Northern Line. 5-minute walk to the BDC.',                                                colour: colours.transport },
-        { lat: 51.5463, lng: -0.1040, name: 'Highbury & Islington',   tag: 'Transport',   info: 'Victoria Line, Overground & National Rail. 10-minute walk south.',                        colour: colours.transport },
-        { lat: 51.5348, lng: -0.1246, name: 'The Standard, London',   tag: 'Hotel',       info: 'King\'s Cross. 15-minute walk. Host venue for The Official Party.',                       colour: colours.hotel },
-        { lat: 51.5358, lng: -0.1054, name: 'Hilton Islington',       tag: 'Hotel',       info: 'Upper Street. Directly opposite the BDC.',                                                colour: colours.hotel },
-        { lat: 51.5340, lng: -0.1110, name: 'Premier Inn Angel',      tag: 'Hotel',       info: 'Liverpool Road. Budget-friendly, 5 minutes\' walk.',                                      colour: colours.hotel },
-        { lat: 51.5355, lng: -0.1030, name: 'Ottolenghi',             tag: 'Restaurant',  info: '287 Upper St. Modern Mediterranean — a London institution.',                              colour: colours.restaurant },
-        { lat: 51.5465, lng: -0.1010, name: 'Trullo',                 tag: 'Restaurant',  info: '300 St Paul\'s Rd. Seasonal Italian, handmade pasta, charcoal grill.',                    colour: colours.restaurant },
-        { lat: 51.5340, lng: -0.1034, name: 'Bellanger',              tag: 'Restaurant',  info: '9 Islington Green. Grand French brasserie, open early to late.',                          colour: colours.restaurant },
-        { lat: 51.5380, lng: -0.1040, name: 'Smokehouse Islington',   tag: 'Restaurant',  info: 'Canonbury Rd. Craft beer and slow-smoked meats. 3-minute walk.',                         colour: colours.restaurant }
-      ];
+      function toggleShowMore() {
+        isExpanded = !isExpanded;
+        var visibleCount = 0;
 
-      markers.forEach(function(m) {
-        L.marker([m.lat, m.lng], { icon: icon(m.colour) })
-          .addTo(map)
-          .bindPopup(
-            '<strong>' + m.name + '</strong>' +
-            '<span class="visit-map__popup-tag" style="background:' + m.colour + '">' + m.tag + '</span>' +
-            '<br>' + m.info
-          );
-      });
-    })();
-  </script>
+        cards.forEach(function(card) {
+          var cat = card.getAttribute('data-cat');
+          var matches = currentFilter === 'all' || cat === currentFilter;
 
-  <!-- Getting Here tabs -->
-  <script>
-    (function() {
-      var tabs = document.querySelectorAll('.visit-getting__tab');
-      if (!tabs.length) return;
+          if (matches) {
+            visibleCount++;
+            if (isExpanded || visibleCount <= PAGE_SIZE) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+
+        var totalMatching = 0;
+        cards.forEach(function(card) {
+          var cat = card.getAttribute('data-cat');
+          if (currentFilter === 'all' || cat === currentFilter) totalMatching++;
+        });
+
+        if (isExpanded) {
+          showMoreBtn.innerHTML = 'Show less <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>';
+          showMoreBtn.classList.add('is-expanded');
+        } else {
+          var remaining = totalMatching - PAGE_SIZE;
+          showMoreBtn.innerHTML = 'Show ' + remaining + ' more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>';
+          showMoreBtn.classList.remove('is-expanded');
+        }
+      }
 
       tabs.forEach(function(tab) {
         tab.addEventListener('click', function() {
-          tabs.forEach(function(t) {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-
-          var panels = document.querySelectorAll('.visit-getting__panel');
-          panels.forEach(function(p) {
-            p.classList.remove('active');
-            p.hidden = true;
-          });
-
-          var target = document.getElementById(tab.getAttribute('aria-controls'));
-          if (target) {
-            target.classList.add('active');
-            target.hidden = false;
-          }
+          applyFilter(tab.getAttribute('data-filter'));
         });
       });
-    })();
-  </script>
 
-  <!-- Neighbourhood tabs -->
-  <script>
-    (function() {
-      var tabs = document.querySelectorAll('.visit-neighbourhood__tab');
-      if (!tabs.length) return;
+      showMoreBtn.addEventListener('click', toggleShowMore);
 
-      tabs.forEach(function(tab) {
-        tab.addEventListener('click', function() {
-          tabs.forEach(function(t) {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-
-          var panels = document.querySelectorAll('.visit-neighbourhood__panel');
-          panels.forEach(function(p) {
-            p.classList.remove('active');
-            p.hidden = true;
-          });
-
-          var target = document.getElementById(tab.getAttribute('aria-controls'));
-          if (target) {
-            target.classList.add('active');
-            target.hidden = false;
-          }
-        });
-      });
+      /* Initial render */
+      applyFilter('all');
     })();
   </script>
 
