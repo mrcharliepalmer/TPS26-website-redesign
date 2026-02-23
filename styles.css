@@ -1654,15 +1654,17 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 .home-night__hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.15) 100%);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .home-night__hero-content {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--space-xl) var(--space-md) var(--space-lg);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
   text-align: center;
   max-width: 700px;
   margin-inline: auto;
@@ -1670,7 +1672,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 .home-night__hero-content h2 {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--colour-yellow);
   margin-bottom: var(--space-xs);
@@ -1691,6 +1693,12 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   font-size: clamp(1rem, 1.8vw, 1.15rem);
   line-height: 1.5;
   margin-inline: auto;
+}
+
+@media (min-width: 1025px) {
+  .home-night__hero-content h2 {
+    font-size: 3.25rem;
+  }
 }
 
 /* Charcoal strip with card grid */
