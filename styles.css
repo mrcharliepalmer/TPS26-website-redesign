@@ -496,38 +496,37 @@ p {
   background: var(--colour-purple);
   color: var(--colour-white);
   text-align: center;
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 0.02em;
-  padding: 10px 48px 10px 20px;
+  padding: 14px 48px 14px 20px;
   z-index: 101;
 }
 
 .urgency-bar a {
   color: var(--colour-white);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 600;
-  white-space: nowrap;
+  text-decoration: none;
 }
 
 .urgency-bar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
   text-decoration-thickness: 2px;
 }
 
 .urgency-bar__close {
   position: absolute;
-  right: 12px;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
   color: var(--colour-white);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 6px 10px;
   opacity: 0.8;
   transition: opacity var(--ease);
 }
@@ -544,13 +543,13 @@ p {
 
 /* Push fixed header down by urgency bar height */
 html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header {
-  top: var(--urgency-bar-h, 37px);
+  top: var(--urgency-bar-h, 50px);
 }
 
 @media (min-width: 768px) {
   .urgency-bar {
-    font-size: 0.875rem;
-    padding: 10px 20px;
+    font-size: 1.125rem;
+    padding: 16px 20px;
   }
 }
 

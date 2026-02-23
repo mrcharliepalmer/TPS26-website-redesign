@@ -85,8 +85,11 @@ For detailed per-page decisions, see BUILD-LOG.md.
 
 ### Urgency Bar
 - Persistent fixed bar above the nav on every page
-- Purple bg, white text, centred copy: "95% of exhibition space for
-  2026 is now sold. Enquire Now →" linking to partners.html
+- Purple bg, white text, uppercase centred copy: "Book now and save
+  up to £55 with Second Release passes" — entire text is a link to
+  passes.html, no underline by default, underline appears on hover
+- Larger than standard — Space Grotesk heading font, 1rem mobile /
+  1.125rem desktop, 600 weight, extra letter-spacing
 - Dismissible (×) — preference stored in `sessionStorage` so it
   doesn't reappear mid-session
 - Inline `<script>` in `<head>` adds `.urgency-dismissed` to `<html>`
