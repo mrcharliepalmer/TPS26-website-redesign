@@ -15,6 +15,8 @@ curl -L -o "arielle-nissenblatt.png"  "$CDN/Arielle-Nissenblatt-Headshot-2026.pn
 curl -L -o "megan-bradshaw.jpg"       "$CDN/Megan-Bradshaw-Headshot-2026-1-.jpeg"
 curl -L -o "arif-noorani.jpg"         "$CDN/Arif-Noorani-Headshot.jpg"
 curl -L -o "steve-ackerman.jpg"       "$CDN/Steve-Ackerman-Headshot.jpg"
+curl -L -o "laura-hagen.jpg"         "$CDN/libraries/speakers/LH-Photo-.jpeg"
+curl -L -o "vicky-etchells.jpg"      "$CDN/libraries/speakers/Vicky-Etchells-Headshot-1-.jpg"
 
 echo ""
 echo "Done. Downloaded $(ls -1 *.jpg *.png 2>/dev/null | wc -l) images."

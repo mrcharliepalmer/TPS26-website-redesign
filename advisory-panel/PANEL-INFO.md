@@ -58,15 +58,21 @@ Source: [thepodcastshowlondon.com/podcast-show-advisory-panel](https://www.thepo
 - **Image:** `steve-ackerman.jpg`
 - **Bio:** Radio Academy Fellow, non-executive director and media consultant advising audio and creator-economy businesses on growth strategy.
 
-## 10. Vicky Etchells *(not currently on TPS page — listed in press release only)*
+## 10. Laura Hagen
+- **Title:** SVP, Regional MD Americas & Global Head of Agency Relations, Acast
+- **Company:** Acast
+- **Image:** `laura-hagen.jpg`
+- **Bio:** Podcast advertising leader driving Acast's US growth, with previous senior roles at iHeartMedia and Zeta Global spanning audio, agency, and digital sales.
+
+## 11. Vicky Etchells
 - **Title:** Director, Podcasts at Global
 - **Company:** Global
-- **Image:** *No headshot available on TPS site*
+- **Image:** `vicky-etchells.jpg`
 - **Bio:** Podcast commissioning leader who grew news and factual content at Global after a decade in senior roles at LBC.
 
 ---
 
 ## Notes
-- 9 of 10 members have headshots on the TPS advisory panel page. Vicky Etchells was named in the January 2026 Podnews press release but does not currently appear on the website — she may have stepped down or not yet been added.
+- All 11 members now have headshots. Laura Hagen was sourced from her TPS speakers page. Vicky Etchells' photo was sourced from her TPS speakers page rather than the advisory panel page.
 - All image filenames above assume the download script has been run (see `download-headshots.sh`).
 - Original photos from the TPS CDN are high-resolution. The download script fetches originals; resize as needed for web use.

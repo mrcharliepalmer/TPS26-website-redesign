@@ -4516,7 +4516,8 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 /* ---------- ABOUT TEAM (staggered layout) ---------- */
 .about-team {
-  background: transparent;
+  background: var(--colour-purple);
+  border-radius: var(--radius-md);
 }
 
 .about-team__header {
@@ -4525,6 +4526,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 .about-team__header h2 {
   margin-bottom: var(--space-xs);
+  color: #fff;
 }
 
 .about-team__header h2::before {
@@ -4532,13 +4534,14 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   display: block;
   width: 40px;
   height: 3px;
-  background: var(--colour-purple);
+  background: var(--colour-cyan, #00e5ff);
   margin-bottom: var(--space-sm);
   border-radius: 2px;
 }
 
 .about-team__header p {
-  color: #555;
+  color: rgba(255, 255, 255, 0.75);
+  margin-inline: 0;
 }
 
 .about-team__grid {
@@ -4551,27 +4554,11 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   gap: var(--space-md);
 }
 
-.about-team__photo {
-  overflow: hidden;
-  border-radius: var(--radius-md);
-}
-
-.about-team__photo img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.about-team__card:hover .about-team__photo img {
-  transform: scale(1.03);
-}
-
 .about-team__info h3 {
   font-family: var(--font-heading);
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--colour-charcoal);
+  color: #fff;
   margin-bottom: 4px;
 }
 
@@ -4581,38 +4568,34 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--colour-purple);
+  color: var(--colour-cyan, #00e5ff);
   margin-bottom: var(--space-sm);
 }
 
 .about-team__info p {
-  color: #555;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @media (min-width: 1025px) {
   .about-team__grid {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-xl);
   }
 
   .about-team__card {
     grid-template-columns: 1fr;
   }
-
-  /* Stagger: offset the second card down */
-  .about-team__card--offset {
-    margin-top: 80px;
-  }
 }
 
 
-/* ---------- ABOUT ADVISORY PANEL (elevated, with photos) ---------- */
+/* ---------- ABOUT ADVISORY PANEL (quote carousel) ---------- */
+/* ---------- ABOUT ADVISORY PANEL (headshot grid) ---------- */
 .about-panel {
   background: transparent;
 }
 
 .about-panel__header {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .about-panel__header h2 {
@@ -4631,6 +4614,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 .about-panel__header p {
   color: #555;
+  margin-inline: 0;
 }
 
 .about-panel__grid {
@@ -4639,90 +4623,96 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   gap: var(--space-lg) var(--space-md);
 }
 
-.about-panel__card {
+.about-panel__member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  opacity: 0;
-  transform: scale(0.85);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: transform 0.25s ease;
 }
 
-.about-panel__grid.is-visible .about-panel__card {
-  opacity: 1;
-  transform: scale(1);
-  transition-delay: calc(var(--stagger, 0) * 60ms);
+.about-panel__member:hover {
+  transform: translateY(-3px);
 }
 
-.about-panel__avatar {
-  width: 100px;
-  height: 100px;
+.about-panel__member:hover .about-panel__name {
+  color: var(--colour-purple);
+}
+
+.about-panel__headshot {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 3px solid var(--colour-purple);
   object-fit: cover;
-  display: block;
-  margin: 0 auto var(--space-sm);
-  transition: transform 0.3s ease;
+  border: 3px solid var(--colour-purple);
+  margin-bottom: var(--space-sm);
 }
 
-.about-panel__card:hover .about-panel__avatar {
-  transform: scale(1.05);
-}
-
-.about-panel__card h3 {
+.about-panel__initials {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--colour-purple);
+  color: #fff;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1rem;
-  color: var(--colour-charcoal);
-  margin-bottom: 2px;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+  border: 3px solid var(--colour-purple);
+  margin-bottom: var(--space-sm);
+  flex-shrink: 0;
 }
 
-.about-panel__role {
+.about-panel__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--colour-charcoal);
+  transition: color 0.2s ease;
+  line-height: 1.3;
+}
+
+.about-panel__org {
   font-size: 0.85rem;
   color: #777;
   display: block;
+  margin-top: 2px;
 }
 
-.about-panel__bio {
-  font-size: 0.8rem;
-  color: #999;
-  font-weight: 400;
-  line-height: 1.45;
-  margin-top: var(--space-xs);
-  max-width: none;
-}
-
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .about-panel__grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-  }
-
-  .about-panel__avatar {
-    width: 120px;
-    height: 120px;
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .about-panel__grid {
     grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-xl) var(--space-lg);
   }
 
-  .about-panel__avatar {
-    width: 140px;
-    height: 140px;
+  .about-panel__headshot,
+  .about-panel__initials {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-panel__initials {
+    font-size: 2rem;
   }
 }
 
 
 /* ---------- ABOUT PRESS & RECOGNITION ---------- */
-/* About press — uses shared .press-quotes--dark */
+/* About press — uses shared .press-quotes--light */
 .about-press {
-  background: var(--colour-purple);
-  border-radius: var(--radius-md);
+  background: transparent;
 }
 
 .about-press__header h2 {
-  color: var(--colour-white);
   margin-bottom: var(--space-lg);
 }
 
@@ -4731,7 +4721,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   display: block;
   width: 40px;
   height: 3px;
-  background: var(--colour-cyan);
+  background: var(--colour-purple);
   margin-bottom: var(--space-sm);
   border-radius: 2px;
 }
@@ -4750,9 +4740,12 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 /* ---------- ABOUT PAGE FOCUS STATES ---------- */
 .about-stats :focus-visible,
-.about-press :focus-visible,
 .about-cta :focus-visible {
   outline-color: var(--colour-cyan);
+}
+
+.about-press :focus-visible {
+  outline-color: var(--colour-purple);
 }
 
 
