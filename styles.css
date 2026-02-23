@@ -4641,35 +4641,53 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 .about-panel__card {
   text-align: center;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.about-panel__grid.is-visible .about-panel__card {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: calc(var(--stagger, 0) * 60ms);
 }
 
 .about-panel__avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: var(--colour-purple);
-  color: var(--colour-white);
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 3px solid var(--colour-purple);
+  object-fit: cover;
+  display: block;
   margin: 0 auto var(--space-sm);
+  transition: transform 0.3s ease;
+}
+
+.about-panel__card:hover .about-panel__avatar {
+  transform: scale(1.05);
 }
 
 .about-panel__card h3 {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--colour-charcoal);
   margin-bottom: 2px;
 }
 
-.about-panel__card span {
+.about-panel__role {
   font-size: 0.85rem;
   color: #777;
+  display: block;
+}
+
+.about-panel__bio {
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 400;
+  line-height: 1.45;
+  margin-top: var(--space-xs);
+  max-width: none;
 }
 
 @media (min-width: 768px) {
@@ -4681,13 +4699,17 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   .about-panel__avatar {
     width: 120px;
     height: 120px;
-    font-size: 1.75rem;
   }
 }
 
 @media (min-width: 1025px) {
   .about-panel__grid {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .about-panel__avatar {
+    width: 140px;
+    height: 140px;
   }
 }
 

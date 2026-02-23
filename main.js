@@ -167,6 +167,26 @@ if (speakerGrid) {
 }
 
 
+/* --- Advisory panel avatar stagger entrance --- */
+const panelGrid = document.querySelector('.about-panel__grid');
+
+if (panelGrid) {
+  const panelObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        panelObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  panelObserver.observe(panelGrid);
+}
+
+
 /* --- Partner activations scroll arrows --- */
 const activationsTrack = document.querySelector('.partner-activations__track');
 
