@@ -4234,6 +4234,283 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 }
 
 
+/* ---------- ABOUT JOURNEY TIMELINE ---------- */
+.about-journey {
+  background: var(--colour-canvas);
+}
+
+.about-journey__header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.about-journey__header h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.about-journey__header h2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--colour-purple);
+  margin: 0 auto var(--space-sm);
+  border-radius: 2px;
+}
+
+.about-journey__header p {
+  color: #555;
+  max-width: 42ch;
+  margin-inline: auto;
+}
+
+/* Timeline list */
+.about-journey__timeline {
+  position: relative;
+  padding-left: 28px;
+  list-style: none;
+}
+
+/* Connecting line */
+.about-journey__timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: rgba(85, 31, 239, 0.18);
+  border-radius: 1px;
+}
+
+/* Entry */
+.about-journey__entry {
+  position: relative;
+  padding-bottom: var(--space-xl);
+}
+
+.about-journey__entry:last-child {
+  padding-bottom: 0;
+}
+
+/* Marker dot */
+.about-journey__marker {
+  position: absolute;
+  left: -28px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--colour-canvas);
+  border: 3px solid var(--colour-purple);
+  z-index: 1;
+}
+
+/* Current year marker — filled + glow */
+.about-journey__marker--current {
+  background: var(--colour-purple);
+  border-color: var(--colour-purple);
+  box-shadow: 0 0 0 6px rgba(85, 31, 239, 0.15);
+}
+
+/* Year */
+.about-journey__year {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--colour-purple);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+/* Headline */
+.about-journey__body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--colour-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+/* Photo */
+.about-journey__photo {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+}
+
+.about-journey__photo img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Body copy */
+.about-journey__body p {
+  color: #555;
+  margin-bottom: var(--space-sm);
+  max-width: 60ch;
+  margin-inline: 0;
+}
+
+/* Stat pills */
+.about-journey__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.about-journey__pills li {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--colour-charcoal);
+  background: rgba(85, 31, 239, 0.07);
+  padding: 5px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* 2026 — current entry highlight */
+.about-journey__entry--current .about-journey__body {
+  background: rgba(85, 31, 239, 0.04);
+  border: 1px solid rgba(85, 31, 239, 0.12);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.about-journey__badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--colour-purple);
+  background: rgba(85, 31, 239, 0.1);
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: var(--space-sm);
+}
+
+.about-journey__entry--current .btn {
+  margin-top: var(--space-xs);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .about-journey__timeline {
+    padding-left: 36px;
+  }
+
+  .about-journey__marker {
+    left: -36px;
+  }
+
+  .about-journey__body h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/* Desktop — photo opposite text across centre line */
+@media (min-width: 1025px) {
+  .about-journey__timeline {
+    padding-left: 0;
+  }
+
+  /* Vertical line down the centre */
+  .about-journey__timeline::before {
+    left: calc(50% - 1px);
+    top: 0;
+  }
+
+  /* Each entry: 3-col grid — [left] [centre-gap] [right] */
+  .about-journey__entry {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 0;
+    align-items: start;
+    padding-bottom: var(--space-2xl);
+  }
+
+  .about-journey__entry:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Marker sits in the centre column */
+  .about-journey__marker {
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+    width: 18px;
+    height: 18px;
+    justify-self: center;
+    margin-top: 10px;
+  }
+
+  /* --- Odd entries (2022, 2024, 2026): text left, photo right --- */
+  .about-journey__entry:nth-child(odd) .about-journey__body {
+    grid-column: 1;
+    grid-row: 1;
+    padding-right: var(--space-md);
+  }
+
+  .about-journey__entry:nth-child(odd) .about-journey__photo {
+    grid-column: 3;
+    grid-row: 1;
+    margin-left: var(--space-md);
+  }
+
+  /* --- Even entries (2023, 2025): photo left, text right --- */
+  .about-journey__entry:nth-child(even) .about-journey__photo {
+    grid-column: 1;
+    grid-row: 1;
+    margin-right: var(--space-md);
+  }
+
+  .about-journey__entry:nth-child(even) .about-journey__body {
+    grid-column: 3;
+    grid-row: 1;
+    padding-left: var(--space-md);
+  }
+
+  /* Photo fills its column height */
+  .about-journey__photo {
+    margin-bottom: 0;
+    align-self: stretch;
+  }
+
+  .about-journey__photo img {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 280px;
+  }
+
+  /* 2026 — no photo, text spans left column only */
+  .about-journey__entry--current {
+    grid-template-columns: 1fr 40px 1fr;
+  }
+
+  .about-journey__marker--current {
+    box-shadow: 0 0 0 8px rgba(85, 31, 239, 0.12);
+  }
+
+  .about-journey__year {
+    font-size: clamp(2.5rem, 4vw, 3.25rem);
+  }
+
+  .about-journey__body h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-journey__entry--current .about-journey__body {
+    padding: var(--space-lg);
+  }
+}
+
+
 /* ---------- ABOUT FULL-BLEED PHOTO BREAK ---------- */
 
 
