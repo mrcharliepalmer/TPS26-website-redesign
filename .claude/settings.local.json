@@ -20,7 +20,11 @@
       "Bash(grep:*)",
       "Bash(comm -23 /tmp/css_classes.txt /tmp/html_classes.txt)",
       "WebFetch(domain:thepodcastshowlondon.com)",
-      "Bash(for dir in \"/Users/belikenige/Documents/Work/Red Slash Studio/The Podcast Show/podcast-show-redesign-v2/Photos\"/*)"
+      "Bash(for dir in \"/Users/belikenige/Documents/Work/Red Slash Studio/The Podcast Show/podcast-show-redesign-v2/Photos\"/*)",
+      "Bash(gh api:*)",
+      "Bash(gh run:*)",
+      "Bash(node -e:*)",
+      "Bash(xargs kill:*)"
     ]
   }
 }
