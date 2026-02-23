@@ -3837,6 +3837,33 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 }
 
 
+/* ---------- PROGRAMME CONTENT THEMES — canvas variant ---------- */
+.prog-themes--canvas {
+  background: transparent;
+  border-radius: 0;
+}
+
+.prog-themes--canvas .prog-theme {
+  background: var(--colour-white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.prog-themes--canvas .prog-theme:hover {
+  background: var(--colour-white);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.prog-themes--canvas .prog-theme h3 {
+  color: var(--colour-charcoal);
+}
+
+.prog-themes--canvas .prog-theme p {
+  color: var(--colour-charcoal);
+  opacity: 0.7;
+}
+
+
 /* ---------- PROGRAMME FEATURES & SPACES (canvas, alternating rows) ---------- */
 .prog-features {
   background: transparent;
