@@ -755,40 +755,6 @@
 
   <script src="main.js" defer></script>
 
-  <!-- Page-specific: Programme carousel arrows -->
-  <script>
-  (function() {
-    var track = document.querySelector('.programme__marquee-track');
-    var prev = document.querySelector('.programme__arrow--prev');
-    var next = document.querySelector('.programme__arrow--next');
-    if (!track || !prev || !next) return;
-
-    function getScrollAmount() {
-      var card = track.querySelector('.programme-card');
-      if (!card) return 300;
-      return card.offsetWidth + parseInt(getComputedStyle(track).gap) || 24;
-    }
-
-    function updateArrows() {
-      var sl = track.scrollLeft;
-      var maxScroll = track.scrollWidth - track.clientWidth;
-      prev.classList.toggle('is-hidden', sl <= 5);
-      next.classList.toggle('is-hidden', sl >= maxScroll - 5);
-    }
-
-    prev.addEventListener('click', function() {
-      track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-    });
-    next.addEventListener('click', function() {
-      track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-    });
-
-    track.addEventListener('scroll', updateArrows, { passive: true });
-    window.addEventListener('resize', updateArrows);
-    updateArrows();
-  })();
-  </script>
-
   <!-- Page-specific: Full session wall -->
   <script src="data/sessions.js"></script>
   <script>
