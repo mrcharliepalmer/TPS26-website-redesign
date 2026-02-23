@@ -927,16 +927,36 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 /* ---------- PROGRAMME HIGHLIGHTS ---------- */
 .programme {
-  background: var(--colour-purple);
+  background: var(--colour-canvas);
   position: relative;
   overflow: clip;
   overflow-x: clip;
-  border-radius: var(--radius-md);
 }
 
-/* When programme flows into the session teaser, drop bottom radius */
+/* When programme flows into the session teaser on homepage, restore purple */
 .programme:has(+ .home-sessions) {
   border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background: var(--colour-purple);
+}
+
+.programme:has(+ .home-sessions) .programme__marquee::after {
+  background: linear-gradient(to right, transparent, var(--colour-purple));
+}
+
+.programme:has(+ .home-sessions) .programme__arrow {
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--colour-white);
+  box-shadow: none;
+}
+
+.programme:has(+ .home-sessions) .programme__arrow:hover {
+  background: rgba(0,0,0,0.55);
+  border-color: rgba(255,255,255,0.5);
+  color: var(--colour-white);
+  box-shadow: none;
 }
 
 .section-header--left {
@@ -1007,20 +1027,21 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,0.3);
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--colour-white);
+  border: 1.5px solid rgba(85, 31, 239, 0.25);
+  background: var(--colour-white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  color: var(--colour-purple);
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
   align-items: center;
   justify-content: center;
 }
 
 .programme__arrow:hover {
-  background: rgba(0,0,0,0.55);
-  border-color: rgba(255,255,255,0.5);
+  background: var(--colour-purple);
+  border-color: var(--colour-purple);
+  color: var(--colour-white);
+  box-shadow: 0 4px 16px rgba(85, 31, 239, 0.3);
 }
 
 .programme__arrow.is-hidden {
@@ -1052,7 +1073,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   right: 0;
   bottom: var(--space-sm);
   width: 60px;
-  background: linear-gradient(to right, transparent, var(--colour-purple));
+  background: linear-gradient(to right, transparent, var(--colour-canvas));
   pointer-events: none;
   z-index: 1;
 }
@@ -1089,18 +1110,18 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 
 .programme-card {
-  background: rgba(255,255,255,0.06);
+  background: var(--colour-purple);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .programme-card:hover {
   transform: translateY(-4px);
-  background: rgba(255,255,255,0.1);
+  box-shadow: 0 8px 30px rgba(85, 31, 239, 0.35);
 }
 
 .programme-card__image {
@@ -3735,57 +3756,6 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 
 
 /* ---------- PROGRAMME THEMES TAG CLOUD ---------- */
-.prog-tags {
-  background: transparent;
-  position: relative;
-}
-
-.prog-tags .section-header--left h2::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--colour-purple);
-  margin-bottom: var(--space-sm);
-  border-radius: 2px;
-}
-
-.prog-tags__cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.prog-tags__pill {
-  font-family: var(--font-heading);
-  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-  font-weight: 700;
-  padding: 12px 28px;
-  border-radius: 40px;
-  border: 2px solid var(--colour-purple);
-  background: transparent;
-  color: var(--colour-purple);
-  cursor: default;
-  transition: background 0.25s ease, color 0.25s ease;
-  line-height: 1.3;
-}
-
-.prog-tags__pill:hover {
-  background: var(--colour-purple);
-  color: var(--colour-white);
-}
-
-@media (min-width: 768px) {
-  .prog-tags__cloud {
-    gap: 14px;
-  }
-
-  .prog-tags__pill {
-    padding: 14px 32px;
-  }
-}
-
-
 /* ---------- PROGRAMME CONTENT THEMES (static grid on purple) ---------- */
 .prog-themes {
   background: var(--colour-purple);
@@ -3837,30 +3807,51 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
 }
 
 
-/* ---------- PROGRAMME CONTENT THEMES — canvas variant ---------- */
-.prog-themes--canvas {
-  background: transparent;
-  border-radius: 0;
+/* ---------- PROGRAMME CONTENT THEMES — dark variant (matches New for 2026) ---------- */
+.prog-themes--dark {
+  background: #1a0a4e;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
 }
 
-.prog-themes--canvas .prog-theme {
-  background: var(--colour-white);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+.prog-themes--dark::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(ellipse at center, rgba(85, 31, 239, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.prog-themes--canvas .prog-theme:hover {
-  background: var(--colour-white);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+.prog-themes--dark .container {
+  position: relative;
+  z-index: 1;
 }
 
-.prog-themes--canvas .prog-theme h3 {
-  color: var(--colour-charcoal);
+.prog-themes--dark .prog-theme {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.prog-themes--canvas .prog-theme p {
-  color: var(--colour-charcoal);
-  opacity: 0.7;
+.prog-themes--dark .prog-theme:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(71, 201, 214, 0.3);
+}
+
+.prog-themes--dark .prog-theme h3 {
+  color: var(--colour-white);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.prog-themes--dark .prog-theme p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 
