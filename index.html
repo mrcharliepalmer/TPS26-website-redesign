@@ -203,7 +203,7 @@
             <a href="about.html" class="btn btn--ghost-dark">Learn More About TPS</a>
           </div>
           <div class="home-about__image">
-            <img src="Photos/TP25 LUKE DAY 1/BDC External.jpg" alt="Crowds at the Business Design Centre entrance during The Podcast Show London" loading="lazy">
+            <img src="Photos/TP25 LUKE DAY 1/BDC - External7.jpg" alt="Crowds at the Business Design Centre entrance during The Podcast Show London" loading="lazy">
           </div>
         </div>
       </div>
@@ -334,7 +334,6 @@
           <article class="home-launch__card reveal">
             <div class="home-launch__card-visual">
               <img src="Photos/Party/THEPODCASTSHOW_THESTANDARD_ROMURPHY-111b.jpeg" alt="The Creator Mix — 1,000 podcasters under one roof" loading="lazy">
-              <span class="home-launch__card-number">01</span>
             </div>
             <div class="home-launch__card-body">
               <h3>The Creator Mix</h3>
@@ -345,7 +344,6 @@
           <article class="home-launch__card reveal">
             <div class="home-launch__card-visual">
               <img src="Photos/Famous faces/The_Podcast_Show_-_23rd_May_2024_by_Luke_Dyson_-_LD3_0706_1920x1280.jpg" alt="International delegates at The Podcast Show" loading="lazy">
-              <span class="home-launch__card-number">02</span>
             </div>
             <div class="home-launch__card-body">
               <h3>The International Stage</h3>
@@ -357,7 +355,6 @@
           <article class="home-launch__card reveal">
             <div class="home-launch__card-visual">
               <img src="Photos/Exhibitors/Podcast Show 2025 -Day 2-202454.jpg" alt="Brand networking at The Podcast Show" loading="lazy">
-              <span class="home-launch__card-number">03</span>
             </div>
             <div class="home-launch__card-body">
               <h3>TPS Connects</h3>
@@ -368,7 +365,6 @@
           <article class="home-launch__card reveal">
             <div class="home-launch__card-visual">
               <img src="Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg" alt="Creator economy insights at The Podcast Show" loading="lazy">
-              <span class="home-launch__card-number">04</span>
             </div>
             <div class="home-launch__card-body">
               <h3>The Creator First Stage</h3>
@@ -387,64 +383,85 @@
     </section>
 
 
-    <!-- ============ 4. AUDIENCE CARDS ============ -->
-    <section class="audience section-padding" aria-label="Who attends">
+    <!-- ============ 4. AUDIENCE TABS ============ -->
+    <section class="home-audience section-padding" aria-label="Who attends">
       <div class="container">
         <div class="section-header reveal">
           <h2>Where the Industry Comes Together</h2>
         </div>
 
-        <div class="audience__grid">
-
-          <!-- Creators -->
-          <article class="audience-card reveal">
-            <img class="audience-card__image" src="Photos/Audience/Podcast Show 2025 -Day 1-200796-2.jpg" alt="Podcast creators networking at The Podcast Show" loading="lazy">
-            <h3>Podcast Creators</h3>
-            <p>Learn from 450+ speakers, master monetisation, discover new tools, and connect with 2,400+ fellow creators at the world's biggest podcasting community gathering.</p>
-            <div class="audience-card__stats">
-              <div class="audience-card__stat">
-                <strong>2,391</strong> Creators in 2025
-              </div>
-              <div class="audience-card__stat">
-                <strong>8+</strong> Stages
-              </div>
-            </div>
-            <a href="creators.html" class="btn btn--ghost-dark btn--sm">Explore for Creators</a>
-          </article>
-
-          <!-- Brands & Media -->
-          <article class="audience-card reveal">
-            <img class="audience-card__image" src="Photos/Exhibitors/Podcast_Show_2024_-_RB_-209395_1920x1280.jpg" alt="Brand exhibition stands at The Podcast Show" loading="lazy">
-            <h3>Brands &amp; Media Agencies</h3>
-            <p>Meet 1,000+ brand advertisers and media agencies. Explore podcast advertising opportunities, forge creator partnerships, and access decision-makers from the world's biggest platforms.</p>
-            <div class="audience-card__stats">
-              <div class="audience-card__stat">
-                <strong>1,042</strong> Agencies in 2025
-              </div>
-              <div class="audience-card__stat">
-                <strong>120+</strong> Brands
-              </div>
-            </div>
-            <a href="brands.html" class="btn btn--ghost-dark btn--sm">Explore for Brands</a>
-          </article>
-
-          <!-- Platforms & Tech -->
-          <article class="audience-card reveal">
-            <img class="audience-card__image" src="Photos/Exhibitors/Podcast Show 2025 -Day 2-202454.jpg" alt="Technology platforms showcasing at The Podcast Show" loading="lazy">
-            <h3>Platforms &amp; Tech</h3>
-            <p>Showcase your innovation to 10,000+ attendees. Exhibit alongside Spotify, Amazon Music, and YouTube. Connect with the creators and advertisers driving the industry forward.</p>
-            <div class="audience-card__stats">
-              <div class="audience-card__stat">
-                <strong>100+</strong> Exhibitors
-              </div>
-              <div class="audience-card__stat">
-                <strong>53</strong> Countries
-              </div>
-            </div>
-            <a href="partners.html" class="btn btn--ghost-dark btn--sm">Explore Exhibiting</a>
-          </article>
-
+        <div class="home-audience__tabs" role="tablist" aria-label="Audience types">
+          <button class="home-audience__tab is-active" role="tab" aria-selected="true" aria-controls="audience-panel-creators" id="audience-tab-creators" type="button">Podcast Creators</button>
+          <button class="home-audience__tab" role="tab" aria-selected="false" aria-controls="audience-panel-brands" id="audience-tab-brands" type="button">Brands &amp; Media Agencies</button>
+          <button class="home-audience__tab" role="tab" aria-selected="false" aria-controls="audience-panel-platforms" id="audience-tab-platforms" type="button">Platforms &amp; Tech</button>
         </div>
+
+        <!-- Panel: Creators -->
+        <div class="home-audience__panel is-active" role="tabpanel" id="audience-panel-creators" aria-labelledby="audience-tab-creators">
+          <div class="home-audience__image">
+            <img src="Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg" alt="Podcast creators networking at The Podcast Show" loading="lazy">
+          </div>
+          <div class="home-audience__content">
+            <h3 class="home-audience__label">Podcast Creators</h3>
+            <p>Learn from 450+ speakers, master monetisation, discover new tools, and connect with 2,400+ fellow creators at the world's biggest podcasting community gathering.</p>
+            <div class="home-audience__stats">
+              <div class="home-audience__stat">
+                <span class="home-audience__stat-number">2,391</span>
+                <span class="home-audience__stat-label">Creators in 2025</span>
+              </div>
+              <div class="home-audience__stat">
+                <span class="home-audience__stat-number">8+</span>
+                <span class="home-audience__stat-label">Stages</span>
+              </div>
+            </div>
+            <a href="creators.html" class="btn btn--ghost-dark">Explore for Creators</a>
+          </div>
+        </div>
+
+        <!-- Panel: Brands -->
+        <div class="home-audience__panel" role="tabpanel" id="audience-panel-brands" aria-labelledby="audience-tab-brands" hidden>
+          <div class="home-audience__image">
+            <img src="Photos/Exhibitors/Podcast_Show_2024_-_RB_-209395_1920x1280.jpg" alt="Brand exhibition stands at The Podcast Show" loading="lazy">
+          </div>
+          <div class="home-audience__content">
+            <h3 class="home-audience__label">Brands &amp; Media Agencies</h3>
+            <p>Meet 1,000+ brand advertisers and media agencies. Explore podcast advertising opportunities, forge creator partnerships, and access decision-makers from the world's biggest platforms.</p>
+            <div class="home-audience__stats">
+              <div class="home-audience__stat">
+                <span class="home-audience__stat-number">1,042</span>
+                <span class="home-audience__stat-label">Agencies in 2025</span>
+              </div>
+              <div class="home-audience__stat">
+                <span class="home-audience__stat-number">120+</span>
+                <span class="home-audience__stat-label">Brands</span>
+              </div>
+            </div>
+            <a href="brands.html" class="btn btn--ghost-dark">Explore for Brands</a>
+          </div>
+        </div>
+
+        <!-- Panel: Platforms -->
+        <div class="home-audience__panel" role="tabpanel" id="audience-panel-platforms" aria-labelledby="audience-tab-platforms" hidden>
+          <div class="home-audience__image">
+            <img src="Photos/Exhibitors/Podcast Show 2025 -Day 2-202454.jpg" alt="Technology platforms showcasing at The Podcast Show" loading="lazy">
+          </div>
+          <div class="home-audience__content">
+            <h3 class="home-audience__label">Platforms &amp; Tech</h3>
+            <p>Showcase your innovation to 10,000+ attendees. Exhibit alongside Spotify, Amazon Music, and YouTube. Connect with the creators and advertisers driving the industry forward.</p>
+            <div class="home-audience__stats">
+              <div class="home-audience__stat">
+                <span class="home-audience__stat-number">100+</span>
+                <span class="home-audience__stat-label">Exhibitors</span>
+              </div>
+              <div class="home-audience__stat">
+                <span class="home-audience__stat-number">53</span>
+                <span class="home-audience__stat-label">Countries</span>
+              </div>
+            </div>
+            <a href="partners.html" class="btn btn--ghost-dark">Explore Exhibiting</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -540,8 +557,8 @@
     <section class="home-sessions section-padding" id="sessions-teaser" aria-label="Session teaser">
       <div class="container">
         <div class="section-header section-header--light section-header--left reveal">
-          <h2>A Taste of What to Expect</h2>
-          <p>Our 2026 programme will be announced soon. Click a theme below to explore highlights from last year.</p>
+          <h2>Highlights from 2025</h2>
+          <p>Our 2026 programme will be announced soon. Get a taste of what to expect with our theme explorer for 2025.</p>
         </div>
 
         <!-- Theme pill filters -->
@@ -638,17 +655,46 @@
 
 
     <!-- ============ TPS AFTER HOURS ============ -->
-    <div class="photo-break photo-break--parallax home-night__hero" aria-label="Evening programme photography">
+    <div class="home-night__hero" aria-label="Evening programme">
       <img src="Photos/Party/THEPODCASTSHOW_THESTANDARD_ROMURPHY-111b.jpeg" alt="The Podcast Show after-hours party" loading="lazy">
+      <div class="home-night__hero-overlay"></div>
+      <div class="home-night__hero-content">
+        <h2>Unforgettable Nights</h2>
+        <p>When the stages close, the festival keeps going. Parties, live podcast recordings, executive dinners, and unforgettable nights across London's best venues.</p>
+      </div>
     </div>
 
-    <section class="home-night__strip section-padding" aria-label="Evening programme">
+    <section class="home-night__strip section-padding" aria-label="Evening programme events">
       <div class="container">
-        <div class="home-night__strip-content reveal">
-          <h2>Unforgettable Nights</h2>
-          <p>When the stages close, the festival keeps going. Parties, live podcast recordings, executive dinners, and unforgettable nights across London's best venues.</p>
-          <a href="programme.html#by-night" class="btn btn--ghost-light btn--lg">See the Full Night Programme</a>
+
+        <div class="home-night__grid">
+
+          <article class="night-card reveal">
+            <h3>Official Launch Party</h3>
+            <p>A night of big energy and great music in an iconic London venue.</p>
+          </article>
+
+          <article class="night-card reveal">
+            <h3>Live On Stage</h3>
+            <p>A series of live podcasts throughout May with AEG Presents.</p>
+          </article>
+
+          <article class="night-card reveal">
+            <h3>Executive Dinners</h3>
+            <p>An exclusive, high-level, three-course dinner for Platinum Pass holders.</p>
+          </article>
+
+          <article class="night-card reveal">
+            <h3>The Creator Mix</h3>
+            <p>The ultimate networking party for 750+ global creators at The Podcast Show.</p>
+          </article>
+
         </div>
+
+        <div class="home-night__cta reveal">
+          <a href="programme.html#by-night" class="btn btn--ghost-light btn--lg">See Full Programme</a>
+        </div>
+
       </div>
     </section>
 
@@ -697,11 +743,77 @@
           <h2>Trusted by the Biggest Names in Audio</h2>
           <p>Headline, official, and show partners who power The Podcast Show.</p>
         </div>
+      </div>
 
-        <div class="partners__logo-stack reveal">
-          <img src="Logo Stack _ Version 2_29th Jan.png" alt="Partner logos including Global, iHeart Podcasts, Amazon Music, Spotify, Acast, Audioboom, YouTube, BBC Studios, Sony Music, and many more" loading="lazy">
+      <div class="partners-marquee" aria-label="Partner logos">
+        <!-- Row 1: Headline + Official Partners (left-to-right) -->
+        <div class="partners-marquee__row partners-marquee__row--1">
+          <div class="partners-marquee__track partners-marquee__track--ltr">
+            <img src="Partner Logos/Headline Partners/global-x-iheartpodcasts.png" alt="Global x iHeart Podcasts" loading="lazy">
+            <img src="Partner Logos/Official Partners/acast.png" alt="Acast" loading="lazy">
+            <img src="Partner Logos/Official Partners/adswizz.png" alt="AdsWizz" loading="lazy">
+            <img src="Partner Logos/Official Partners/amazon-music.png" alt="Amazon Music" loading="lazy">
+            <img src="Partner Logos/Official Partners/audioboom.png" alt="Audioboom" loading="lazy">
+            <img src="Partner Logos/Official Partners/pave-studios.png" alt="Pave Studios" loading="lazy">
+            <img src="Partner Logos/Official Partners/simplecast.png" alt="Simplecast" loading="lazy">
+            <img src="Partner Logos/Official Partners/spotify.png" alt="Spotify" loading="lazy">
+            <div class="partners-marquee__clone" aria-hidden="true">
+              <img src="Partner Logos/Headline Partners/global-x-iheartpodcasts.png" alt="" loading="lazy">
+              <img src="Partner Logos/Official Partners/acast.png" alt="" loading="lazy">
+              <img src="Partner Logos/Official Partners/adswizz.png" alt="" loading="lazy">
+              <img src="Partner Logos/Official Partners/amazon-music.png" alt="" loading="lazy">
+              <img src="Partner Logos/Official Partners/audioboom.png" alt="" loading="lazy">
+              <img src="Partner Logos/Official Partners/pave-studios.png" alt="" loading="lazy">
+              <img src="Partner Logos/Official Partners/simplecast.png" alt="" loading="lazy">
+              <img src="Partner Logos/Official Partners/spotify.png" alt="" loading="lazy">
+            </div>
+          </div>
         </div>
 
+        <!-- Row 2: Partners (right-to-left) -->
+        <div class="partners-marquee__row partners-marquee__row--2">
+          <div class="partners-marquee__track partners-marquee__track--rtl">
+            <img src="Partner Logos/Partners/adelicious.png" alt="Adelicious" loading="lazy">
+            <img src="Partner Logos/Partners/arcade.png" alt="Arcade" loading="lazy">
+            <img src="Partner Logos/Partners/audible.png" alt="Audible" loading="lazy">
+            <img src="Partner Logos/Partners/audiouk.png" alt="AudioUK" loading="lazy">
+            <img src="Partner Logos/Partners/bbc-studios.png" alt="BBC Studios" loading="lazy">
+            <img src="Partner Logos/Partners/bauer.png" alt="Bauer" loading="lazy">
+            <img src="Partner Logos/Partners/espn.png" alt="ESPN" loading="lazy">
+            <img src="Partner Logos/Partners/libsyn.png" alt="Libsyn" loading="lazy">
+            <img src="Partner Logos/Partners/one-decision-podcast.png" alt="One Decision Podcast" loading="lazy">
+            <img src="Partner Logos/Partners/podx.png" alt="PodX" loading="lazy">
+            <img src="Partner Logos/Partners/sony-europe.png" alt="Sony Europe" loading="lazy">
+            <img src="Partner Logos/Partners/sony-music-entertainment.png" alt="Sony Music Entertainment" loading="lazy">
+            <img src="Partner Logos/Partners/sounds-profitable.png" alt="Sounds Profitable" loading="lazy">
+            <img src="Partner Logos/Partners/sport-social-podcast-network.png" alt="Sport Social Podcast Network" loading="lazy">
+            <img src="Partner Logos/Partners/the-trade-desk.png" alt="The Trade Desk" loading="lazy">
+            <img src="Partner Logos/Partners/triton-digital.png" alt="Triton Digital" loading="lazy">
+            <img src="Partner Logos/Partners/youtube.png" alt="YouTube" loading="lazy">
+            <div class="partners-marquee__clone" aria-hidden="true">
+              <img src="Partner Logos/Partners/adelicious.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/arcade.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/audible.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/audiouk.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/bbc-studios.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/bauer.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/espn.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/libsyn.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/one-decision-podcast.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/podx.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/sony-europe.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/sony-music-entertainment.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/sounds-profitable.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/sport-social-podcast-network.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/the-trade-desk.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/triton-digital.png" alt="" loading="lazy">
+              <img src="Partner Logos/Partners/youtube.png" alt="" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
         <div class="partners__cta reveal">
           <a href="partners.html" class="btn btn--ghost-dark">Become a Partner</a>
         </div>
@@ -1027,6 +1139,49 @@
 
     /* --- Kick off --- */
     init();
+  })();
+  </script>
+
+  <!-- Page-specific: Audience tabs -->
+  <script>
+  (function() {
+    var tabs = document.querySelectorAll('.home-audience__tab');
+    var panels = document.querySelectorAll('.home-audience__panel');
+    if (!tabs.length) return;
+
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var targetId = tab.getAttribute('aria-controls');
+        var current = document.querySelector('.home-audience__panel.is-active');
+        var next = document.getElementById(targetId);
+        if (!next || next === current) return;
+
+        // Update tab states
+        tabs.forEach(function(t) {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+
+        // Crossfade: fade out current, then fade in next
+        if (current) {
+          current.classList.add('is-fading');
+          setTimeout(function() {
+            current.classList.remove('is-active', 'is-fading');
+            current.hidden = true;
+            next.hidden = false;
+            // Force reflow before adding is-active for transition
+            next.offsetHeight;
+            next.classList.add('is-active');
+          }, 300);
+        } else {
+          next.hidden = false;
+          next.offsetHeight;
+          next.classList.add('is-active');
+        }
+      });
+    });
   })();
   </script>
 
