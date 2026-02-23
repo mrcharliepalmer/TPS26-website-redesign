@@ -169,37 +169,56 @@ if (speakerGrid) {
 
 
 
-/* --- Partner activations scroll arrows --- */
-const activationsTrack = document.querySelector('.partner-activations__track');
+/* --- Scroll-arrow utility (shared by programme carousel + partner activations) --- */
+function initScrollArrows(trackSel, prevSel, nextSel, opts) {
+  const track = document.querySelector(trackSel);
+  const prev = document.querySelector(prevSel);
+  const next = document.querySelector(nextSel);
+  if (!track || !prev || !next) return;
 
-if (activationsTrack) {
-  const prevBtn = document.querySelector('.partner-activations__arrow--prev');
-  const nextBtn = document.querySelector('.partner-activations__arrow--next');
-  const card = activationsTrack.querySelector('.partner-activations__card');
+  const cardSel = (opts && opts.cardSelector) || ':scope > *';
+  const mode = (opts && opts.mode) || 'class'; // 'class' uses is-hidden, 'disabled' sets disabled attr
 
   const getScrollAmount = () => {
-    if (!card) return 340;
-    return card.offsetWidth + parseInt(getComputedStyle(activationsTrack).gap) || 24;
+    const card = track.querySelector(cardSel);
+    if (!card) return 300;
+    return card.offsetWidth + (parseInt(getComputedStyle(track).gap) || 24);
   };
 
-  const updateArrowState = () => {
-    const { scrollLeft, scrollWidth, clientWidth } = activationsTrack;
-    prevBtn.disabled = scrollLeft <= 2;
-    nextBtn.disabled = scrollLeft + clientWidth >= scrollWidth - 2;
+  const update = () => {
+    const sl = track.scrollLeft;
+    const max = track.scrollWidth - track.clientWidth;
+    if (mode === 'disabled') {
+      prev.disabled = sl <= 2;
+      next.disabled = sl + track.clientWidth >= track.scrollWidth - 2;
+    } else {
+      prev.classList.toggle('is-hidden', sl <= 5);
+      next.classList.toggle('is-hidden', sl >= max - 5);
+    }
   };
 
-  prevBtn.addEventListener('click', () => {
-    activationsTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-  });
-
-  nextBtn.addEventListener('click', () => {
-    activationsTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-  });
-
-  activationsTrack.addEventListener('scroll', updateArrowState, { passive: true });
-  window.addEventListener('resize', updateArrowState, { passive: true });
-  updateArrowState();
+  prev.addEventListener('click', () => track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' }));
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
 }
+
+/* Programme stages carousel (homepage + programme page) */
+initScrollArrows(
+  '.programme__marquee-track',
+  '.programme__arrow--prev',
+  '.programme__arrow--next',
+  { cardSelector: '.programme-card' }
+);
+
+/* Partner activations carousel */
+initScrollArrows(
+  '.partner-activations__track',
+  '.partner-activations__arrow--prev',
+  '.partner-activations__arrow--next',
+  { cardSelector: '.partner-activations__card', mode: 'disabled' }
+);
 
 
 /* --- Partner quotes rotator --- */

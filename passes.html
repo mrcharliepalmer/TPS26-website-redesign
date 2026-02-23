@@ -116,7 +116,7 @@
         <li><a href="visit.html">Visit</a></li>
       </ul>
 
-      <a href="#passes" class="btn btn--primary btn--sm nav__cta">Book Your Pass</a>
+      <a href="passes.html" class="btn btn--primary btn--sm nav__cta">Book Your Pass</a>
 
       <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span>
@@ -133,7 +133,7 @@
     <a href="speakers.html">Speakers</a>
     <a href="partners.html">Partners</a>
     <a href="visit.html">Visit</a>
-    <a href="#passes" class="btn btn--primary">Book Your Pass</a>
+    <a href="passes.html" class="btn btn--primary">Book Your Pass</a>
   </div>
 
 
@@ -493,262 +493,6 @@
         </div>
       </div>
 
-      <style>
-        /* ---- Compare Passes: Three-Column Comparison ---- */
-        .passes-compare {
-          background: var(--colour-canvas);
-          position: relative;
-        }
-
-        .passes-compare__table {
-          border-radius: var(--radius-md);
-          overflow: clip;
-          border: 1px solid var(--colour-grey-light);
-          background: var(--colour-canvas);
-        }
-
-        .passes-compare__row--head {
-          display: grid;
-          grid-template-columns: 1.6fr 1fr 1fr 1fr;
-          background: var(--colour-charcoal);
-          border-bottom: 2px solid var(--colour-grey-light);
-        }
-
-        .passes-compare__row--head .passes-compare__col {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: var(--space-md) var(--space-xs);
-          gap: 4px;
-          position: relative;
-        }
-
-        .passes-compare__row--head .passes-compare__col + .passes-compare__col {
-          border-left: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Label column — canvas, distinct from pass columns */
-        .passes-compare__col--label {
-          background: var(--colour-canvas);
-        }
-
-        /* Shared dark header columns */
-        .passes-compare__col--plat,
-        .passes-compare__col--gold2,
-        .passes-compare__col--gold1 {
-          background: var(--colour-charcoal);
-          position: relative;
-        }
-
-        .passes-compare__col--plat::before,
-        .passes-compare__col--gold2::before,
-        .passes-compare__col--gold1::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 4px;
-        }
-
-        /* Platinum — premium gradient + cyan accents */
-        .passes-compare__col--plat {
-          background: linear-gradient(170deg, #3a3a3a 0%, var(--colour-charcoal) 40%, #2a2a2a 100%);
-          border-left: 2px solid var(--colour-purple) !important;
-        }
-        .passes-compare__col--plat::before {
-          background: linear-gradient(135deg, var(--colour-cyan), var(--colour-purple));
-        }
-        .passes-compare__col--plat .passes-compare__name {
-          color: var(--colour-cyan);
-        }
-        .passes-compare__col--plat .passes-compare__price {
-          color: var(--colour-white);
-        }
-
-        /* Gold 2-Day — orange accents */
-        .passes-compare__col--gold2::before {
-          background: var(--colour-orange);
-        }
-        .passes-compare__col--gold2 .passes-compare__name {
-          color: var(--colour-orange);
-        }
-
-        /* Gold 1-Day — orange accents (matches 2-Day) */
-        .passes-compare__col--gold1::before {
-          background: var(--colour-orange);
-        }
-        .passes-compare__col--gold1 .passes-compare__name {
-          color: var(--colour-orange);
-        }
-
-        .passes-compare__name {
-          font-family: var(--font-heading);
-          font-size: 0.75rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          color: var(--colour-white);
-          line-height: 1;
-        }
-
-        .passes-compare__price {
-          font-family: var(--font-heading);
-          font-size: clamp(1.5rem, 2.5vw, 2rem);
-          font-weight: 700;
-          color: var(--colour-white);
-          line-height: 1;
-          letter-spacing: -0.02em;
-        }
-
-        .passes-compare__desc {
-          font-family: var(--font-body);
-          font-size: 0.78rem;
-          color: rgba(255,255,255,0.5);
-          line-height: 1.3;
-        }
-
-        /* --- Feature rows --- */
-        .passes-compare__body .passes-compare__row {
-          display: grid;
-          grid-template-columns: 1.6fr 1fr 1fr 1fr;
-          align-items: center;
-          min-height: 44px;
-        }
-
-        .passes-compare__row--alt {
-          background: rgba(0, 0, 0, 0.02);
-        }
-
-        /* Category header rows */
-        .passes-compare__row--category {
-          display: block;
-          background: var(--colour-canvas);
-          border-top: 1px solid var(--colour-grey-light);
-          border-bottom: 1px solid var(--colour-grey-light);
-          padding: 10px var(--space-md);
-        }
-
-        .passes-compare__cat {
-          font-family: var(--font-heading);
-          font-size: 0.8rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.06em;
-          color: var(--colour-charcoal);
-        }
-
-        /* Feature name (first column) */
-        .passes-compare__feature {
-          font-family: var(--font-body);
-          font-size: 0.85rem;
-          color: var(--colour-charcoal);
-          padding: 10px var(--space-md);
-          line-height: 1.4;
-        }
-
-        /* Value cells */
-        .passes-compare__val {
-          text-align: center;
-          padding: 10px 6px;
-          font-size: 0.85rem;
-          font-family: var(--font-body);
-          border-left: 1px solid rgba(0, 0, 0, 0.04);
-        }
-
-        .passes-compare__val--yes {
-          color: var(--colour-purple);
-          font-weight: 700;
-          font-size: 1.05rem;
-        }
-
-        .passes-compare__val--no {
-          color: #ccc;
-          font-size: 1rem;
-        }
-
-        .passes-compare__val--text {
-          color: var(--colour-charcoal);
-          font-weight: 500;
-          font-size: 0.8rem;
-        }
-
-        /* Platinum column tint on every row */
-        .passes-compare__val--plat {
-          background: rgba(85, 31, 239, 0.035);
-          border-left: 2px solid rgba(85, 31, 239, 0.10);
-        }
-
-        /* --- Mobile: abbreviate header names, tighter spacing --- */
-        @media (max-width: 599px) {
-          .passes-compare__row--head .passes-compare__col {
-            padding: var(--space-sm) 4px;
-            gap: 2px;
-          }
-
-          .passes-compare__name {
-            font-size: 0.6rem;
-            letter-spacing: 0.06em;
-          }
-
-          .passes-compare__price {
-            font-size: 1.2rem;
-          }
-
-          .passes-compare__desc {
-            font-size: 0.62rem;
-          }
-
-          .passes-compare__body .passes-compare__row,
-          .passes-compare__row--head {
-            grid-template-columns: 1.3fr 1fr 1fr 1fr;
-          }
-
-          .passes-compare__feature {
-            font-size: 0.75rem;
-            padding: 8px 10px;
-          }
-
-          .passes-compare__val {
-            font-size: 0.8rem;
-            padding: 8px 4px;
-          }
-
-          .passes-compare__val--text {
-            font-size: 0.72rem;
-          }
-
-          .passes-compare__cat {
-            font-size: 0.72rem;
-          }
-
-          .passes-compare__row--category {
-            padding: 8px 10px;
-          }
-        }
-
-        /* --- Tablet+ --- */
-        @media (min-width: 768px) {
-          .passes-compare__body .passes-compare__row,
-          .passes-compare__row--head {
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-          }
-
-          .passes-compare__feature {
-            font-size: 0.9rem;
-          }
-        }
-
-        /* --- Desktop --- */
-        @media (min-width: 1025px) {
-          .passes-compare__row--head .passes-compare__col {
-            padding: var(--space-sm) var(--space-md);
-          }
-        }
-      </style>
-
     </section>
 
 
@@ -920,31 +664,34 @@
 
   <!-- Page-specific: Countdown timer -->
   <script>
-    /* --- Countdown timer --- */
-    const eventDate = new Date('2026-05-20T09:00:00+01:00').getTime();
+    (function() {
+      const eventDate = new Date('2026-05-20T09:00:00+01:00').getTime();
+      const countdownEl = document.getElementById('countdown');
+      if (!countdownEl) return;
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
+      const timer = setInterval(updateCountdown, 1000);
+      updateCountdown();
 
-      if (distance < 0) {
-        document.getElementById('countdown').style.display = 'none';
-        return;
+      function updateCountdown() {
+        const distance = eventDate - Date.now();
+
+        if (distance < 0) {
+          countdownEl.style.display = 'none';
+          clearInterval(timer);
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown-days').textContent = days;
+        document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('countdown-mins').textContent = String(mins).padStart(2, '0');
+        document.getElementById('countdown-secs').textContent = String(secs).padStart(2, '0');
       }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById('countdown-days').textContent = days;
-      document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('countdown-mins').textContent = String(mins).padStart(2, '0');
-      document.getElementById('countdown-secs').textContent = String(secs).padStart(2, '0');
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    })();
   </script>
 
 </body>
