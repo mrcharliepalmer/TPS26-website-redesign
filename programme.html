@@ -177,155 +177,88 @@
     </div>
 
 
-    <!-- ============ 5. FEATURED SESSIONS (canvas, filterable session cards) ============ -->
-    <section class="prog-highlights section-padding" id="highlights" aria-label="Featured Sessions">
+    <!-- ============ 5. PROGRAMME STAGES (purple, horizontal scroll carousel) ============ -->
+    <section class="programme section-padding" aria-label="Programme stages">
       <div class="container">
-        <div class="section-header section-header--left reveal">
-          <h2>Featured Sessions</h2>
-          <p>A taste of what to expect. These are just some of the sessions that defined last year's festival — and the bar we're raising for 2026.</p>
+        <div class="section-header section-header--light section-header--left reveal">
+          <h2>170+ Sessions Across 8 Stages</h2>
+          <p>Keynotes, panels, workshops, live recordings, and conversations that shape the future of podcasting.</p>
         </div>
+      </div>
 
-        <!-- Stage filters -->
-        <div class="prog-highlights__filters reveal" role="tablist" aria-label="Filter by stage">
-          <button class="prog-highlights__filter active" data-stage="all" role="tab" aria-selected="true">All Stages</button>
-          <button class="prog-highlights__filter" data-stage="origin-theatre" role="tab" aria-selected="false">Origin Theatre</button>
-          <button class="prog-highlights__filter" data-stage="creator-stage" role="tab" aria-selected="false">Creator Stage</button>
-          <button class="prog-highlights__filter" data-stage="brand-works" role="tab" aria-selected="false">Brand Works</button>
-          <button class="prog-highlights__filter" data-stage="industry" role="tab" aria-selected="false">Industry</button>
-        </div>
-
-        <div class="prog-highlights__grid" id="highlights-grid">
-
-          <!-- Origin Theatre -->
-          <article class="prog-highlight card reveal" data-stage="origin-theatre">
-            <span class="prog-highlight__stage">Origin Theatre</span>
-            <h3 class="prog-highlight__title">Behind The Headlines</h3>
-            <p class="prog-highlight__speakers">Christiane Amanpour &amp; Emily Maitlis, in association with Global</p>
-            <p class="prog-highlight__desc">Two of journalism's most formidable voices on truth, trust and the future of news podcasting.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="origin-theatre">
-            <span class="prog-highlight__stage">Origin Theatre</span>
-            <h3 class="prog-highlight__title">Inside Apple Podcasts</h3>
-            <p class="prog-highlight__speakers">Jake Shapiro &amp; Susie Warhurst, Apple</p>
-            <p class="prog-highlight__desc">Apple's first-ever public appearance at a podcasting event — a rare inside look at platform strategy, creator support and what's next.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="origin-theatre">
-            <span class="prog-highlight__stage">Origin Theatre</span>
-            <h3 class="prog-highlight__title">The Power of Building Community</h3>
-            <p class="prog-highlight__speakers">Elizabeth Day &amp; Dan Jones, Sony Music Podcasts</p>
-            <p class="prog-highlight__desc">How the most loyal podcast audiences are built, and what creators can learn from those who've done it.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="origin-theatre">
-            <span class="prog-highlight__stage">Origin Theatre</span>
-            <h3 class="prog-highlight__title">Staying Ahead: The Future of Digital Storytelling</h3>
-            <p class="prog-highlight__speakers">Goalhanger</p>
-            <p class="prog-highlight__desc">The team behind The Rest Is History and The Rest Is Politics on building a sustainable, audience-first podcast business.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="origin-theatre">
-            <span class="prog-highlight__stage">Origin Theatre</span>
-            <h3 class="prog-highlight__title">The Capital Breakfast Masterclass</h3>
-            <p class="prog-highlight__speakers">Global</p>
-            <p class="prog-highlight__desc">How to connect with audiences like a flagship radio show — and what podcasters can steal from broadcast.</p>
-          </article>
-
-          <!-- Creator Stage -->
-          <article class="prog-highlight card reveal" data-stage="creator-stage">
-            <span class="prog-highlight__stage">Creator Stage</span>
-            <h3 class="prog-highlight__title">How to Grow Your Audience Without Burning Out</h3>
-            <p class="prog-highlight__speakers">Mark Asquith (Captivate) &amp; Jordan Harbinger</p>
-            <p class="prog-highlight__desc">Practical audience growth strategies for independent podcasters who don't have a big team behind them.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="creator-stage">
-            <span class="prog-highlight__stage">Creator Stage</span>
-            <h3 class="prog-highlight__title">Speaking Up: Unfiltered Female Voices in Podcasting</h3>
-            <p class="prog-highlight__speakers">Angela Scanlon &amp; Vicky Pattison</p>
-            <p class="prog-highlight__desc">Two of the UK's most fearless broadcasters on owning your story and making space for honest conversation.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="creator-stage">
-            <span class="prog-highlight__stage">Creator Stage</span>
-            <h3 class="prog-highlight__title">Building a New Media Empire</h3>
-            <p class="prog-highlight__speakers">Zach Justice, Dropouts University</p>
-            <p class="prog-highlight__desc">How a college dropout built three shows and 10 million subscribers from a construction job during Covid.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="creator-stage">
-            <span class="prog-highlight__stage">Creator Stage</span>
-            <h3 class="prog-highlight__title">From Audio to TV: The Podcast Adaptation Playbook</h3>
-            <p class="prog-highlight__speakers">Novel, The Observer &amp; BBC Studios</p>
-            <p class="prog-highlight__desc">Practical lessons from adapting Sweet Bobby, The Girlfriends and Evil Genius for screen.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="creator-stage">
-            <span class="prog-highlight__stage">Creator Stage</span>
-            <h3 class="prog-highlight__title">Truth, Trust &amp; Responsibility in Podcasting</h3>
-            <p class="prog-highlight__speakers">Sky News, Tortoise &amp; BBC</p>
-            <p class="prog-highlight__desc">How news and current affairs podcasters are navigating a post-truth media landscape.</p>
-          </article>
-
-          <!-- Brand Works -->
-          <article class="prog-highlight card reveal" data-stage="brand-works">
-            <span class="prog-highlight__stage">Brand Works</span>
-            <h3 class="prog-highlight__title">How Analytics Can Inspire Creativity</h3>
-            <p class="prog-highlight__speakers">CoHost &amp; Quill</p>
-            <p class="prog-highlight__desc">Why the best podcast teams use data not to limit ideas, but to find where to dig deeper.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="brand-works">
-            <span class="prog-highlight__stage">Brand Works</span>
-            <h3 class="prog-highlight__title">The Power of Thought Leadership Podcasts</h3>
-            <p class="prog-highlight__speakers">Quill, Signal Hill &amp; Voxtopica</p>
-            <p class="prog-highlight__desc">76% of brands launch podcasts for thought leadership — here's what the data says actually works.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="brand-works">
-            <span class="prog-highlight__stage">Brand Works</span>
-            <h3 class="prog-highlight__title">Do's and Don'ts for Podcasting on YouTube</h3>
-            <p class="prog-highlight__speakers">YouTube</p>
-            <p class="prog-highlight__desc">Best practices, common mistakes and the platform features that creators are underusing.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="brand-works">
-            <span class="prog-highlight__stage">Brand Works</span>
-            <h3 class="prog-highlight__title">How Video Podcasts Are Redefining Content Creation</h3>
-            <p class="prog-highlight__speakers">Industry panel</p>
-            <p class="prog-highlight__desc">Whether to go video, how to do it without a big budget, and what it means for the definition of a podcast.</p>
-          </article>
-
-          <!-- Industry -->
-          <article class="prog-highlight card reveal" data-stage="industry">
-            <span class="prog-highlight__stage">Industry</span>
-            <h3 class="prog-highlight__title">The Infinite Dial UK 2025</h3>
-            <p class="prog-highlight__speakers">Edison Research</p>
-            <p class="prog-highlight__desc">71% of UK adults have now listened to or watched a podcast. The data that's reshaping how brands and creators think about the medium.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="industry">
-            <span class="prog-highlight__stage">Industry</span>
-            <h3 class="prog-highlight__title">Zen and the Art of Audio Editing</h3>
-            <p class="prog-highlight__speakers">Hindenburg</p>
-            <p class="prog-highlight__desc">How to organise your story before you touch the timeline — a masterclass in editorial thinking for audio producers.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="industry">
-            <span class="prog-highlight__stage">Industry</span>
-            <h3 class="prog-highlight__title">Sound That Resonates: Dolby Atmos and the Future of Audio</h3>
-            <p class="prog-highlight__speakers">All Together Now, Brain Audio &amp; Pascal Wyse</p>
-            <p class="prog-highlight__desc">How immersive audio formats are transforming nonfiction and true crime production.</p>
-          </article>
-
-          <article class="prog-highlight card reveal" data-stage="industry">
-            <span class="prog-highlight__stage">Industry</span>
-            <h3 class="prog-highlight__title">Creators Leading the Charge</h3>
-            <p class="prog-highlight__speakers">PAVE Studios with Morgan Absher &amp; Jamie Laing</p>
-            <p class="prog-highlight__desc">How the most successful creators are building businesses, not just audiences — community, fandom and multi-format content.</p>
-          </article>
-
+      <div class="programme__marquee" aria-label="Stages carousel">
+        <button class="programme__arrow programme__arrow--prev" aria-label="Scroll left" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="programme__arrow programme__arrow--next" aria-label="Scroll right" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="programme__marquee-track">
+          <div class="programme-card">
+            <img class="programme-card__image" src="Photos/Famous faces/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD3_0387-Enhanced-NR_1920x1280.jpg" alt="Keynote speaker on stage" loading="lazy">
+            <div class="programme-card__body">
+              <div class="programme-card__number">01</div>
+              <h3>The Origin Theatre</h3>
+              <p>Flagship keynotes from the biggest names in podcasting and media.</p>
+            </div>
+          </div>
+          <div class="programme-card">
+            <img class="programme-card__image" src="Photos/Audience/Podcast_Show_2024_-_RB_-208312_1920x1280.jpg" alt="Studio sessions at The Podcast Show" loading="lazy">
+            <div class="programme-card__body">
+              <div class="programme-card__number">02</div>
+              <h3>The Studio Stage</h3>
+              <p>Multi-track conversations about the topics shaping the industry.</p>
+            </div>
+          </div>
+          <div class="programme-card">
+            <img class="programme-card__image" src="Photos/Audience/Podcast Show 2025 -Day 1-100312.jpg" alt="Creators in session at The Podcast Show" loading="lazy">
+            <div class="programme-card__body">
+              <div class="programme-card__number">03</div>
+              <h3>The Creator Stage</h3>
+              <p>Marketing, monetisation, AI, and production — everything creators need.</p>
+            </div>
+          </div>
+          <div class="programme-card">
+            <img class="programme-card__image" src="Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg" alt="Creator economy panel" loading="lazy">
+            <div class="programme-card__body">
+              <div class="programme-card__number">04</div>
+              <h3>Creator First Stage</h3>
+              <p>Real-world case studies and future forecasts for the creator economy.</p>
+            </div>
+          </div>
+          <div class="programme-card">
+            <img class="programme-card__image" src="Photos/Famous faces/The_Podcast_Show_-_23rd_May_2024_by_Luke_Dyson_-_LD3_0706_1920x1280.jpg" alt="International panel discussion" loading="lazy">
+            <div class="programme-card__body">
+              <div class="programme-card__number">05</div>
+              <h3>International Stage</h3>
+              <p>Global perspectives on podcasting from creators and platforms worldwide.</p>
+            </div>
+          </div>
+          <div class="programme-card">
+            <img class="programme-card__image" src="Photos/Audience/Podcast_Show_2024_-_RB_-201419_1920x1280.jpg" alt="Indie podcasters networking" loading="lazy">
+            <div class="programme-card__body">
+              <div class="programme-card__number">06</div>
+              <h3>Indie Business Stage</h3>
+              <p>Inspiring talks and networking for independent podcast businesses.</p>
+            </div>
+          </div>
+          <div class="programme-card">
+            <img class="programme-card__image" src="Photos/Exhibitors/Podcast_Show_2024_-_RB_-209395_1920x1280.jpg" alt="Brand exhibition at The Podcast Show" loading="lazy">
+            <div class="programme-card__body">
+              <div class="programme-card__number">07</div>
+              <h3>Brand Works Stage</h3>
+              <p>Where brands, advertisers, and agencies come together.</p>
+            </div>
+          </div>
+          <div class="programme-card">
+            <img class="programme-card__image" src="Photos/Famous faces/The Podcast Show - 22nd May 2024 by Luke Dyson - LD3_0445.jpg" alt="Back-to-back conversations" loading="lazy">
+            <div class="programme-card__body">
+              <div class="programme-card__number">08</div>
+              <h3>Talking Podcasts 1 &amp; 2</h3>
+              <p>Back-to-back conversations and pro tips from the brightest minds.</p>
+            </div>
+          </div>
+          <div class="programme__marquee-spacer" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -335,7 +268,7 @@
     <section class="tps-sessions section-padding" id="browse-sessions" aria-label="Browse all 2025 sessions">
       <div class="container">
         <div class="section-header section-header--left reveal">
-          <h2>Browse All 2025 Sessions</h2>
+          <h2>Explore All Sessions from Last Year's Festival</h2>
           <p>Over 160 sessions across 8 stages. Filter by stage or theme to find what matters to you.</p>
         </div>
 
@@ -385,11 +318,71 @@
     </section>
 
 
-    <!-- ============ 6. CONTENT THEMES (isolated purple) ============ -->
-    <section class="prog-themes section-padding" aria-label="Content themes">
+    <!-- ============ NEW FOR 2026 (dark purple, product-launch moment) ============ -->
+    <section class="home-launch section-padding" aria-label="New for 2026">
       <div class="container">
-        <div class="section-header section-header--light reveal">
-          <h2>Content Themes for 2026</h2>
+
+        <div class="home-launch__intro reveal">
+          <span class="home-launch__eyebrow">Introducing</span>
+          <h2 class="home-launch__title">New for 2026</h2>
+          <p class="home-launch__subtitle">Four brand-new experiences join the festival this year.</p>
+        </div>
+
+        <div class="home-launch__grid">
+
+          <article class="home-launch__card reveal">
+            <div class="home-launch__card-visual">
+              <img src="Photos/Party/THEPODCASTSHOW_THESTANDARD_ROMURPHY-111b.jpeg" alt="The Creator Mix — 1,000 podcasters under one roof" loading="lazy">
+            </div>
+            <div class="home-launch__card-body">
+              <h3>The Creator Mix</h3>
+              <p>1,000+ creators. One iconic London venue. DJs, live music, and the biggest gathering of the global podcast community under one roof.</p>
+            </div>
+          </article>
+
+          <article class="home-launch__card reveal">
+            <div class="home-launch__card-visual">
+              <img src="Photos/Famous faces/The_Podcast_Show_-_23rd_May_2024_by_Luke_Dyson_-_LD3_0706_1920x1280.jpg" alt="International delegates at The Podcast Show" loading="lazy">
+            </div>
+            <div class="home-launch__card-body">
+              <h3>The International Stage</h3>
+              <span class="home-launch__card-partner">Powered by Podimo</span>
+              <p>A dedicated stage and networking hub for international voices, cross-border deals, and a truly global perspective.</p>
+            </div>
+          </article>
+
+          <article class="home-launch__card reveal">
+            <div class="home-launch__card-visual">
+              <img src="Photos/Exhibitors/Podcast Show 2025 -Day 2-202454.jpg" alt="Brand networking at The Podcast Show" loading="lazy">
+            </div>
+            <div class="home-launch__card-body">
+              <h3>TPS Connects</h3>
+              <p>Curated sessions, keynotes, and invitation-only gatherings bringing the podcast community closer to brands and agencies.</p>
+            </div>
+          </article>
+
+          <article class="home-launch__card reveal">
+            <div class="home-launch__card-visual">
+              <img src="Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg" alt="Creator economy insights at The Podcast Show" loading="lazy">
+            </div>
+            <div class="home-launch__card-body">
+              <h3>The Creator First Stage</h3>
+              <span class="home-launch__card-partner">In association with Arcade</span>
+              <p>Two days of insights on thriving in a $250bn, 200-million-strong creator economy.</p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============ 6. CONTENT THEMES (canvas) ============ -->
+    <section class="prog-themes prog-themes--canvas section-padding" aria-label="Content themes">
+      <div class="container">
+        <div class="section-header section-header--left reveal">
+          <h2>The Big Themes for 2026</h2>
           <p>The programme is shaped by the conversations driving the industry right now.</p>
         </div>
 
@@ -624,6 +617,104 @@
     </section>
 
 
+    <!-- ============ BOOK YOUR PASS (pricing) ============ -->
+    <section class="pricing home-pricing section-padding" aria-label="Pricing">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Book Your Pass</h2>
+          <p>Advanced pricing available now. Instalment plans and group discounts available.</p>
+        </div>
+
+        <div class="pricing__grid">
+
+          <!-- Platinum (Hero card) -->
+          <div class="price-card price-card--platinum reveal">
+            <div class="price-card__badge">Reloaded for 2026</div>
+            <div class="price-card__top">
+              <div class="price-card__name">Platinum</div>
+              <div class="price-card__price">£350</div>
+              <div class="price-card__note">The ultimate experience</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>Everything in Gold 2-Day</li>
+                <li>Fast-track entry to all theatres</li>
+                <li>Leaders in Podcasting Breakfast</li>
+                <li>The Official Party at The Standard</li>
+                <li>Premium seating</li>
+                <li>Exclusive networking events</li>
+              </ul>
+              <a href="passes.html" class="btn btn--gradient btn--sm">Book Platinum</a>
+            </div>
+          </div>
+
+          <!-- Gold 2-Day (Most Popular) -->
+          <div class="price-card price-card--popular reveal">
+            <div class="price-card__badge">Most Popular</div>
+            <div class="price-card__top">
+              <div class="price-card__name">Gold 2-Day</div>
+              <div class="price-card__price">£205</div>
+              <div class="price-card__note">Full access, both days</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>All stages and sessions — both days</li>
+                <li>Creator Village access</li>
+                <li>Full networking programme</li>
+                <li>Exhibition floor — both days</li>
+                <li>On-demand content after the show</li>
+                <li>Save £25 vs two 1-Day passes</li>
+              </ul>
+              <a href="passes.html" class="btn btn--urgency btn--sm">Book Gold 2-Day</a>
+            </div>
+          </div>
+
+          <!-- Gold 1-Day -->
+          <div class="price-card price-card--gold reveal">
+            <div class="price-card__top">
+              <div class="price-card__name">Gold 1-Day</div>
+              <div class="price-card__price">£115</div>
+              <div class="price-card__note">Full access, one day</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>All stages and sessions</li>
+                <li>Creator Village access</li>
+                <li>Exhibition floor</li>
+                <li>Networking areas &amp; Hub Bar</li>
+                <li>On-demand content after the show</li>
+              </ul>
+              <a href="passes.html" class="btn btn--urgency btn--sm">Book Gold 1-Day</a>
+            </div>
+          </div>
+
+          <!-- Silver (Sold Out) -->
+          <div class="price-card price-card--soldout reveal">
+            <div class="price-card__top">
+              <div class="price-card__name">Silver Day</div>
+              <div class="price-card__price"><s>£59</s></div>
+              <div class="price-card__note">One-day access</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>Access to exhibition floor</li>
+                <li>Selected stage access</li>
+                <li>Networking areas</li>
+                <li>The Hub Bar</li>
+              </ul>
+              <p class="price-card__sold-out">Sold Out</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pricing__footer reveal">
+          <p>All prices subject to 2% booking fee. 3-part instalment plans available. 10% group discount for 8+ people.</p>
+        </div>
+      </div>
+    </section>
+
+
     <!-- ============ NEWSLETTER ============ -->
     <section class="newsletter newsletter--vibrant section-padding" aria-label="Newsletter signup">
       <div class="container">
@@ -694,78 +785,41 @@
 
   <script src="main.js" defer></script>
 
-  <!-- Page-specific: Highlights filter (animated) -->
+  <!-- Page-specific: Programme carousel arrows -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const filters = document.querySelectorAll('.prog-highlights__filter');
-      const cards = document.querySelectorAll('.prog-highlight');
-      let isAnimating = false;
+  (function() {
+    var track = document.querySelector('.programme__marquee-track');
+    var prev = document.querySelector('.programme__arrow--prev');
+    var next = document.querySelector('.programme__arrow--next');
+    if (!track || !prev || !next) return;
 
-      filters.forEach(btn => {
-        btn.addEventListener('click', () => {
-          if (isAnimating) return;
-          const stage = btn.dataset.stage;
+    function getScrollAmount() {
+      var card = track.querySelector('.programme-card');
+      if (!card) return 300;
+      return card.offsetWidth + parseInt(getComputedStyle(track).gap) || 24;
+    }
 
-          // Update active filter
-          filters.forEach(f => {
-            f.classList.remove('active');
-            f.setAttribute('aria-selected', 'false');
-          });
-          btn.classList.add('active');
-          btn.setAttribute('aria-selected', 'true');
+    function updateArrows() {
+      var sl = track.scrollLeft;
+      var maxScroll = track.scrollWidth - track.clientWidth;
+      prev.classList.toggle('is-hidden', sl <= 5);
+      next.classList.toggle('is-hidden', sl >= maxScroll - 5);
+    }
 
-          // Find cards currently visible and cards that should show
-          const visible = [...cards].filter(c => c.style.display !== 'none');
-          const toShow = [...cards].filter(c => stage === 'all' || c.dataset.stage === stage);
-
-          // If nothing changes, bail
-          if (visible.length === toShow.length && visible.every(c => toShow.includes(c))) return;
-
-          isAnimating = true;
-
-          // Phase 1: Exit — fade out visible cards
-          visible.forEach(c => c.classList.add('is-exiting'));
-
-          setTimeout(() => {
-            // Hide exiting, remove exit state
-            visible.forEach(c => {
-              c.classList.remove('is-exiting', 'visible');
-              c.style.display = 'none';
-            });
-
-            // Phase 2: Enter — prep incoming cards
-            toShow.forEach(c => {
-              c.style.display = '';
-              c.classList.add('is-entering');
-            });
-
-            // Force reflow so the entering state is painted before transition
-            void toShow[0]?.offsetHeight;
-
-            // Stagger the entrance
-            toShow.forEach((c, i) => {
-              setTimeout(() => {
-                c.classList.add('is-shown');
-              }, i * 40);
-            });
-
-            // Clean up after animations complete
-            const cleanupDelay = (toShow.length * 40) + 200;
-            setTimeout(() => {
-              toShow.forEach(c => {
-                c.classList.remove('is-entering', 'is-shown');
-                c.classList.add('visible');
-              });
-              isAnimating = false;
-            }, cleanupDelay);
-
-          }, 150); // matches exit duration
-        });
-      });
+    prev.addEventListener('click', function() {
+      track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     });
+    next.addEventListener('click', function() {
+      track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+  })();
   </script>
 
-  <!-- Page-specific: Full session wall (Browse All 2025 Sessions) -->
+  <!-- Page-specific: Full session wall -->
   <script src="data/sessions.js"></script>
   <script>
   (function() {
