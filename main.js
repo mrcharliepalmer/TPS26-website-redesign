@@ -83,6 +83,14 @@ window.addEventListener('scroll', () => {
 const hamburger = document.querySelector('.nav__hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
 hamburger.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('open');
   hamburger.classList.toggle('active');
@@ -91,14 +99,11 @@ hamburger.addEventListener('click', () => {
   document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
+const mobileClose = mobileMenu.querySelector('.mobile-menu__close');
+if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+
 mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('active');
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  });
+  link.addEventListener('click', closeMobileMenu);
 });
 
 /* --- Scroll reveal --- */

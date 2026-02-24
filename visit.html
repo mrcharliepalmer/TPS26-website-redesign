@@ -110,6 +110,7 @@
 
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
     <a href="about.html">About</a>
     <a href="programme.html">Programme</a>
     <a href="speakers.html">Speakers</a>
@@ -127,6 +128,8 @@
       <img
         class="page-hero__bg"
         src="Photos/TP25 LUKE DAY 1/BDC External.jpg"
+        srcset="Photos/responsive/BDC External-640w.jpg 640w, Photos/responsive/BDC External-1024w.jpg 1024w, Photos/TP25 LUKE DAY 1/BDC External.jpg 1075w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
         width="1075"
         height="717"
         alt=""
@@ -141,7 +144,7 @@
 
         <div class="hero__ctas">
           <a href="passes.html" class="btn btn--primary btn--lg">Book Your Pass</a>
-          <a href="partners.html" class="btn btn--coral btn--lg">Partner With Us</a>
+          <a href="#neighbourhood" class="btn btn--coral btn--lg" id="hero-hotel-btn">Book Your Hotel</a>
         </div>
       </div>
     </section>
@@ -164,6 +167,8 @@
           <div class="visit-bdc__mosaic-large">
             <img
               src="Photos/TP25 LUKE DAY 1/Show Floor - Creator Village.jpg"
+        srcset="Photos/responsive/Show Floor - Creator Village-640w.jpg 640w, Photos/responsive/Show Floor - Creator Village-1024w.jpg 1024w, Photos/TP25 LUKE DAY 1/Show Floor - Creator Village.jpg 1045w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
               width="1045"
               height="697"
               alt="Inside the Business Design Centre — The Creator Village and Creator Stage banners hang above a packed show floor beneath the iconic arched glass roof"
@@ -183,6 +188,8 @@
             <div class="visit-bdc__mosaic-small">
               <img
                 src="Photos/TP25 LUKE DAY 1/Entrance Hall - Registration.jpg"
+        srcset="Photos/responsive/Entrance Hall - Registration-640w.jpg 640w, Photos/TP25 LUKE DAY 1/Entrance Hall - Registration.jpg 1012w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
                 width="1012"
                 height="675"
                 alt="Registration area at the Business Design Centre entrance hall"
@@ -239,6 +246,8 @@
     <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img
         src="Photos/TP25 LUKE DAY 1/People - Smiling.jpg"
+        srcset="Photos/responsive/People - Smiling-640w.jpg 640w, Photos/responsive/People - Smiling-1024w.jpg 1024w, Photos/TP25 LUKE DAY 1/People - Smiling.jpg 1042w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
         width="1920"
         height="1280"
         alt="Attendees at The Podcast Show"
@@ -248,7 +257,7 @@
 
 
     <!-- ============ 4. THE NEIGHBOURHOOD (rich guide with tabs) ============ -->
-    <section class="visit-neighbourhood section-padding" aria-label="The neighbourhood">
+    <section class="visit-neighbourhood section-padding" id="neighbourhood" aria-label="The neighbourhood">
       <div class="container">
 
         <div class="visit-neighbourhood__intro visit-neighbourhood__intro--accent reveal">
@@ -271,7 +280,7 @@
           <article class="visit-place-card" data-cat="hotels">
             <img src="visit-content/hotels/the-hilton.png" width="1252" height="691" alt="Hilton London Angel Islington" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Hilton London Angel Islington</h3>
+              <h3><a href="https://www.hilton.com/en/hotels/lonishn-hilton-london-angel-islington/" target="_blank" rel="noopener">Hilton London Angel Islington</a></h3>
               <span class="visit-place-card__type">Hotel &middot; Angel</span>
               <p>Steps from the BDC on Upper Street. The closest hotel to the venue — walk across the road and you're there.</p>
               <span class="visit-place-card__offer">Delegate rate: up to 18% off</span>
@@ -281,7 +290,7 @@
           <article class="visit-place-card" data-cat="hotels">
             <img src="visit-content/hotels/the-standard.jpg" width="2048" height="1365" alt="The Standard, London" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Standard, London</h3>
+              <h3><a href="https://www.standardhotels.com/london/properties/london" target="_blank" rel="noopener">The Standard, London</a></h3>
               <span class="visit-place-card__type">Hotel &middot; King's Cross</span>
               <p>Panoramic views and a rooftop restaurant. Host venue for the official after-party, and right next to Eurostar.</p>
               <span class="visit-place-card__offer">Delegate rate: 15% off best available</span>
@@ -291,7 +300,7 @@
           <article class="visit-place-card" data-cat="hotels">
             <img src="visit-content/hotels/the-megaro.jpg" width="1000" height="667" alt="The Megaro Hotel" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Megaro</h3>
+              <h3><a href="https://www.themegaro.co.uk/" target="_blank" rel="noopener">The Megaro</a></h3>
               <span class="visit-place-card__type">Hotel &middot; King's Cross</span>
               <p>Creatively decorated rooms and suites that blend design, fashion, and cinematography. A stylish base near St Pancras.</p>
               <span class="visit-place-card__offer">Delegate rate: up to 12% off</span>
@@ -301,7 +310,7 @@
           <article class="visit-place-card" data-cat="hotels">
             <img src="visit-content/hotels/the-gyle.jpg" width="900" height="480" alt="The Gyle Hotel" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Gyle</h3>
+              <h3><a href="https://www.thegyle.co.uk/" target="_blank" rel="noopener">The Gyle</a></h3>
               <span class="visit-place-card__type">Hotel &middot; King's Cross</span>
               <p>A cosy, personalised base with character and style. Comfort meets individuality in a quiet square minutes from the action.</p>
               <span class="visit-place-card__offer">Delegate rate: up to 12% off</span>
@@ -311,7 +320,7 @@
           <article class="visit-place-card" data-cat="hotels">
             <img src="visit-content/hotels/the-california-london.png" width="900" height="500" alt="The California London" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The California London</h3>
+              <h3><a href="https://www.thecalifornialondon.com/" target="_blank" rel="noopener">The California London</a></h3>
               <span class="visit-place-card__type">Hotel &middot; King's Cross</span>
               <p>London townhouses blended with eclectic West Coast style. Steps from buzzing King's Cross with easy access to the BDC.</p>
               <span class="visit-place-card__offer">Delegate rate: up to 12% off</span>
@@ -322,7 +331,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/ottolenghi.jpg" width="1024" height="682" alt="Ottolenghi restaurant" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Ottolenghi</h3>
+              <h3><a href="https://ottolenghi.co.uk/pages/locations/islington" target="_blank" rel="noopener">Ottolenghi</a></h3>
               <span class="visit-place-card__type">Restaurant</span>
               <p>A London institution on Upper Street. Mediterranean deli and restaurant, communal tables, and food worth crossing the city for.</p>
             </div>
@@ -331,7 +340,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/bellanger.webp" width="1080" height="608" alt="Bellanger brasserie" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Bellanger</h3>
+              <h3><a href="https://bellanger.co.uk/" target="_blank" rel="noopener">Bellanger</a></h3>
               <span class="visit-place-card__type">Brasserie</span>
               <p>All-day French brasserie on Islington Green from the team behind The Wolseley. Steak frites, confit de canard, and a cocktail list that runs late.</p>
             </div>
@@ -340,7 +349,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/the-pig-and-butcher.jpg" width="610" height="614" alt="The Pig and Butcher" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Pig and Butcher</h3>
+              <h3><a href="https://thepigandbutcher.co.uk/" target="_blank" rel="noopener">The Pig and Butcher</a></h3>
               <span class="visit-place-card__type">Pub &amp; Restaurant</span>
               <p>An Islington institution since 2012. On-site butcher, daily-changing menu, craft beers, and wine from family vineyards only.</p>
             </div>
@@ -349,7 +358,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/the-old-queens-head.jpg" width="1856" height="1365" alt="The Old Queens Head" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Old Queens Head</h3>
+              <h3><a href="https://theoldqueenshead.com/" target="_blank" rel="noopener">The Old Queens Head</a></h3>
               <span class="visit-place-card__type">Pub &amp; Live Venue</span>
               <p>16th-century fireplaces, bespoke chandeliers, and a karaoke room. Live music, DJs, and a tasty pub menu. Host of TPS creator meetups in 2025.</p>
             </div>
@@ -358,7 +367,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/the-vineyard.jpg" width="900" height="450" alt="The Vineyard" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Vineyard</h3>
+              <h3><a href="https://www.socialpubandkitchen.co.uk/vineyard-islington" target="_blank" rel="noopener">The Vineyard</a></h3>
               <span class="visit-place-card__type">Bar &amp; Kitchen</span>
               <p>One of the best beer gardens in Angel. Exposed brick, vaulted ceilings, and gorgeous vintage seating inside. Perfect for a post-show drink.</p>
             </div>
@@ -367,7 +376,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/the-camden-head.jpg" width="1024" height="683" alt="The Camden Head" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Camden Head</h3>
+              <h3><a href="https://camdenhead.com/" target="_blank" rel="noopener">The Camden Head</a></h3>
               <span class="visit-place-card__type">Pub</span>
               <p>Grade II listed, tucked away on Camden Passage. Etched glass windows, original mirrors, and one of London's best comedy nights.</p>
             </div>
@@ -376,7 +385,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/fredericks.webp" width="1360" height="905" alt="Frederick's restaurant" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Frederick's</h3>
+              <h3><a href="https://www.fredericks.co.uk/" target="_blank" rel="noopener">Frederick's</a></h3>
               <span class="visit-place-card__type">Restaurant</span>
               <p>Contemporary European with a stunning private dining room and one of Islington's best wine lists. Ideal for business dinners.</p>
             </div>
@@ -385,7 +394,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/sticks-n-sushi.jpg" width="1000" height="667" alt="Sticks'n'Sushi" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Sticks'n'Sushi</h3>
+              <h3><a href="https://www.sticksnsushi.com/gb/en/restaurants/islington/" target="_blank" rel="noopener">Sticks'n'Sushi</a></h3>
               <span class="visit-place-card__type">Restaurant</span>
               <p>Japanese tradition meets Danish flair. Fresh seafood, handmade sushi, and a sake selection that runs deep.</p>
             </div>
@@ -394,7 +403,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/the-breakfast-club-angel.jpg" width="1428" height="956" alt="The Breakfast Club Angel" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Breakfast Club</h3>
+              <h3><a href="https://thebreakfastclubcafes.com/angel/" target="_blank" rel="noopener">The Breakfast Club</a></h3>
               <span class="visit-place-card__type">Brunch</span>
               <p>Bright, vibrant, and packed with character. The breakfast burritos alone are worth the trip. Perfect fuel before a day on the show floor.</p>
             </div>
@@ -403,7 +412,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/brother-marcus.webp" width="1360" height="908" alt="Brother Marcus" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Brother Marcus</h3>
+              <h3><a href="https://brothermarcus.co.uk/locations/angel/" target="_blank" rel="noopener">Brother Marcus</a></h3>
               <span class="visit-place-card__type">Brunch &amp; Dinner</span>
               <p>British meets Mediterranean on Camden Passage. Top-quality ingredients, vegan-friendly, and a brunch queue that speaks for itself.</p>
             </div>
@@ -412,7 +421,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/meat-liquor-n1.jpg" width="1024" height="1024" alt="Meat Liquor N1" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Meat Liquor N1</h3>
+              <h3><a href="https://meatliquor.com/restaurant/meatliquor-n1/" target="_blank" rel="noopener">Meat Liquor N1</a></h3>
               <span class="visit-place-card__type">Burgers &amp; Bar</span>
               <p>Set in an old Citro&euml;n garage between Angel and Highbury stations. Outdoor dining, private mezzanine, and some of the best burgers in north London.</p>
             </div>
@@ -421,7 +430,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/le-sacre-coeur.jpg" width="1200" height="800" alt="Le Sacré Coeur" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Le Sacr&eacute; Coeur</h3>
+              <h3><a href="https://lesacrecoeurbistro.co.uk/" target="_blank" rel="noopener">Le Sacr&eacute; Coeur</a></h3>
               <span class="visit-place-card__type">French Bistro</span>
               <p>One of the oldest French restaurants in the area. Cosy, traditional, and centred around authentic indulgent food in the heart of Angel.</p>
             </div>
@@ -430,7 +439,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/tofu-vegan.webp" width="1360" height="1020" alt="Tofu Vegan" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Tofu Vegan</h3>
+              <h3><a href="https://www.tofuvegan.com/" target="_blank" rel="noopener">Tofu Vegan</a></h3>
               <span class="visit-place-card__type">Vegan</span>
               <p>Completely plant-based with chefs from Sichuan, Canton, and Dongbei. Regional Chinese flavours that delight even confirmed carnivores.</p>
             </div>
@@ -439,7 +448,7 @@
           <article class="visit-place-card" data-cat="eat-drink">
             <img src="visit-content/eat-drink/the-bull-islington.webp" width="650" height="365" alt="The Bull Islington" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>The Bull</h3>
+              <h3><a href="https://www.thebullislington.co.uk/" target="_blank" rel="noopener">The Bull</a></h3>
               <span class="visit-place-card__type">Pub</span>
               <p>Quirky charm meets British pub hospitality. Flavoursome food, an explorative drinks menu, and a genuinely welcoming atmosphere.</p>
             </div>
@@ -458,7 +467,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/camden-passage.jpeg" width="600" height="400" alt="Camden Passage" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Camden Passage</h3>
+              <h3><a href="https://www.camdenpassageislington.co.uk/" target="_blank" rel="noopener">Camden Passage</a></h3>
               <span class="visit-place-card__type">Shopping &amp; Market</span>
               <p>A picturesque car-free street filled with antique shops, vintage finds, outdoor markets, and independent cafes. Two minutes from the BDC.</p>
             </div>
@@ -467,7 +476,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/coal-drops-yard.jpeg" width="1640" height="1106" alt="Coal Drops Yard" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Coal Drops Yard</h3>
+              <h3><a href="https://www.kingscross.co.uk/coal-drops-yard" target="_blank" rel="noopener">Coal Drops Yard</a></h3>
               <span class="visit-place-card__type">Shopping &amp; Dining</span>
               <p>Cobbled streets and brick arches at King's Cross, home to a brilliant mix of independent shops and signature brands.</p>
             </div>
@@ -476,7 +485,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/sadlers-wells-theatre.jpeg" width="973" height="730" alt="Sadler's Wells Theatre" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Sadler's Wells Theatre</h3>
+              <h3><a href="https://www.sadlerswells.com/" target="_blank" rel="noopener">Sadler's Wells Theatre</a></h3>
               <span class="visit-place-card__type">Theatre</span>
               <p>One of the world's leading dance venues. A 1,500-seat auditorium on Rosebery Avenue, a short walk from the BDC.</p>
             </div>
@@ -485,7 +494,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/almeida-theatre.jpeg" width="640" height="360" alt="Almeida Theatre" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Almeida Theatre</h3>
+              <h3><a href="https://almeida.co.uk/" target="_blank" rel="noopener">Almeida Theatre</a></h3>
               <span class="visit-place-card__type">Theatre</span>
               <p>A 325-seat producing house with an international reputation, right off Upper Street. Plays regularly transfer to the West End.</p>
             </div>
@@ -494,7 +503,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/regents-canal.jpg" width="1600" height="1067" alt="Regent's Canal" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Regent's Canal</h3>
+              <h3><a href="https://waterways.org.uk/waterways/discover-the-waterways/regents-canal-and-hertford-union-canal" target="_blank" rel="noopener">Regent's Canal</a></h3>
               <span class="visit-place-card__type">Walk</span>
               <p>A hidden world of narrowboats, towpaths, and waterside pubs. Walk from Angel to Camden Market, past London Zoo.</p>
             </div>
@@ -503,7 +512,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/union-chapel.jpeg" width="954" height="719" alt="Union Chapel" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Union Chapel</h3>
+              <h3><a href="https://unionchapel.org.uk/" target="_blank" rel="noopener">Union Chapel</a></h3>
               <span class="visit-place-card__type">Live Venue</span>
               <p>A Grade I-listed Gothic revival church that doubles as one of London's most atmospheric live entertainment venues.</p>
             </div>
@@ -512,7 +521,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/estorick-collection.jpeg" width="1280" height="860" alt="Estorick Collection" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Estorick Collection</h3>
+              <h3><a href="https://www.estorickcollection.com/" target="_blank" rel="noopener">Estorick Collection</a></h3>
               <span class="visit-place-card__type">Gallery</span>
               <p>Modern Italian art in a Grade II Georgian townhouse. Six galleries of Futurist works. A hidden gem of Islington.</p>
             </div>
@@ -521,7 +530,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/screen-on-the-green.jpeg" width="630" height="472" alt="Screen on the Green" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Screen on the Green</h3>
+              <h3><a href="https://www.everymancinema.com/venues-list/x077o-everyman-screen-on-the-green/" target="_blank" rel="noopener">Screen on the Green</a></h3>
               <span class="visit-place-card__type">Cinema</span>
               <p>One of the UK's oldest continuously running cinemas, facing Islington Green. Single-screen charm since 1913.</p>
             </div>
@@ -530,7 +539,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/exmouth-market.jpeg" width="666" height="388" alt="Exmouth Market" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Exmouth Market</h3>
+              <h3><a href="https://exmouth.london/" target="_blank" rel="noopener">Exmouth Market</a></h3>
               <span class="visit-place-card__type">Street Food &amp; Bars</span>
               <p>A semi-pedestrianised street in Clerkenwell with 30+ street food stalls and a string of vibrant bars and restaurants.</p>
             </div>
@@ -539,7 +548,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/spitalfields-market.jpeg" width="640" height="360" alt="Spitalfields Market" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Spitalfields Market</h3>
+              <h3><a href="https://www.spitalfields.co.uk/" target="_blank" rel="noopener">Spitalfields Market</a></h3>
               <span class="visit-place-card__type">Market</span>
               <p>Artisanal food, handmade goods, contemporary fashion, and a flea market. A short bus ride east from Islington.</p>
             </div>
@@ -548,7 +557,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/emirates-stadium.jpg" width="1600" height="900" alt="Emirates Stadium" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Emirates Stadium</h3>
+              <h3><a href="https://www.arsenal.com/the-club/emirates-stadium" target="_blank" rel="noopener">Emirates Stadium</a></h3>
               <span class="visit-place-card__type">Sport</span>
               <p>Home of Arsenal FC. A 60,000-seat stadium just up the road in Holloway. Stadium tours available on non-match days.</p>
             </div>
@@ -557,7 +566,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/british-museum.jpeg" width="640" height="425" alt="British Museum" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>British Museum</h3>
+              <h3><a href="https://www.britishmuseum.org/" target="_blank" rel="noopener">British Museum</a></h3>
               <span class="visit-place-card__type">Museum</span>
               <p>Eight million works spanning human history, art, and culture. Free entry. A 20-minute bus ride from Islington to Bloomsbury.</p>
             </div>
@@ -566,7 +575,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/culpeper-community-garden.jpeg" width="640" height="360" alt="Culpeper Community Garden" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Culpeper Community Garden</h3>
+              <h3><a href="https://www.culpeper.org.uk/" target="_blank" rel="noopener">Culpeper Community Garden</a></h3>
               <span class="visit-place-card__type">Green Space</span>
               <p>An award-winning green oasis in the midst of Islington. Perfect for a quiet lunch break or a moment of calm between sessions.</p>
             </div>
@@ -575,7 +584,7 @@
           <article class="visit-place-card" data-cat="things-to-do">
             <img src="visit-content/things-to-do/angel-central.jpeg" width="1280" height="720" alt="Angel Central" loading="lazy">
             <div class="visit-place-card__body">
-              <h3>Angel Central</h3>
+              <h3><a href="https://angelcentral.co.uk/" target="_blank" rel="noopener">Angel Central</a></h3>
               <span class="visit-place-card__type">Shopping</span>
               <p>A stylish collection of shops, restaurants, cinemas, and music venues off Upper Street. Everything you need under one roof.</p>
             </div>
@@ -646,6 +655,8 @@
     <div class="photo-break photo-break--parallax" aria-label="Event photography">
       <img
         src="Photos/TP25 LUKE DAY 1/Entrance Hall - Registration.jpg"
+        srcset="Photos/responsive/Entrance Hall - Registration-640w.jpg 640w, Photos/TP25 LUKE DAY 1/Entrance Hall - Registration.jpg 1012w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
         width="1012"
         height="675"
         alt="Registration area at The Podcast Show"
@@ -677,7 +688,9 @@
           </div>
 
           <div class="visit-access__image">
-            <img src="Photos/TP25 LUKE DAY 1/Registration.jpg" width="1920" height="1280" alt="Registration area at the Business Design Centre" loading="lazy">
+            <img src="Photos/TP25 LUKE DAY 1/Registration.jpg"
+        srcset="Photos/responsive/Registration-640w.jpg 640w, Photos/TP25 LUKE DAY 1/Registration.jpg 1021w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px" width="1920" height="1280" alt="Registration area at the Business Design Centre" loading="lazy">
           </div>
 
         </div>
@@ -925,6 +938,16 @@
 
       /* Initial render */
       applyFilter('all');
+
+      /* Hero "Book Your Hotel" → scroll + activate Hotels tab */
+      var hotelBtn = document.getElementById('hero-hotel-btn');
+      if (hotelBtn) {
+        hotelBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          applyFilter('hotels');
+          document.getElementById('neighbourhood').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
     })();
   </script>
 
