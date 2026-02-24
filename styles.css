@@ -4556,7 +4556,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   background: rgba(85, 31, 239, 0.1);
   padding: 4px 14px;
   border-radius: 100px;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .about-journey__entry--current .btn {
