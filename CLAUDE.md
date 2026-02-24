@@ -70,7 +70,7 @@ who knows the industry inside out.
 | Creators   | creators.html    | NOT STARTED | —         | Audience sub-page                         |
 | Brands     | brands.html      | NOT STARTED | —         | Audience sub-page                         |
 | FAQ        | faq.html         | NOT STARTED | —         | Reuse accordion pattern from passes page  |
-| Blog       | blog.html        | NOT STARTED | —         | Editorial hub, 3-4 seed articles          |
+| Blog       | blog.html + blog/ | COMPLETE   | No        | Hub page + 4 seed articles in /blog/ subfolder |
 | Contact    | contact.html     | NOT STARTED | —         |                                           |
 
 ## Key Build Decisions
