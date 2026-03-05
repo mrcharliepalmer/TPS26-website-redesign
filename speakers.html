@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Speakers — The Podcast Show London 2026</title>
-  <meta name="description" content="The 2026 speaker line-up is coming soon. The Podcast Show London, 20–21 May 2026 at the Business Design Centre.">
+  <meta name="description" content="Meet the 2026 speaker line-up. Founders, creators, platform leaders and industry pioneers — all on one stage. The Podcast Show London, 20–21 May 2026 at the Business Design Centre.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Speakers — The Podcast Show London 2026">
-  <meta property="og:description" content="The 2026 speaker line-up is coming soon. The Podcast Show London, 20–21 May 2026 at the Business Design Centre.">
+  <meta property="og:description" content="Meet the 2026 speaker line-up. Founders, creators, platform leaders and industry pioneers at the world's biggest podcasting festival.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thepodcastshowlondon.com/speakers.html">
   <meta property="og:image" content="https://thepodcastshowlondon.com/Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg">
@@ -17,7 +17,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Speakers — The Podcast Show London 2026">
-  <meta name="twitter:description" content="The 2026 speaker line-up is coming soon. The Podcast Show London, 20–21 May 2026 at the Business Design Centre.">
+  <meta name="twitter:description" content="Meet the 2026 speaker line-up. Founders, creators, platform leaders and industry pioneers at the world's biggest podcasting festival.">
   <meta name="twitter:image" content="https://thepodcastshowlondon.com/Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg">
 
   <link rel="canonical" href="https://thepodcastshowlondon.com/speakers.html">
@@ -31,6 +31,36 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   <script>if(sessionStorage.getItem('urgency-dismissed'))document.documentElement.classList.add('urgency-dismissed');</script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "The Podcast Show London 2026",
+    "description": "The biggest international festival for the business of podcasting. 450+ speakers across 8 stages.",
+    "startDate": "2026-05-20T09:00:00+01:00",
+    "endDate": "2026-05-21T18:00:00+01:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Business Design Centre",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "52 Upper Street",
+        "addressLocality": "Islington, London",
+        "postalCode": "N1 0QH",
+        "addressCountry": "GB"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "The Podcast Show",
+      "url": "https://thepodcastshowlondon.com"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -92,7 +122,7 @@
         class="page-hero__bg"
         src="Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg"
         srcset="Photos/responsive/Podcast_Show_2024_-_RB_-209429_1920x1280-640w.jpg 640w, Photos/responsive/Podcast_Show_2024_-_RB_-209429_1920x1280-1024w.jpg 1024w, Photos/Famous faces/Podcast_Show_2024_-_RB_-209429_1920x1280.jpg 1920w"
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+        sizes="100vw"
         width="1920"
         height="1280"
         alt=""
@@ -101,7 +131,183 @@
       <div class="page-hero__overlay" aria-hidden="true"></div>
 
       <div class="page-hero__content">
-        <h1 class="hero__title">I've Not Built This Page (Yet)</h1>
+        <p class="hero__tag">20–21 MAY 2026 · LONDON</p>
+        <h1 class="hero__title">The Voices Shaping Podcasting</h1>
+        <p class="page-hero__subtitle">Founders, creators, platform leaders and industry pioneers — all on one stage</p>
+        <div class="hero__ctas">
+          <a href="passes.html" class="btn btn--primary btn--lg">Book Your Pass</a>
+          <a href="partners.html" class="btn btn--coral btn--lg">Partner With Us</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ FIRST NAMES ANNOUNCED ============ -->
+    <section class="speakers-lineup section-padding" aria-label="Speaker line-up" id="speakers">
+      <div class="container">
+        <div class="section-header">
+          <h2>First Names Announced</h2>
+          <p>The 2026 speaker line-up is here. These are just the first names — with hundreds more to come.</p>
+        </div>
+
+        <!-- Search + Sector Filters -->
+        <div class="speakers-lineup__controls">
+          <div class="speakers-lineup__search-wrap">
+            <input
+              type="search"
+              class="speakers-lineup__search"
+              id="speaker-search"
+              placeholder="Search by name, role or company..."
+              aria-label="Search speakers by name, role or company"
+              autocomplete="off"
+            >
+          </div>
+
+          <div class="speakers-lineup__filters" role="tablist" aria-label="Filter by sector">
+            <button class="speakers-lineup__pill is-active" data-sector="all" role="tab" aria-selected="true">All</button>
+            <button class="speakers-lineup__pill" data-sector="Creator" role="tab" aria-selected="false">Creator</button>
+            <button class="speakers-lineup__pill" data-sector="Platform" role="tab" aria-selected="false">Platform</button>
+            <button class="speakers-lineup__pill" data-sector="Brand" role="tab" aria-selected="false">Brand</button>
+            <button class="speakers-lineup__pill" data-sector="Business" role="tab" aria-selected="false">Business</button>
+            <button class="speakers-lineup__pill" data-sector="Insight" role="tab" aria-selected="false">Insight</button>
+            <button class="speakers-lineup__pill" data-sector="Tech" role="tab" aria-selected="false">Tech</button>
+          </div>
+        </div>
+
+        <!-- Speaker count -->
+        <p class="speakers-lineup__count" id="speaker-count" aria-live="polite"></p>
+
+        <!-- Speaker grid -->
+        <div class="speakers-lineup__grid" id="speakers-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ FULL-BLEED PHOTO BREAK ============ -->
+    <div class="speakers-photo-break" aria-hidden="true">
+      <img
+        src="Photos/Famous faces/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD1_0417_1920x1280.jpg"
+        srcset="Photos/responsive/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD1_0417_1920x1280-640w.jpg 640w, Photos/responsive/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD1_0417_1920x1280-1024w.jpg 1024w, Photos/Famous faces/The_Podcast_Show_-_22nd_May_2024_by_Luke_Dyson_-_LD1_0417_1920x1280.jpg 1920w"
+        sizes="100vw"
+        width="1920"
+        height="1280"
+        alt=""
+        loading="lazy"
+      >
+    </div>
+
+
+    <!-- ============ PRICING ============ -->
+    <section class="pricing home-pricing section-padding" aria-label="Pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Book Your Pass</h2>
+          <p>Advanced pricing available now. Instalment plans and group discounts available.</p>
+        </div>
+
+        <div class="pricing__grid">
+
+          <!-- Platinum (Hero card) -->
+          <div class="price-card price-card--platinum">
+            <div class="price-card__badge">Reloaded for 2026</div>
+            <div class="price-card__top">
+              <div class="price-card__name">Platinum</div>
+              <div class="price-card__price">£350</div>
+              <div class="price-card__note">The ultimate experience</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>Everything in Gold 2-Day</li>
+                <li>Fast-track entry to all theatres</li>
+                <li>Leaders in Podcasting Breakfast</li>
+                <li>The Official Party at The Standard</li>
+                <li>Premium seating</li>
+                <li>Exclusive networking events</li>
+              </ul>
+              <a href="passes.html" class="btn btn--gradient btn--sm">Book Platinum</a>
+            </div>
+          </div>
+
+          <!-- Gold 2-Day (Most Popular) -->
+          <div class="price-card price-card--popular">
+            <div class="price-card__badge">Most Popular</div>
+            <div class="price-card__top">
+              <div class="price-card__name">Gold 2-Day</div>
+              <div class="price-card__price">£205</div>
+              <div class="price-card__note">Full access, both days</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>All stages and sessions — both days</li>
+                <li>Creator Village access</li>
+                <li>Full networking programme</li>
+                <li>Exhibition floor — both days</li>
+                <li>On-demand content after the show</li>
+                <li>Save £25 vs two 1-Day passes</li>
+              </ul>
+              <a href="passes.html" class="btn btn--urgency btn--sm">Book Gold 2-Day</a>
+            </div>
+          </div>
+
+          <!-- Gold 1-Day -->
+          <div class="price-card price-card--gold">
+            <div class="price-card__top">
+              <div class="price-card__name">Gold 1-Day</div>
+              <div class="price-card__price">£115</div>
+              <div class="price-card__note">Full access, one day</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>All stages and sessions</li>
+                <li>Creator Village access</li>
+                <li>Exhibition floor</li>
+                <li>Networking areas &amp; Hub Bar</li>
+                <li>On-demand content after the show</li>
+              </ul>
+              <a href="passes.html" class="btn btn--urgency btn--sm">Book Gold 1-Day</a>
+            </div>
+          </div>
+
+          <!-- Silver (Sold Out) -->
+          <div class="price-card price-card--soldout">
+            <div class="price-card__top">
+              <div class="price-card__name">Silver Day</div>
+              <div class="price-card__price"><s>£59</s></div>
+              <div class="price-card__note">One-day access</div>
+            </div>
+            <div class="price-card__body">
+              <ul class="price-card__features">
+                <li>Access to exhibition floor</li>
+                <li>Selected stage access</li>
+                <li>Networking areas</li>
+                <li>The Hub Bar</li>
+              </ul>
+              <p class="price-card__sold-out">Sold Out</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pricing__footer">
+          <p>All prices subject to 2% booking fee. 3-part instalment plans available. 10% group discount for 8+ people.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="newsletter section-padding" aria-label="Newsletter signup">
+      <div class="container">
+        <div class="section-header section-header--light">
+          <h2>Stay in the Loop</h2>
+          <p>Get speaker announcements, programme updates and exclusive offers straight to your inbox.</p>
+        </div>
+        <form class="newsletter__form" action="#" method="POST">
+          <input type="email" class="newsletter__input" placeholder="Your email address" aria-label="Email address" required>
+          <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
+        </form>
       </div>
     </section>
 
@@ -160,6 +366,126 @@
     </div>
   </footer>
 
+
+  <!-- Speaker Data -->
+  <script src="data/speakers.js"></script>
+
+  <!-- Speaker Page Logic -->
+  <script>
+  (function() {
+    'use strict';
+
+    var speakers = window.__TPS_SPEAKERS__ || [];
+    var grid = document.getElementById('speakers-grid');
+    var searchInput = document.getElementById('speaker-search');
+    var countEl = document.getElementById('speaker-count');
+    var filtersWrap = document.querySelector('.speakers-lineup__filters');
+
+    // --- State ---
+    var activeSector = 'all';
+    var searchTerm = '';
+
+    function getInitials(name) {
+      var parts = name.split(' ');
+      if (parts.length === 1) return parts[0].charAt(0).toUpperCase();
+      return (parts[0].charAt(0) + parts[parts.length - 1].charAt(0)).toUpperCase();
+    }
+
+    // --- Card (featured-style for all speakers) ---
+    function createCard(speaker, index) {
+      var card = document.createElement('div');
+      card.className = 'speakers-lineup__card';
+      card.style.setProperty('--stagger', index);
+      card.innerHTML =
+        '<div class="speakers-lineup__img-wrap">' +
+          '<img src="' + speaker.img + '" alt="' + speaker.name + '" loading="lazy" width="500" height="500" class="speakers-lineup__img">' +
+        '</div>' +
+        '<h3 class="speakers-lineup__name">' + speaker.name + '</h3>' +
+        '<p class="speakers-lineup__role">' + speaker.role + '</p>' +
+        (speaker.company ? '<p class="speakers-lineup__company">' + speaker.company + '</p>' : '') +
+        '<div class="speakers-lineup__sectors">' +
+          (speaker.sectors || []).map(function(s) {
+            return '<span class="speakers-lineup__sector-tag speakers-lineup__sector-tag--' + s.toLowerCase() + '">' + s + '</span>';
+          }).join('') +
+        '</div>';
+      var img = card.querySelector('img');
+      img.onerror = function() {
+        img.style.display = 'none';
+        var fallback = document.createElement('div');
+        fallback.className = 'speakers-initials-fallback';
+        fallback.textContent = getInitials(speaker.name);
+        img.parentElement.appendChild(fallback);
+      };
+      return card;
+    }
+
+    // --- Render ---
+    function render() {
+      var filtered = speakers.filter(function(s) {
+        var matchesSector = activeSector === 'all' ||
+          (s.sectors && s.sectors.indexOf(activeSector) !== -1);
+        var matchesSearch = !searchTerm ||
+          s.name.toLowerCase().indexOf(searchTerm) !== -1 ||
+          (s.company && s.company.toLowerCase().indexOf(searchTerm) !== -1) ||
+          (s.role && s.role.toLowerCase().indexOf(searchTerm) !== -1);
+        return matchesSector && matchesSearch;
+      });
+
+      grid.innerHTML = '';
+      filtered.forEach(function(s, i) {
+        grid.appendChild(createCard(s, i));
+      });
+
+      countEl.textContent = 'Showing ' + filtered.length + ' of ' + speakers.length + ' speakers';
+
+      requestAnimationFrame(function() {
+        grid.classList.add('is-visible');
+      });
+    }
+
+    // --- Sector pill clicks ---
+    filtersWrap.addEventListener('click', function(e) {
+      var pill = e.target.closest('.speakers-lineup__pill');
+      if (!pill) return;
+
+      filtersWrap.querySelectorAll('.speakers-lineup__pill').forEach(function(p) {
+        p.classList.remove('is-active');
+        p.setAttribute('aria-selected', 'false');
+      });
+      pill.classList.add('is-active');
+      pill.setAttribute('aria-selected', 'true');
+      activeSector = pill.dataset.sector;
+
+      grid.classList.remove('is-visible');
+      setTimeout(render, 80);
+    });
+
+    // --- Search input ---
+    var searchTimeout;
+    searchInput.addEventListener('input', function() {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(function() {
+        searchTerm = searchInput.value.trim().toLowerCase();
+        grid.classList.remove('is-visible');
+        setTimeout(render, 80);
+      }, 150);
+    });
+
+    // --- Scroll reveal ---
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(grid);
+
+    // --- Initial render ---
+    render();
+  })();
+  </script>
 
   <script src="main.js" defer></script>
 
