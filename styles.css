@@ -2934,6 +2934,7 @@ html:not(.urgency-dismissed) body:has(.urgency-bar:not(.is-hidden)) .site-header
   justify-content: center;
   overflow: hidden;
   background: var(--colour-charcoal);
+  padding-top: 80px; /* clear fixed header */
 }
 
 .page-hero__bg {
